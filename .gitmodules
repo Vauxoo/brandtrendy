@@ -1,0 +1,4 @@
+[submodule "brandtrendy"]
+	path = brandtrendy
+	url = git@git.vauxoo.com:vauxoo/brandtrendy.git
+	branch = 16.0
