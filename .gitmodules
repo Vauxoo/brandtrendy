@@ -1,0 +1,3 @@
+[submodule "brandtrendy"]
+	path = brandtrendy
+	url = git@git.vauxoo.com:vauxoo/brandtrendy.git
