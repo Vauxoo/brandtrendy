@@ -1,3 +1,7 @@
 [submodule "brandtrendy"]
 	path = brandtrendy
 	url = git@git.vauxoo.com:vauxoo/brandtrendy.git
+[submodule "stock-logistics-workflow"]
+	path = stock-logistics-workflow
+	url = git@github.com:Vauxoo/stock-logistics-workflow.git
+	branch = 16.0
