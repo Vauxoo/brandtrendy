@@ -5,3 +5,7 @@
 	path = stock-logistics-workflow
 	url = git@github.com:Vauxoo/stock-logistics-workflow.git
 	branch = 16.0
+[submodule "product-attribute"]
+	path = product-attribute
+	url = git@github.com:Vauxoo/product-attribute.git
+	branch = 16.0
