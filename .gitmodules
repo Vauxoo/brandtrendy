@@ -10,3 +10,7 @@
 	path = product-attribute
 	url = git@github.com:Vauxoo/product-attribute.git
 	branch = 17.0
+[submodule "sale-self-invoice"]
+	path = sale-self-invoice
+	url = git@git.vauxoo.com:vauxoo/sale-self-invoice.git
+	branch = 17.0
