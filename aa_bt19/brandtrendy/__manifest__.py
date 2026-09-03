@@ -19,7 +19,6 @@
         "iot",
         "knowledge",
         "l10n_mx_edi_stock",
-        "l10n_mx_hr",
         "maintenance",
         "mrp",
         "project",
