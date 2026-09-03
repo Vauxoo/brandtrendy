@@ -1,0 +1,45 @@
+# Translation of Odoo Server.
+# This file contains the translation of the following modules:
+# 	* brandtrendy
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: Odoo Server 17.0+e\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2024-06-28 00:07+0000\n"
+"PO-Revision-Date: 2024-06-28 00:07+0000\n"
+"Last-Translator: Jesús Valdez[Vauxoo]\n"
+"Language-Team: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: \n"
+"Plural-Forms: \n"
+
+#. module: brandtrendy
+#: model:ir.model.fields,field_description:brandtrendy.field_account_bank_statement_line__concept
+msgid "Concept"
+msgstr "Concepto"
+
+#. module: brandtrendy
+#: model:ir.model.fields,field_description:brandtrendy.field_account_bank_statement_line__doc_number
+msgid "Document number"
+msgstr "Número documento"
+
+#. module: brandtrendy
+#: model:ir.model.fields,help:brandtrendy.field_account_bank_statement_line__concept
+msgid ""
+"Field used to hold the transaction concept, for example: Commission, sale, "
+"discount, etc."
+msgstr ""
+"Campo usado para almacenar el concepto de la transacción, por ejemplo: "
+"Comisión, venta, descuento, etc."
+
+#. module: brandtrendy
+#: model:ir.model.fields,help:brandtrendy.field_account_bank_statement_line__doc_number
+msgid "Field used to refer to the transaction number"
+msgstr "Campo usado para referirse al número de transacción"
+
+#. module: brandtrendy
+#: model:ir.model.fields,field_description:brandtrendy.field_helpdesk_ticket__order_id
+msgid "Order"
+msgstr "Orden"

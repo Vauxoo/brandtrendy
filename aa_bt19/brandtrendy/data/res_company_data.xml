@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<odoo noupdate="1">
+
+    <record id="base.main_company" model="res.company">
+        <field name="name">Brandtrendy</field>
+        <field name="street">Poniente 134 #682 Bodega E</field>
+        <field name="zip">02300</field>
+        <field name="phone">5555260418</field>
+        <field name="vat">BRA15050667A</field>
+        <field name="email">hola@brandtrendy.com.mx</field>
+        <field name="website">https://www.brandtrendy.com.mx</field>
+        <field name="state_id" ref="base.state_mx_df" />
+        <field name="country_id" ref="base.mx" />
+        <field name="logo" type="base64" file="brandtrendy/static/img/logo.png" />
+        <field name="l10n_mx_edi_fiscal_regime">601</field>
+    </record>
+
+    <record id="ritz_novi_branch_company" model="res.company">
+        <field name="name">HONGKONG RITZ NOVI TECHNOLOGY LIMITED</field>
+        <field name="street">No. 306, a floor, 367 Buzheng East Road, Wangchun Industrial Park, Haishu District</field>
+        <field name="city">Ningbo</field>
+        <field name="phone">008618180837673</field>
+        <field name="state_id" ref="base.state_cn_ZJ" />
+        <field name="email">wsunny1227@msn.cn</field>
+        <field name="currency_id" ref="base.USD" />
+        <field name="country_id" ref="base.cn" />
+    </record>
+</odoo>

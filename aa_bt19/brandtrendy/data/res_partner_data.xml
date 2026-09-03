@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<odoo noupdate="1">
+
+    <record id="data_res_partner_invoice_address_brandtrendy" model="res.partner">
+        <field name="type">invoice</field>
+        <field name="parent_id" ref="base.main_partner" />
+        <field name="street">Poniente 134 #682 Bodega E</field>
+        <field name="zip">02300</field>
+        <field name="phone">5555260418</field>
+        <field name="email">hola@brandtrendy.com.mx</field>
+        <field name="state_id" ref="base.state_mx_df" />
+        <field name="country_id" ref="base.mx" />
+    </record>
+
+</odoo>
