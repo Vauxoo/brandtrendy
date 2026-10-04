@@ -4,8 +4,8 @@
 	branch = 17.0
 [submodule "product-attribute"]
 	path = product-attribute
-	url = git@github.com:Vauxoo/product-attribute.git
-	branch = 17.0
+	url = https://github.com/OCA/product-attribute.git
+	branch = 19.0
 [submodule "sale-self-invoice"]
 	path = sale-self-invoice
 	url = git@git.vauxoo.com:vauxoo/sale-self-invoice.git
