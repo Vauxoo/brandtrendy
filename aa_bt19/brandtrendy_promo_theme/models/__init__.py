@@ -5,3 +5,4 @@ from . import website
 from . import website_menu
 from . import website_paginas
 from . import website_rutas
+from . import website_textos

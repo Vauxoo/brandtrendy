@@ -1,7 +1,7 @@
 <pagina url="/proceso-de-personalizacion" nombre="Proceso de personalización de productos promocionales" titulo="Proceso de personalización | Promocionales Brandtrendy" descripcion="Conoce el proceso de personalización paso a paso: cotización, prueba digital, aprobación, producción y envío, de la selección a la entrega." indexada="1" publicada="1">
   <section class="s_title o_cc o_cc1 pt64 pb32" data-snippet="s_title" data-vcss="001" data-name="Título de la página">
     <div class="container s_allow_columns">
-      <h1 class="display-3-fs">Proceso de personalización</h1>
+      <h1>Proceso de personalización</h1>
       <p class="lead">Trabajamos por cotización: cada proyecto se define, se prueba y se aprueba antes de producirse. Así se ve el proceso completo, del primer contacto a la entrega.</p>
     </div>
   </section>

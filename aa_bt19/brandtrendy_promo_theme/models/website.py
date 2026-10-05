@@ -16,7 +16,7 @@ PARAM_RESULTADO = MODULO + ".ultimo_aplicar"
 # Versión de la lógica de «aplicar». Los pasos de configuración se re-aplican cuando cambia este número (o en una base
 # recién restaurada); entre versiones, un cambio deliberado de un administrador se respeta. Subirla al cambiar PASOS,
 # VISTAS_APAGAR o los ajustes.
-APLICAR_VERSION = "1"
+APLICAR_VERSION = "3"
 PARAM_PASO = MODULO + ".aplicado."  # + nombre del paso → versión aplicada
 PARAM_CODIGO_RESPALDO = MODULO + ".codigo_respaldo"
 GSC_BLOQUE = re.compile(r"<!-- BT-GSC -->.*?<!-- /BT-GSC -->", re.S)  # verificación de Search Console: se conserva
@@ -27,6 +27,8 @@ ASSETS_SITIO = [  # (key, bundle, directiva, ruta)
      MODULO + "/static/src/scss/primary_variables.scss"),
     (MODULO + ".fuentes", "web.assets_frontend", "append", MODULO + "/static/src/scss/fuentes.scss"),
     (MODULO + ".tema", "web.assets_frontend", "append", MODULO + "/static/src/scss/tema.scss"),
+    (MODULO + ".bootstrap", "web._assets_frontend_helpers", "prepend",
+     MODULO + "/static/src/scss/bootstrap_overridden.scss"),
 ]
 ICONOS_KEY = MODULO + ".sitio_iconos"
 ICONOS_ARCH = """<data>
@@ -47,7 +49,7 @@ VISTAS_APAGAR = [
     "brandtrendy_s3.bt_shop_products_only", "brandtrendy_s3.bt_lupa_products_only",
     "website_sale.header_cart_link", "brandtrendy_f4.bt_share_only_approved",
     # copias enteras de plantillas de la 17 (capa 2)
-    "website.header_text_element", "website_sale.address", "website_sale.payment", "website_sale.payment_delivery",
+    "website_sale.address", "website_sale.payment", "website_sale.payment_delivery",
     "website_sale.confirmation", "website_appointment_sale.website_sale_confirmation_appointment",
     "website_sale.checkout_layout", "l10n_mx_edi_website_sale.l10n_mx_edi_invoicing_info", "website_sale.cart",
     "payment.form", "website_sale.checkout", "website_sale.address_list",
@@ -63,7 +65,14 @@ VISTAS_APAGAR = [
     "brandtrendy_i5.seo_head", "brandtrendy_i5.seo_producto", "brandtrendy_i5.seo_listado",
     "brandtrendy_i5.perf_lcp_ficha", "brandtrendy_m2.noindex_modulos", "brandtrendy_k3.jobs_sidebar_off",
     "website.cookies_bar",  # N3: barra de consentimiento apagada; aviso en el pie
+    # copyright de la 17 con estilos en línea: borra el t-call web.brand_promotion que la vista primaria
+    # planning.frontend_layout necesita y rompe la validación del pie; los enlaces legales van en el pie del módulo
+    "brandtrendy_f4.bt_footer_copyright",
 ]
+
+# --- Analítica (D11): GA4 por el campo nativo de Odoo (públicos en el código de la página; no son secretos).
+GA4_PRODUCCION = "G-WNH0PQXKT1"  # propiedad «Promocionales Brandtrendy» (28_PLAN_ANALYTICS)
+GA4_PRUEBAS = "G-HLGCJNRK8C"  # propiedad «Promocionales - PRUEBAS»: bases neutralizadas (staging de Odoo.sh)
 
 # --- Pasos del checkout del sitio (D1), por step_href: (nombre, botón principal, botón de regreso) ------------
 PASOS = {
@@ -73,6 +82,24 @@ PASOS = {
     "/shop/payment": ("Confirmar solicitud", "Revisar y confirmar", False),
 }
 PASO_CFDI = "/shop/l10n_mx_invoicing_info"  # N1: fuera del flujo del sitio en modo cotización
+
+# --- Cabecera del sitio: plantilla «Sale 2» de Odoo 19 (franja superior + logotipo, buscador y «Mi cotización» + menú)
+CABECERA_ENCENDER = ["website.template_header_sales_two", "website.header_text_element"]
+CABECERA_APAGAR = [
+    "website.template_header_default", "website.template_header_search",  # otras plantillas de cabecera
+    "portal.user_sign_in",  # sin cuentas de cliente en el sitio (account_on_checkout = disabled)
+    "website.header_call_to_action",  # la acción principal es la cotización, no un botón aparte
+]
+CABECERA_TEXTO = """<data inherit_id="website.placeholder_header_text_element" name="Header Text element" active="True">
+    <xpath expr="." position="inside">
+        <li t-attf-class="#{_item_class}">
+            <div t-attf-class="s_text_block #{_div_class}" data-name="Text">
+                <small>Envíos a todo México · Facturación CFDI · Atención a empresas L–V 8:30–17:30 ·
+                    <a href="https://wa.me/525555260418" class="text-reset">WhatsApp +52 55 5526 0418</a></small>
+            </div>
+        </li>
+    </xpath>
+</data>"""
 
 # --- Automatizaciones de la base que este módulo sustituye (se archivan por nombre; no se borran) -------------
 AUTOMATIZACIONES_RETIRAR = [
@@ -124,6 +151,8 @@ class Website(models.Model):
                 ("codigo", sitio._bt_promo_codigo, "una_vez"),
                 ("ajustes", sitio._bt_promo_ajustes, "version"),
                 ("pasos", sitio._bt_promo_pasos, "version"),
+                ("cabecera", sitio._bt_promo_cabecera, "version"),
+                ("textos", sitio._bt_promo_textos, "siempre"),
                 ("automatizaciones", sitio._bt_promo_automatizaciones, "una_vez"),
                 ("paginas", sitio._bt_promo_paginas, "siempre"),  # protege con huella lo editado a mano
                 ("pie", sitio._bt_promo_pie, "siempre"),
@@ -155,7 +184,7 @@ class Website(models.Model):
         if not self.env.user.has_group("base.group_system"):
             raise AccessError(self.env._("Solo un administrador puede reaplicar la configuración del sitio."))
         ICP = self.env["ir.config_parameter"].sudo()
-        for paso in ("modo", "vistas", "ajustes", "pasos", "rutas", "menu"):
+        for paso in ("modo", "vistas", "ajustes", "pasos", "cabecera", "rutas", "menu"):
             ICP.set_param(PARAM_PASO + paso, False)
         self._bt_promo_aplicar()
         return json.loads(ICP.get_param(PARAM_RESULTADO) or "{}")
@@ -236,6 +265,9 @@ class Website(models.Model):
             "social_linkedin": "https://www.linkedin.com/company/brandtrendy",
             "social_twitter": False,
         }
+        # En una base neutralizada (copia de prueba) se mide en la propiedad de pruebas, para no ensuciar la real.
+        neutralizada = self.env["ir.config_parameter"].sudo().get_param("database.is_neutralized")
+        vals["google_analytics_key"] = GA4_PRUEBAS if neutralizada else GA4_PRODUCCION
         if self.salesteam_id:
             vals["crm_default_team_id"] = self.salesteam_id.id  # el formulario de contacto cae en el equipo del sitio
         if self.salesperson_id:
@@ -263,6 +295,33 @@ class Website(models.Model):
                                                        back_button_label=regreso))
             hechos.append(href)
         return "pasos: %s" % ", ".join(hechos)
+
+    # ------------------------------------------------------------------ cabecera
+    def _bt_promo_vista_del_sitio(self, key, activa):
+        """Deja la vista ``key`` en el estado pedido SOLO para este sitio (copia del sitio vía COW si no existe)."""
+        View = self.env["ir.ui.view"].sudo().with_context(active_test=False)
+        propia = View.search([("key", "=", key), ("website_id", "=", self.id)], limit=1)
+        if propia:
+            if propia.active != activa:
+                propia.with_context(website_id=False).write({"active": activa})
+            return propia
+        generica = View.search([("key", "=", key), ("website_id", "=", False)], limit=1)
+        if not generica:
+            return View
+        generica.with_context(website_id=self.id).write({"active": activa})  # el COW crea la copia del sitio
+        return View.search([("key", "=", key), ("website_id", "=", self.id)], limit=1)
+
+    def _bt_promo_cabecera(self):
+        self.ensure_one()
+        for key in CABECERA_APAGAR:
+            self._bt_promo_vista_del_sitio(key, False)
+        for key in CABECERA_ENCENDER:
+            self._bt_promo_vista_del_sitio(key, True)
+        texto = self._bt_promo_vista_del_sitio("website.header_text_element", True)
+        if texto:
+            for lang in ("en_US", "es_MX"):
+                texto.with_context(lang=lang, website_id=False).write({"arch_db": CABECERA_TEXTO})
+        return "cabecera «Sale 2» con franja de texto; sin botón de acción ni inicio de sesión"
 
     # ------------------------------------------------------------------ automatizaciones sustituidas
     def _bt_promo_automatizaciones(self):

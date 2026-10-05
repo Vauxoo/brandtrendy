@@ -1,7 +1,7 @@
 <pagina url="/preguntas-frecuentes" nombre="Preguntas frecuentes" titulo="Preguntas frecuentes | Promocionales Brandtrendy" descripcion="Dudas frecuentes sobre cotizaciones, pagos por transferencia, personalización, envíos e incidencias en Promocionales Brandtrendy." indexada="1" publicada="1">
   <section class="s_title pt40 pb16" data-snippet="s_title" data-vcss="001" data-name="Título">
     <div class="container s_allow_columns">
-      <h1 class="display-3-fs">Preguntas frecuentes</h1>
+      <h1>Preguntas frecuentes</h1>
     </div>
   </section>
   <section class="s_text_block pt0 pb16" data-snippet="s_text_block" data-name="Introducción">

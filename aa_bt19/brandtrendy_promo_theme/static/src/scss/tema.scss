@@ -22,3 +22,10 @@
     color: var(--bt-ink);
     font-variant-numeric: tabular-nums;
 }
+
+// El envío siempre se cotiza aparte en este sitio: Odoo mostraría «$0.00» en totales y la insignia «Gratis» del método
+// de envío (texto de JavaScript, no traducible por vista). Se ocultan solo aquí.
+tr[name="o_order_delivery"],
+.o_wsale_delivery_price_badge {
+    display: none !important;
+}

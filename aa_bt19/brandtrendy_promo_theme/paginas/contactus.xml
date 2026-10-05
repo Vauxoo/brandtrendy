@@ -1,7 +1,7 @@
 <pagina url="/contactus" nombre="Contacto" titulo="Contacto y asesoría | Promocionales Brandtrendy" descripcion="Cuéntanos tu proyecto a medida y un ejecutivo te asesora. Teléfono, WhatsApp, correo, horario y domicilio de Brandtrendy en Azcapotzalco, CDMX." indexada="1" publicada="1">
   <section class="s_text_block pt64 pb16" data-snippet="s_text_block" data-name="Introducción">
     <div class="container s_allow_columns">
-      <h1 class="display-3-fs">Contacto</h1>
+      <h1>Contacto</h1>
       <p class="lead">Esta página es para proyectos a medida y asesoría. Cuéntanos qué necesitas y un ejecutivo te acompaña desde la idea hasta la entrega.</p>
       <p>Si buscas producto de catálogo, agrégalo a <b>Mi cotización</b> desde el <a href="/shop" class="o_translate_inline">catálogo</a>: la cotización formal llega en 1 día hábil.</p>
     </div>

@@ -1,7 +1,7 @@
 <pagina url="/contactus-thank-you" nombre="Gracias por tu mensaje" titulo="Gracias por tu mensaje | Promocionales Brandtrendy" descripcion="Recibimos tu solicitud. Un ejecutivo la revisa y te contacta en horario de atención." indexada="0" publicada="1">
   <section class="s_text_block o_cc o_cc1 pt96 pb96" data-snippet="s_text_block" data-name="Confirmación">
     <div class="container s_allow_columns">
-      <h1 class="display-3-fs" style="text-align: center;">Recibimos tu solicitud</h1>
+      <h1 style="text-align: center;">Recibimos tu solicitud</h1>
       <p class="lead" style="text-align: center;">Un ejecutivo la revisa y te contacta en nuestro horario de atención: lunes a viernes, de 8:30 a 17:30 h (hora del centro de México).</p>
       <p style="text-align: center;">Mientras tanto, puedes seguir explorando el catálogo.</p>
       <p style="text-align: center;">

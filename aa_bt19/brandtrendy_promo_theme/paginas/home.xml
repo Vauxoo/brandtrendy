@@ -6,7 +6,7 @@
     <div class="container">
       <div class="row align-items-center">
         <div class="col-lg-6 pt16 pb16">
-          <h1 class="display-5-fs">Promocionales personalizados para empresas</h1>
+          <h1 class="display-3-fs">Promocionales personalizados para empresas</h1>
           <p class="lead">Elige del catálogo, personaliza con tu logotipo y recibe tu cotización formal en 1 día hábil. Un ejecutivo te confirma precio, personalización y entrega.</p>
           <form method="get" class="o_searchbar_form s_searchbar_input mb-3" action="/shop" data-snippet="s_searchbar_input" data-name="Buscador">
             <div role="search" class="input-group input-group-lg">

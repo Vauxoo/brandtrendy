@@ -10,6 +10,7 @@ Cada archivo ``paginas/<nombre>.xml`` tiene un elemento raíz ``<pagina>`` con s
     parámetro): la deja y lo registra.
 """
 import hashlib
+import html
 import logging
 import os
 import re
@@ -45,6 +46,8 @@ class Website(models.Model):
     def _bt_promo_categoria(self, ruta):
         Categoria = self.env["product.public.category"].sudo()
         padre = Categoria
+        # El libxml2 del servidor puede serializar acentos de atributos como entidades (&#xF3;): se decodifican.
+        ruta = html.unescape(ruta)
         for nombre in [p.strip() for p in ruta.split("/") if p.strip()]:
             dominio = [("name", "=", nombre), ("parent_id", "=", padre.id or False)]
             padre = Categoria.search(dominio, limit=1)

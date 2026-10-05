@@ -1,7 +1,7 @@
 <pagina url="/devoluciones" nombre="Devoluciones e incidencias" titulo="Devoluciones e incidencias | Promocionales Brandtrendy" descripcion="Cómo reportar una incidencia con tu pedido: plazos, expediente requerido, retornos autorizados y cancelaciones sin defecto en Brandtrendy." indexada="1" publicada="1">
   <section class="s_title pt40 pb16" data-snippet="s_title" data-vcss="001" data-name="Título">
     <div class="container o_container_small s_allow_columns">
-      <h1 class="display-3-fs">Devoluciones e incidencias</h1>
+      <h1>Devoluciones e incidencias</h1>
     </div>
   </section>
   <section class="s_text_block pt0 pb16" data-snippet="s_text_block" data-name="Introducción">

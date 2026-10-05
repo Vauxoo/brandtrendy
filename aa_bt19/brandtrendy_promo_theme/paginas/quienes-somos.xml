@@ -1,7 +1,7 @@
 <pagina url="/quienes-somos" nombre="Quiénes somos" titulo="Quiénes somos | Promocionales Brandtrendy" descripcion="Operamos en comercio electrónico desde 2006, con almacén propio en CDMX y cobertura nacional. Cotizamos tus artículos promocionales con todo desglosado." indexada="1" publicada="1">
   <section class="s_title o_cc o_cc1 pt64 pb32" data-snippet="s_title" data-vcss="001" data-name="Título de la página">
     <div class="container s_allow_columns">
-      <h1 class="display-3-fs">Quiénes somos</h1>
+      <h1>Quiénes somos</h1>
       <p class="lead">BRANDTRENDY, S.A. DE C.V. es una empresa mexicana dedicada a artículos promocionales personalizables para empresas, con atención empresarial y operación propia en México.</p>
     </div>
   </section>

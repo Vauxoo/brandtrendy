@@ -1,7 +1,7 @@
 <pagina url="/pagos-y-facturacion" nombre="Pagos y facturación para pedidos corporativos" titulo="Pagos y facturación | Promocionales Brandtrendy" descripcion="Cómo pagar tu pedido: transferencia electrónica, esquema de 100% o 70% y 30%, datos para tu factura CFDI y vigencia de la cotización." indexada="1" publicada="1">
   <section class="s_title o_cc o_cc1 pt64 pb32" data-snippet="s_title" data-vcss="001" data-name="Título de la página">
     <div class="container s_allow_columns">
-      <h1 class="display-3-fs">Pagos y facturación</h1>
+      <h1>Pagos y facturación</h1>
       <p class="lead">Trabajamos por cotización: tu ejecutivo confirma producto, personalización y envío antes de cualquier pago. Aquí encuentras cómo funciona el pago, qué necesitamos para facturar y qué debe estar listo antes de que inicie la producción.</p>
     </div>
   </section>

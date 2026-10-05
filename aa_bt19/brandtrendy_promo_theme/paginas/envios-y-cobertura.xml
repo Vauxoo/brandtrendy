@@ -1,7 +1,7 @@
 <pagina url="/envios-y-cobertura" nombre="Envíos y cobertura a nivel nacional" titulo="Envíos y cobertura | Promocionales Brandtrendy" descripcion="Cobertura de envío en México: paqueterías, reparto propio en CDMX, tiempos de tránsito estimados, envío exprés y recolección en almacén." indexada="1" publicada="1">
   <section class="s_title o_cc o_cc1 pt64 pb32" data-snippet="s_title" data-vcss="001" data-name="Título de la página">
     <div class="container s_allow_columns">
-      <h1 class="display-3-fs">Envíos y cobertura</h1>
+      <h1>Envíos y cobertura</h1>
       <p class="lead">Gestionamos el envío de tu pedido a nivel nacional desde nuestro almacén propio en la Ciudad de México. Aquí te explicamos cómo funciona la cobertura, los tiempos estimados y qué hacer al recibir tu mercancía.</p>
     </div>
   </section>

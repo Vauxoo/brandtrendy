@@ -1,0 +1,5 @@
+// Variables de Bootstrap que Odoo no expone como opción del sitio. Se carga SOLO en el sitio Promocionales y ANTES de
+// las variables de Bootstrap (ir.asset «prepend» en web._assets_frontend_helpers), por eso basta con !default.
+// Hanken Grotesk no tiene archivo de peso 500 (el que usa Bootstrap para encabezados): sin esto caen a 400.
+$headings-font-weight: 700 !default;
+$display-font-weight: 800 !default;
