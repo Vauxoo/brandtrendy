@@ -36,10 +36,12 @@ $o-website-values-palettes: (
         'buttons-font': 'Hanken Grotesk',
         'body-line-height': 1.5,
         'headings-line-height': 1.25,
-        'btn-border-radius': 8px,
+        // Radios en rem (8 px): website/static/src/scss/bootstrap_overridden.scss l.267 hace
+        // min($input-border-radius, .25rem) y mezclar px con rem rompe la compilación del bundle.
+        'btn-border-radius': .5rem,
         'btn-padding-y': .75rem,
         'btn-padding-x': 1.25rem,
-        'input-border-radius': 8px,
+        'input-border-radius': .5rem,
         'link-underline': 'hover',
         'btn-ripple': false,
     ),
