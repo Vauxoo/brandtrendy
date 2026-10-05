@@ -93,3 +93,8 @@ main .table-bordered > :not(caption) > * > * {
     border-width: 0 0 1px;
     border-color: #F3F3F4;
 }
+
+// Anclas (índice de términos, /contactus#asesoria, #modelos): el destino no queda bajo la cabecera fija.
+html {
+    scroll-padding-top: 96px;
+}

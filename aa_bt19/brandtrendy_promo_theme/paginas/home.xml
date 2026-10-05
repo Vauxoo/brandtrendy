@@ -268,16 +268,6 @@
             </div>
           </div>
         </div>
-        <div data-name="Card" class="col-lg-3 col-6 pt8 pb8">
-          <div class="s_card o_card_img_top card h-100 o_cc o_cc1" data-snippet="s_card" data-vxml="001" data-name="Card">
-            <figure class="o_card_img_wrapper ratio ratio-1x1 mb-0">
-              <a href="{{url_categoria:Promocionales / Reconocimientos}}" tabindex="-1" aria-hidden="true"><img src="/brandtrendy_promo_theme/static/img/paginas/home-categoria-reconocimientos.jpg" alt="Reloj de pared de madera en un librero" class="o_card_img card-img-top"/></a>
-            </figure>
-            <div class="card-body">
-              <h3 class="card-title h6-fs mb-0" style="text-align: center;"><a href="{{url_categoria:Promocionales / Reconocimientos}}">Reconocimientos</a></h3>
-            </div>
-          </div>
-        </div>
       </div>
     </div>
   </section>
@@ -343,7 +333,7 @@
         <div class="col-lg-3 s_process_step position-relative pt24 pb24">
           <svg class="s_process_step_connector position-absolute z-index-1" viewBox="0 0 100 20" preserveAspectRatio="none"><path d="M 0 10 L 100 10" vector-effect="non-scaling-stroke"/></svg>
           <div class="s_process_step_number d-flex align-items-center justify-content-center mx-auto rounded-circle bg-primary-light" data-name="Step Number"><p class="h3 mb-0 text-primary text-center" aria-hidden="true">3</p></div>
-          <div class="s_process_step_content mt-3 px-3 text-center"><h3 class="h5-fs">Aprueba tu cotización</h3><p>Recibes tu cotización formal y apruebas la prueba digital.</p></div>
+          <div class="s_process_step_content mt-3 px-3 text-center"><h3 class="h5-fs">Aprueba y confirma</h3><p>Recibes tu cotización formal, confirmas el anticipo y apruebas la prueba digital antes de producir.</p></div>
         </div>
         <div class="col-lg-3 s_process_step position-relative pt24 pb24">
           <svg class="s_process_step_connector position-absolute z-index-1" viewBox="0 0 100 20" preserveAspectRatio="none"><path d="M 0 10 L 100 10" vector-effect="non-scaling-stroke"/></svg>

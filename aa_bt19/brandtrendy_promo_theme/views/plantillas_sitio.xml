@@ -111,4 +111,15 @@
             <attribute name="t-attf-class">fa #{'fa-file-text-o' if website.bt_quote_mode else 'fa-shopping-cart'} fa-stack</attribute>
         </xpath>
     </template>
+
+    <!--
+        Accesibilidad · el campo de búsqueda solo trae placeholder (website.website_search_box, odoo 19.0): en el sitio en
+        modo cotización recibe el mismo texto como nombre accesible; en el sitio 1 no cambia nada (None omite el atributo).
+    -->
+    <template id="buscador_nombre_accesible" inherit_id="website.website_search_box"
+              name="Promocionales · nombre accesible del buscador">
+        <xpath expr="//input[@name='search']" position="attributes">
+            <attribute name="t-att-aria-label">(placeholder or 'Buscar producto') if website.bt_quote_mode else None</attribute>
+        </xpath>
+    </template>
 </odoo>

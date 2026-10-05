@@ -37,7 +37,7 @@
 // misma altura en todas las tarjetas. Solo el botón baja al fondo (margin-top: auto).
 #wrap .oe_product_cart .o_wsale_products_item_title {
     max-width: none;
-    min-height: 4.5rem;
+    min-height: 6rem;
     margin-bottom: 4px;
     font-size: 1rem;
     line-height: 1.5rem;
@@ -46,7 +46,7 @@
 
 #wrap .oe_product_cart .o_wsale_products_item_title > a {
     display: -webkit-box;
-    -webkit-line-clamp: 3;
+    -webkit-line-clamp: 4;
     -webkit-box-orient: vertical;
     overflow: hidden;
     color: #231F20;
