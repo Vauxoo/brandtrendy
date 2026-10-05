@@ -1,0 +1,171 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <!--
+        Ficha de producto, Mi cotización y página 404 del sitio en modo cotización.
+        Regla de todas las herencias: lo nuevo lleva t-if="website.bt_quote_mode"; lo que se oculta del original lleva
+        t-if="not website.bt_quote_mode" como atributo (el nodo y su texto traducido se quedan en la vista de origen).
+        Ningún nodo con texto traducible se reemplaza: el sitio 1 rinde exactamente lo mismo.
+        Anclas verificadas contra el arch combinado de Odoo 19 (ver comentario de cada plantilla); ninguna es
+        t-set, t-call ni t-foreach.
+    -->
+
+    <!--
+        Ficha · precio. Ancla: span.oe_price de website_sale.product_price (templates.xml 19.0). El JavaScript de
+        variantes solo reescribe .oe_price .oe_currency_value, así que «Desde» y «IVA incluido» sobreviven al cambio
+        de variante. Los precios del sitio incluyen IVA (impuesto con price_include y
+        show_line_subtotals_tax_selection = tax_included en el sitio).
+    -->
+    <template id="ficha_precio_desde" inherit_id="website_sale.product_price"
+              name="Promocionales · precio «Desde $X · IVA incluido»">
+        <xpath expr="//span[hasclass('oe_price')]" position="before">
+            <span t-if="website.bt_quote_mode" class="bt_precio_desde">Desde</span>
+        </xpath>
+        <xpath expr="//span[hasclass('oe_price')]" position="after">
+            <span t-if="website.bt_quote_mode" class="bt_precio_iva">· IVA incluido</span>
+        </xpath>
+    </template>
+
+    <!--
+        Ficha · bloque de compra y orden en móvil. Anclas en el arch combinado de website_sale.product:
+        - div.o_wsale_product_details_content_section_price: mínimo y aviso de envío junto al precio.
+        - div.o_wsale_product_details_content_section_cta: expectativa del CTA junto a «Agregar a cotización».
+        - div#product_attributes_simple: después va la descripción larga (con sus preguntas frecuentes), que en este
+          sitio sale del bloque del título; así precio, variantes, cantidad y botón quedan antes en móvil.
+        - fila tr de product_attributes_simple: «Cantidad mínima» (atributo de catálogo de la 17) ya se muestra junto
+          al precio con x_bt_moq; se omite la fila solo si el producto tiene x_bt_moq.
+        - li de la ruta de navegación: se omite la raíz del árbol de categorías cuando no es la última
+          («Todos los productos» ya enlaza al catálogo).
+    -->
+    <template id="ficha_bloque_compra" inherit_id="website_sale.product"
+              name="Promocionales · bloque de compra de la ficha">
+        <xpath expr="//div[hasclass('o_wsale_product_details_content_section_price')]" position="inside">
+            <t t-if="website.bt_quote_mode">
+                <p t-if="product.x_bt_moq" class="bt_ficha_minimo mb-1">
+                    <t t-if="product.x_bt_moq == 1">Desde 1 pieza</t>
+                    <t t-else="">Desde <t t-out="product.x_bt_moq" t-options="{'widget': 'integer'}"/> piezas</t>
+                </p>
+                <p class="bt_ficha_aparte mb-0">El envío y la personalización se cotizan aparte.</p>
+            </t>
+        </xpath>
+        <xpath expr="//div[hasclass('o_wsale_product_details_content_section_cta')]" position="inside">
+            <p t-if="website.bt_quote_mode" class="bt_ficha_expectativa mb-0">Un ejecutivo te confirma precio, personalización y entrega en 1 día hábil.</p>
+        </xpath>
+        <xpath expr="//div[@id='product_attributes_simple']//tr" position="attributes">
+            <attribute name="t-if">not (website.bt_quote_mode and product.x_bt_moq and attribute.name == 'Cantidad mínima')</attribute>
+        </xpath>
+        <xpath expr="//div[@id='product_attributes_simple']" position="after">
+            <div t-if="website.bt_quote_mode" id="bt_ficha_descripcion"
+                 class="o_wsale_product_details_content_section bt_ficha_descripcion mb-4">
+                <div t-field="product.description_ecommerce" class="oe_structure text-muted"
+                     placeholder="Descripción del producto"/>
+            </div>
+        </xpath>
+        <xpath expr="//ol[hasclass('o_wsale_breadcrumb')]//li[a[contains(@t-att-href, 'slug(cat)')] and not(hasclass('d-lg-none'))]" position="attributes">
+            <attribute name="t-if">not (website.bt_quote_mode and not cat.parent_id and not cat_last)</attribute>
+        </xpath>
+    </template>
+
+    <!--
+        Ficha · bloque del título. Ancla: div[@t-field='product.description_ecommerce'] de website_sale.product_title.
+        Si se puede agregar a cotización, la descripción se muestra en #bt_ficha_descripcion (después del bloque de
+        compra); si no, se queda aquí.
+    -->
+    <template id="ficha_descripcion_despues" inherit_id="website_sale.product_title"
+              name="Promocionales · descripción después del bloque de compra">
+        <xpath expr="//div[@t-field='product.description_ecommerce']" position="attributes">
+            <attribute name="t-if">not (website.bt_quote_mode and is_add_to_cart_possible)</attribute>
+        </xpath>
+    </template>
+
+    <!-- Ficha · botón «Agregar a cotización» sin ícono de carrito. Ancla: a#add_to_cart/i de website_sale.cta_wrapper. -->
+    <template id="ficha_boton_sin_carrito" inherit_id="website_sale.cta_wrapper"
+              name="Promocionales · botón de cotización sin carrito">
+        <xpath expr="//a[@id='add_to_cart']/i" position="attributes">
+            <attribute name="t-if">not website.bt_quote_mode</attribute>
+        </xpath>
+    </template>
+
+    <!--
+        Cabeza del documento (website.layout). Anclas:
+        - script[@t-out='product_markup_data'] (website_sale.website_sale_layout): JSON-LD del producto. En este sitio
+          no se afirma existencia: «availability» (InStock/OutOfStock, de website_sale_stock) se sustituye por
+          itemCondition NewCondition; «All Products» es una cadena fija en Python (controllers/main.py,
+          _prepare_breadcrumb_markup_data), no un término traducible. json.dumps(json.loads(…)) valida el JSON y
+          devuelve el objeto seguro para <script>.
+        - meta[@name='default_description'] y link[@rel='canonical']: en la 404 sin og/twitter (el título saldría del
+          nombre de la vista «Page Not Found») y sin canonical hacia la URL inexistente.
+    -->
+    <template id="cabeza_ficha_y_404" inherit_id="website.layout"
+              name="Promocionales · JSON-LD de producto y cabeza de la 404">
+        <xpath expr="//script[@t-out='product_markup_data']" position="attributes">
+            <attribute name="t-out">json.dumps(json.loads(str(product_markup_data).replace('"availability": "https://schema.org/InStock"', '"itemCondition": "https://schema.org/NewCondition"').replace('"availability": "https://schema.org/OutOfStock"', '"itemCondition": "https://schema.org/NewCondition"').replace('"name": "All Products"', '"name": "Todos los productos"')), indent=2) if website.bt_quote_mode else product_markup_data</attribute>
+        </xpath>
+        <xpath expr="//meta[@name='default_description']" position="after">
+            <t t-if="website.bt_quote_mode and status_code == 404" t-set="website_meta" t-value="{}"/>
+        </xpath>
+        <xpath expr="//link[@rel='canonical']" position="attributes">
+            <attribute name="t-if">not (website.bt_quote_mode and status_code == 404)</attribute>
+        </xpath>
+    </template>
+
+    <!--
+        Mi cotización (/shop/cart). Anclas en website_sale.cart: div#shop_cart/div con el h4 del resumen y su div
+        del botón «Repetir solicitud» (sin cuentas de cliente en este sitio: solo si hay historial).
+    -->
+    <template id="cotizacion_encabezado" inherit_id="website_sale.cart"
+              name="Promocionales · encabezado de Mi cotización">
+        <xpath expr="//div[@id='shop_cart']/div[h4]" position="before">
+            <h1 t-if="website.bt_quote_mode" class="bt_cotizacion_titulo mb-3">Mi cotización</h1>
+        </xpath>
+        <xpath expr="//div[@id='shop_cart']/div[h4]/div[hasclass('border-start')]" position="attributes">
+            <attribute name="t-if">not website.bt_quote_mode or order_history</attribute>
+        </xpath>
+    </template>
+
+    <!--
+        Mi cotización vacía. Ancla: primer div.js_cart_lines de website_sale.cart_lines (estado vacío): sin la
+        ilustración del carrito y con la explicación del proceso.
+    -->
+    <template id="cotizacion_vacia" inherit_id="website_sale.cart_lines"
+              name="Promocionales · Mi cotización vacía">
+        <xpath expr="//div[hasclass('js_cart_lines')]/div[hasclass('mt-5')]" position="attributes">
+            <attribute name="t-if">not website.bt_quote_mode</attribute>
+        </xpath>
+        <xpath expr="//div[hasclass('js_cart_lines')][div[hasclass('mt-5')]]/h5" position="after">
+            <p t-if="website.bt_quote_mode" class="bt_cotizacion_vacia text-center">Agrega los modelos que te interesan desde el catálogo y envía tu solicitud; un ejecutivo te confirma precio, personalización y entrega en 1 día hábil.</p>
+        </xpath>
+    </template>
+
+    <!--
+        404. Ancla: section[@data-snippet='s_image_text'] de http_routing.404. En este sitio se oculta completa (con lo
+        que le agregue cualquier otra herencia) y se muestra una composición tipográfica con una sola acción.
+        Prioridad 30: se aplica después de las herencias del sitio con prioridad menor.
+    -->
+    <template id="pagina_no_encontrada" inherit_id="http_routing.404" priority="30"
+              name="Promocionales · página no encontrada">
+        <!-- Hijo directo del t-call: el título llega a la cabeza del documento (website.layout). -->
+        <xpath expr="//div[@id='wrap']" position="before">
+            <t t-if="website.bt_quote_mode" t-set="additional_title">Página no encontrada</t>
+        </xpath>
+        <xpath expr="//section[@data-snippet='s_image_text']" position="attributes">
+            <attribute name="t-if">not website.bt_quote_mode</attribute>
+        </xpath>
+        <xpath expr="//section[@data-snippet='s_image_text']" position="before">
+            <t t-if="website.bt_quote_mode">
+                <section class="bt_404 py-5">
+                    <div class="container">
+                        <div class="row justify-content-center">
+                            <div class="col-lg-8 text-center py-lg-5">
+                                <h1 class="mb-3">Página no encontrada</h1>
+                                <p class="mb-4">No encontramos la página que buscas. Si crees que es un error,
+                                    escríbenos desde <a href="/contactus">contacto</a>.</p>
+                                <p class="mb-3"><a href="/shop" class="btn btn-primary">Ver el catálogo</a></p>
+                                <p class="mb-0"><a href="/">Ir al inicio</a></p>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+            </t>
+        </xpath>
+    </template>
+</odoo>

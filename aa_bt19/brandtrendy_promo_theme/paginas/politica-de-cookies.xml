@@ -11,37 +11,37 @@
   </section>
   <section class="s_text_block pt24 pb24" data-snippet="s_text_block" data-name="Qué son las cookies">
     <div class="container o_container_small s_allow_columns">
-      <h2 class="h3-fs">Qué son las cookies</h2>
+      <h2>Qué son las cookies</h2>
       <p>Las cookies son archivos pequeños de texto que el sitio guarda en tu navegador. Sirven para que el sitio recuerde tu sesión, tu idioma y lo que has agregado a «Mi cotización», y para que podamos entender, de forma agregada, cómo se usa el sitio y de dónde llegan las solicitudes.</p>
     </div>
   </section>
   <section class="s_text_block pt24 pb24" data-snippet="s_text_block" data-name="Tu consentimiento">
     <div class="container o_container_small s_allow_columns">
-      <h2 class="h3-fs">Tu consentimiento</h2>
+      <h2>Tu consentimiento</h2>
       <p>Al seguir navegando en este sitio aceptas el uso de las cookies que se describen en esta página. Por eso te avisamos en el pie de cada página, con un enlace a esta política.</p><p>Las cookies necesarias no dependen de tu consentimiento, porque sin ellas el sitio no funciona. Las demás son opcionales: puedes desactivarlas cuando quieras desde tu navegador (te explicamos cómo más abajo) y el sitio funciona igual.</p>
     </div>
   </section>
   <section class="s_text_block pt24 pb24" data-snippet="s_text_block" data-name="Cookies que usa el sitio">
     <div class="container o_container_small s_allow_columns">
-      <h2 class="h3-fs">Cookies que usa el sitio</h2>
-      <p>Estas son todas las cookies que usa el sitio, agrupadas por su finalidad.</p><h3 class="h5-fs">Necesarias (sesión y cotización)</h3><p>Mantienen tu sesión y el contenido de «Mi cotización», y protegen el sitio y sus formularios. Sin ellas no puedes armar ni enviar una solicitud.</p><ul><li><strong>Cookies:</strong> session_id</li><li><strong>Duración y origen:</strong> hasta 7 días; propia (Odoo).</li></ul><h3 class="h5-fs">De preferencia</h3><p>Recuerdan el idioma del sitio para que no tengas que elegirlo en cada visita.</p><ul><li><strong>Cookies:</strong> frontend_lang</li><li><strong>Duración y origen:</strong> hasta 1 año; propia (Odoo).</li></ul><h3 class="h5-fs">Analítica</h3><p>Nos dicen, de forma agregada, qué páginas se visitan y cómo se navega el sitio, para mejorarlo. La medición la hace Google Analytics 4; Google LLC puede tratar estos datos fuera de México.</p><ul><li><strong>Cookies:</strong> _ga y _ga_ seguida del identificador de la propiedad</li><li><strong>Duración y origen:</strong> hasta 2 años; Google Analytics 4 (tercero).</li></ul><h3 class="h5-fs">Atribución de campañas</h3><p>Recuerdan desde qué campaña, anuncio o búsqueda llegaste (cuando tu visita trae esos datos en el enlace) para dar seguimiento correcto a tu solicitud y medir nuestras propias campañas. No comparten tu navegación con terceros.</p><ul><li><strong>Cookies:</strong> odoo_utm_source, odoo_utm_medium y odoo_utm_campaign</li><li><strong>Duración y origen:</strong> 31 días; propia (Odoo).</li></ul><p>Más información sobre las cookies de Google Analytics en la <a href="https://developers.google.com/analytics/resources/concepts/gaConceptsCookies">documentación de Google</a> y en su <a href="https://policies.google.com/privacy">política de privacidad</a>.</p>
+      <h2>Cookies que usa el sitio</h2>
+      <p>Estas son las cookies principales que usa el sitio, agrupadas por su finalidad.</p><h3 class="h5-fs">Necesarias (sesión y cotización)</h3><p>Mantienen tu sesión y el contenido de «Mi cotización», y protegen el sitio y sus formularios. Sin ellas no puedes armar ni enviar una solicitud.</p><ul><li><strong>Cookies:</strong> session_id</li><li><strong>Duración y origen:</strong> hasta 7 días; propia del sitio.</li></ul><h3 class="h5-fs">De preferencia</h3><p>Recuerdan el idioma del sitio para que no tengas que elegirlo en cada visita.</p><ul><li><strong>Cookies:</strong> frontend_lang</li><li><strong>Duración y origen:</strong> hasta 1 año; propia del sitio.</li></ul><h3 class="h5-fs">Analítica</h3><p>Nos dicen, de forma agregada, qué páginas se visitan y cómo se navega el sitio, para mejorarlo. La medición la hace Google Analytics 4; Google LLC puede tratar estos datos fuera de México.</p><ul><li><strong>Cookies:</strong> _ga y _ga_ seguida del identificador de la propiedad</li><li><strong>Duración y origen:</strong> hasta 2 años; Google Analytics 4 (tercero).</li></ul><h3 class="h5-fs">Atribución de campañas</h3><p>Recuerdan desde qué campaña, anuncio o búsqueda llegaste (cuando tu visita trae esos datos en el enlace) para dar seguimiento correcto a tu solicitud y medir nuestras propias campañas. No comparten tu navegación con terceros.</p><ul><li><strong>Cookies:</strong> odoo_utm_source, odoo_utm_medium y odoo_utm_campaign</li><li><strong>Duración y origen:</strong> 31 días; propia del sitio.</li></ul><p>Más información sobre las cookies de Google Analytics en la <a href="https://developers.google.com/analytics/resources/concepts/gaConceptsCookies">documentación de Google</a> y en su <a href="https://policies.google.com/privacy">política de privacidad</a>.</p>
     </div>
   </section>
   <section class="s_text_block pt24 pb24" data-snippet="s_text_block" data-name="Cómo desactivar las cookies">
     <div class="container o_container_small s_allow_columns">
-      <h2 class="h3-fs">Cómo desactivar las cookies</h2>
+      <h2>Cómo desactivar las cookies</h2>
       <p>Puedes bloquear o borrar las cookies desde la configuración de tu navegador. Cada navegador lo hace distinto; estas son las guías oficiales de los más usados:</p><ul><li><a href="https://support.google.com/chrome/answer/95647">Google Chrome</a></li><li><a href="https://support.apple.com/es-mx/guide/safari/sfri11471/mac">Safari</a></li><li><a href="https://support.mozilla.org/es/kb/habilitar-y-deshabilitar-cookies-sitios-web-rastrear-preferencias">Mozilla Firefox</a></li><li><a href="https://support.microsoft.com/es-es/microsoft-edge/eliminar-las-cookies-en-microsoft-edge-63947406-40ac-c3b8-57b9-2a946a29ae09">Microsoft Edge</a></li></ul><p>Para dejar de ser medido por Google Analytics en todos los sitios que lo usan, Google ofrece un <a href="https://tools.google.com/dlpage/gaoptout">complemento de inhabilitación para el navegador</a>.</p><p>Si desactivas las cookies opcionales, el sitio funciona igual. Si bloqueas las necesarias, «Mi cotización» y los formularios pueden dejar de funcionar.</p>
     </div>
   </section>
   <section class="s_text_block pt24 pb24" data-snippet="s_text_block" data-name="Señales No rastrear">
     <div class="container o_container_small s_allow_columns">
-      <h2 class="h3-fs">Señales «No rastrear»</h2>
+      <h2>Señales «No rastrear»</h2>
       <p>Algunos navegadores envían una señal «No rastrear» (Do Not Track). Como no existe un estándar del sector para atenderla, el sitio no responde a esa señal; puedes controlar las cookies como se explica arriba.</p>
     </div>
   </section>
   <section class="s_text_block pt24 pb48" data-snippet="s_text_block" data-name="Responsable y contacto">
     <div class="container o_container_small s_allow_columns">
-      <h2 class="h3-fs">Responsable, contacto y cambios</h2>
+      <h2>Responsable, contacto y cambios</h2>
       <p>El responsable del tratamiento de los datos es BRANDTRENDY, S.A. DE C.V. Si tienes dudas sobre esta política o quieres ejercer tus derechos sobre tus datos personales, escríbenos a <a href="mailto:juridico@brandtrendy.com.mx">juridico@brandtrendy.com.mx</a>. El detalle de tus derechos está en el <a href="/aviso-de-privacidad">Aviso de privacidad</a>.</p><p>Si cambian las cookies que usa el sitio, actualizamos esta página. Última actualización: 4 de octubre de 2026.</p>
     </div>
   </section>

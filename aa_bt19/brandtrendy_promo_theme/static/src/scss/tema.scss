@@ -29,3 +29,34 @@ tr[name="o_order_delivery"],
 .o_wsale_delivery_price_badge {
     display: none !important;
 }
+
+// Pie: sin la promoción «Con tecnología de Odoo» en este sitio.
+.o_brand_promotion {
+    display: none !important;
+}
+
+// Redes del pie en grafito: Odoo pinta cada ícono con el color de su red (máximo 2 colores de marca por pantalla).
+footer .s_social_media a > i.fa {
+    color: #414042 !important;
+}
+footer .s_social_media a:hover > i.fa {
+    color: var(--bt-ink) !important;
+}
+
+// Cabecera móvil: el lockup con PROMOCIONALES debe medir al menos 240 px de ancho para que el descriptor se lea
+// (Odoo lo deja a 40 px de alto ≈ 225 px).
+@media (max-width: 991.98px) {
+    header .navbar-brand.logo img {
+        height: 44px !important;
+        max-height: 44px !important;
+    }
+}
+
+// Casillas y radios de los formularios: borde visible (3:1) y marcados en grafito, no en el primario por defecto.
+.form-check-input {
+    border-color: #767579;
+}
+.form-check-input:checked {
+    background-color: #414042;
+    border-color: #414042;
+}

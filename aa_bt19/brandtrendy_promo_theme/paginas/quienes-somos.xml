@@ -2,18 +2,18 @@
   <section class="s_title o_cc o_cc1 pt64 pb32" data-snippet="s_title" data-vcss="001" data-name="Título de la página">
     <div class="container s_allow_columns">
       <h1>Quiénes somos</h1>
-      <p class="lead">BRANDTRENDY, S.A. DE C.V. es una empresa mexicana dedicada a artículos promocionales personalizables para empresas, con atención empresarial y operación propia en México.</p>
+      <p class="lead">Brandtrendy es una empresa mexicana dedicada a artículos promocionales personalizables para empresas, con atención empresarial y operación propia en México.</p>
     </div>
   </section>
-  <section class="s_text_block o_cc o_cc1 pt40 pb40" data-snippet="s_text_block" data-name="Historia y operación">
+  <section class="s_text_block o_cc o_cc1 pt0 pb40" data-snippet="s_text_block" data-name="Historia y operación">
     <div class="container s_allow_columns">
       <div class="row">
         <div class="col-lg-6 pt16 pb16">
-          <h2 class="h3-fs">Nuestra historia</h2>
-          <p>Operamos en comercio electrónico desde 2006. En 2015 formalizamos nuestra constitución legal como BRANDTRENDY, S.A. DE C.V.</p><p>En este tiempo hemos construido experiencia en desarrollo de producto, marketplaces y logística, que aplicamos en cada cotización y cada pedido que gestionamos.</p>
+          <h2 class="h1-fs">Nuestra historia</h2>
+          <p>Operamos en comercio electrónico desde 2006. En 2015 formalizamos nuestra constitución legal como BRANDTRENDY, S.A. DE C.V.</p><p>Hoy gestionamos producto, personalización, control de calidad y entrega nacional desde una sola operación, en cada cotización y cada pedido.</p>
         </div>
         <div class="col-lg-6 pt16 pb16">
-          <h2 class="h3-fs">Nuestra operación</h2>
+          <h2 class="h1-fs">Nuestra operación</h2>
           <p>Contamos con almacén propio en la Ciudad de México, que es también nuestro domicilio fiscal y operativo.</p><p>Damos cobertura a todo México por paquetería, según destino, peso y volumen. En CDMX y zona metropolitana ofrecemos, además, reparto propio, sujeto a disponibilidad. Conoce el detalle en <a href="/envios-y-cobertura">envíos y cobertura</a>.</p>
         </div>
       </div>
@@ -21,12 +21,12 @@
   </section>
   <section class="s_features o_cc o_cc2 pt64 pb64" data-snippet="s_features" data-name="Cómo trabajamos">
     <div class="container">
-      <h2 class="h3-fs">Cómo trabajamos</h2>
-      <p class="lead">Operamos por cotización. Agregas productos a Mi cotización, envías tu solicitud y un ejecutivo te responde en máximo 1 día hábil con una cotización formal. Trabajamos con distintas técnicas de personalización, según el producto y el diseño de cada proyecto.</p>
+      <h2 class="h1-fs">Cómo trabajamos</h2>
+      <p class="lead">Operamos por cotización. Agregas productos a Mi cotización, envías tu solicitud y un ejecutivo te responde en máximo 1 día hábil con una cotización formal de productos de catálogo; los proyectos a medida se acuerdan contigo según su alcance. Trabajamos con distintas técnicas de personalización, según el producto y el diseño de cada proyecto.</p>
       <div class="row">
         <div class="col-lg-3">
           <div class="s_hr pt-4 pb32" data-snippet="s_hr" data-name="Separador"><hr class="w-100 mx-auto"/></div>
-          <i class="s_features_icon fa fa-file-text-o mb-3 rounded bg-o-color-3" role="img"/>
+          <i class="s_features_icon fa fa-file-text-o mb-3 rounded bg-white" aria-hidden="true"/>
           <div class="overflow-hidden">
             <h3 class="h5-fs">Cotización transparente</h3>
             <p>Producto, personalización y envío desglosados por separado.</p>
@@ -34,7 +34,7 @@
         </div>
         <div class="col-lg-3">
           <div class="s_hr pt-4 pb32" data-snippet="s_hr" data-name="Separador"><hr class="w-100 mx-auto"/></div>
-          <i class="s_features_icon fa fa-eye mb-3 rounded bg-o-color-3" role="img"/>
+          <i class="s_features_icon fa fa-eye mb-3 rounded bg-white" aria-hidden="true"/>
           <div class="overflow-hidden">
             <h3 class="h5-fs">Prueba digital previa</h3>
             <p>Antes de iniciar producción generamos una prueba digital para tu revisión. Sin prueba aprobada, no hay producción.</p>
@@ -42,7 +42,7 @@
         </div>
         <div class="col-lg-3">
           <div class="s_hr pt-4 pb32" data-snippet="s_hr" data-name="Separador"><hr class="w-100 mx-auto"/></div>
-          <i class="s_features_icon fa fa-road mb-3 rounded bg-o-color-3" role="img"/>
+          <i class="s_features_icon fa fa-check-square-o mb-3 rounded bg-white" aria-hidden="true"/>
           <div class="overflow-hidden">
             <h3 class="h5-fs">Seguimiento de cada pedido</h3>
             <p>Damos seguimiento a cada pedido, de la cotización a la entrega.</p>
@@ -50,7 +50,7 @@
         </div>
         <div class="col-lg-3">
           <div class="s_hr pt-4 pb32" data-snippet="s_hr" data-name="Separador"><hr class="w-100 mx-auto"/></div>
-          <i class="s_features_icon fa fa-headphones mb-3 rounded bg-o-color-3" role="img"/>
+          <i class="s_features_icon fa fa-headphones mb-3 rounded bg-white" aria-hidden="true"/>
           <div class="overflow-hidden">
             <h3 class="h5-fs">Atención empresarial</h3>
             <p>Directa, por teléfono, WhatsApp o correo.</p>
@@ -63,11 +63,11 @@
     <div class="container">
       <div class="row">
         <div class="col-lg-9">
-          <h2 class="h3-fs">Hablemos de tu proyecto</h2>
-          <p class="lead">Explora nuestro catálogo de artículos promocionales o contáctanos para resolver dudas antes de cotizar.</p>
+          <h2 class="h1-fs">Hablemos de tu proyecto</h2>
+          <p class="lead">Cuéntanos tu caso y un ejecutivo te responde en 1 día hábil.</p>
         </div>
         <div class="col-lg-3">
-          <p style="text-align: right;"><a href="/contactus" class="btn btn-primary btn-lg o_translate_inline">Solicitar cotización</a></p>
+          <p style="text-align: right;"><a href="/contactus#asesoria" class="btn btn-primary btn-lg o_translate_inline">Solicitar asesoría</a></p>
         </div>
       </div>
     </div>

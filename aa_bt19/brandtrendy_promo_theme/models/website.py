@@ -16,7 +16,7 @@ PARAM_RESULTADO = MODULO + ".ultimo_aplicar"
 # Versión de la lógica de «aplicar». Los pasos de configuración se re-aplican cuando cambia este número (o en una base
 # recién restaurada); entre versiones, un cambio deliberado de un administrador se respeta. Subirla al cambiar PASOS,
 # VISTAS_APAGAR o los ajustes.
-APLICAR_VERSION = "3"
+APLICAR_VERSION = "4"
 PARAM_PASO = MODULO + ".aplicado."  # + nombre del paso → versión aplicada
 PARAM_CODIGO_RESPALDO = MODULO + ".codigo_respaldo"
 GSC_BLOQUE = re.compile(r"<!-- BT-GSC -->.*?<!-- /BT-GSC -->", re.S)  # verificación de Search Console: se conserva
@@ -27,6 +27,8 @@ ASSETS_SITIO = [  # (key, bundle, directiva, ruta)
      MODULO + "/static/src/scss/primary_variables.scss"),
     (MODULO + ".fuentes", "web.assets_frontend", "append", MODULO + "/static/src/scss/fuentes.scss"),
     (MODULO + ".tema", "web.assets_frontend", "append", MODULO + "/static/src/scss/tema.scss"),
+    (MODULO + ".tienda", "web.assets_frontend", "append", MODULO + "/static/src/scss/tienda.scss"),
+    (MODULO + ".ficha", "web.assets_frontend", "append", MODULO + "/static/src/scss/ficha.scss"),
     (MODULO + ".bootstrap", "web._assets_frontend_helpers", "prepend",
      MODULO + "/static/src/scss/bootstrap_overridden.scss"),
 ]

@@ -9,11 +9,11 @@
     <div class="container s_allow_columns">
       <div class="row">
         <div class="col-lg-6 pt16 pb16">
-          <h2 class="h3-fs">Cobertura nacional y paqueterías</h2>
+          <h2 class="h1-fs">Cobertura nacional y paqueterías</h2>
           <p>Enviamos a toda la República Mexicana a través de paqueterías como Estafeta, FedEx, DHL y Paquetexpress, seleccionadas según el destino, peso y volumen de cada pedido.</p>
         </div>
         <div class="col-lg-6 pt16 pb16">
-          <h2 class="h3-fs">Reparto propio en CDMX y zona metropolitana</h2>
+          <h2 class="h1-fs">Reparto propio en CDMX y zona metropolitana</h2>
           <p>Para pedidos dentro de la Ciudad de México y zona metropolitana contamos con reparto propio, sujeto a disponibilidad, volumen del pedido y cotización previa.</p>
         </div>
       </div>
@@ -23,8 +23,8 @@
     <div class="container">
       <div class="row align-items-start">
         <div class="col-lg-6 pt16 pb16">
-          <h2 class="h3-fs">El envío siempre se cotiza aparte</h2>
-          <p>Los precios publicados en el catálogo incluyen IVA, pero no incluyen el costo de envío. Este se cotiza de forma independiente.</p><p>El desglose completo — producto, personalización y envío — se entrega en tu cotización formal, junto con los datos bancarios para el pago por transferencia.</p>
+          <h2 class="h1-fs">El envío siempre se cotiza aparte</h2>
+          <p>Los precios publicados en el catálogo llevan IVA incluido; el envío se cotiza aparte, de forma independiente.</p><p>El desglose completo —producto, personalización y envío— se entrega en tu cotización formal, junto con los datos bancarios para el pago por transferencia.</p>
         </div>
         <div class="col-lg-5 offset-lg-1 pt16 pb16">
           <div class="s_card card o_cc o_cc1" data-vxml="001" data-snippet="s_card" data-name="Card" style="border-width: 0px !important;">
@@ -41,19 +41,19 @@
     <div class="container">
       <div class="row s_nb_column_fixed">
         <div class="col-lg-8">
-          <h2 class="mb-3 h3-fs">Tiempos de tránsito estimados</h2>
+          <h2 class="mb-3 h1-fs">Tiempos de tránsito estimados</h2>
           <p class="lead">Corren desde que tu pedido queda liberado.</p>
         </div>
       </div>
       <div class="row s_nb_column_fixed">
         <div class="col-lg-4">
-          <p style="text-align: center;"><span class="s_number display-1-fs">1 a 3</span><br/><span class="h5-fs">días · CDMX y zona metropolitana</span></p>
+          <p style="text-align: center;"><span class="s_number display-1-fs fw-bold">1 a 3</span><br/><span class="h5-fs">días · CDMX y zona metropolitana</span></p>
         </div>
         <div class="col-lg-4">
-          <p style="text-align: center;"><span class="s_number display-1-fs">1 a 7</span><br/><span class="h5-fs">días · interior de la República</span></p>
+          <p style="text-align: center;"><span class="s_number display-1-fs fw-bold">1 a 7</span><br/><span class="h5-fs">días · interior de la República</span></p>
         </div>
         <div class="col-lg-4">
-          <p style="text-align: center;"><span class="s_number display-1-fs">7 a 15</span><br/><span class="h5-fs">días · zonas extendidas</span></p>
+          <p style="text-align: center;"><span class="s_number display-1-fs fw-bold">7 a 15</span><br/><span class="h5-fs">días · zonas extendidas</span></p>
         </div>
       </div>
       <div class="row">
@@ -65,15 +65,15 @@
       </div>
     </div>
   </section>
-  <section class="s_text_image o_cc o_cc1 pt64 pb64" data-snippet="s_text_image" data-name="Recolección en almacén">
+  <section class="s_text_image o_cc o_cc2 pt64 pb64" data-snippet="s_text_image" data-name="Recolección en almacén">
     <div class="container">
       <div class="row align-items-start">
         <div class="col-lg-6 pt16 pb16">
-          <h2 class="h3-fs">Recolección en almacén</h2>
+          <h2 class="h1-fs">Recolección en almacén</h2>
           <p>Si prefieres recoger tu pedido directamente, puedes hacerlo con cita previa una vez que esté terminado, pagado y liberado.</p><h3 class="h5-fs">Requisitos para la recolección</h3><ul><li>Número de pedido</li><li>Persona autorizada</li><li>Identificación oficial vigente</li><li>Carta de autorización, si acude un tercero</li></ul>
         </div>
         <div class="col-lg-5 offset-lg-1 pt16 pb16">
-          <div class="s_card card o_cc o_cc2" data-vxml="001" data-snippet="s_card" data-name="Card" style="border-width: 0px !important;">
+          <div class="s_card card o_cc o_cc1" data-vxml="001" data-snippet="s_card" data-name="Card" style="border-width: 0px !important;">
               <div class="card-body">
                 <h3 class="card-title h5-fs">Dónde y cuándo</h3>
                 <p class="card-text">Poniente 134 núm. 682, Bodega E, Col. Industrial Vallejo, Alcaldía Azcapotzalco, C.P. 02300, CDMX.</p><p class="card-text">Atención de lunes a viernes de 8:30 a 17:30 horas (hora del centro). Sábados solo por WhatsApp, sujeto a disponibilidad y con confirmación expresa para recolecciones sabatinas.</p>
@@ -85,19 +85,19 @@
   </section>
   <section class="s_text_block o_cc o_cc1 pt48 pb48" data-snippet="s_text_block" data-name="Al recibir tu pedido">
     <div class="container s_allow_columns">
-      <h2 class="h3-fs">Al recibir tu pedido</h2>
-      <p>Antes de firmar de recibido: cuenta los bultos, revisa el estado del embalaje y anota cualquier anomalía directamente en la guía o carta porte de la paquetería; toma fotografías del paquete y su contenido. Este registro es indispensable para cualquier reclamación posterior.</p><p>Reporta cualquier anomalía dentro de los 3 días naturales siguientes a la entrega. Conoce el proceso completo en nuestra página de <a href="/devoluciones">devoluciones</a>.</p>
+      <h2 class="h1-fs">Al recibir tu pedido</h2>
+      <p>Antes de firmar de recibido: cuenta los bultos, revisa el estado del embalaje y anota cualquier anomalía directamente en la guía o carta porte de la paquetería; toma fotografías del paquete y su contenido. Este registro es indispensable para cualquier reclamación posterior.</p><p>Reporta cualquier anomalía dentro de los 3 días naturales siguientes a la entrega. Conoce el proceso completo en nuestra página de <a href="/devoluciones">devoluciones e incidencias</a>.</p>
     </div>
   </section>
   <section class="s_call_to_action o_cc o_cc5 pt64 pb64" data-snippet="s_call_to_action" data-name="Llamada a la acción">
     <div class="container">
       <div class="row">
         <div class="col-lg-9">
-          <h2 class="h3-fs">¿Tienes dudas sobre tu envío?</h2>
-          <p class="lead">Solicita tu cotización y te confirmamos tiempos y costos según tu destino. También puedes escribirnos a hola@brandtrendy.com.mx o llamar al +52 55 5526 0418.</p>
+          <h2 class="h1-fs">¿Tienes dudas sobre tu envío?</h2>
+          <p class="lead">Cuéntanos tu caso y un ejecutivo te responde en 1 día hábil.</p>
         </div>
         <div class="col-lg-3">
-          <p style="text-align: right;"><a href="/contactus" class="btn btn-primary btn-lg o_translate_inline">Solicitar cotización</a></p>
+          <p style="text-align: right;"><a href="/contactus#asesoria" class="btn btn-primary btn-lg o_translate_inline">Solicitar asesoría</a></p>
         </div>
       </div>
     </div>

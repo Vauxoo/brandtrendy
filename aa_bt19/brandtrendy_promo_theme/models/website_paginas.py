@@ -27,6 +27,14 @@ PARAM_HUELLA = MODULO + ".pagina."  # + url → sha1 del arch que dejó el módu
 MARCADOR = re.compile(r"\{\{(categoria|url_categoria|filtro):([^}]+)\}\}")
 CLASES_TIENDA = "{{clases_tienda}}"
 LANGS = ("en_US", "es_MX")
+COPYRIGHT_ARCH = """<data inherit_id="website.layout" priority="15">
+    <xpath expr="//footer//span[hasclass('o_footer_copyright_name')]" position="replace">
+        <span class="o_footer_copyright_name me-2 small">© Brandtrendy · Artículos promocionales para empresas</span>
+    </xpath>
+    <xpath expr="//div[hasclass('o_footer_copyright')]//div[hasclass('col-sm')]" position="attributes">
+        <attribute name="class" remove="col-sm text-sm-start" add="col-md d-flex flex-column-reverse gap-2 text-md-start" separator=" "/>
+    </xpath>
+</data>"""
 
 
 def _huella(texto):
@@ -173,6 +181,11 @@ class Website(models.Model):
         for lang in LANGS:
             vista.with_context(lang=lang).write({"arch_db": arch, "active": True})
         ICP.set_param(clave, _huella(vista.with_context(lang="es_MX").arch_db))
+        # Copyright propio del sitio (la plantilla estándar trae el texto de ejemplo «Copyright © Company name»).
+        derechos = self._bt_promo_vista_del_sitio("website.footer_copyright_company_name", True)
+        if derechos:
+            for lang in LANGS:
+                derechos.with_context(lang=lang, website_id=False).write({"arch_db": COPYRIGHT_ARCH})
         if faltantes:
             return "PENDIENTE (categorías faltantes: %s); pie aplicado" % sorted(faltantes)
         return "pie aplicado"

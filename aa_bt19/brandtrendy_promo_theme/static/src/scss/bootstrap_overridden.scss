@@ -3,3 +3,5 @@
 // Hanken Grotesk no tiene archivo de peso 500 (el que usa Bootstrap para encabezados): sin esto caen a 400.
 $headings-font-weight: 700 !default;
 $display-font-weight: 800 !default;
+// Botones en 600 (R5 §2.3); Bootstrap los deja en 400.
+$btn-font-weight: 600 !default;

@@ -5,7 +5,7 @@
       <p class="lead">Trabajamos por cotización: cada proyecto se define, se prueba y se aprueba antes de producirse. Así se ve el proceso completo, del primer contacto a la entrega.</p>
     </div>
   </section>
-  <section class="s_process_steps pt72 pb72 s_process_steps_connector_line" data-snippet="s_process_steps" data-vcss="002" data-vxml="002" data-name="Pasos del proceso">
+  <section class="s_process_steps pt72 pb48 s_process_steps_connector_line" data-snippet="s_process_steps" data-vcss="002" data-vxml="002" data-name="Pasos del proceso">
     <svg class="s_process_step_svg_defs position-absolute">
       <defs>
         <marker class="s_process_steps_arrow_head" markerWidth="15" markerHeight="10" refX="6" refY="6" orient="auto">
@@ -14,206 +14,161 @@
       </defs>
     </svg>
     <div class="container">
-      <h2 class="mb-4 text-center h3-fs">Paso a paso</h2>
+      <h2 class="mb-4 h1-fs">Paso a paso</h2>
       <div class="row g-0">
-        <div class="col-lg-3 s_process_step position-relative pt24 pb24">
+        <div class="col-lg-3 s_process_step position-relative d-flex d-lg-block align-items-start gap-3 pt16 pb16">
           <svg class="s_process_step_connector position-absolute z-index-1" viewBox="0 0 100 20" preserveAspectRatio="none"><path d="M 0 10 L 100 10" vector-effect="non-scaling-stroke"/></svg>
-          <div class="s_process_step_number d-flex align-items-center justify-content-center mx-auto rounded-circle bg-primary-light" data-name="Step Number"><h3 class="mb-0 text-primary text-center">1</h3></div>
-          <div class="s_process_step_content mt-3 px-3 text-center"><h3 class="h4-fs">Selección de producto y técnica</h3><p>Elige tus productos en el <a href="/shop">catálogo</a> y define la técnica de personalización para tu proyecto.</p></div>
+          <div class="s_process_step_number d-flex align-items-center justify-content-center flex-shrink-0 mx-0 mx-lg-auto rounded-circle bg-primary-light" data-name="Step Number"><span class="h3 mb-0 text-primary text-center" aria-hidden="true">1</span></div>
+          <div class="s_process_step_content mt-lg-3 px-lg-3 text-start text-lg-center"><h3 class="h4-fs">Selección de producto y técnica</h3><p>Elige tus productos en el <a href="/shop">catálogo</a> y define la técnica de personalización para tu proyecto.</p></div>
         </div>
-        <div class="col-lg-3 s_process_step position-relative pt24 pb24">
+        <div class="col-lg-3 s_process_step position-relative d-flex d-lg-block align-items-start gap-3 pt16 pb16">
           <svg class="s_process_step_connector position-absolute z-index-1" viewBox="0 0 100 20" preserveAspectRatio="none"><path d="M 0 10 L 100 10" vector-effect="non-scaling-stroke"/></svg>
-          <div class="s_process_step_number d-flex align-items-center justify-content-center mx-auto rounded-circle bg-primary-light" data-name="Step Number"><h3 class="mb-0 text-primary text-center">2</h3></div>
-          <div class="s_process_step_content mt-3 px-3 text-center"><h3 class="h4-fs">Solicitud de cotización</h3><p>Agregas tus productos a Mi cotización y envías tu solicitud con la información de tu proyecto.</p></div>
+          <div class="s_process_step_number d-flex align-items-center justify-content-center flex-shrink-0 mx-0 mx-lg-auto rounded-circle bg-primary-light" data-name="Step Number"><span class="h3 mb-0 text-primary text-center" aria-hidden="true">2</span></div>
+          <div class="s_process_step_content mt-lg-3 px-lg-3 text-start text-lg-center"><h3 class="h4-fs">Solicitud de cotización</h3><p>Agregas tus productos a Mi cotización y envías tu solicitud con la información de tu proyecto.</p></div>
         </div>
-        <div class="col-lg-3 s_process_step position-relative pt24 pb24">
+        <div class="col-lg-3 s_process_step position-relative d-flex d-lg-block align-items-start gap-3 pt16 pb16">
           <svg class="s_process_step_connector position-absolute z-index-1" viewBox="0 0 100 20" preserveAspectRatio="none"><path d="M 0 10 L 100 10" vector-effect="non-scaling-stroke"/></svg>
-          <div class="s_process_step_number d-flex align-items-center justify-content-center mx-auto rounded-circle bg-primary-light" data-name="Step Number"><h3 class="mb-0 text-primary text-center">3</h3></div>
-          <div class="s_process_step_content mt-3 px-3 text-center"><h3 class="h4-fs">Cotización formal</h3><p>Un ejecutivo responde en máximo 1 día hábil con producto, personalización y envío desglosados. La cotización tiene una vigencia de 7 días naturales.</p></div>
+          <div class="s_process_step_number d-flex align-items-center justify-content-center flex-shrink-0 mx-0 mx-lg-auto rounded-circle bg-primary-light" data-name="Step Number"><span class="h3 mb-0 text-primary text-center" aria-hidden="true">3</span></div>
+          <div class="s_process_step_content mt-lg-3 px-lg-3 text-start text-lg-center"><h3 class="h4-fs">Cotización formal</h3><p>Un ejecutivo responde en máximo 1 día hábil con producto, personalización y envío desglosados. La cotización tiene una vigencia de 7 días naturales.</p></div>
         </div>
-        <div class="col-lg-3 s_process_step position-relative pt24 pb24">
+        <div class="col-lg-3 s_process_step position-relative d-flex d-lg-block align-items-start gap-3 pt16 pb16">
+          <div class="s_process_step_number d-flex align-items-center justify-content-center flex-shrink-0 mx-0 mx-lg-auto rounded-circle bg-primary-light" data-name="Step Number"><span class="h3 mb-0 text-primary text-center" aria-hidden="true">4</span></div>
+          <div class="s_process_step_content mt-lg-3 px-lg-3 text-start text-lg-center"><h3 class="h4-fs">Anticipo</h3><p>En producto personalizado, el anticipo es del 70% para iniciar el proyecto. En entrega inmediata sin personalizar, el pago es del 100% antes de preparar, enviar, liberar o recolectar.</p></div>
+        </div>
+        <div class="col-lg-3 s_process_step position-relative d-flex d-lg-block align-items-start gap-3 pt16 pb16">
           <svg class="s_process_step_connector position-absolute z-index-1" viewBox="0 0 100 20" preserveAspectRatio="none"><path d="M 0 10 L 100 10" vector-effect="non-scaling-stroke"/></svg>
-          <div class="s_process_step_number d-flex align-items-center justify-content-center mx-auto rounded-circle bg-primary-light" data-name="Step Number"><h3 class="mb-0 text-primary text-center">4</h3></div>
-          <div class="s_process_step_content mt-3 px-3 text-center"><h3 class="h4-fs">Anticipo</h3><p>En producto personalizado, el anticipo es del 70% para iniciar el proyecto. En entrega inmediata sin personalizar, el pago es del 100% antes de preparar el pedido.</p></div>
+          <div class="s_process_step_number d-flex align-items-center justify-content-center flex-shrink-0 mx-0 mx-lg-auto rounded-circle bg-primary-light" data-name="Step Number"><span class="h3 mb-0 text-primary text-center" aria-hidden="true">5</span></div>
+          <div class="s_process_step_content mt-lg-3 px-lg-3 text-start text-lg-center"><h3 class="h4-fs">Entrega de archivos</h3><p>Envías tu logo y artes en los formatos requeridos.</p></div>
+        </div>
+        <div class="col-lg-3 s_process_step position-relative d-flex d-lg-block align-items-start gap-3 pt16 pb16">
+          <svg class="s_process_step_connector position-absolute z-index-1" viewBox="0 0 100 20" preserveAspectRatio="none"><path d="M 0 10 L 100 10" vector-effect="non-scaling-stroke"/></svg>
+          <div class="s_process_step_number d-flex align-items-center justify-content-center flex-shrink-0 mx-0 mx-lg-auto rounded-circle bg-primary-light" data-name="Step Number"><span class="h3 mb-0 text-primary text-center" aria-hidden="true">6</span></div>
+          <div class="s_process_step_content mt-lg-3 px-lg-3 text-start text-lg-center"><h3 class="h4-fs">Prueba digital</h3><p>Incluida sin costo. Se entrega en aproximadamente 1 día hábil desde que se confirman el anticipo, un logo adecuado, los textos, las instrucciones y la selección completa del pedido.</p></div>
+        </div>
+        <div class="col-lg-3 s_process_step position-relative d-flex d-lg-block align-items-start gap-3 pt16 pb16">
+          <svg class="s_process_step_connector position-absolute z-index-1" viewBox="0 0 100 20" preserveAspectRatio="none"><path d="M 0 10 L 100 10" vector-effect="non-scaling-stroke"/></svg>
+          <div class="s_process_step_number d-flex align-items-center justify-content-center flex-shrink-0 mx-0 mx-lg-auto rounded-circle bg-primary-light" data-name="Step Number"><span class="h3 mb-0 text-primary text-center" aria-hidden="true">7</span></div>
+          <div class="s_process_step_content mt-lg-3 px-lg-3 text-start text-lg-center"><h3 class="h4-fs">Ronda de cambios</h3><p>Incluye una ronda de ajustes sin costo sobre la prueba digital.</p></div>
+        </div>
+        <div class="col-lg-3 s_process_step position-relative d-flex d-lg-block align-items-start gap-3 pt16 pb16">
+          <div class="s_process_step_number d-flex align-items-center justify-content-center flex-shrink-0 mx-0 mx-lg-auto rounded-circle bg-primary-light" data-name="Step Number"><span class="h3 mb-0 text-primary text-center" aria-hidden="true">8</span></div>
+          <div class="s_process_step_content mt-lg-3 px-lg-3 text-start text-lg-center"><h3 class="h4-fs">Aprobación expresa</h3><p>Confirmas la prueba por escrito. Producimos solo con tu aprobación.</p></div>
+        </div>
+        <div class="col-lg-3 s_process_step position-relative d-flex d-lg-block align-items-start gap-3 pt16 pb16">
+          <svg class="s_process_step_connector position-absolute z-index-1" viewBox="0 0 100 20" preserveAspectRatio="none"><path d="M 0 10 L 100 10" vector-effect="non-scaling-stroke"/></svg>
+          <div class="s_process_step_number d-flex align-items-center justify-content-center flex-shrink-0 mx-0 mx-lg-auto rounded-circle bg-primary-light" data-name="Step Number"><span class="h3 mb-0 text-primary text-center" aria-hidden="true">9</span></div>
+          <div class="s_process_step_content mt-lg-3 px-lg-3 text-start text-lg-center"><h3 class="h4-fs">Producción</h3><p>Inicia con anticipo confirmado, producto y cantidades confirmados, archivos utilizables, prueba aprobada e información completa. El tiempo se confirma en tu cotización, según técnica y cantidad.</p></div>
+        </div>
+        <div class="col-lg-3 s_process_step position-relative d-flex d-lg-block align-items-start gap-3 pt16 pb16">
+          <svg class="s_process_step_connector position-absolute z-index-1" viewBox="0 0 100 20" preserveAspectRatio="none"><path d="M 0 10 L 100 10" vector-effect="non-scaling-stroke"/></svg>
+          <div class="s_process_step_number d-flex align-items-center justify-content-center flex-shrink-0 mx-0 mx-lg-auto rounded-circle bg-primary-light" data-name="Step Number"><span class="h3 mb-0 text-primary text-center" aria-hidden="true">10</span></div>
+          <div class="s_process_step_content mt-lg-3 px-lg-3 text-start text-lg-center"><h3 class="h4-fs">Control de calidad y liberación</h3><p>Revisamos el pedido y, en producto personalizado, lo liberamos al recibir el 30% restante.</p></div>
+        </div>
+        <div class="col-lg-3 s_process_step position-relative d-flex d-lg-block align-items-start gap-3 pt16 pb16">
+          <div class="s_process_step_number d-flex align-items-center justify-content-center flex-shrink-0 mx-0 mx-lg-auto rounded-circle bg-primary-light" data-name="Step Number"><span class="h3 mb-0 text-primary text-center" aria-hidden="true">11</span></div>
+          <div class="s_process_step_content mt-lg-3 px-lg-3 text-start text-lg-center"><h3 class="h4-fs">Envío o recolección</h3><p>Se envía o se recolecta en almacén, según lo acordado en la cotización. Consulta <a href="/envios-y-cobertura">envíos y cobertura</a>.</p></div>
         </div>
       </div>
     </div>
   </section>
-  <section class="s_process_steps pt0 pb72 s_process_steps_connector_line" data-snippet="s_process_steps" data-vcss="002" data-vxml="002" data-name="Pasos del proceso">
-    <svg class="s_process_step_svg_defs position-absolute">
-      <defs>
-        <marker class="s_process_steps_arrow_head" markerWidth="15" markerHeight="10" refX="6" refY="6" orient="auto">
-          <path d="M 2,2 L10,6 L2,10 L6,6 L2,2" vector-effect="non-scaling-size"/>
-        </marker>
-      </defs>
-    </svg>
+  <section class="s_faq_collapse o_cc o_cc1 pt48 pb32" data-snippet="s_faq_collapse" data-vcss="001" data-name="Técnicas de personalización">
     <div class="container">
-      <div class="row g-0">
-        <div class="col-lg-3 s_process_step position-relative pt24 pb24">
-          <svg class="s_process_step_connector position-absolute z-index-1" viewBox="0 0 100 20" preserveAspectRatio="none"><path d="M 0 10 L 100 10" vector-effect="non-scaling-stroke"/></svg>
-          <div class="s_process_step_number d-flex align-items-center justify-content-center mx-auto rounded-circle bg-primary-light" data-name="Step Number"><h3 class="mb-0 text-primary text-center">5</h3></div>
-          <div class="s_process_step_content mt-3 px-3 text-center"><h3 class="h4-fs">Entrega de archivos</h3><p>Envías tu logo y artes en los formatos requeridos.</p></div>
-        </div>
-        <div class="col-lg-3 s_process_step position-relative pt24 pb24">
-          <svg class="s_process_step_connector position-absolute z-index-1" viewBox="0 0 100 20" preserveAspectRatio="none"><path d="M 0 10 L 100 10" vector-effect="non-scaling-stroke"/></svg>
-          <div class="s_process_step_number d-flex align-items-center justify-content-center mx-auto rounded-circle bg-primary-light" data-name="Step Number"><h3 class="mb-0 text-primary text-center">6</h3></div>
-          <div class="s_process_step_content mt-3 px-3 text-center"><h3 class="h4-fs">Prueba digital</h3><p>Incluida sin costo. Se entrega en aproximadamente 1 día hábil desde que se confirman el anticipo, un logo adecuado, los textos, las instrucciones y la selección completa del pedido.</p></div>
-        </div>
-        <div class="col-lg-3 s_process_step position-relative pt24 pb24">
-          <svg class="s_process_step_connector position-absolute z-index-1" viewBox="0 0 100 20" preserveAspectRatio="none"><path d="M 0 10 L 100 10" vector-effect="non-scaling-stroke"/></svg>
-          <div class="s_process_step_number d-flex align-items-center justify-content-center mx-auto rounded-circle bg-primary-light" data-name="Step Number"><h3 class="mb-0 text-primary text-center">7</h3></div>
-          <div class="s_process_step_content mt-3 px-3 text-center"><h3 class="h4-fs">Ronda de cambios</h3><p>Incluye una ronda de ajustes sin costo sobre la prueba digital.</p></div>
-        </div>
-        <div class="col-lg-3 s_process_step position-relative pt24 pb24">
-          <svg class="s_process_step_connector position-absolute z-index-1" viewBox="0 0 100 20" preserveAspectRatio="none"><path d="M 0 10 L 100 10" vector-effect="non-scaling-stroke"/></svg>
-          <div class="s_process_step_number d-flex align-items-center justify-content-center mx-auto rounded-circle bg-primary-light" data-name="Step Number"><h3 class="mb-0 text-primary text-center">8</h3></div>
-          <div class="s_process_step_content mt-3 px-3 text-center"><h3 class="h4-fs">Aprobación expresa</h3><p>Confirmas la prueba por escrito. Producimos solo con tu aprobación.</p></div>
-        </div>
-      </div>
-    </div>
-  </section>
-  <section class="s_process_steps pt0 pb72 s_process_steps_connector_line" data-snippet="s_process_steps" data-vcss="002" data-vxml="002" data-name="Pasos del proceso">
-    <svg class="s_process_step_svg_defs position-absolute">
-      <defs>
-        <marker class="s_process_steps_arrow_head" markerWidth="15" markerHeight="10" refX="6" refY="6" orient="auto">
-          <path d="M 2,2 L10,6 L2,10 L6,6 L2,2" vector-effect="non-scaling-size"/>
-        </marker>
-      </defs>
-    </svg>
-    <div class="container">
-      <div class="row g-0">
-        <div class="col-lg-4 s_process_step position-relative pt24 pb24">
-          <svg class="s_process_step_connector position-absolute z-index-1" viewBox="0 0 100 20" preserveAspectRatio="none"><path d="M 0 10 L 100 10" vector-effect="non-scaling-stroke"/></svg>
-          <div class="s_process_step_number d-flex align-items-center justify-content-center mx-auto rounded-circle bg-primary-light" data-name="Step Number"><h3 class="mb-0 text-primary text-center">9</h3></div>
-          <div class="s_process_step_content mt-3 px-3 text-center"><h3 class="h4-fs">Producción</h3><p>Inicia con anticipo confirmado, producto y cantidades confirmados, archivos utilizables, prueba aprobada e información completa. El tiempo se confirma en tu cotización, según técnica y cantidad.</p></div>
-        </div>
-        <div class="col-lg-4 s_process_step position-relative pt24 pb24">
-          <svg class="s_process_step_connector position-absolute z-index-1" viewBox="0 0 100 20" preserveAspectRatio="none"><path d="M 0 10 L 100 10" vector-effect="non-scaling-stroke"/></svg>
-          <div class="s_process_step_number d-flex align-items-center justify-content-center mx-auto rounded-circle bg-primary-light" data-name="Step Number"><h3 class="mb-0 text-primary text-center">10</h3></div>
-          <div class="s_process_step_content mt-3 px-3 text-center"><h3 class="h4-fs">Control de calidad y liberación</h3><p>Revisamos el pedido y, en producto personalizado, lo liberamos al recibir el 30% restante.</p></div>
-        </div>
-        <div class="col-lg-4 s_process_step position-relative pt24 pb24">
-          <svg class="s_process_step_connector position-absolute z-index-1" viewBox="0 0 100 20" preserveAspectRatio="none"><path d="M 0 10 L 100 10" vector-effect="non-scaling-stroke"/></svg>
-          <div class="s_process_step_number d-flex align-items-center justify-content-center mx-auto rounded-circle bg-primary-light" data-name="Step Number"><h3 class="mb-0 text-primary text-center">11</h3></div>
-          <div class="s_process_step_content mt-3 px-3 text-center"><h3 class="h4-fs">Envío o recolección</h3><p>Se envía o se recolecta en almacén, según lo acordado en la cotización.</p></div>
-        </div>
-      </div>
-    </div>
-  </section>
-  <section class="s_cards_soft o_cc o_cc1 pt48 pb32" data-snippet="s_cards_soft" data-name="Técnicas de personalización">
-    <div class="container">
-      <h2 class="h3-fs">Técnicas de personalización</h2>
+      <h2 class="h1-fs">Técnicas de personalización</h2>
       <p class="lead">Cada ficha de producto indica qué técnicas admite ese artículo: son las que aparecen como opción al agregarlo a tu cotización. El costo de personalización se cotiza por proyecto, según técnica, área, número de tintas o posiciones y cantidad, y se confirma junto con tu cotización. No manejamos tarifas planas.</p>
       <div class="row">
-        <div data-name="Card" class="col-md-6 col-lg-4 pt16 pb16">
-          <div class="s_card card h-100 o_cc o_cc2" data-vxml="001" data-snippet="s_card" data-name="Card" style="border-width: 0px !important;">
-            <div class="card-body">
-              <h3 class="card-title h5-fs">Serigrafía</h3>
-              <p class="card-text">Impresión con mallas y tintas, indicada para superficies planas y diseños de pocos colores.</p>
+        <div class="col-lg-6 s_col_no_bgcolor" data-name="Accordion Box">
+          <div class="s_accordion" data-name="Accordion">
+            <div id="tecAcc1" class="accordion-flush accordion">
+              <div class="accordion-item position-relative z-1" data-name="Accordion Item">
+                <button type="button" id="tecAcc1-btn-1" class="accordion-header accordion-button collapsed justify-content-between gap-2 bg-transparent h6-fs fw-bold text-decoration-none text-reset transition-none" data-bs-target="#tecAcc1-tab-1" aria-controls="tecAcc1-tab-1" data-bs-toggle="collapse" aria-expanded="false"><span class="flex-grow-1">Serigrafía</span></button>
+                <div id="tecAcc1-tab-1" class="accordion-collapse collapse" data-bs-parent="#tecAcc1" role="region" aria-labelledby="tecAcc1-btn-1">
+                  <div class="accordion-body"><p>Impresión con mallas y tintas, indicada para superficies planas y diseños de pocos colores.</p></div>
+                </div>
+              </div>
+              <div class="accordion-item position-relative z-1" data-name="Accordion Item">
+                <button type="button" id="tecAcc1-btn-2" class="accordion-header accordion-button collapsed justify-content-between gap-2 bg-transparent h6-fs fw-bold text-decoration-none text-reset transition-none" data-bs-target="#tecAcc1-tab-2" aria-controls="tecAcc1-tab-2" data-bs-toggle="collapse" aria-expanded="false"><span class="flex-grow-1">Tampografía</span></button>
+                <div id="tecAcc1-tab-2" class="accordion-collapse collapse" data-bs-parent="#tecAcc1" role="region" aria-labelledby="tecAcc1-btn-2">
+                  <div class="accordion-body"><p>Impresión con tampón de silicón, útil para decorar superficies curvas o irregulares.</p></div>
+                </div>
+              </div>
+              <div class="accordion-item position-relative z-1" data-name="Accordion Item">
+                <button type="button" id="tecAcc1-btn-3" class="accordion-header accordion-button collapsed justify-content-between gap-2 bg-transparent h6-fs fw-bold text-decoration-none text-reset transition-none" data-bs-target="#tecAcc1-tab-3" aria-controls="tecAcc1-tab-3" data-bs-toggle="collapse" aria-expanded="false"><span class="flex-grow-1">Grabado láser</span></button>
+                <div id="tecAcc1-tab-3" class="accordion-collapse collapse" data-bs-parent="#tecAcc1" role="region" aria-labelledby="tecAcc1-btn-3">
+                  <div class="accordion-body"><p>Marca la superficie del material con láser; aplica en metal, madera y algunos plásticos.</p></div>
+                </div>
+              </div>
+              <div class="accordion-item position-relative z-1" data-name="Accordion Item">
+                <button type="button" id="tecAcc1-btn-4" class="accordion-header accordion-button collapsed justify-content-between gap-2 bg-transparent h6-fs fw-bold text-decoration-none text-reset transition-none" data-bs-target="#tecAcc1-tab-4" aria-controls="tecAcc1-tab-4" data-bs-toggle="collapse" aria-expanded="false"><span class="flex-grow-1">Bordado</span></button>
+                <div id="tecAcc1-tab-4" class="accordion-collapse collapse" data-bs-parent="#tecAcc1" role="region" aria-labelledby="tecAcc1-btn-4">
+                  <div class="accordion-body"><p>Decoración con hilo sobre textil, con acabado resistente en prendas, gorras y bolsas.</p></div>
+                </div>
+              </div>
+              <div class="accordion-item position-relative z-1" data-name="Accordion Item">
+                <button type="button" id="tecAcc1-btn-5" class="accordion-header accordion-button collapsed justify-content-between gap-2 bg-transparent h6-fs fw-bold text-decoration-none text-reset transition-none" data-bs-target="#tecAcc1-tab-5" aria-controls="tecAcc1-tab-5" data-bs-toggle="collapse" aria-expanded="false"><span class="flex-grow-1">Sublimación</span></button>
+                <div id="tecAcc1-tab-5" class="accordion-collapse collapse" data-bs-parent="#tecAcc1" role="region" aria-labelledby="tecAcc1-btn-5">
+                  <div class="accordion-body"><p>Transfiere tinta mediante calor sobre superficies con recubrimiento apto para esta técnica.</p></div>
+                </div>
+              </div>
+              <div class="accordion-item position-relative z-1" data-name="Accordion Item">
+                <button type="button" id="tecAcc1-btn-6" class="accordion-header accordion-button collapsed justify-content-between gap-2 bg-transparent h6-fs fw-bold text-decoration-none text-reset transition-none" data-bs-target="#tecAcc1-tab-6" aria-controls="tecAcc1-tab-6" data-bs-toggle="collapse" aria-expanded="false"><span class="flex-grow-1">DTF / transfer</span></button>
+                <div id="tecAcc1-tab-6" class="accordion-collapse collapse" data-bs-parent="#tecAcc1" role="region" aria-labelledby="tecAcc1-btn-6">
+                  <div class="accordion-body"><p>Impresión sobre film que se transfiere con calor; permite diseños a color.</p></div>
+                </div>
+              </div>
+              <div class="accordion-item position-relative z-1" data-name="Accordion Item">
+                <button type="button" id="tecAcc1-btn-7" class="accordion-header accordion-button collapsed justify-content-between gap-2 bg-transparent h6-fs fw-bold text-decoration-none text-reset transition-none" data-bs-target="#tecAcc1-tab-7" aria-controls="tecAcc1-tab-7" data-bs-toggle="collapse" aria-expanded="false"><span class="flex-grow-1">Termograbado</span></button>
+                <div id="tecAcc1-tab-7" class="accordion-collapse collapse" data-bs-parent="#tecAcc1" role="region" aria-labelledby="tecAcc1-btn-7">
+                  <div class="accordion-body"><p>Marca por calor y presión, común en piel, cartón y algunos materiales sintéticos.</p></div>
+                </div>
+              </div>
             </div>
           </div>
         </div>
-        <div data-name="Card" class="col-md-6 col-lg-4 pt16 pb16">
-          <div class="s_card card h-100 o_cc o_cc2" data-vxml="001" data-snippet="s_card" data-name="Card" style="border-width: 0px !important;">
-            <div class="card-body">
-              <h3 class="card-title h5-fs">Tampografía</h3>
-              <p class="card-text">Impresión con tampón de silicón, útil para decorar superficies curvas o irregulares.</p>
-            </div>
-          </div>
-        </div>
-        <div data-name="Card" class="col-md-6 col-lg-4 pt16 pb16">
-          <div class="s_card card h-100 o_cc o_cc2" data-vxml="001" data-snippet="s_card" data-name="Card" style="border-width: 0px !important;">
-            <div class="card-body">
-              <h3 class="card-title h5-fs">Grabado láser</h3>
-              <p class="card-text">Marca la superficie del material con láser; aplica en metal, madera y algunos plásticos.</p>
-            </div>
-          </div>
-        </div>
-        <div data-name="Card" class="col-md-6 col-lg-4 pt16 pb16">
-          <div class="s_card card h-100 o_cc o_cc2" data-vxml="001" data-snippet="s_card" data-name="Card" style="border-width: 0px !important;">
-            <div class="card-body">
-              <h3 class="card-title h5-fs">Bordado</h3>
-              <p class="card-text">Decoración con hilo sobre textil, con acabado resistente en prendas, gorras y bolsas.</p>
-            </div>
-          </div>
-        </div>
-        <div data-name="Card" class="col-md-6 col-lg-4 pt16 pb16">
-          <div class="s_card card h-100 o_cc o_cc2" data-vxml="001" data-snippet="s_card" data-name="Card" style="border-width: 0px !important;">
-            <div class="card-body">
-              <h3 class="card-title h5-fs">Sublimación</h3>
-              <p class="card-text">Transfiere tinta mediante calor sobre superficies con recubrimiento apto para esta técnica.</p>
-            </div>
-          </div>
-        </div>
-        <div data-name="Card" class="col-md-6 col-lg-4 pt16 pb16">
-          <div class="s_card card h-100 o_cc o_cc2" data-vxml="001" data-snippet="s_card" data-name="Card" style="border-width: 0px !important;">
-            <div class="card-body">
-              <h3 class="card-title h5-fs">DTF / transfer</h3>
-              <p class="card-text">Impresión sobre film que se transfiere con calor; permite diseños a color.</p>
-            </div>
-          </div>
-        </div>
-        <div data-name="Card" class="col-md-6 col-lg-4 pt16 pb16">
-          <div class="s_card card h-100 o_cc o_cc2" data-vxml="001" data-snippet="s_card" data-name="Card" style="border-width: 0px !important;">
-            <div class="card-body">
-              <h3 class="card-title h5-fs">Termograbado</h3>
-              <p class="card-text">Marca por calor y presión, común en piel, cartón y algunos materiales sintéticos.</p>
-            </div>
-          </div>
-        </div>
-        <div data-name="Card" class="col-md-6 col-lg-4 pt16 pb16">
-          <div class="s_card card h-100 o_cc o_cc2" data-vxml="001" data-snippet="s_card" data-name="Card" style="border-width: 0px !important;">
-            <div class="card-body">
-              <h3 class="card-title h5-fs">Pantógrafo</h3>
-              <p class="card-text">Grabado mecánico con punta de diamante sobre metal; deja un corte brillante a la vista.</p>
-            </div>
-          </div>
-        </div>
-        <div data-name="Card" class="col-md-6 col-lg-4 pt16 pb16">
-          <div class="s_card card h-100 o_cc o_cc2" data-vxml="001" data-snippet="s_card" data-name="Card" style="border-width: 0px !important;">
-            <div class="card-body">
-              <h3 class="card-title h5-fs">Grabado espejo</h3>
-              <p class="card-text">Grabado sobre metal que deja un acabado pulido tipo espejo dentro del área marcada.</p>
-            </div>
-          </div>
-        </div>
-        <div data-name="Card" class="col-md-6 col-lg-4 pt16 pb16">
-          <div class="s_card card h-100 o_cc o_cc2" data-vxml="001" data-snippet="s_card" data-name="Card" style="border-width: 0px !important;">
-            <div class="card-body">
-              <h3 class="card-title h5-fs">Grabado en arena</h3>
-              <p class="card-text">Desgaste de la superficie con abrasivo a presión; se usa en vidrio, cerámica y madera.</p>
-            </div>
-          </div>
-        </div>
-        <div data-name="Card" class="col-md-6 col-lg-4 pt16 pb16">
-          <div class="s_card card h-100 o_cc o_cc2" data-vxml="001" data-snippet="s_card" data-name="Card" style="border-width: 0px !important;">
-            <div class="card-body">
-              <h3 class="card-title h5-fs">Goteado en resina</h3>
-              <p class="card-text">Etiqueta impresa cubierta con una gota de resina transparente que da volumen y brillo.</p>
-            </div>
-          </div>
-        </div>
-        <div data-name="Card" class="col-md-6 col-lg-4 pt16 pb16">
-          <div class="s_card card h-100 o_cc o_cc2" data-vxml="001" data-snippet="s_card" data-name="Card" style="border-width: 0px !important;">
-            <div class="card-body">
-              <h3 class="card-title h5-fs">Termocalca</h3>
-              <p class="card-text">Calca aplicada con calor sobre cerámica; permite diseños a color.</p>
-            </div>
-          </div>
-        </div>
-        <div data-name="Card" class="col-md-6 col-lg-4 pt16 pb16">
-          <div class="s_card card h-100 o_cc o_cc2" data-vxml="001" data-snippet="s_card" data-name="Card" style="border-width: 0px !important;">
-            <div class="card-body">
-              <h3 class="card-title h5-fs">Vinil textil</h3>
-              <p class="card-text">Vinil cortado y aplicado con calor sobre prendas.</p>
-            </div>
-          </div>
-        </div>
-        <div data-name="Card" class="col-md-6 col-lg-4 pt16 pb16">
-          <div class="s_card card h-100 o_cc o_cc2" data-vxml="001" data-snippet="s_card" data-name="Card" style="border-width: 0px !important;">
-            <div class="card-body">
-              <h3 class="card-title h5-fs">Impresión a todo color</h3>
-              <p class="card-text">Impresión de diseños con varias tintas o degradados en una sola aplicación.</p>
+        <div class="col-lg-6 s_col_no_bgcolor" data-name="Accordion Box">
+          <div class="s_accordion" data-name="Accordion">
+            <div id="tecAcc2" class="accordion-flush accordion">
+              <div class="accordion-item position-relative z-1" data-name="Accordion Item">
+                <button type="button" id="tecAcc2-btn-1" class="accordion-header accordion-button collapsed justify-content-between gap-2 bg-transparent h6-fs fw-bold text-decoration-none text-reset transition-none" data-bs-target="#tecAcc2-tab-1" aria-controls="tecAcc2-tab-1" data-bs-toggle="collapse" aria-expanded="false"><span class="flex-grow-1">Pantógrafo</span></button>
+                <div id="tecAcc2-tab-1" class="accordion-collapse collapse" data-bs-parent="#tecAcc2" role="region" aria-labelledby="tecAcc2-btn-1">
+                  <div class="accordion-body"><p>Grabado mecánico con punta de diamante sobre metal; deja un corte brillante a la vista.</p></div>
+                </div>
+              </div>
+              <div class="accordion-item position-relative z-1" data-name="Accordion Item">
+                <button type="button" id="tecAcc2-btn-2" class="accordion-header accordion-button collapsed justify-content-between gap-2 bg-transparent h6-fs fw-bold text-decoration-none text-reset transition-none" data-bs-target="#tecAcc2-tab-2" aria-controls="tecAcc2-tab-2" data-bs-toggle="collapse" aria-expanded="false"><span class="flex-grow-1">Grabado espejo</span></button>
+                <div id="tecAcc2-tab-2" class="accordion-collapse collapse" data-bs-parent="#tecAcc2" role="region" aria-labelledby="tecAcc2-btn-2">
+                  <div class="accordion-body"><p>Grabado sobre metal que deja un acabado pulido tipo espejo dentro del área marcada.</p></div>
+                </div>
+              </div>
+              <div class="accordion-item position-relative z-1" data-name="Accordion Item">
+                <button type="button" id="tecAcc2-btn-3" class="accordion-header accordion-button collapsed justify-content-between gap-2 bg-transparent h6-fs fw-bold text-decoration-none text-reset transition-none" data-bs-target="#tecAcc2-tab-3" aria-controls="tecAcc2-tab-3" data-bs-toggle="collapse" aria-expanded="false"><span class="flex-grow-1">Grabado en arena</span></button>
+                <div id="tecAcc2-tab-3" class="accordion-collapse collapse" data-bs-parent="#tecAcc2" role="region" aria-labelledby="tecAcc2-btn-3">
+                  <div class="accordion-body"><p>Desgaste de la superficie con abrasivo a presión; se usa en vidrio, cerámica y madera.</p></div>
+                </div>
+              </div>
+              <div class="accordion-item position-relative z-1" data-name="Accordion Item">
+                <button type="button" id="tecAcc2-btn-4" class="accordion-header accordion-button collapsed justify-content-between gap-2 bg-transparent h6-fs fw-bold text-decoration-none text-reset transition-none" data-bs-target="#tecAcc2-tab-4" aria-controls="tecAcc2-tab-4" data-bs-toggle="collapse" aria-expanded="false"><span class="flex-grow-1">Goteado en resina</span></button>
+                <div id="tecAcc2-tab-4" class="accordion-collapse collapse" data-bs-parent="#tecAcc2" role="region" aria-labelledby="tecAcc2-btn-4">
+                  <div class="accordion-body"><p>Etiqueta impresa cubierta con una gota de resina transparente que da volumen y brillo.</p></div>
+                </div>
+              </div>
+              <div class="accordion-item position-relative z-1" data-name="Accordion Item">
+                <button type="button" id="tecAcc2-btn-5" class="accordion-header accordion-button collapsed justify-content-between gap-2 bg-transparent h6-fs fw-bold text-decoration-none text-reset transition-none" data-bs-target="#tecAcc2-tab-5" aria-controls="tecAcc2-tab-5" data-bs-toggle="collapse" aria-expanded="false"><span class="flex-grow-1">Termocalca</span></button>
+                <div id="tecAcc2-tab-5" class="accordion-collapse collapse" data-bs-parent="#tecAcc2" role="region" aria-labelledby="tecAcc2-btn-5">
+                  <div class="accordion-body"><p>Calca aplicada con calor sobre cerámica; permite diseños a color.</p></div>
+                </div>
+              </div>
+              <div class="accordion-item position-relative z-1" data-name="Accordion Item">
+                <button type="button" id="tecAcc2-btn-6" class="accordion-header accordion-button collapsed justify-content-between gap-2 bg-transparent h6-fs fw-bold text-decoration-none text-reset transition-none" data-bs-target="#tecAcc2-tab-6" aria-controls="tecAcc2-tab-6" data-bs-toggle="collapse" aria-expanded="false"><span class="flex-grow-1">Vinil textil</span></button>
+                <div id="tecAcc2-tab-6" class="accordion-collapse collapse" data-bs-parent="#tecAcc2" role="region" aria-labelledby="tecAcc2-btn-6">
+                  <div class="accordion-body"><p>Vinil cortado y aplicado con calor sobre prendas.</p></div>
+                </div>
+              </div>
+              <div class="accordion-item position-relative z-1" data-name="Accordion Item">
+                <button type="button" id="tecAcc2-btn-7" class="accordion-header accordion-button collapsed justify-content-between gap-2 bg-transparent h6-fs fw-bold text-decoration-none text-reset transition-none" data-bs-target="#tecAcc2-tab-7" aria-controls="tecAcc2-tab-7" data-bs-toggle="collapse" aria-expanded="false"><span class="flex-grow-1">Impresión a todo color</span></button>
+                <div id="tecAcc2-tab-7" class="accordion-collapse collapse" data-bs-parent="#tecAcc2" role="region" aria-labelledby="tecAcc2-btn-7">
+                  <div class="accordion-body"><p>Impresión de diseños con varias tintas o degradados en una sola aplicación.</p></div>
+                </div>
+              </div>
             </div>
           </div>
         </div>
@@ -222,7 +177,7 @@
   </section>
   <section class="s_cards_soft o_cc o_cc1 pt48 pb32" data-snippet="s_cards_soft" data-name="Requisitos de archivos">
     <div class="container">
-      <h2 class="h3-fs">Requisitos de archivos</h2>
+      <h2 class="h1-fs">Requisitos de archivos</h2>
       <p class="lead">Para preparar tu prueba digital sin demoras, envía tu arte en alguno de estos formatos.</p>
       <div class="row">
         <div data-name="Card" class="col-lg-6 pt16 pb16">
@@ -247,20 +202,20 @@
   </section>
   <section class="s_text_block o_cc o_cc2 pt48 pb48" data-snippet="s_text_block" data-name="Checklist de la prueba">
     <div class="container s_allow_columns">
-      <h2 class="h3-fs">Checklist antes de aprobar tu prueba</h2>
+      <h2 class="h1-fs">Checklist antes de aprobar tu prueba</h2>
       <p>Revisa estos puntos antes de dar tu aprobación. Una vez aprobada, la producción avanza sobre esa base.</p>
-      <div class="row"><div class="col-6 col-lg-4"><ul class="list-unstyled"><li><i class="fa fa-check text-o-color-2 me-2" role="img"/>Logo</li><li><i class="fa fa-check text-o-color-2 me-2" role="img"/>Ortografía</li><li><i class="fa fa-check text-o-color-2 me-2" role="img"/>Fechas</li><li><i class="fa fa-check text-o-color-2 me-2" role="img"/>Nombres</li></ul></div><div class="col-6 col-lg-4"><ul class="list-unstyled"><li><i class="fa fa-check text-o-color-2 me-2" role="img"/>Teléfonos</li><li><i class="fa fa-check text-o-color-2 me-2" role="img"/>Direcciones</li><li><i class="fa fa-check text-o-color-2 me-2" role="img"/>Código QR</li><li><i class="fa fa-check text-o-color-2 me-2" role="img"/>Colores</li></ul></div><div class="col-6 col-lg-4"><ul class="list-unstyled"><li><i class="fa fa-check text-o-color-2 me-2" role="img"/>Tamaño</li><li><i class="fa fa-check text-o-color-2 me-2" role="img"/>Posición</li><li><i class="fa fa-check text-o-color-2 me-2" role="img"/>Técnica</li><li><i class="fa fa-check text-o-color-2 me-2" role="img"/>Producto y variante</li></ul></div></div>
+      <div class="row"><div class="col-6 col-lg-4"><ul class="list-unstyled"><li><i class="fa fa-check text-o-color-2 me-2" aria-hidden="true"/>Logo</li><li><i class="fa fa-check text-o-color-2 me-2" aria-hidden="true"/>Ortografía</li><li><i class="fa fa-check text-o-color-2 me-2" aria-hidden="true"/>Fechas</li><li><i class="fa fa-check text-o-color-2 me-2" aria-hidden="true"/>Nombres</li></ul></div><div class="col-6 col-lg-4"><ul class="list-unstyled"><li><i class="fa fa-check text-o-color-2 me-2" aria-hidden="true"/>Teléfonos</li><li><i class="fa fa-check text-o-color-2 me-2" aria-hidden="true"/>Direcciones</li><li><i class="fa fa-check text-o-color-2 me-2" aria-hidden="true"/>Código QR</li><li><i class="fa fa-check text-o-color-2 me-2" aria-hidden="true"/>Colores</li></ul></div><div class="col-6 col-lg-4"><ul class="list-unstyled"><li><i class="fa fa-check text-o-color-2 me-2" aria-hidden="true"/>Tamaño</li><li><i class="fa fa-check text-o-color-2 me-2" aria-hidden="true"/>Posición</li><li><i class="fa fa-check text-o-color-2 me-2" aria-hidden="true"/>Técnica</li><li><i class="fa fa-check text-o-color-2 me-2" aria-hidden="true"/>Producto y variante</li></ul></div></div>
     </div>
   </section>
   <section class="s_cards_soft o_cc o_cc1 pt48 pb32" data-snippet="s_cards_soft" data-name="Aprobación, color y muestras">
     <div class="container">
-      <h2 class="h3-fs">Aprobación, color y muestras</h2>
+      <h2 class="h1-fs">Aprobación, color y muestras</h2>
       <div class="row">
         <div data-name="Card" class="col-lg-4 pt16 pb16">
           <div class="s_card card h-100 o_cc o_cc2" data-vxml="001" data-snippet="s_card" data-name="Card" style="border-width: 0px !important;">
             <div class="card-body">
               <h3 class="card-title h5-fs">Qué pasa después de aprobar</h3>
-              <p class="card-text">Al aprobar la prueba digital por escrito, confirmas logo, textos, colores, tamaño, posición y técnica. Si la producción difiere materialmente de la prueba aprobada, nos hacemos cargo. Sin prueba aprobada, no hay producción.</p>
+              <p class="card-text">Al aprobar la prueba digital por escrito, confirmas logo, textos, colores, tamaño, posición y técnica. Si la producción difiere de la prueba aprobada por causa atribuible a Brandtrendy, la corregimos conforme a nuestros <a href="/terminos-y-condiciones">términos y condiciones</a>. Sin prueba aprobada, no hay producción.</p>
             </div>
           </div>
         </div>
@@ -287,11 +242,11 @@
     <div class="container">
       <div class="row">
         <div class="col-lg-9">
-          <h2 class="h3-fs">¿Listo para tu proyecto?</h2>
-          <p class="lead">Cuéntanos qué necesitas y te enviamos una cotización con producto, personalización y envío desglosados en máximo 1 día hábil. Precios especiales por volumen — solicita tu cotización.</p>
+          <h2 class="h1-fs">¿Listo para tu proyecto?</h2>
+          <p class="lead">Cuéntanos tu caso y un ejecutivo te responde en 1 día hábil.</p>
         </div>
         <div class="col-lg-3">
-          <p style="text-align: right;"><a href="/contactus" class="btn btn-primary btn-lg o_translate_inline">Solicitar cotización</a></p>
+          <p style="text-align: right;"><a href="/contactus#asesoria" class="btn btn-primary btn-lg o_translate_inline">Solicitar asesoría</a></p>
         </div>
       </div>
     </div>

@@ -1,0 +1,234 @@
+// Listados de la tienda del sitio «Promocionales Brandtrendy»: tarjeta de producto, cabecera de /shop y categorías,
+// listados dinámicos en rejilla y resultados de búsqueda. Se carga SOLO en ese sitio (ir.asset con website_id).
+// Escrito en CSS plano (sin anidar ni mixins) para que se lea igual compilado o pegado.
+// Medidas y colores: R5 §2.2-2.3 (tarjeta blanca, borde 1 px #F3F3F4, radio 12, imagen 1:1 contain, precio en ink).
+
+// ---------------------------------------------------------------- Tarjeta de producto (/shop, categoría, dinámicos)
+#wrap .oe_product_cart {
+    --o-wsale-card-bg: #FFFFFF;
+    --o-wsale-card-border-width: 1px;
+    --o-wsale-card-border-color: #F3F3F4;
+    --o-wsale-card-border-color-hover: #F3F3F4;
+    --o-wsale-card-border-radius: 12px;
+    --o-wsale-card-padding: 0;
+    --o-wsale-card-shadow: none;
+    --o-wsale-card-shadow-hover: 0 8px 24px rgba(35, 31, 32, .12);
+    --o-wsale-card-transform-hover: none;
+    --o-wsale-card-transition: box-shadow 150ms ease-out;
+    --o-wsale-card-thumb-aspect-ratio: 1;
+    --o-wsale-card-thumb-fill-mode: contain;
+    --o-wsale-card-thumb-position: center;
+    --o-wsale-card-thumb-background: #FFFFFF;
+    --o-wsale-card-thumb-border-radius: 12px 12px 0 0;
+    --o-wsale-card-thumb-shadow: none;
+    --o-wsale-card-img-transform-hover: none;
+    --o-wsale-card-info-padding: 12px 16px 16px;
+    --o-wsale-card-info-font-size: 1rem;
+    overflow: hidden;
+}
+
+// Foto completa a su proporción, con margen blanco; nunca recortada.
+#wrap .oe_product_cart .oe_product_image_img {
+    padding: 8%;
+    background-color: #FFFFFF;
+}
+
+#wrap .oe_product_cart .o_wsale_products_item_title {
+    max-width: none;
+    margin-bottom: 4px;
+    font-size: 1rem;
+    line-height: 1.5rem;
+    font-weight: 600;
+}
+
+#wrap .oe_product_cart .o_wsale_products_item_title > a {
+    display: -webkit-box;
+    -webkit-line-clamp: 3;
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+    color: #231F20;
+}
+
+#wrap .oe_product_cart .bt_tarjeta_pie {
+    order: 6;
+    margin-top: auto;
+    width: 100%;
+}
+
+// Orden de lectura: precio, mínimo y técnicas, botón (Odoo da order 6 a .product_price).
+#wrap .oe_product_cart .bt_tarjeta_pie > * {
+    order: 0;
+}
+
+#wrap .oe_product_cart .bt_tarjeta_precio {
+    display: block;
+    min-width: 0;
+    font-size: 1.125rem;
+    line-height: 1.5rem;
+    font-weight: 700;
+    color: #231F20;
+    font-variant-numeric: tabular-nums;
+}
+
+#wrap .oe_product_cart .bt_tarjeta_desde,
+#wrap .oe_product_cart .bt_tarjeta_iva {
+    font-size: .875rem;
+    line-height: 1.25rem;
+    font-weight: 400;
+    color: #5F5E61;
+}
+
+#wrap .oe_product_cart .bt_tarjeta_iva {
+    white-space: nowrap;
+}
+
+#wrap .oe_product_cart .bt_tarjeta_detalle {
+    font-size: .875rem;
+    line-height: 1.25rem;
+    color: #5F5E61;
+}
+
+#wrap .oe_product_cart .bt_tarjeta_cta {
+    position: relative;
+    z-index: 2;
+    width: 100%;
+    min-height: 44px;
+    white-space: normal;
+}
+
+// Rejilla de /shop: el hueco vertical acompaña al de la tarjeta con borde.
+#o_wsale_products_grid {
+    --o-wsale-products-grid-gap-y-multiplier: 1;
+}
+
+// ---------------------------------------------------------------- Listados dinámicos (home y landings) en rejilla
+// En Odoo 19 el bloque de productos siempre es un carrusel y avanza solo aunque la página pida intervalo 0
+// (website/static/src/interactions/carousel/carousel_slider.js reescribe el 0 por 5000). Se presentan todas las
+// diapositivas como una sola rejilla: nada se desplaza a la vista y no hay flechas.
+.s_dynamic_snippet_products .carousel-inner {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 16px;
+    overflow: visible;
+}
+
+.s_dynamic_snippet_products .carousel-inner > .carousel-item,
+.s_dynamic_snippet_products .carousel-inner .s_dynamic_snippet_row {
+    display: contents !important;
+}
+
+.s_dynamic_snippet_products .s_dynamic_snippet_row > div {
+    width: auto;
+    max-width: none;
+    margin: 0;
+    padding: 0;
+}
+
+.s_dynamic_snippet_products .carousel-control-prev,
+.s_dynamic_snippet_products .carousel-control-next,
+.s_dynamic_snippet_products .s_dynamic_snippet_arrow_bottom {
+    display: none !important;
+}
+
+@media (min-width: 768px) {
+    .s_dynamic_snippet_products .carousel-inner {
+        grid-template-columns: repeat(3, minmax(0, 1fr));
+        gap: 24px;
+    }
+}
+
+@media (min-width: 992px) {
+    .s_dynamic_snippet_products .carousel-inner {
+        grid-template-columns: repeat(4, minmax(0, 1fr));
+    }
+    .s_dynamic_snippet_products[data-number-of-elements="3"] .carousel-inner {
+        grid-template-columns: repeat(3, minmax(0, 1fr));
+    }
+    .s_dynamic_snippet_products[data-number-of-elements="2"] .carousel-inner {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+    }
+}
+
+// ---------------------------------------------------------------- Cabecera de /shop, categorías y búsqueda
+#o_wsale_products_header .o_wsale_category_title:not(.o_wsale_category_title_is_search),
+.bt_titulo_listado {
+    font-size: 1.75rem !important;
+    line-height: 2.25rem !important;
+    font-weight: 700;
+    color: #231F20;
+}
+
+#o_wsale_products_header .o_wsale_category_description,
+#o_wsale_products_header .o_wsale_category_description p {
+    max-width: 72ch;
+    font-size: 1rem;
+    line-height: 1.5rem;
+    color: #5F5E61;
+}
+
+// Píldoras de categoría: solo texto (las categorías no tienen imagen y el cuadro gris vacío no aporta).
+#o_wsale_categories_filmstrip .o_wsale_filmstrip_placeholder {
+    display: none !important;
+}
+
+// Móvil: la fila de píldoras se desvanece a la derecha para indicar que se desplaza.
+@media (max-width: 991.98px) {
+    #o_wsale_categories_filmstrip .o_wsale_filmstrip_wrapper {
+        -webkit-mask-image: linear-gradient(to right, #000 85%, transparent);
+        mask-image: linear-gradient(to right, #000 85%, transparent);
+    }
+    #o_wsale_categories_filmstrip .o_wsale_filmstrip {
+        padding-right: 32px;
+    }
+}
+
+// ---------------------------------------------------------------- Resultados de búsqueda (/website/search y sugerencias)
+// Sin la fila de categorías de cada resultado (de 6 a 9 enlaces que compiten con el título).
+.o_search_result_item_detail .btn-link {
+    display: none !important;
+}
+
+.o_search_result_item_detail .h6 {
+    color: #231F20;
+}
+
+@media (max-width: 575.98px) {
+    .o_search_result_item {
+        display: grid !important;
+        grid-template-columns: 56px minmax(0, 1fr);
+        grid-template-areas: "foto texto" "foto precio";
+        column-gap: 12px;
+        align-items: start !important;
+    }
+    .o_search_result_item > img,
+    .o_search_result_item > i {
+        grid-area: foto;
+        width: 56px;
+        height: 56px;
+        padding: 0 !important;
+        font-size: 24px !important;
+    }
+    .o_search_result_item > .o_search_result_item_detail {
+        grid-area: texto;
+        padding: 0 !important;
+    }
+    .o_search_result_item > .flex-shrink-0.ms-auto {
+        grid-area: precio;
+        margin-left: 0 !important;
+        font-size: .875rem;
+    }
+    .o_search_result_item_detail .h6 {
+        margin-bottom: 2px;
+        font-size: .9375rem;
+        line-height: 1.25rem;
+        font-weight: 600;
+    }
+    .o_search_result_item_detail p {
+        display: -webkit-box;
+        -webkit-line-clamp: 2;
+        -webkit-box-orient: vertical;
+        overflow: hidden;
+        font-size: .875rem;
+        line-height: 1.25rem;
+    }
+}

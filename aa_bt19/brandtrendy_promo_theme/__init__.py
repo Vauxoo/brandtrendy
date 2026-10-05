@@ -1,3 +1,4 @@
+from . import controllers
 from . import models
 
 PREFIJO = "brandtrendy_promo_theme."

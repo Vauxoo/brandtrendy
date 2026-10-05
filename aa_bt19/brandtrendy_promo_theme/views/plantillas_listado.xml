@@ -1,0 +1,222 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <!--
+        Listados de la tienda del sitio en modo cotización (website.bt_quote_mode): tarjeta de producto, cabecera de
+        /shop y de categoría, tarjeta de los listados dinámicos y buscador.
+        Regla: toda herencia que cambia el marcado lo hace bajo t-if="website.bt_quote_mode" y conserva el original
+        intacto en el t-else; el otro sitio pinta exactamente lo mismo que antes.
+        Anclas verificadas contra el arch combinado de odoo 19.0 (website, website_sale).
+    -->
+
+    <!-- ============================================================ Detalle de tarjeta (compartido)
+         Parámetros:
+           bt_producto: product.template o product.product (lee x_bt_moq y las líneas de atributo).
+           bt_href: enlace a la ficha.
+           bt_nombre: nombre visible del producto (para el nombre accesible del botón).
+           bt_precio: número o None (None = no se muestra precio).
+           bt_sin_boton: True cuando quien llama trae sus propias acciones.
+         Técnicas: valores del atributo «Técnica de personalización» del producto (la misma fuente que la ficha).
+    -->
+    <template id="tarjeta_detalle" name="Promocionales · detalle de tarjeta de producto">
+        <t t-set="bt_moq" t-value="bt_producto.x_bt_moq"/>
+        <t t-set="bt_tecnicas" t-value="bt_producto.attribute_line_ids.filtered(lambda l: l.attribute_id.name == 'Técnica de personalización').value_ids.mapped('name')"/>
+        <t t-set="bt_tecnicas_txt" t-value="', '.join([n if (i == 0 or n[1:2].isupper()) else n[:1].lower() + n[1:] for i, n in enumerate(bt_tecnicas[:3])])"/>
+        <div class="bt_tarjeta_pie d-flex flex-column gap-1">
+            <p t-if="bt_precio is not None" class="product_price bt_tarjeta_precio mb-0">
+                <span class="bt_tarjeta_desde">Desde</span>
+                <span t-out="bt_precio" t-options="{'widget': 'monetary', 'display_currency': website.currency_id}"/>
+                <span t-if="website.show_line_subtotals_tax_selection == 'tax_included'" class="bt_tarjeta_iva">· IVA incluido</span>
+            </p>
+            <p t-if="bt_moq or bt_tecnicas" class="bt_tarjeta_detalle mb-0">
+                <t t-if="bt_moq">Desde <t t-out="bt_moq"/> <t t-if="bt_moq == 1">pieza</t><t t-else="">piezas</t></t>
+                <t t-if="bt_moq and bt_tecnicas"> · </t>
+                <t t-if="bt_tecnicas" t-out="bt_tecnicas_txt"/>
+                <t t-if="len(bt_tecnicas) &gt; 3"> y <t t-out="len(bt_tecnicas) - 3"/> más</t>
+            </p>
+            <a t-if="not bt_sin_boton" t-att-href="bt_href" class="btn btn-secondary bt_tarjeta_cta mt-2"
+               t-att-aria-label="'Ver y cotizar ' + (bt_nombre or '')">Ver y cotizar</a>
+        </div>
+    </template>
+
+    <!-- ============================================================ Tarjeta de /shop y de categoría
+         Anclas: t-set secondary_image_holder y div.o_wsale_product_sub (website_sale.products_item, 19.0).
+         Sin segunda imagen: en móvil Odoo la convierte en un carrusel con puntos sobre la foto.
+         El precio tachado no se pinta: el sitio no comunica descuentos.
+    -->
+    <template id="tarjeta_tienda" inherit_id="website_sale.products_item"
+              name="Promocionales · tarjeta de producto del listado">
+        <xpath expr="//t[@t-set='secondary_image_holder']" position="after">
+            <t t-if="website.bt_quote_mode" t-set="secondary_image_holder" t-value="False"/>
+        </xpath>
+        <xpath expr="//div[hasclass('o_wsale_product_sub')]" position="replace">
+            <t t-if="website.bt_quote_mode">
+                <t t-if="product_price" t-out="product_price"/>
+                <t t-else="">
+                    <t t-set="template_price_vals" t-value="get_product_prices(product)"/>
+                    <t t-set="bt_precio_tarjeta" t-value="template_price_vals['price_reduce'] if (template_price_vals['price_reduce'] or not website.prevent_zero_price_sale) else None"/>
+                </t>
+                <t t-call="brandtrendy_promo_theme.tarjeta_detalle">
+                    <t t-set="bt_producto" t-value="product"/>
+                    <t t-set="bt_href" t-value="product_href"/>
+                    <t t-set="bt_nombre" t-value="product.name"/>
+                    <t t-set="bt_precio" t-value="None if product_price else bt_precio_tarjeta"/>
+                    <t t-set="bt_sin_boton" t-value="bool(product_actions)"/>
+                </t>
+                <div t-if="product_actions" class="o_wsale_product_btn">
+                    <t t-out="product_actions"/>
+                </div>
+            </t>
+            <t t-else="">$0</t>
+        </xpath>
+    </template>
+
+    <!-- ============================================================ Tarjeta de los listados dinámicos (home y landings)
+         Ancla: div.o_carousel_product_card (website_sale.dynamic_filter_template_product_product_products_item, 19.0).
+         Imagen como <img> con texto alternativo (la original es un fondo CSS), título H3 bajo el H2 de la sección,
+         sin «Agregar» desde la tarjeta: el botón lleva a la ficha.
+    -->
+    <template id="tarjeta_dinamica" inherit_id="website_sale.dynamic_filter_template_product_product_products_item"
+              name="Promocionales · tarjeta de los listados dinámicos">
+        <xpath expr="//div[hasclass('o_carousel_product_card')]" position="replace">
+            <t t-if="website.bt_quote_mode">
+                <div class="oe_product_cart o_carousel_product_card bt_tarjeta_dinamica d-flex" role="article"
+                     t-att-aria-label="data.get('display_name')" t-att-data-add2cart-rerender="data.get('_add2cart_rerender')">
+                    <input type="hidden" name="product-id" t-att-data-product-id="record.id"/>
+                    <div class="oe_product_image position-relative flex-grow-0 overflow-hidden">
+                        <a t-att-href="product.website_url" class="oe_product_image_link position-relative" contenteditable="false" t-att-title="data.get('display_name')">
+                            <span class="oe_product_image_img_wrapper d-flex h-100 justify-content-center align-items-center">
+                                <img t-att-src="data['image_512']" t-att-alt="data.get('display_name')" class="oe_product_image_img h-100 w-100" loading="lazy"/>
+                            </span>
+                        </a>
+                        <div t-if="is_sample" class="o_ribbon_right small text-bg-primary">Sample</div>
+                    </div>
+                    <button t-if="data.get('_latest_viewed')" class="btn o_carousel_product_remove js_remove rounded-pill lh-1" t-att-data-product-id="product_id" t-att-data-product-selected="record.is_product_variant" t-att-data-product-template-id="product_template_id" title="Quitar de vistos recientemente">
+                        <i class="oi oi-close" aria-hidden="true"/>
+                    </button>
+                    <div class="o_wsale_product_information flex-grow-1 flex-shrink-1">
+                        <div class="o_wsale_product_information_text">
+                            <h3 class="o_wsale_products_item_title text-break">
+                                <a class="text-decoration-none" t-att-href="product.website_url" t-out="data.get('display_name')"/>
+                            </h3>
+                        </div>
+                        <t t-call="brandtrendy_promo_theme.tarjeta_detalle">
+                            <t t-set="bt_producto" t-value="record"/>
+                            <t t-set="bt_href" t-value="product.website_url"/>
+                            <t t-set="bt_nombre" t-value="data.get('display_name')"/>
+                            <t t-set="bt_precio" t-value="data['price'] if ('price' in data and not data.get('prevent_zero_price_sale') and not data.get('is_sample')) else None"/>
+                            <t t-set="bt_sin_boton" t-value="False"/>
+                        </t>
+                    </div>
+                </div>
+            </t>
+            <t t-else="">$0</t>
+        </xpath>
+    </template>
+
+    <!-- ============================================================ Cabecera de /shop y de categoría
+         Anclas (website_sale.products, 19.0): t-set opt_wsale_show_category_title, h1.o_wsale_shop_title y el
+         t-call de website_sale.filmstrip_categories.
+         - Categoría: el H1 con el nombre se muestra siempre (el ajuste por categoría lo ocultaba con CSS).
+         - /shop: H1 «Catálogo de artículos promocionales» (el mismo texto del título de la página).
+         - Píldoras de /shop: si la raíz es una sola categoría, se muestran sus hijas (la raíz no filtra nada).
+    -->
+    <template id="cabecera_listado" inherit_id="website_sale.products"
+              name="Promocionales · cabecera de la tienda y de las categorías">
+        <xpath expr="//t[@t-set='opt_wsale_show_category_title']" position="after">
+            <t t-if="website.bt_quote_mode" t-set="opt_wsale_show_category_title" t-value="bool(category)"/>
+        </xpath>
+        <xpath expr="//h1[hasclass('o_wsale_shop_title')]" position="replace">
+            <t t-if="website.bt_quote_mode">
+                <h1 class="bt_titulo_listado mb-0" t-if="not category and not search">Catálogo de artículos promocionales</h1>
+            </t>
+            <t t-else="">$0</t>
+        </xpath>
+        <xpath expr="//t[@t-call='website_sale.filmstrip_categories']" position="before">
+            <t t-if="website.bt_quote_mode and not category and len(category_entries) == 1"
+               t-set="bt_hijas_raiz"
+               t-value="category_entries.child_id.filtered(lambda c: c.can_access_from_current_website() and c.has_published_products and (not search or c.id in search_categories_ids))"/>
+        </xpath>
+        <xpath expr="//t[@t-call='website_sale.filmstrip_categories']" position="attributes">
+            <attribute name="entries">(bt_hijas_raiz or category_entries) if website.bt_quote_mode else category_entries</attribute>
+        </xpath>
+    </template>
+
+    <!-- Ruta de navegación sin la categoría raíz (no aporta). Ancla: t-foreach de website_sale.products_breadcrumb. -->
+    <template id="ruta_sin_raiz" inherit_id="website_sale.products_breadcrumb"
+              name="Promocionales · ruta de navegación sin la raíz">
+        <xpath expr="//t[@t-foreach='category.parents_and_self']" position="attributes">
+            <attribute name="t-foreach">category.parents_and_self.filtered(lambda c: c.parent_id or c == category) if website.bt_quote_mode else category.parents_and_self</attribute>
+        </xpath>
+    </template>
+
+    <!-- ============================================================ Buscador (decisión D6)
+         Caja de la cabecera (escritorio, modal y menú móvil pasan por website.header_search_box_input): solo
+         productos, sin coincidencia por descripción en las sugerencias, sin enlaces de categoría, y el envío va al
+         listado de /shop (tarjetas, H1 y paginación del catálogo).
+    -->
+    <template id="buscador_cabecera" inherit_id="website.header_search_box_input"
+              name="Promocionales · buscador de la cabecera solo de productos">
+        <xpath expr="//t[@t-call='website.website_search_box_input']" position="replace">
+            <t t-if="website.bt_quote_mode">
+                <t t-call="website.website_search_box_input"
+                   search_type.f="products_only"
+                   action.f="/shop"
+                   limit="limit or '5'"
+                   display_image.f="true"
+                   display_description.f="false"
+                   display_extra_link.f="false"
+                   display_detail.f="true"/>
+            </t>
+            <t t-else="">$0</t>
+        </xpath>
+    </template>
+
+    <!-- Caja de búsqueda interna de /shop: mismo criterio que la cabecera. Ancla: último t-set de website_sale.search. -->
+    <template id="buscador_tienda" inherit_id="website_sale.search"
+              name="Promocionales · buscador de la tienda solo de productos">
+        <xpath expr="//t[@t-set='display_detail']" position="after">
+            <t t-if="website.bt_quote_mode" t-set="search_type" t-valuef="products_only"/>
+            <t t-if="website.bt_quote_mode" t-set="display_description" t-valuef="false"/>
+            <t t-if="website.bt_quote_mode" t-set="display_extra_link" t-valuef="false"/>
+        </xpath>
+    </template>
+
+    <!-- Contador junto a la lupa con concordancia («1 resultado», «215 resultados»). Ancla: span.oe_search_found. -->
+    <template id="buscador_contador" inherit_id="website.website_search_box"
+              name="Promocionales · contador de resultados de búsqueda">
+        <xpath expr="//span[hasclass('oe_search_found')]" position="replace">
+            <t t-if="website.bt_quote_mode">
+                <span t-if="search" class="oe_search_found">
+                    <small>(<t t-out="search_count or 0"/> <t t-if="search_count == 1">resultado</t><t t-else="">resultados</t>)</small>
+                </span>
+            </t>
+            <t t-else="">$0</t>
+        </xpath>
+    </template>
+
+    <!-- Página /website/search: H1 con el término y caja de búsqueda con el criterio de D6.
+         Anclas (website.list_hybrid, 19.0): el h1 y el t-call de website.website_search_box_input. -->
+    <template id="resultados_busqueda" inherit_id="website.list_hybrid"
+              name="Promocionales · página de resultados de búsqueda">
+        <xpath expr="//t[@t-call='website.website_search_box_input']" position="replace">
+            <t t-if="website.bt_quote_mode">
+                <t t-call="website.website_search_box_input"
+                   _classes.f="mt8"
+                   search_type.f="products_only"
+                   action.f="/shop"
+                   display_description.f="false"
+                   display_extra_link.f="false"/>
+            </t>
+            <t t-else="">$0</t>
+        </xpath>
+        <xpath expr="//h1" position="replace">
+            <t t-if="website.bt_quote_mode">
+                <h1 class="bt_titulo_listado mt24 mb-3">
+                    <t t-if="search">Resultados para «<t t-out="search"/>»</t>
+                    <t t-else="">Resultados de búsqueda</t>
+                </h1>
+            </t>
+            <t t-else="">$0</t>
+        </xpath>
+    </template>
+</odoo>

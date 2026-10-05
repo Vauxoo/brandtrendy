@@ -1,15 +1,15 @@
 <pagina url="/contactus" nombre="Contacto" titulo="Contacto y asesoría | Promocionales Brandtrendy" descripcion="Cuéntanos tu proyecto a medida y un ejecutivo te asesora. Teléfono, WhatsApp, correo, horario y domicilio de Brandtrendy en Azcapotzalco, CDMX." indexada="1" publicada="1">
   <section class="s_text_block pt64 pb16" data-snippet="s_text_block" data-name="Introducción">
     <div class="container s_allow_columns">
-      <h1>Contacto</h1>
-      <p class="lead">Esta página es para proyectos a medida y asesoría. Cuéntanos qué necesitas y un ejecutivo te acompaña desde la idea hasta la entrega.</p>
+      <h1>Contacto y asesoría</h1>
+      <p class="lead">Para proyectos a medida y asesoría: cuéntanos qué necesitas y un ejecutivo te acompaña desde la idea hasta la entrega.</p>
       <p>Si buscas producto de catálogo, agrégalo a <b>Mi cotización</b> desde el <a href="/shop" class="o_translate_inline">catálogo</a>: la cotización formal llega en 1 día hábil.</p>
     </div>
   </section>
 
   <section id="asesoria" class="s_title_form o_cc o_cc2 pt64 pb48" data-snippet="s_title_form" data-name="Formulario de asesoría">
     <div class="o_container_small">
-      <h2 style="text-align: center;">Solicitar asesoría</h2>
+      <h2 class="h1-fs" style="text-align: center;">Solicitar asesoría</h2>
       <p class="lead" style="text-align: center;">Un ejecutivo te confirma precio, personalización y entrega. Los proyectos a medida se acuerdan contigo según su alcance.</p>
       <section class="s_website_form pt16 pb16" data-snippet="s_website_form" data-vcss="001" data-name="Formulario">
         <div class="container-fluid">
@@ -18,10 +18,10 @@
 
               <div data-name="Field" class="s_website_form_field mb-3 col-12 s_website_form_dnone s_website_form_model_required" data-type="char">
                 <div class="row s_col_no_resize s_col_no_bgcolor">
-                  <label class="col-form-label col-sm-auto s_website_form_label" style="width: 200px" for="bt_c_name">
+                  <label class="col-form-label col-12 s_website_form_label" for="bt_c_name">
                     <span class="s_website_form_label_content">Asunto</span>
                   </label>
-                  <div class="col-sm">
+                  <div class="col-12">
                     <input type="hidden" class="form-control s_website_form_input" name="name" id="bt_c_name" value="Solicitud de asesoría desde el sitio"/>
                   </div>
                 </div>
@@ -29,10 +29,10 @@
 
               <div data-name="Field" class="s_website_form_field mb-3 col-12 s_website_form_custom s_website_form_dnone" data-type="char">
                 <div class="row s_col_no_resize s_col_no_bgcolor">
-                  <label class="col-form-label col-sm-auto s_website_form_label" style="width: 200px" for="bt_c_subject">
+                  <label class="col-form-label col-12 s_website_form_label" for="bt_c_subject">
                     <span class="s_website_form_label_content">Tema</span>
                   </label>
-                  <div class="col-sm">
+                  <div class="col-12">
                     <input type="hidden" class="form-control s_website_form_input" name="subject" id="bt_c_subject" value=""/>
                   </div>
                 </div>
@@ -40,47 +40,47 @@
 
               <div data-name="Field" class="s_website_form_field mb-3 col-lg-6 s_website_form_required" data-type="char">
                 <div class="row s_col_no_resize s_col_no_bgcolor">
-                  <label class="col-form-label col-sm-auto s_website_form_label" style="width: 200px" for="bt_c_contacto">
+                  <label class="col-form-label col-12 s_website_form_label" for="bt_c_contacto">
                     <span class="s_website_form_label_content">Nombre</span><span class="s_website_form_mark"> *</span>
                   </label>
-                  <div class="col-sm"><input class="form-control s_website_form_input" type="text" name="contact_name" required="1" data-fill-with="name" id="bt_c_contacto"/></div>
+                  <div class="col-12"><input class="form-control s_website_form_input" type="text" name="contact_name" required="1" data-fill-with="name" id="bt_c_contacto"/></div>
                 </div>
               </div>
 
               <div data-name="Field" class="s_website_form_field mb-3 col-lg-6" data-type="char">
                 <div class="row s_col_no_resize s_col_no_bgcolor">
-                  <label class="col-form-label col-sm-auto s_website_form_label" style="width: 200px" for="bt_c_empresa">
+                  <label class="col-form-label col-12 s_website_form_label" for="bt_c_empresa">
                     <span class="s_website_form_label_content">Empresa</span>
                   </label>
-                  <div class="col-sm"><input class="form-control s_website_form_input" type="text" name="partner_name" data-fill-with="commercial_company_name" id="bt_c_empresa"/></div>
+                  <div class="col-12"><input class="form-control s_website_form_input" type="text" name="partner_name" data-fill-with="commercial_company_name" id="bt_c_empresa"/></div>
                 </div>
               </div>
 
               <div data-name="Field" class="s_website_form_field mb-3 col-lg-6 s_website_form_required" data-type="email">
                 <div class="row s_col_no_resize s_col_no_bgcolor">
-                  <label class="col-form-label col-sm-auto s_website_form_label" style="width: 200px" for="bt_c_correo">
+                  <label class="col-form-label col-12 s_website_form_label" for="bt_c_correo">
                     <span class="s_website_form_label_content">Correo</span><span class="s_website_form_mark"> *</span>
                   </label>
-                  <div class="col-sm"><input class="form-control s_website_form_input" type="email" name="email_from" required="1" data-fill-with="email" id="bt_c_correo"/></div>
+                  <div class="col-12"><input class="form-control s_website_form_input" type="email" name="email_from" required="1" data-fill-with="email" id="bt_c_correo"/></div>
                 </div>
               </div>
 
               <div data-name="Field" class="s_website_form_field mb-3 col-lg-6 s_website_form_required" data-type="tel">
                 <div class="row s_col_no_resize s_col_no_bgcolor">
-                  <label class="col-form-label col-sm-auto s_website_form_label" style="width: 200px" for="bt_c_telefono">
+                  <label class="col-form-label col-12 s_website_form_label" for="bt_c_telefono">
                     <span class="s_website_form_label_content">Teléfono o WhatsApp</span><span class="s_website_form_mark"> *</span>
                   </label>
-                  <div class="col-sm"><input class="form-control s_website_form_input" type="tel" name="phone" required="1" data-fill-with="phone" id="bt_c_telefono"/></div>
+                  <div class="col-12"><input class="form-control s_website_form_input" type="tel" name="phone" required="1" data-fill-with="phone" id="bt_c_telefono"/></div>
                 </div>
               </div>
 
               <div data-name="Field" class="s_website_form_field mb-3 col-12" data-type="selection">
                 <div class="row s_col_no_resize s_col_no_bgcolor">
-                  <label class="col-form-label col-sm-auto s_website_form_label" style="width: 200px">
-                    <span class="s_website_form_label_content">Cantidad aproximada</span>
+                  <label class="col-form-label col-12 s_website_form_label" id="bt_c_cant_lbl">
+                    <span class="s_website_form_label_content">Cantidad aproximada de piezas</span>
                   </label>
-                  <div class="col-sm">
-                    <div class="row s_col_no_resize s_col_no_bgcolor s_website_form_multiple" data-name="x_bt_cantidad" data-display="horizontal">
+                  <div class="col-12">
+                    <div class="row s_col_no_resize s_col_no_bgcolor s_website_form_multiple" data-name="x_bt_cantidad" data-display="horizontal" role="radiogroup" aria-labelledby="bt_c_cant_lbl">
                       <div class="radio col-12 col-lg-3 col-md-6"><div class="form-check">
                         <input type="radio" class="s_website_form_input form-check-input" id="bt_c_cant0" name="x_bt_cantidad" value="lt25"/>
                         <label class="form-check-label s_website_form_check_label" for="bt_c_cant0">Menos de 25</label></div></div>
@@ -100,13 +100,13 @@
 
               <div data-name="Field" class="s_website_form_field mb-3 col-lg-6" data-type="date">
                 <div class="row s_col_no_resize s_col_no_bgcolor">
-                  <label class="col-form-label col-sm-auto s_website_form_label" style="width: 200px" for="bt_c_fecha">
+                  <label class="col-form-label col-12 s_website_form_label" for="bt_c_fecha">
                     <span class="s_website_form_label_content">Fecha deseada</span>
                   </label>
-                  <div class="col-sm">
+                  <div class="col-12">
                     <div class="s_website_form_date input-group date">
                       <input type="text" class="form-control datetimepicker-input s_website_form_input" name="x_bt_fecha_entrega" id="bt_c_fecha"/>
-                      <div class="input-group-text o_input_group_date_icon"><i class="fa fa-calendar"/></div>
+                      <div class="input-group-text o_input_group_date_icon"><i class="fa fa-calendar" aria-hidden="true"/></div>
                     </div>
                   </div>
                 </div>
@@ -114,19 +114,19 @@
 
               <div data-name="Field" class="s_website_form_field mb-3 col-12" data-type="text">
                 <div class="row s_col_no_resize s_col_no_bgcolor">
-                  <label class="col-form-label col-sm-auto s_website_form_label" style="width: 200px" for="bt_c_descripcion">
+                  <label class="col-form-label col-12 s_website_form_label" for="bt_c_descripcion">
                     <span class="s_website_form_label_content">¿Qué necesitas?</span>
                   </label>
-                  <div class="col-sm"><textarea class="form-control s_website_form_input" name="description" id="bt_c_descripcion" rows="5"></textarea></div>
+                  <div class="col-12"><textarea class="form-control s_website_form_input" name="description" id="bt_c_descripcion" rows="5"></textarea></div>
                 </div>
               </div>
 
               <div data-name="Field" class="s_website_form_field mb-3 col-12" data-type="boolean">
                 <div class="row s_col_no_resize s_col_no_bgcolor">
-                  <label class="col-form-label col-sm-auto s_website_form_label" style="width: 200px" for="bt_c_wa">
-                    <span class="s_website_form_label_content">WhatsApp</span>
+                  <label class="col-form-label col-12 s_website_form_label" for="bt_c_wa">
+                    <span class="s_website_form_label_content">Preferencia de contacto</span>
                   </label>
-                  <div class="col-sm">
+                  <div class="col-12">
                     <div class="form-check">
                       <input type="checkbox" value="Yes" class="s_website_form_input form-check-input" name="x_bt_wa_optin" id="bt_c_wa"/>
                       <label class="form-check-label" for="bt_c_wa">Prefiero que me contacten por WhatsApp</label>
@@ -135,9 +135,9 @@
                 </div>
               </div>
 
-              <div class="mb-0 py-2 col-12 s_website_form_submit text-end s_website_form_no_submit_label" data-name="Submit Button">
-                <div style="width: 200px;" class="s_website_form_label"/>
-                <span id="s_website_form_result"/>
+              <div class="mb-0 py-2 col-12 s_website_form_submit s_website_form_no_submit_label d-flex flex-wrap align-items-center justify-content-end column-gap-3 row-gap-2" data-name="Submit Button">
+                <span id="s_website_form_result" class="w-100 order-first"/>
+                <p class="mb-0 small">Consulta nuestro <a href="/aviso-de-privacidad">aviso de privacidad</a>.</p>
                 <a href="#" role="button" class="btn btn-primary s_website_form_send o_translate_inline">Solicitar asesoría</a>
               </div>
             </div>
@@ -149,21 +149,21 @@
 
   <section class="s_features pt64 pb64" data-snippet="s_features" data-name="Datos de contacto">
     <div class="container">
-      <h2 class="h3-fs">Datos de contacto</h2>
-      <p class="lead">BRANDTRENDY, S.A. DE C.V. Operamos en comercio electrónico desde 2006.</p>
+      <h2 class="h1-fs">Datos de contacto</h2>
+      <p class="lead">BRANDTRENDY, S.A. DE C.V. · Operamos en comercio electrónico desde 2006.</p>
       <div class="row">
         <div class="col-lg-3">
           <div class="s_hr pt-4 pb32" data-snippet="s_hr" data-name="Separator"><hr class="w-100 mx-auto"/></div>
-          <i class="s_features_icon fa fa-phone mb-3 rounded bg-o-color-3" role="img"/>
+          <i class="s_features_icon fa fa-phone mb-3 rounded bg-o-color-3" aria-hidden="true"/>
           <div class="overflow-hidden">
             <h3 class="h5-fs">Teléfono y WhatsApp</h3>
             <p><a href="tel:+525555260418" class="o_translate_inline">+52 55 5526 0418</a></p>
-            <p><a href="https://wa.me/525555260418" class="o_translate_inline">wa.me/525555260418</a></p>
+            <p><a href="https://wa.me/525555260418" class="o_translate_inline">Escríbenos por WhatsApp</a></p>
           </div>
         </div>
         <div class="col-lg-3">
           <div class="s_hr pt-4 pb32" data-snippet="s_hr" data-name="Separator"><hr class="w-100 mx-auto"/></div>
-          <i class="s_features_icon fa fa-clock-o mb-3 rounded bg-o-color-3" role="img"/>
+          <i class="s_features_icon fa fa-clock-o mb-3 rounded bg-o-color-3" aria-hidden="true"/>
           <div class="overflow-hidden">
             <h3 class="h5-fs">Horario de atención</h3>
             <p>Lunes a viernes, de 8:30 a 17:30 h (hora del centro de México).</p>
@@ -172,7 +172,7 @@
         </div>
         <div class="col-lg-3">
           <div class="s_hr pt-4 pb32" data-snippet="s_hr" data-name="Separator"><hr class="w-100 mx-auto"/></div>
-          <i class="s_features_icon fa fa-envelope-o mb-3 rounded bg-o-color-3" role="img"/>
+          <i class="s_features_icon fa fa-envelope-o mb-3 rounded bg-o-color-3" aria-hidden="true"/>
           <div class="overflow-hidden">
             <h3 class="h5-fs">Correo por área</h3>
             <p>Ventas y posventa: <a href="mailto:hola@brandtrendy.com.mx" class="o_translate_inline">hola@brandtrendy.com.mx</a></p>
@@ -182,7 +182,7 @@
         </div>
         <div class="col-lg-3">
           <div class="s_hr pt-4 pb32" data-snippet="s_hr" data-name="Separator"><hr class="w-100 mx-auto"/></div>
-          <i class="s_features_icon fa fa-map-marker mb-3 rounded bg-o-color-3" role="img"/>
+          <i class="s_features_icon fa fa-map-marker mb-3 rounded bg-o-color-3" aria-hidden="true"/>
           <div class="overflow-hidden">
             <h3 class="h5-fs">Domicilio y almacén</h3>
             <p>Poniente 134 núm. 682, Bodega E, Col. Industrial Vallejo, Alc. Azcapotzalco, C.P. 02300, CDMX, México.</p>

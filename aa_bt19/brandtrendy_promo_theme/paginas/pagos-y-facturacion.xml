@@ -5,15 +5,10 @@
       <p class="lead">Trabajamos por cotización: tu ejecutivo confirma producto, personalización y envío antes de cualquier pago. Aquí encuentras cómo funciona el pago, qué necesitamos para facturar y qué debe estar listo antes de que inicie la producción.</p>
     </div>
   </section>
-  <section class="s_text_block o_cc o_cc1 pt32 pb32" data-snippet="s_text_block" data-name="Forma de pago">
-    <div class="container s_allow_columns">
-      <h2 class="h3-fs">Forma de pago</h2>
-      <p>El único método de pago es transferencia electrónica interbancaria. Los datos bancarios para tu pago se entregan junto con la cotización formal.</p>
-    </div>
-  </section>
   <section class="s_cards_soft o_cc o_cc1 pt48 pb32" data-snippet="s_cards_soft" data-name="Esquema de pago">
     <div class="container">
-      <h2 class="h3-fs">Esquema de pago según tu pedido</h2>
+      <h2 class="h1-fs">Forma y esquema de pago</h2>
+      <p class="lead">El único método de pago es transferencia electrónica interbancaria. Los datos bancarios para tu pago se entregan junto con la cotización formal.</p>
       <div class="row">
         <div data-name="Card" class="col-lg-6 pt16 pb16">
           <div class="s_card card h-100 o_cc o_cc2" data-vxml="001" data-snippet="s_card" data-name="Card" style="border-width: 0px !important;">
@@ -32,18 +27,18 @@
           </div>
         </div>
       </div>
-      <p class="pt16">La producción inicia cuando se confirman, en conjunto: el anticipo, el producto y las cantidades, los archivos utilizables y la prueba digital aprobada, con toda la información completa. Nada se libera con saldo pendiente. Conoce el detalle del proceso de aprobación en <a href="/proceso-de-personalizacion">personalización</a>.</p>
+      <p class="pt16">La producción inicia cuando se confirman, en conjunto: el anticipo, el producto y las cantidades, los archivos utilizables y la prueba digital aprobada, con toda la información completa. Nada se libera con saldo pendiente. Conoce el detalle del proceso de aprobación en nuestro <a href="/proceso-de-personalizacion">proceso de personalización</a>.</p>
     </div>
   </section>
-  <section class="s_text_image o_cc o_cc1 pt64 pb64" data-snippet="s_text_image" data-name="Facturación CFDI">
+  <section class="s_text_image o_cc o_cc2 pt64 pb64" data-snippet="s_text_image" data-name="Facturación CFDI">
     <div class="container">
       <div class="row align-items-start">
         <div class="col-lg-6 pt16 pb16">
-          <h2 class="h3-fs">Facturación CFDI</h2>
+          <h2 class="h1-fs">Facturación CFDI</h2>
           <p>Facturamos con CFDI. Los datos fiscales los pedimos al confirmar tu pedido; también puedes enviarlos a <a href="mailto:facturacion@brandtrendy.com.mx">facturacion@brandtrendy.com.mx</a>.</p>
         </div>
         <div class="col-lg-5 offset-lg-1 pt16 pb16">
-          <div class="s_card card o_cc o_cc2" data-vxml="001" data-snippet="s_card" data-name="Card" style="border-width: 0px !important;">
+          <div class="s_card card o_cc o_cc1" data-vxml="001" data-snippet="s_card" data-name="Card" style="border-width: 0px !important;">
               <div class="card-body">
                 <h3 class="card-title h5-fs">Para tu factura necesitamos</h3>
                 <ul><li>RFC</li><li>Razón social</li><li>Código postal fiscal</li><li>Régimen fiscal</li><li>Uso de CFDI</li><li>Correo electrónico</li></ul>
@@ -55,20 +50,19 @@
   </section>
   <section class="s_features o_cc o_cc1 pt64 pb64" data-snippet="s_features" data-name="Precios, envío y personalización">
     <div class="container">
-      <h2 class="h3-fs">Precios, envío, personalización y herramentales</h2>
-      <p class="lead"></p>
+      <h2 class="h1-fs">Precios, envío, personalización y herramentales</h2>
       <div class="row">
         <div class="col-lg-3">
           <div class="s_hr pt-4 pb32" data-snippet="s_hr" data-name="Separador"><hr class="w-100 mx-auto"/></div>
-          <i class="s_features_icon fa fa-tag mb-3 rounded bg-o-color-3" role="img"/>
+          <i class="s_features_icon fa fa-tag mb-3 rounded bg-o-color-3" aria-hidden="true"/>
           <div class="overflow-hidden">
             <h3 class="h5-fs">Precios con IVA</h3>
-            <p>Los precios publicados en el <a href="/shop">catálogo</a> incluyen IVA.</p>
+            <p>Los precios del <a href="/shop">catálogo</a> llevan IVA incluido.</p>
           </div>
         </div>
         <div class="col-lg-3">
           <div class="s_hr pt-4 pb32" data-snippet="s_hr" data-name="Separador"><hr class="w-100 mx-auto"/></div>
-          <i class="s_features_icon fa fa-truck mb-3 rounded bg-o-color-3" role="img"/>
+          <i class="s_features_icon fa fa-truck mb-3 rounded bg-o-color-3" aria-hidden="true"/>
           <div class="overflow-hidden">
             <h3 class="h5-fs">Envío aparte</h3>
             <p>El envío siempre se cotiza por separado; consulta <a href="/envios-y-cobertura">envíos y cobertura</a>.</p>
@@ -76,7 +70,7 @@
         </div>
         <div class="col-lg-3">
           <div class="s_hr pt-4 pb32" data-snippet="s_hr" data-name="Separador"><hr class="w-100 mx-auto"/></div>
-          <i class="s_features_icon fa fa-paint-brush mb-3 rounded bg-o-color-3" role="img"/>
+          <i class="s_features_icon fa fa-paint-brush mb-3 rounded bg-o-color-3" aria-hidden="true"/>
           <div class="overflow-hidden">
             <h3 class="h5-fs">Personalización</h3>
             <p>Se cotiza según técnica, área, número de tintas o posiciones y cantidad; revisa el <a href="/proceso-de-personalizacion">proceso de personalización</a>.</p>
@@ -84,7 +78,7 @@
         </div>
         <div class="col-lg-3">
           <div class="s_hr pt-4 pb32" data-snippet="s_hr" data-name="Separador"><hr class="w-100 mx-auto"/></div>
-          <i class="s_features_icon fa fa-wrench mb-3 rounded bg-o-color-3" role="img"/>
+          <i class="s_features_icon fa fa-wrench mb-3 rounded bg-o-color-3" aria-hidden="true"/>
           <div class="overflow-hidden">
             <h3 class="h5-fs">Herramentales</h3>
             <p>Cuando el proyecto los requiere, te los informamos antes de confirmar tu cotización.</p>
@@ -95,7 +89,7 @@
   </section>
   <section class="s_text_block o_cc o_cc2 pt48 pb48" data-snippet="s_text_block" data-name="Vigencia de la cotización">
     <div class="container s_allow_columns">
-      <h2 class="h3-fs">Vigencia de tu cotización</h2>
+      <h2 class="h1-fs">Vigencia de tu cotización</h2>
       <p>Cada cotización formal tiene una vigencia de 7 días naturales a partir de su emisión. Si necesitas más tiempo o ajustar cantidades, contáctanos antes de que venza.</p>
     </div>
   </section>
@@ -103,11 +97,11 @@
     <div class="container">
       <div class="row">
         <div class="col-lg-9">
-          <h2 class="h3-fs">¿Dudas sobre tu pago o factura?</h2>
-          <p class="lead">Escríbenos a hola@brandtrendy.com.mx o llama al +52 55 5526 0418.</p>
+          <h2 class="h1-fs">¿Tienes dudas sobre tu pago o factura?</h2>
+          <p class="lead">Cuéntanos tu caso y un ejecutivo te responde en 1 día hábil.</p>
         </div>
         <div class="col-lg-3">
-          <p style="text-align: right;"><a href="/contactus" class="btn btn-primary btn-lg o_translate_inline">Solicitar cotización</a></p>
+          <p style="text-align: right;"><a href="/contactus#asesoria" class="btn btn-primary btn-lg o_translate_inline">Solicitar asesoría</a></p>
         </div>
       </div>
     </div>

@@ -49,6 +49,12 @@ TEXTOS = [  # (xmlid de la vista, término fuente en inglés, traducción es_MX)
     ('website_sale.confirmation', '<span>Order</span>', '<span>Solicitud</span>'),  # K3
     ('website_sale.confirmation', '<span class="align-middle">to follow your order.</span>', '<span class="align-middle">para dar seguimiento a tu solicitud.</span>'),  # K4
     ('website_sale.payment_confirmation_status', '<b>Communication: </b>', '<b>Referencia de tu solicitud: </b>'),  # K5
+    ('website.list_hybrid', "Your search '", 'No encontramos resultados para «'),  # B1 (D6: sin ustedeo)
+    ('website.list_hybrid', "' did not match anything.", '».'),  # B2
+    ('website.list_hybrid', "' did not match anything. Results are displayed for '", '». Te mostramos los resultados para «'),  # B3
+    ('website.list_hybrid', "'.", '».'),  # B4
+    ('website.list_hybrid', 'Specify a search term.', 'Escribe qué producto buscas.'),  # B5
+    ('website.list_hybrid', 'Search Results', 'Resultados de búsqueda'),  # B6
 ]
 
 TEXTOS_LATENTES = [  # hoy no se pintan (opción apagada, estado raro o con sesión); aplicarlos es inocuo

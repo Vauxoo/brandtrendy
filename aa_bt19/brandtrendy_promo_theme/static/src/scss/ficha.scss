@@ -1,0 +1,159 @@
+// Ficha de producto, Mi cotización y página 404 del sitio en modo cotización (asset cargado solo en este sitio).
+// Marcado en views/plantillas_ficha.xml. Solo tokens de marca; sin ids de registros.
+$bt-ficha-ink: #231F20;
+$bt-ficha-grafito: #414042;
+$bt-ficha-secundario: #5F5E61;
+$bt-ficha-borde: #F3F3F4;
+
+// --- Ficha · título: H1 interior 28/36 700 (móvil 24/31). Odoo le pone la clase h3 (18 px). -------------------
+#o_wsale_product_details_content .o_wsale_product_details_content_section_title h1 {
+    font-size: 28px;
+    line-height: 36px;
+    font-weight: 700;
+    color: $bt-ficha-ink;
+    margin-bottom: 16px;
+
+    @media (max-width: 575.98px) {
+        font-size: 24px;
+        line-height: 31px;
+    }
+}
+
+// --- Ficha · precio «Desde $X · IVA incluido» en ink; el mínimo y el aviso de envío junto al precio ------------
+#o_wsale_product_details_content {
+    [name="product_price_container"] {
+        justify-content: flex-start !important;
+        color: $bt-ficha-ink;
+        font-size: 16px;
+        line-height: 24px;
+    }
+
+    .product_price .oe_price {
+        font-size: 18px;
+        line-height: 24px;
+        font-weight: 700;
+    }
+
+    .bt_precio_desde,
+    .bt_precio_iva {
+        font-size: 16px;
+        line-height: 24px;
+        font-weight: 400;
+        color: $bt-ficha-ink;
+    }
+
+    .bt_ficha_minimo {
+        font-size: 16px;
+        line-height: 24px;
+        font-weight: 600;
+        color: $bt-ficha-ink;
+    }
+
+    .bt_ficha_aparte,
+    .bt_ficha_expectativa {
+        font-size: 14px;
+        line-height: 20px;
+        color: $bt-ficha-secundario;
+    }
+
+    // La expectativa va pegada al botón (cta_wrapper trae mb-4).
+    .o_wsale_product_details_content_section_cta:has(.bt_ficha_expectativa) #o_wsale_cta_wrapper {
+        margin-bottom: 12px !important;
+    }
+
+    // Bloques vacíos entre separadores: el de «Contáctanos» (oculto mientras el precio no sea cero; el JavaScript de
+    // variantes alterna d-none en #contact_us_wrapper) y la tabla de atributos de un solo valor si queda sin filas.
+    .o_wsale_product_details_content_section_contact:not(:has(#contact_us_wrapper:not(.d-none))),
+    #product_attributes_simple:not(:has(td)) {
+        display: none;
+    }
+}
+
+// --- Ficha · descripción y «Preguntas frecuentes de este producto» (details/summary del contenido) -------------
+.bt_ficha_descripcion {
+    font-size: 16px;
+    line-height: 24px;
+
+    h3 {
+        font-size: 18px;
+        line-height: 26px;
+        font-weight: 600;
+        color: $bt-ficha-ink;
+        margin: 24px 0 8px;
+    }
+
+    details {
+        border-bottom: 1px solid $bt-ficha-borde;
+
+        > p {
+            margin: 0;
+            padding: 0 32px 12px 0;
+        }
+    }
+
+    summary {
+        position: relative;
+        display: block;
+        list-style: none;
+        cursor: pointer;
+        padding: 12px 32px 12px 0;
+        font-weight: 600;
+        color: $bt-ficha-ink;
+
+        &::-webkit-details-marker {
+            display: none;
+        }
+
+        // Chevron a la derecha, como el acordeón de /preguntas-frecuentes.
+        &::after {
+            content: "";
+            position: absolute;
+            right: 6px;
+            top: 50%;
+            width: 8px;
+            height: 8px;
+            border-right: 2px solid $bt-ficha-grafito;
+            border-bottom: 2px solid $bt-ficha-grafito;
+            transform: translateY(-75%) rotate(45deg);
+            transition: transform 150ms ease-out;
+        }
+    }
+
+    details[open] > summary::after {
+        transform: translateY(-25%) rotate(-135deg);
+    }
+}
+
+// --- Mi cotización ---------------------------------------------------------------------------------------------
+.bt_cotizacion_titulo {
+    font-size: 28px;
+    line-height: 36px;
+    font-weight: 700;
+    color: $bt-ficha-ink;
+
+    @media (max-width: 575.98px) {
+        font-size: 24px;
+        line-height: 31px;
+    }
+}
+
+.bt_cotizacion_vacia {
+    max-width: 560px;
+    margin: 0 auto 24px;
+    font-size: 16px;
+    line-height: 24px;
+    color: $bt-ficha-secundario;
+}
+
+// --- 404: composición tipográfica ------------------------------------------------------------------------------
+.bt_404 h1 {
+    font-size: 28px;
+    line-height: 36px;
+    font-weight: 700;
+    color: $bt-ficha-ink;
+
+    @media (max-width: 575.98px) {
+        font-size: 24px;
+        line-height: 31px;
+    }
+}

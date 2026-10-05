@@ -68,7 +68,7 @@ class Website(models.Model):
                     enlaces.append('<a href="%s" class="nav-link px-0" data-name="Menu Item">%s</a>'
                                    % (escape(url), escape(nombre)))
             columnas.append(
-                '<div class="col-12 col-lg-3 pt16 pb24"><h4 class="h5 fw-bold mt-0">%s</h4>'
+                '<div class="col-12 col-lg-3 pt16 pb24"><p class="h5 fw-bold mt-0 mb-2">%s</p>'
                 '<nav class="nav flex-column">%s</nav></div>' % (escape(titulo), "".join(enlaces)))
         return (
             '<section class="s_mega_menu_odoo_menu pt16 o_colored_level o_cc o_cc1" data-name="Mega Menu">'

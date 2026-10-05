@@ -20,6 +20,8 @@
         "data/plantillas_correo.xml",
         "data/automatizacion.xml",
         "views/plantillas_sitio.xml",
+        "views/plantillas_listado.xml",
+        "views/plantillas_ficha.xml",
         # Al final y sin noupdate: re-aplica la configuración del sitio en cada instalación y actualización.
         "data/aplicar.xml",
     ],

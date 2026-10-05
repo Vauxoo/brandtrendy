@@ -10,12 +10,12 @@
           <p class="lead">Elige del catálogo, personaliza con tu logotipo y recibe tu cotización formal en 1 día hábil. Un ejecutivo te confirma precio, personalización y entrega.</p>
           <form method="get" class="o_searchbar_form s_searchbar_input mb-3" action="/shop" data-snippet="s_searchbar_input" data-name="Buscador">
             <div role="search" class="input-group input-group-lg">
-              <input type="search" name="search" class="search-query form-control oe_search_box" placeholder="¿Qué producto buscas?" aria-label="Buscar productos" data-search-type="products_only" data-limit="6" data-display-image="true" data-display-description="true" data-display-extra-link="true" data-display-detail="true" data-order-by="website_sequence asc"/>
+              <input type="search" name="search" class="search-query form-control oe_search_box" placeholder="¿Qué producto buscas?" aria-label="Buscar productos" data-search-type="products_only" data-limit="6" data-display-image="true" data-display-description="false" data-display-extra-link="false" data-display-detail="true" data-order-by="website_sequence asc"/>
               <button type="submit" aria-label="Buscar" title="Buscar" class="btn oe_search_button btn-primary"><i class="oi oi-search"/></button>
             </div>
             <input name="order" type="hidden" class="o_search_order_by oe_unremovable" value="website_sequence asc"/>
           </form>
-          <p><a href="/shop" class="btn btn-secondary btn-lg o_translate_inline">Explorar el catálogo</a></p>
+          <p><a href="#modelos" class="btn btn-secondary btn-lg o_translate_inline">Ver modelos</a></p>
         </div>
         <div class="col-lg-5 offset-lg-1 pt16 pb16">
           <img src="/brandtrendy_promo_theme/static/img/paginas/home-heroe.jpg" class="img img-fluid mx-auto rounded" alt="Colaboradora en oficina con bolsa promocional personalizada"/>
@@ -27,28 +27,28 @@
   <!-- 2 · Franja de confianza: solo datos defendibles -->
   <section class="s_features o_cc o_cc2 pt48 pb48" data-snippet="s_features" data-name="Confianza">
     <div class="container">
-      <h2 class="h3-fs">Una sola operación, de la selección a la entrega</h2>
+      <h2 class="h1-fs">Una sola operación, de la selección a la entrega</h2>
       <p class="lead">Gestionamos producto, personalización, control de calidad y entrega nacional desde una sola operación.</p>
       <div class="row">
         <div class="col-lg-3 col-md-6">
           <div class="s_hr pt-4 pb32" data-snippet="s_hr" data-name="Separator"><hr class="w-100 mx-auto"/></div>
-          <i class="s_features_icon fa fa-clock-o mb-3 rounded bg-o-color-4" role="img" aria-hidden="true"/>
+          <i class="s_features_icon fa fa-clock-o mb-3 rounded bg-o-color-4" aria-hidden="true"/>
           <div class="overflow-hidden">
-            <h3 class="h5-fs">Desde 2006</h3>
+            <h3 class="h5-fs">Comercio electrónico desde 2006</h3>
             <p>Operamos en comercio electrónico desde 2006.</p>
           </div>
         </div>
         <div class="col-lg-3 col-md-6">
           <div class="s_hr pt-4 pb32" data-snippet="s_hr" data-name="Separator"><hr class="w-100 mx-auto"/></div>
-          <i class="s_features_icon fa fa-building-o mb-3 rounded bg-o-color-4" role="img" aria-hidden="true"/>
+          <i class="s_features_icon fa fa-building-o mb-3 rounded bg-o-color-4" aria-hidden="true"/>
           <div class="overflow-hidden">
             <h3 class="h5-fs">Almacén propio en CDMX</h3>
-            <p>Recepción, control de calidad, personalización y despacho bajo un mismo techo.</p>
+            <p>Recepción centralizada para control de calidad y personalización.</p>
           </div>
         </div>
         <div class="col-lg-3 col-md-6">
           <div class="s_hr pt-4 pb32" data-snippet="s_hr" data-name="Separator"><hr class="w-100 mx-auto"/></div>
-          <i class="s_features_icon fa fa-check-square-o mb-3 rounded bg-o-color-4" role="img" aria-hidden="true"/>
+          <i class="s_features_icon fa fa-check-square-o mb-3 rounded bg-o-color-4" aria-hidden="true"/>
           <div class="overflow-hidden">
             <h3 class="h5-fs">Prueba digital incluida</h3>
             <p>Ves tu diseño aplicado antes de producir, con una ronda de cambios sin costo.</p>
@@ -56,7 +56,7 @@
         </div>
         <div class="col-lg-3 col-md-6">
           <div class="s_hr pt-4 pb32" data-snippet="s_hr" data-name="Separator"><hr class="w-100 mx-auto"/></div>
-          <i class="s_features_icon fa fa-truck mb-3 rounded bg-o-color-4" role="img" aria-hidden="true"/>
+          <i class="s_features_icon fa fa-truck mb-3 rounded bg-o-color-4" aria-hidden="true"/>
           <div class="overflow-hidden">
             <h3 class="h5-fs">Cobertura nacional</h3>
             <p>Envíos a toda la república por paquetería y reparto propio en CDMX y zona metropolitana, sujeto a disponibilidad.</p>
@@ -66,16 +66,16 @@
     </div>
   </section>
 
-  <!-- 3 · Compra según tu necesidad: páginas de temporada y categorías transversales reales -->
+  <!-- 3 · Elige según tu necesidad: páginas de temporada y categorías transversales reales -->
   <section class="s_three_columns o_cc o_cc1 pt48 pb48 o_colored_level" data-snippet="s_three_columns" data-name="Según tu necesidad" data-vxml="001" data-vcss="001">
     <div class="container">
-      <h2 class="h3-fs">Compra según tu necesidad</h2>
+      <h2 class="h1-fs">Elige según tu necesidad</h2>
       <p class="lead">Selecciones por temporada, ocasión y tipo de evento.</p>
       <div class="row d-flex align-items-stretch">
         <div data-name="Card" class="col-lg-4 col-md-6 pt16 pb16">
           <div class="s_card o_card_img_top card h-100 o_cc o_cc1 my-0" data-vxml="001" data-snippet="s_card" data-name="Card">
             <figure class="o_card_img_wrapper ratio ratio-1x1 mb-0">
-              <a href="/agendas-2027" aria-label="Agendas 2027"><img class="o_card_img card-img-top" src="/brandtrendy_promo_theme/static/img/paginas/home-ocasion-agendas-2027.jpg" alt="Tres agendas 2027 en negro, azul y café"/></a>
+              <a href="/agendas-2027" tabindex="-1" aria-hidden="true"><img class="o_card_img card-img-top" src="/brandtrendy_promo_theme/static/img/paginas/home-ocasion-agendas-2027.jpg" alt="Tres agendas 2027 en negro, azul marino y café"/></a>
             </figure>
             <div class="card-body">
               <h3 class="card-title h5-fs"><a href="/agendas-2027">Agendas 2027</a></h3>
@@ -86,7 +86,7 @@
         <div data-name="Card" class="col-lg-4 col-md-6 pt16 pb16">
           <div class="s_card o_card_img_top card h-100 o_cc o_cc1 my-0" data-vxml="001" data-snippet="s_card" data-name="Card">
             <figure class="o_card_img_wrapper ratio ratio-1x1 mb-0">
-              <a href="/ocasiones/fin-de-ano" aria-label="Regalos de fin de año"><img class="o_card_img card-img-top" src="/brandtrendy_promo_theme/static/img/paginas/home-ocasion-fin-de-ano.jpg" alt="Estuche de regalo con accesorios de bar y vasos térmicos para fin de año"/></a>
+              <a href="/ocasiones/fin-de-ano" tabindex="-1" aria-hidden="true"><img class="o_card_img card-img-top" src="/brandtrendy_promo_theme/static/img/paginas/home-ocasion-fin-de-ano.jpg" alt="Estuche de regalo con accesorios de bar y vasos térmicos para fin de año"/></a>
             </figure>
             <div class="card-body">
               <h3 class="card-title h5-fs"><a href="/ocasiones/fin-de-ano">Regalos de fin de año</a></h3>
@@ -97,7 +97,7 @@
         <div data-name="Card" class="col-lg-4 col-md-6 pt16 pb16">
           <div class="s_card o_card_img_top card h-100 o_cc o_cc1 my-0" data-vxml="001" data-snippet="s_card" data-name="Card">
             <figure class="o_card_img_wrapper ratio ratio-1x1 mb-0">
-              <a href="/ocasiones/regalos-ejecutivos" aria-label="Regalos ejecutivos"><img class="o_card_img card-img-top" src="/brandtrendy_promo_theme/static/img/paginas/home-ocasion-regalos-ejecutivos.jpg" alt="Ejecutivo con set de licorera y vasos de regalo"/></a>
+              <a href="/ocasiones/regalos-ejecutivos" tabindex="-1" aria-hidden="true"><img class="o_card_img card-img-top" src="/brandtrendy_promo_theme/static/img/paginas/home-ocasion-regalos-ejecutivos.jpg" alt="Ejecutivo con set de licorera forrada en curpiel y vasos de acero"/></a>
             </figure>
             <div class="card-body">
               <h3 class="card-title h5-fs"><a href="/ocasiones/regalos-ejecutivos">Regalos ejecutivos</a></h3>
@@ -108,7 +108,7 @@
         <div data-name="Card" class="col-lg-4 col-md-6 pt16 pb16">
           <div class="s_card o_card_img_top card h-100 o_cc o_cc1 my-0" data-vxml="001" data-snippet="s_card" data-name="Card">
             <figure class="o_card_img_wrapper ratio ratio-1x1 mb-0">
-              <a href="{{url_categoria:Promocionales / Por ocasión / Bienvenida a colaboradores}}" aria-label="Bienvenida a colaboradores"><img class="o_card_img card-img-top" src="/brandtrendy_promo_theme/static/img/paginas/home-ocasion-bienvenida.jpg" alt="Colaborador con mochila, bolígrafo y termo de bienvenida"/></a>
+              <a href="{{url_categoria:Promocionales / Por ocasión / Bienvenida a colaboradores}}" tabindex="-1" aria-hidden="true"><img class="o_card_img card-img-top" src="/brandtrendy_promo_theme/static/img/paginas/home-ocasion-bienvenida.jpg" alt="Colaborador con mochila, bolígrafo y termo de bienvenida"/></a>
             </figure>
             <div class="card-body">
               <h3 class="card-title h5-fs"><a href="{{url_categoria:Promocionales / Por ocasión / Bienvenida a colaboradores}}">Bienvenida a colaboradores</a></h3>
@@ -119,7 +119,7 @@
         <div data-name="Card" class="col-lg-4 col-md-6 pt16 pb16">
           <div class="s_card o_card_img_top card h-100 o_cc o_cc1 my-0" data-vxml="001" data-snippet="s_card" data-name="Card">
             <figure class="o_card_img_wrapper ratio ratio-1x1 mb-0">
-              <a href="/kits" aria-label="Kits promocionales"><img class="o_card_img card-img-top" src="/brandtrendy_promo_theme/static/img/paginas/home-ocasion-kits.jpg" alt="Kit con mochila, termo, estuche y libreta sobre un escritorio"/></a>
+              <a href="/kits" tabindex="-1" aria-hidden="true"><img class="o_card_img card-img-top" src="/brandtrendy_promo_theme/static/img/paginas/home-ocasion-kits.jpg" alt="Kit con mochila, termo, estuche y libreta sobre un escritorio"/></a>
             </figure>
             <div class="card-body">
               <h3 class="card-title h5-fs"><a href="/kits">Kits promocionales</a></h3>
@@ -130,7 +130,7 @@
         <div data-name="Card" class="col-lg-4 col-md-6 pt16 pb16">
           <div class="s_card o_card_img_top card h-100 o_cc o_cc1 my-0" data-vxml="001" data-snippet="s_card" data-name="Card">
             <figure class="o_card_img_wrapper ratio ratio-1x1 mb-0">
-              <a href="{{url_categoria:Promocionales / Por industria / Congresos y exposiciones}}" aria-label="Congresos y exposiciones"><img class="o_card_img card-img-top" src="/brandtrendy_promo_theme/static/img/paginas/home-ocasion-congresos.jpg" alt="Asistente con mochila y gafete en un congreso"/></a>
+              <a href="{{url_categoria:Promocionales / Por industria / Congresos y exposiciones}}" tabindex="-1" aria-hidden="true"><img class="o_card_img card-img-top" src="/brandtrendy_promo_theme/static/img/paginas/home-ocasion-congresos.jpg" alt="Asistente con mochila y gafete en un congreso"/></a>
             </figure>
             <div class="card-body">
               <h3 class="card-title h5-fs"><a href="{{url_categoria:Promocionales / Por industria / Congresos y exposiciones}}">Congresos y exposiciones</a></h3>
@@ -145,13 +145,13 @@
   <!-- 4 · Categorías de primer nivel (tarjetas estáticas: el listado dinámico de categorías recorta la foto y le pone velo) -->
   <section class="s_product_list o_cc o_cc2 pt48 pb48" data-snippet="s_product_list" data-name="Categorías" data-vcss="001">
     <div class="container">
-      <h2 class="h3-fs">Todo lo que tu marca necesita, por categoría</h2>
+      <h2 class="h1-fs">Todo lo que tu marca necesita, por categoría</h2>
       <p><a href="/shop">Ver todo el catálogo<span class="fa fa-long-arrow-right ms-2"/></a></p>
-      <div class="row">
+      <div class="row justify-content-center">
         <div data-name="Card" class="col-lg-3 col-6 pt8 pb8">
           <div class="s_card o_card_img_top card h-100 o_cc o_cc1" data-snippet="s_card" data-vxml="001" data-name="Card">
             <figure class="o_card_img_wrapper ratio ratio-1x1 mb-0">
-              <a href="{{url_categoria:Promocionales / Termos y botellas}}" aria-label="Termos y botellas"><img src="/brandtrendy_promo_theme/static/img/paginas/home-categoria-termos-y-botellas.jpg" alt="Colaborador con termo promocional blanco en una terraza" class="o_card_img card-img-top"/></a>
+              <a href="{{url_categoria:Promocionales / Termos y botellas}}" tabindex="-1" aria-hidden="true"><img src="/brandtrendy_promo_theme/static/img/paginas/home-categoria-termos-y-botellas.jpg" alt="Colaborador con termo blanco en una terraza" class="o_card_img card-img-top"/></a>
             </figure>
             <div class="card-body">
               <h3 class="card-title h6-fs mb-0" style="text-align: center;"><a href="{{url_categoria:Promocionales / Termos y botellas}}">Termos y botellas</a></h3>
@@ -161,7 +161,7 @@
         <div data-name="Card" class="col-lg-3 col-6 pt8 pb8">
           <div class="s_card o_card_img_top card h-100 o_cc o_cc1" data-snippet="s_card" data-vxml="001" data-name="Card">
             <figure class="o_card_img_wrapper ratio ratio-1x1 mb-0">
-              <a href="{{url_categoria:Promocionales / Bolsas y mochilas}}" aria-label="Bolsas y mochilas"><img src="/brandtrendy_promo_theme/static/img/paginas/home-categoria-bolsas-y-mochilas.jpg" alt="Mujer con dos bolsas promocionales al hombro" class="o_card_img card-img-top"/></a>
+              <a href="{{url_categoria:Promocionales / Bolsas y mochilas}}" tabindex="-1" aria-hidden="true"><img src="/brandtrendy_promo_theme/static/img/paginas/home-categoria-bolsas-y-mochilas.jpg" alt="Mujer con dos bolsas al hombro" class="o_card_img card-img-top"/></a>
             </figure>
             <div class="card-body">
               <h3 class="card-title h6-fs mb-0" style="text-align: center;"><a href="{{url_categoria:Promocionales / Bolsas y mochilas}}">Bolsas y mochilas</a></h3>
@@ -171,7 +171,7 @@
         <div data-name="Card" class="col-lg-3 col-6 pt8 pb8">
           <div class="s_card o_card_img_top card h-100 o_cc o_cc1" data-snippet="s_card" data-vxml="001" data-name="Card">
             <figure class="o_card_img_wrapper ratio ratio-1x1 mb-0">
-              <a href="{{url_categoria:Promocionales / Tazas y vasos}}" aria-label="Tazas y vasos"><img src="/brandtrendy_promo_theme/static/img/paginas/home-categoria-tazas-y-vasos.jpg" alt="Colaborador con taza promocional en la oficina" class="o_card_img card-img-top"/></a>
+              <a href="{{url_categoria:Promocionales / Tazas y vasos}}" tabindex="-1" aria-hidden="true"><img src="/brandtrendy_promo_theme/static/img/paginas/home-categoria-tazas-y-vasos.jpg" alt="Colaborador con taza en la oficina" class="o_card_img card-img-top"/></a>
             </figure>
             <div class="card-body">
               <h3 class="card-title h6-fs mb-0" style="text-align: center;"><a href="{{url_categoria:Promocionales / Tazas y vasos}}">Tazas y vasos</a></h3>
@@ -181,7 +181,7 @@
         <div data-name="Card" class="col-lg-3 col-6 pt8 pb8">
           <div class="s_card o_card_img_top card h-100 o_cc o_cc1" data-snippet="s_card" data-vxml="001" data-name="Card">
             <figure class="o_card_img_wrapper ratio ratio-1x1 mb-0">
-              <a href="{{url_categoria:Promocionales / Tecnología}}" aria-label="Tecnología"><img src="/brandtrendy_promo_theme/static/img/paginas/home-categoria-tecnologia.jpg" alt="Pareja con audífonos inalámbricos promocionales" class="o_card_img card-img-top"/></a>
+              <a href="{{url_categoria:Promocionales / Tecnología}}" tabindex="-1" aria-hidden="true"><img src="/brandtrendy_promo_theme/static/img/paginas/home-categoria-tecnologia.jpg" alt="Pareja con audífonos inalámbricos" class="o_card_img card-img-top"/></a>
             </figure>
             <div class="card-body">
               <h3 class="card-title h6-fs mb-0" style="text-align: center;"><a href="{{url_categoria:Promocionales / Tecnología}}">Tecnología</a></h3>
@@ -191,7 +191,7 @@
         <div data-name="Card" class="col-lg-3 col-6 pt8 pb8">
           <div class="s_card o_card_img_top card h-100 o_cc o_cc1" data-snippet="s_card" data-vxml="001" data-name="Card">
             <figure class="o_card_img_wrapper ratio ratio-1x1 mb-0">
-              <a href="{{url_categoria:Promocionales / Escritura}}" aria-label="Escritura"><img src="/brandtrendy_promo_theme/static/img/paginas/home-categoria-escritura.jpg" alt="Bolígrafo promocional escribiendo en una libreta" class="o_card_img card-img-top"/></a>
+              <a href="{{url_categoria:Promocionales / Escritura}}" tabindex="-1" aria-hidden="true"><img src="/brandtrendy_promo_theme/static/img/paginas/home-categoria-escritura.jpg" alt="Bolígrafo escribiendo en una libreta" class="o_card_img card-img-top"/></a>
             </figure>
             <div class="card-body">
               <h3 class="card-title h6-fs mb-0" style="text-align: center;"><a href="{{url_categoria:Promocionales / Escritura}}">Escritura</a></h3>
@@ -201,7 +201,7 @@
         <div data-name="Card" class="col-lg-3 col-6 pt8 pb8">
           <div class="s_card o_card_img_top card h-100 o_cc o_cc1" data-snippet="s_card" data-vxml="001" data-name="Card">
             <figure class="o_card_img_wrapper ratio ratio-1x1 mb-0">
-              <a href="{{url_categoria:Promocionales / Oficina}}" aria-label="Oficina"><img src="/brandtrendy_promo_theme/static/img/paginas/home-categoria-oficina.jpg" alt="Libreta, bolígrafo y vaso térmico promocionales sobre un escritorio" class="o_card_img card-img-top"/></a>
+              <a href="{{url_categoria:Promocionales / Oficina}}" tabindex="-1" aria-hidden="true"><img src="/brandtrendy_promo_theme/static/img/paginas/home-categoria-oficina.jpg" alt="Libreta, bolígrafo y vaso térmico sobre un escritorio" class="o_card_img card-img-top"/></a>
             </figure>
             <div class="card-body">
               <h3 class="card-title h6-fs mb-0" style="text-align: center;"><a href="{{url_categoria:Promocionales / Oficina}}">Oficina</a></h3>
@@ -211,7 +211,7 @@
         <div data-name="Card" class="col-lg-3 col-6 pt8 pb8">
           <div class="s_card o_card_img_top card h-100 o_cc o_cc1" data-snippet="s_card" data-vxml="001" data-name="Card">
             <figure class="o_card_img_wrapper ratio ratio-1x1 mb-0">
-              <a href="{{url_categoria:Promocionales / Hogar}}" aria-label="Hogar"><img src="/brandtrendy_promo_theme/static/img/paginas/home-categoria-hogar.jpg" alt="Tabla para quesos promocional con utensilios" class="o_card_img card-img-top"/></a>
+              <a href="{{url_categoria:Promocionales / Hogar}}" tabindex="-1" aria-hidden="true"><img src="/brandtrendy_promo_theme/static/img/paginas/home-categoria-hogar.jpg" alt="Tabla para quesos con utensilios" class="o_card_img card-img-top"/></a>
             </figure>
             <div class="card-body">
               <h3 class="card-title h6-fs mb-0" style="text-align: center;"><a href="{{url_categoria:Promocionales / Hogar}}">Hogar</a></h3>
@@ -221,7 +221,7 @@
         <div data-name="Card" class="col-lg-3 col-6 pt8 pb8">
           <div class="s_card o_card_img_top card h-100 o_cc o_cc1" data-snippet="s_card" data-vxml="001" data-name="Card">
             <figure class="o_card_img_wrapper ratio ratio-1x1 mb-0">
-              <a href="{{url_categoria:Promocionales / Viaje}}" aria-label="Viaje"><img src="/brandtrendy_promo_theme/static/img/paginas/home-categoria-viaje.jpg" alt="Mujer con maletas promocionales en la playa" class="o_card_img card-img-top"/></a>
+              <a href="{{url_categoria:Promocionales / Viaje}}" tabindex="-1" aria-hidden="true"><img src="/brandtrendy_promo_theme/static/img/paginas/home-categoria-viaje.jpg" alt="Mujer con maletas en la playa" class="o_card_img card-img-top"/></a>
             </figure>
             <div class="card-body">
               <h3 class="card-title h6-fs mb-0" style="text-align: center;"><a href="{{url_categoria:Promocionales / Viaje}}">Viaje</a></h3>
@@ -231,7 +231,7 @@
         <div data-name="Card" class="col-lg-3 col-6 pt8 pb8">
           <div class="s_card o_card_img_top card h-100 o_cc o_cc1" data-snippet="s_card" data-vxml="001" data-name="Card">
             <figure class="o_card_img_wrapper ratio ratio-1x1 mb-0">
-              <a href="{{url_categoria:Promocionales / Productos ecológicos}}" aria-label="Productos ecológicos"><img src="/brandtrendy_promo_theme/static/img/paginas/home-categoria-productos-ecologicos.jpg" alt="Ejecutiva con bolsa ecológica promocional" class="o_card_img card-img-top"/></a>
+              <a href="{{url_categoria:Promocionales / Productos ecológicos}}" tabindex="-1" aria-hidden="true"><img src="/brandtrendy_promo_theme/static/img/paginas/home-categoria-productos-ecologicos.jpg" alt="Ejecutiva con bolsa ecológica" class="o_card_img card-img-top"/></a>
             </figure>
             <div class="card-body">
               <h3 class="card-title h6-fs mb-0" style="text-align: center;"><a href="{{url_categoria:Promocionales / Productos ecológicos}}">Productos ecológicos</a></h3>
@@ -241,7 +241,7 @@
         <div data-name="Card" class="col-lg-3 col-6 pt8 pb8">
           <div class="s_card o_card_img_top card h-100 o_cc o_cc1" data-snippet="s_card" data-vxml="001" data-name="Card">
             <figure class="o_card_img_wrapper ratio ratio-1x1 mb-0">
-              <a href="{{url_categoria:Promocionales / Regalos corporativos}}" aria-label="Regalos corporativos"><img src="/brandtrendy_promo_theme/static/img/paginas/home-categoria-regalos-corporativos.jpg" alt="Ejecutivo con set de licorera promocional" class="o_card_img card-img-top"/></a>
+              <a href="{{url_categoria:Promocionales / Regalos corporativos}}" tabindex="-1" aria-hidden="true"><img src="/brandtrendy_promo_theme/static/img/paginas/home-categoria-regalos-corporativos.jpg" alt="Ejecutivo con set de licorera y vasos de acero" class="o_card_img card-img-top"/></a>
             </figure>
             <div class="card-body">
               <h3 class="card-title h6-fs mb-0" style="text-align: center;"><a href="{{url_categoria:Promocionales / Regalos corporativos}}">Regalos corporativos</a></h3>
@@ -251,7 +251,7 @@
         <div data-name="Card" class="col-lg-3 col-6 pt8 pb8">
           <div class="s_card o_card_img_top card h-100 o_cc o_cc1" data-snippet="s_card" data-vxml="001" data-name="Card">
             <figure class="o_card_img_wrapper ratio ratio-1x1 mb-0">
-              <a href="{{url_categoria:Promocionales / Cuidado personal}}" aria-label="Cuidado personal"><img src="/brandtrendy_promo_theme/static/img/paginas/home-categoria-cuidado-personal.jpg" alt="Mujer con set de brochas de maquillaje promocional" class="o_card_img card-img-top"/></a>
+              <a href="{{url_categoria:Promocionales / Cuidado personal}}" tabindex="-1" aria-hidden="true"><img src="/brandtrendy_promo_theme/static/img/paginas/home-categoria-cuidado-personal.jpg" alt="Mujer con set de brochas de maquillaje" class="o_card_img card-img-top"/></a>
             </figure>
             <div class="card-body">
               <h3 class="card-title h6-fs mb-0" style="text-align: center;"><a href="{{url_categoria:Promocionales / Cuidado personal}}">Cuidado personal</a></h3>
@@ -261,7 +261,7 @@
         <div data-name="Card" class="col-lg-3 col-6 pt8 pb8">
           <div class="s_card o_card_img_top card h-100 o_cc o_cc1" data-snippet="s_card" data-vxml="001" data-name="Card">
             <figure class="o_card_img_wrapper ratio ratio-1x1 mb-0">
-              <a href="{{url_categoria:Promocionales / Deporte y bienestar}}" aria-label="Deporte y bienestar"><img src="/brandtrendy_promo_theme/static/img/paginas/home-categoria-deporte-y-bienestar.jpg" alt="Ciclista con cangurera promocional" class="o_card_img card-img-top"/></a>
+              <a href="{{url_categoria:Promocionales / Deporte y bienestar}}" tabindex="-1" aria-hidden="true"><img src="/brandtrendy_promo_theme/static/img/paginas/home-categoria-deporte-y-bienestar.jpg" alt="Ciclista con cangurera" class="o_card_img card-img-top"/></a>
             </figure>
             <div class="card-body">
               <h3 class="card-title h6-fs mb-0" style="text-align: center;"><a href="{{url_categoria:Promocionales / Deporte y bienestar}}">Deporte y bienestar</a></h3>
@@ -271,17 +271,7 @@
         <div data-name="Card" class="col-lg-3 col-6 pt8 pb8">
           <div class="s_card o_card_img_top card h-100 o_cc o_cc1" data-snippet="s_card" data-vxml="001" data-name="Card">
             <figure class="o_card_img_wrapper ratio ratio-1x1 mb-0">
-              <a href="{{url_categoria:Promocionales / Kits promocionales}}" aria-label="Kits promocionales"><img src="/brandtrendy_promo_theme/static/img/paginas/home-categoria-kits-promocionales.jpg" alt="Kit de asador promocional en estuche junto a una parrilla" class="o_card_img card-img-top"/></a>
-            </figure>
-            <div class="card-body">
-              <h3 class="card-title h6-fs mb-0" style="text-align: center;"><a href="{{url_categoria:Promocionales / Kits promocionales}}">Kits promocionales</a></h3>
-            </div>
-          </div>
-        </div>
-        <div data-name="Card" class="col-lg-3 col-6 pt8 pb8">
-          <div class="s_card o_card_img_top card h-100 o_cc o_cc1" data-snippet="s_card" data-vxml="001" data-name="Card">
-            <figure class="o_card_img_wrapper ratio ratio-1x1 mb-0">
-              <a href="{{url_categoria:Promocionales / Textiles}}" aria-label="Textiles"><img src="/brandtrendy_promo_theme/static/img/paginas/home-categoria-textiles.jpg" alt="Hombre con gorra promocional en un muelle" class="o_card_img card-img-top"/></a>
+              <a href="{{url_categoria:Promocionales / Textiles}}" tabindex="-1" aria-hidden="true"><img src="/brandtrendy_promo_theme/static/img/paginas/home-categoria-textiles.jpg" alt="Hombre con gorra en un muelle" class="o_card_img card-img-top"/></a>
             </figure>
             <div class="card-body">
               <h3 class="card-title h6-fs mb-0" style="text-align: center;"><a href="{{url_categoria:Promocionales / Textiles}}">Textiles</a></h3>
@@ -291,17 +281,7 @@
         <div data-name="Card" class="col-lg-3 col-6 pt8 pb8">
           <div class="s_card o_card_img_top card h-100 o_cc o_cc1" data-snippet="s_card" data-vxml="001" data-name="Card">
             <figure class="o_card_img_wrapper ratio ratio-1x1 mb-0">
-              <a href="{{url_categoria:Promocionales / Eventos y exposiciones}}" aria-label="Eventos y exposiciones"><img src="/brandtrendy_promo_theme/static/img/paginas/home-categoria-eventos-y-exposiciones.jpg" alt="Hielera promocional en un día de campo" class="o_card_img card-img-top"/></a>
-            </figure>
-            <div class="card-body">
-              <h3 class="card-title h6-fs mb-0" style="text-align: center;"><a href="{{url_categoria:Promocionales / Eventos y exposiciones}}">Eventos y exposiciones</a></h3>
-            </div>
-          </div>
-        </div>
-        <div data-name="Card" class="col-lg-3 col-6 pt8 pb8">
-          <div class="s_card o_card_img_top card h-100 o_cc o_cc1" data-snippet="s_card" data-vxml="001" data-name="Card">
-            <figure class="o_card_img_wrapper ratio ratio-1x1 mb-0">
-              <a href="{{url_categoria:Promocionales / Reconocimientos}}" aria-label="Reconocimientos"><img src="/brandtrendy_promo_theme/static/img/paginas/home-categoria-reconocimientos.jpg" alt="Reloj de pared de madera promocional en un librero" class="o_card_img card-img-top"/></a>
+              <a href="{{url_categoria:Promocionales / Reconocimientos}}" tabindex="-1" aria-hidden="true"><img src="/brandtrendy_promo_theme/static/img/paginas/home-categoria-reconocimientos.jpg" alt="Reloj de pared de madera en un librero" class="o_card_img card-img-top"/></a>
             </figure>
             <div class="card-body">
               <h3 class="card-title h6-fs mb-0" style="text-align: center;"><a href="{{url_categoria:Promocionales / Reconocimientos}}">Reconocimientos</a></h3>
@@ -313,7 +293,7 @@
   </section>
 
   <!-- 5 · Listado vivo del catálogo (orden de la tienda) -->
-  <section data-snippet="s_dynamic_snippet_products" data-name="Productos del catálogo" class="s_dynamic_snippet_products oe_website_sale {{clases_tienda}} s_dynamic o_colored_level o_cc o_cc1 pt48 pb48" data-filter-id="{{filtro:brandtrendy_promo_theme.snippet_filtro_catalogo}}" data-template-key="website_sale.dynamic_filter_template_product_product_products_item" data-product-category-id="{{categoria:Promocionales}}" data-number-of-records="8" data-number-of-elements="4" data-number-of-elements-small-devices="1" data-row-per-slide="2" data-carousel-interval="0" data-custom-template-data="{}">
+  <section data-snippet="s_dynamic_snippet_products" id="modelos" data-name="Productos del catálogo" class="s_dynamic_snippet_products oe_website_sale {{clases_tienda}} s_dynamic o_colored_level o_cc o_cc1 pt48 pb48" data-filter-id="{{filtro:brandtrendy_promo_theme.snippet_filtro_catalogo}}" data-template-key="website_sale.dynamic_filter_template_product_product_products_item" data-product-category-id="{{categoria:Promocionales}}" data-number-of-records="8" data-number-of-elements="4" data-number-of-elements-small-devices="1" data-row-per-slide="2" data-carousel-interval="0" data-custom-template-data="{}">
     <div class="s_dynamic_snippet_container container">
       <div class="row s_nb_column_fixed">
         <section class="s_dynamic_snippet_holder d-none px-4 placeholder-glow">
@@ -328,7 +308,7 @@
         </section>
         <section class="s_dynamic_snippet_title oe_unremovable oe_unmovable justify-content-between d-flex flex-column flex-md-row mb-lg-0 pb-3 pb-md-0 s_col_no_resize">
           <div>
-            <h2 class="h3">Productos del catálogo</h2>
+            <h2 class="h1-fs">Productos del catálogo</h2>
             <p class="lead">Abre cualquier producto para ver su mínimo, sus técnicas de personalización y agregarlo a tu cotización.</p>
           </div>
           <div>
@@ -338,7 +318,7 @@
         <section class="s_dynamic_snippet_content oe_unremovable oe_unmovable o_not_editable col s_col_no_resize">
           <div class="css_non_editable_mode_hidden">
             <div class="missing_option_warning alert alert-info fade show d-none d-print-none rounded-0">
-              Your Dynamic Snippet will be displayed here... This message is displayed because you did not provide enough options to retrieve its content.<br/>
+              Aquí se mostrará tu listado dinámico. Este mensaje aparece porque no diste suficientes opciones para obtener su contenido.<br/>
             </div>
           </div>
           <div class="dynamic_snippet_template"/>
@@ -357,27 +337,27 @@
       </defs>
     </svg>
     <div class="container">
-      <h2 class="mb-2 text-center h3-fs">Cómo funciona</h2>
+      <h2 class="mb-2 text-center h1-fs">Cómo funciona</h2>
       <p class="lead text-center mb-4">El sitio opera por cotización: armas tu solicitud y un ejecutivo te confirma precio, personalización y entrega.</p>
       <div class="row g-0">
         <div class="col-lg-3 s_process_step position-relative pt24 pb24">
           <svg class="s_process_step_connector position-absolute z-index-1" viewBox="0 0 100 20" preserveAspectRatio="none"><path d="M 0 10 L 100 10" vector-effect="non-scaling-stroke"/></svg>
-          <div class="s_process_step_number d-flex align-items-center justify-content-center mx-auto rounded-circle bg-primary-light" data-name="Step Number"><h3 class="mb-0 text-primary text-center">1</h3></div>
+          <div class="s_process_step_number d-flex align-items-center justify-content-center mx-auto rounded-circle bg-primary-light" data-name="Step Number"><p class="h3 mb-0 text-primary text-center" aria-hidden="true">1</p></div>
           <div class="s_process_step_content mt-3 px-3 text-center"><h3 class="h5-fs">Elige productos</h3><p>Agrégalos a tu cotización desde el catálogo.</p></div>
         </div>
         <div class="col-lg-3 s_process_step position-relative pt24 pb24">
           <svg class="s_process_step_connector position-absolute z-index-1" viewBox="0 0 100 20" preserveAspectRatio="none"><path d="M 0 10 L 100 10" vector-effect="non-scaling-stroke"/></svg>
-          <div class="s_process_step_number d-flex align-items-center justify-content-center mx-auto rounded-circle bg-primary-light" data-name="Step Number"><h3 class="mb-0 text-primary text-center">2</h3></div>
+          <div class="s_process_step_number d-flex align-items-center justify-content-center mx-auto rounded-circle bg-primary-light" data-name="Step Number"><p class="h3 mb-0 text-primary text-center" aria-hidden="true">2</p></div>
           <div class="s_process_step_content mt-3 px-3 text-center"><h3 class="h5-fs">Define cantidad</h3><p>Cantidades, variantes y técnica de personalización.</p></div>
         </div>
         <div class="col-lg-3 s_process_step position-relative pt24 pb24">
           <svg class="s_process_step_connector position-absolute z-index-1" viewBox="0 0 100 20" preserveAspectRatio="none"><path d="M 0 10 L 100 10" vector-effect="non-scaling-stroke"/></svg>
-          <div class="s_process_step_number d-flex align-items-center justify-content-center mx-auto rounded-circle bg-primary-light" data-name="Step Number"><h3 class="mb-0 text-primary text-center">3</h3></div>
-          <div class="s_process_step_content mt-3 px-3 text-center"><h3 class="h5-fs">Autoriza la propuesta</h3><p>Recibes tu cotización formal y apruebas la prueba digital.</p></div>
+          <div class="s_process_step_number d-flex align-items-center justify-content-center mx-auto rounded-circle bg-primary-light" data-name="Step Number"><p class="h3 mb-0 text-primary text-center" aria-hidden="true">3</p></div>
+          <div class="s_process_step_content mt-3 px-3 text-center"><h3 class="h5-fs">Aprueba tu cotización</h3><p>Recibes tu cotización formal y apruebas la prueba digital.</p></div>
         </div>
         <div class="col-lg-3 s_process_step position-relative pt24 pb24">
           <svg class="s_process_step_connector position-absolute z-index-1" viewBox="0 0 100 20" preserveAspectRatio="none"><path d="M 0 10 L 100 10" vector-effect="non-scaling-stroke"/></svg>
-          <div class="s_process_step_number d-flex align-items-center justify-content-center mx-auto rounded-circle bg-primary-light" data-name="Step Number"><h3 class="mb-0 text-primary text-center">4</h3></div>
+          <div class="s_process_step_number d-flex align-items-center justify-content-center mx-auto rounded-circle bg-primary-light" data-name="Step Number"><p class="h3 mb-0 text-primary text-center" aria-hidden="true">4</p></div>
           <div class="s_process_step_content mt-3 px-3 text-center"><h3 class="h5-fs">Producimos y entregamos</h3><p>Con control de calidad y envío a todo México.</p></div>
         </div>
       </div>
@@ -390,7 +370,7 @@
     <div class="container">
       <div class="row align-items-start s_nb_column_fixed">
         <div class="col-lg-4 pt16">
-          <h2 class="h3-fs">Preguntas frecuentes</h2>
+          <h2 class="h1-fs">Preguntas frecuentes</h2>
           <p class="lead">Lo que más nos preguntan antes de cotizar.</p>
           <p><a href="/preguntas-frecuentes">Ver todas las preguntas<span class="fa fa-long-arrow-right ms-2"/></a></p>
         </div>
@@ -416,7 +396,7 @@
                 </div>
               </div>
               <div class="accordion-item position-relative z-1" data-name="Accordion Item">
-                <button type="button" id="faqInicio-btn-4" class="accordion-header accordion-button collapsed justify-content-between gap-2 bg-transparent h6-fs fw-bold text-decoration-none text-reset transition-none" data-bs-target="#faqInicio-tab-4" aria-controls="faqInicio-tab-4" data-bs-toggle="collapse" aria-expanded="false"><span class="flex-grow-1">¿Cuánto tarda mi pedido?</span></button>
+                <button type="button" id="faqInicio-btn-4" class="accordion-header accordion-button collapsed justify-content-between gap-2 bg-transparent h6-fs fw-bold text-decoration-none text-reset transition-none" data-bs-target="#faqInicio-tab-4" aria-controls="faqInicio-tab-4" data-bs-toggle="collapse" aria-expanded="false"><span class="flex-grow-1">¿Cuánto tarda mi entrega?</span></button>
                 <div id="faqInicio-tab-4" class="accordion-collapse collapse" data-bs-parent="#faqInicio" role="region" aria-labelledby="faqInicio-btn-4">
                   <div class="accordion-body"><p>Depende del producto y la técnica; el plazo se cotiza contigo. Corre desde la confirmación completa (anticipo, archivos utilizables y prueba aprobada), y el tránsito del envío se suma según tu código postal.</p></div>
                 </div>
@@ -439,11 +419,11 @@
     <div class="container">
       <div class="row align-items-center">
         <div class="col-lg-9">
-          <h2 class="h3-fs">¿Tienes un proyecto a medida o un kit para tu equipo?</h2>
-          <p class="lead">Cuéntanos qué necesitas. Un ejecutivo te confirma precio, personalización y entrega.</p>
+          <h2 class="h1-fs">¿Tienes un proyecto a medida o un kit para tu equipo?</h2>
+          <p class="lead">Cuéntanos tu caso y un ejecutivo te responde en 1 día hábil.</p>
         </div>
         <div class="col-lg-3">
-          <p style="text-align: right;"><a href="/contactus" class="btn btn-primary btn-lg o_translate_inline">Solicitar asesoría</a></p>
+          <p style="text-align: right;"><a href="/contactus#asesoria" class="btn btn-primary btn-lg o_translate_inline">Solicitar asesoría</a></p>
         </div>
       </div>
     </div>

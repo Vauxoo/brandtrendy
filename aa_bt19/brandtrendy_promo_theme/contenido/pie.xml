@@ -40,7 +40,7 @@
                         <li><a href="/quienes-somos">Quiénes somos</a></li>
                         <li><a href="/contactus">Contacto</a></li>
                         <li><i class="fa fa-whatsapp fa-fw me-2" aria-hidden="true"/><a href="https://wa.me/525555260418">Tel. y WhatsApp +52 55 5526 0418</a></li>
-                        <li><i class="fa fa-envelope fa-fw me-2" aria-hidden="true"/><a href="mailto:hola@brandtrendy.com.mx">hola@brandtrendy.com.mx</a></li>
+                        <li><i class="fa fa-envelope fa-fw me-2" aria-hidden="true"/><a href="mailto:hola@brandtrendy.com.mx">hola@<wbr/>brandtrendy.com.mx</a></li>
                         <li>Lunes a viernes de 8:30 a 17:30, hora del centro</li>
                     </ul>
                     <div class="s_social_media text-start o_not_editable" data-snippet="s_social_media" data-name="Social Media" contenteditable="false">
