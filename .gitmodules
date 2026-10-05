@@ -10,3 +10,7 @@
 	path = sale-self-invoice
 	url = git@git.vauxoo.com:vauxoo/sale-self-invoice.git
 	branch = 17.0
+[submodule "pms-odoo-addons"]
+	path = pms-odoo-addons
+	url = git@github.com:fershiis/pms-odoo-addons.git
+	branch = 19.0
