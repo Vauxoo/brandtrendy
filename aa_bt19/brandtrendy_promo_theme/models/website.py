@@ -32,6 +32,13 @@ ASSETS_SITIO = [  # (key, bundle, directiva, ruta)
     (MODULO + ".bootstrap", "web._assets_frontend_helpers", "prepend",
      MODULO + "/static/src/scss/bootstrap_overridden.scss"),
 ]
+# Al terminar cada actualización de módulos, Odoo 19 copia toda vista genérica nueva bajo TODAS las copias por sitio de
+# su vista padre, activas o no, y la valida ahí (website/models/ir_ui_view.py, _create_all_specific_views, llamado desde
+# ir.model.data._process_end). Si una copia por sitio no tiene las anclas de 19, la validación falla, la actualización
+# aborta (código 255) y Odoo.sh deja el build en rojo aunque el sitio responda (5-oct: copia 5685 de la 17 de
+# website_sale.cart sin div#shop_cart). Los pasos «jubilar» y «herencias_sitio» lo evitan (ver sus docstrings).
+SUFIJO_JUBILADA = ".bt17_jubilada"
+PARAM_INSTALADO = MODULO + ".instalado_en"  # primera aplicación del módulo en esta base: separa copias de la 17 de las de 19
 ICONOS_KEY = MODULO + ".sitio_iconos"
 ICONOS_ARCH = """<data>
     <xpath expr="//link[@rel='apple-touch-icon']" position="attributes">
@@ -150,6 +157,7 @@ class Website(models.Model):
                 ("modo", sitio._bt_promo_modo, "version"),
                 ("tema", sitio._bt_promo_tema, "siempre"),
                 ("vistas", sitio._bt_promo_vistas, "version"),
+                ("jubilar", sitio._bt_promo_jubilar, "siempre"),
                 ("codigo", sitio._bt_promo_codigo, "una_vez"),
                 ("ajustes", sitio._bt_promo_ajustes, "version"),
                 ("pasos", sitio._bt_promo_pasos, "version"),
@@ -160,6 +168,8 @@ class Website(models.Model):
                 ("pie", sitio._bt_promo_pie, "siempre"),
                 ("rutas", sitio._bt_promo_rutas, "version"),
                 ("menu", sitio._bt_promo_menu, "version"),
+                # al final: los pasos anteriores crean copias por sitio (checkout, cabecera, pie)
+                ("herencias_sitio", sitio._bt_promo_herencias_sitio, "siempre"),
             ]:
                 marca = ICP.get_param(PARAM_PASO + nombre)
                 if (regla == "version" and marca == APLICAR_VERSION) or (regla == "una_vez" and marca):
@@ -231,11 +241,93 @@ class Website(models.Model):
     def _bt_promo_vistas(self):
         self.ensure_one()
         # Sin website_id en el contexto: se escriben las vistas ya específicas del sitio, sin crear copias.
-        vistas = self.env["ir.ui.view"].sudo().with_context(active_test=False, website_id=False).search(
-            [("key", "in", VISTAS_APAGAR), ("website_id", "=", self.id), ("active", "=", True)])
+        View = self.env["ir.ui.view"].sudo().with_context(active_test=False, website_id=False, no_cow=True)
+        vistas = View.search([("key", "in", VISTAS_APAGAR), ("website_id", "=", self.id), ("active", "=", True)])
         if vistas:
             vistas.write({"active": False})
         return "%s vistas apagadas" % len(vistas)
+
+    def _bt_promo_instalado_en(self):
+        """Momento de la primera aplicación del módulo en esta base. Lo creado antes (en la 17 o en la migración) es
+        anterior; lo creado después (p. ej. con el editor de la 19) se respeta."""
+        ICP = self.env["ir.config_parameter"].sudo()
+        valor = ICP.get_param(PARAM_INSTALADO)
+        if not valor:
+            valor = fields.Datetime.to_string(self.env.cr.now())
+            ICP.set_param(PARAM_INSTALADO, valor)
+        return fields.Datetime.to_datetime(valor)
+
+    def _bt_promo_jubilar(self):
+        """Jubila las copias del sitio de plantillas PRIMARIAS de la 17 que el paso «vistas» apaga (carrito, checkout,
+        dirección, pago, confirmación, cabecera del carrito, filtro de precio, CFDI): las que están inactivas, son
+        anteriores a la instalación del módulo y tienen su plantilla genérica en 19. Jubilar = cambiar la key (sufijo
+        SUFIJO_JUBILADA) de la copia y de todo su subárbol del mismo sitio, para que Odoo deje de tratarlos como copias
+        de la plantilla: ya no reciben herencias nuevas al actualizar módulos (de este módulo o de Odoo).
+
+        Nada visible cambia: una primaria inactiva no se pinta (el sitio ya usa la genérica) y su subárbol no entra en
+        ningún árbol de herencia; en el staging las huellas del flujo (inicio, tienda, Mi cotización con líneas, datos,
+        pago, confirmación) son idénticas antes y después, y is_view_active da lo mismo (las hijas activas, como la de
+        campos B2B, tienen genérica activa con el mismo arch). No toca extensiones (su copia inactiva es la que apaga
+        una opción en el sitio, p. ej. la barra de cookies). Idempotente. Reversa: quitar el sufijo de las keys."""
+        self.ensure_one()
+        View = self.env["ir.ui.view"].sudo().with_context(active_test=False, website_id=False, no_cow=True)
+        instalado = self._bt_promo_instalado_en()
+        jubiladas = View.browse()
+        for copia in View.search([("key", "in", VISTAS_APAGAR), ("website_id", "=", self.id), ("active", "=", False),
+                                  ("mode", "=", "primary")]):
+            if copia.create_date and copia.create_date >= instalado:
+                continue  # copia hecha en la 19: no es de la 17
+            if not View.search_count([("key", "=", copia.key), ("website_id", "=", False), ("mode", "=", "primary")]):
+                continue
+            pila = [copia]
+            while pila:
+                vista = pila.pop()
+                if vista in jubiladas:
+                    continue
+                jubiladas |= vista
+                pila.extend(vista.inherit_children_ids.filtered(lambda hija: hija.website_id == copia.website_id))
+        for vista in jubiladas:
+            vista.write({"key": vista.key + SUFIJO_JUBILADA})
+        self.env.flush_all()  # _create_all_specific_views lee con SQL directo
+        return "%s copias de la 17 jubiladas (con su subárbol)" % len(jubiladas)
+
+    def _bt_promo_herencias_sitio(self):
+        """Hace por adelantado, par por par y dentro de un savepoint, lo que Odoo hará al terminar la actualización con
+        las vistas genéricas de ESTE módulo: copiarlas bajo cada copia por sitio de su vista padre. Si un par valida, la
+        copia queda hecha (igual que la haría Odoo). Si falla —una copia por sitio sin las anclas de 19, p. ej. una
+        edición hecha con el editor de la 17 en producción antes del corte—, deja para ese sitio un marcador INACTIVO con
+        la key de la vista del módulo: Odoo ya no ve el par pendiente y la actualización termina; la personalización del
+        módulo no aplica en esa plantilla de ese sitio hasta que alguien revise la copia (aviso en el log y en el
+        resultado). Corre al final y siempre; sin pares pendientes no hace nada."""
+        self.ensure_one()
+        View = self.env["ir.ui.view"].sudo().with_context(active_test=False, website_id=False, no_cow=True)
+        copiadas, marcadores = 0, []
+        for generica in View.search([("type", "=", "qweb"), ("website_id", "=", False), ("inherit_id", "!=", False),
+                                     ("key", "=like", MODULO + ".%")]):
+            clave_padre = generica.inherit_id.key
+            if not clave_padre:
+                continue
+            for copia_padre in View.search([("key", "=", clave_padre), ("website_id", "!=", False)]):
+                sitio_id = copia_padre.website_id.id
+                if View.search_count([("key", "=", generica.key), ("website_id", "=", sitio_id)]):
+                    continue
+                try:
+                    with self.env.cr.savepoint():
+                        generica.with_context(website_id=sitio_id, no_cow=False).write({"inherit_id": copia_padre.id})
+                    copiadas += 1
+                except Exception as error:  # noqa: BLE001 — la validación de la copia falló: marcador y aviso
+                    View.create({
+                        "name": "%s · marcador: no aplica en esta copia del sitio" % generica.name,
+                        "key": generica.key, "website_id": sitio_id, "type": "qweb", "mode": "primary",
+                        "active": False, "arch": '<t t-name="%s"/>' % generica.key,
+                    })
+                    marcadores.append("%s→%s" % (generica.key, copia_padre.id))
+                    _logger.warning("%s: %s no aplica en la copia %s (%s) del sitio %s; se dejó un marcador. %s",
+                                    MODULO, generica.key, copia_padre.id, clave_padre, sitio_id,
+                                    " ".join(str(error).split())[:300])
+        self.env.flush_all()
+        texto = "%s herencias copiadas a copias por sitio" % copiadas
+        return texto + ("; marcadores (revisar): %s" % ", ".join(marcadores) if marcadores else "")
 
     def _bt_promo_codigo(self):
         """Una sola vez: respalda el código inyectado de la 17 en un parámetro, conserva únicamente el bloque de

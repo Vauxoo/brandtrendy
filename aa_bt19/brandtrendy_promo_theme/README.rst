@@ -29,3 +29,16 @@ Importante
 * El acuse por WhatsApp está apagado por omisión: se enciende con el parámetro
   ``brandtrendy_promo_theme.acuse_whatsapp = 1`` (manda mensajes a clientes).
 * Repositorio público: nada de credenciales, proveedores, costos ni datos de clientes en este módulo.
+* **Copias por sitio y builds en rojo.** Al terminar cada actualización, Odoo 19 copia toda vista genérica nueva bajo
+  todas las copias por sitio de su vista padre (activas o no) y la valida ahí; una copia sin las anclas de 19 aborta la
+  actualización (Odoo.sh: «Test: Failed»), aunque el sitio responda. Por eso:
+
+  - el paso ``jubilar`` cambia la key (sufijo ``.bt17_jubilada``) de las copias inactivas de la 17 de plantillas
+    primarias que el paso ``vistas`` apaga, con su subárbol del sitio. No cambia nada visible. Reversa: quitar el sufijo
+    (solo junto con quitar este paso; si no, la siguiente actualización vuelve a fallar);
+  - el paso ``herencias_sitio`` hace por adelantado esas copias para las vistas de este módulo y, si una no valida,
+    deja un marcador inactivo y un aviso en el log: la personalización no aplica en esa copia hasta revisarla;
+  - antes de dar por bueno un build: ``odoo19/tools/f5_diagnostico_cow.py --modulos '*'`` (0 errores) y el estado del
+    build en Odoo.sh.
+* En producción, Odoo.sh solo actualiza un módulo si sube ``version`` en el manifiesto: subirla en cada entrega.
+* Desinstalar este módulo arrastra al kit ``brandtrendy`` (depende de él); las copias jubiladas no se revierten solas.

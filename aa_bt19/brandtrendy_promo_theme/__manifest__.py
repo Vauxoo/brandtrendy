@@ -6,7 +6,7 @@
     "website": "https://promocionales.brandtrendy.com.mx",
     "license": "LGPL-3",
     "category": "Website/Website",
-    "version": "19.0.1.0.0",
+    "version": "19.0.1.0.1",
     "depends": [
         "website_sale",
         "website_crm",
