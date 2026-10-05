@@ -1,0 +1,105 @@
+<pagina url="/envios-y-cobertura" nombre="Envíos y cobertura a nivel nacional" titulo="Envíos y cobertura | Promocionales Brandtrendy" descripcion="Cobertura de envío en México: paqueterías, reparto propio en CDMX, tiempos de tránsito estimados, envío exprés y recolección en almacén." indexada="1" publicada="1">
+  <section class="s_title o_cc o_cc1 pt64 pb32" data-snippet="s_title" data-vcss="001" data-name="Título de la página">
+    <div class="container s_allow_columns">
+      <h1 class="display-3-fs">Envíos y cobertura</h1>
+      <p class="lead">Gestionamos el envío de tu pedido a nivel nacional desde nuestro almacén propio en la Ciudad de México. Aquí te explicamos cómo funciona la cobertura, los tiempos estimados y qué hacer al recibir tu mercancía.</p>
+    </div>
+  </section>
+  <section class="s_text_block o_cc o_cc1 pt40 pb40" data-snippet="s_text_block" data-name="Cobertura y reparto">
+    <div class="container s_allow_columns">
+      <div class="row">
+        <div class="col-lg-6 pt16 pb16">
+          <h2 class="h3-fs">Cobertura nacional y paqueterías</h2>
+          <p>Enviamos a toda la República Mexicana a través de paqueterías como Estafeta, FedEx, DHL y Paquetexpress, seleccionadas según el destino, peso y volumen de cada pedido.</p>
+        </div>
+        <div class="col-lg-6 pt16 pb16">
+          <h2 class="h3-fs">Reparto propio en CDMX y zona metropolitana</h2>
+          <p>Para pedidos dentro de la Ciudad de México y zona metropolitana contamos con reparto propio, sujeto a disponibilidad, volumen del pedido y cotización previa.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+  <section class="s_text_image o_cc o_cc2 pt64 pb64" data-snippet="s_text_image" data-name="Envío cotizado aparte">
+    <div class="container">
+      <div class="row align-items-start">
+        <div class="col-lg-6 pt16 pb16">
+          <h2 class="h3-fs">El envío siempre se cotiza aparte</h2>
+          <p>Los precios publicados en el catálogo incluyen IVA, pero no incluyen el costo de envío. Este se cotiza de forma independiente.</p><p>El desglose completo — producto, personalización y envío — se entrega en tu cotización formal, junto con los datos bancarios para el pago por transferencia.</p>
+        </div>
+        <div class="col-lg-5 offset-lg-1 pt16 pb16">
+          <div class="s_card card o_cc o_cc1" data-vxml="001" data-snippet="s_card" data-name="Card" style="border-width: 0px !important;">
+              <div class="card-body">
+                <h3 class="card-title h5-fs">El costo de envío depende de</h3>
+                <ul><li>Código postal de destino</li><li>Peso y volumen del paquete</li><li>Número de bultos</li><li>Tipo de producto</li><li>Servicio estándar o exprés</li><li>Maniobras necesarias para la entrega</li></ul>
+              </div>
+            </div>
+        </div>
+      </div>
+    </div>
+  </section>
+  <section class="s_numbers o_cc o_cc1 pt64 pb64" data-snippet="s_numbers" data-name="Tiempos de tránsito">
+    <div class="container">
+      <div class="row s_nb_column_fixed">
+        <div class="col-lg-8">
+          <h2 class="mb-3 h3-fs">Tiempos de tránsito estimados</h2>
+          <p class="lead">Corren desde que tu pedido queda liberado.</p>
+        </div>
+      </div>
+      <div class="row s_nb_column_fixed">
+        <div class="col-lg-4">
+          <p style="text-align: center;"><span class="s_number display-1-fs">1 a 3</span><br/><span class="h5-fs">días · CDMX y zona metropolitana</span></p>
+        </div>
+        <div class="col-lg-4">
+          <p style="text-align: center;"><span class="s_number display-1-fs">1 a 7</span><br/><span class="h5-fs">días · interior de la República</span></p>
+        </div>
+        <div class="col-lg-4">
+          <p style="text-align: center;"><span class="s_number display-1-fs">7 a 15</span><br/><span class="h5-fs">días · zonas extendidas</span></p>
+        </div>
+      </div>
+      <div class="row">
+        <div class="col-lg-8 pt24">
+          <p><b>Importante:</b> el tiempo de tránsito corre a partir de que el pedido queda liberado —es decir, pagado, producido y con la prueba digital aprobada— y no incluye el tiempo de producción ni de personalización. Ese plazo se confirma en tu cotización según la técnica y la cantidad solicitada.</p>
+          <h3 class="h5-fs">Envío exprés</h3>
+          <p>El servicio exprés está sujeto a existencia, pago completo, prueba digital aprobada, capacidad operativa del momento, horario y destino, e implica un costo adicional. Solo se considera confirmado cuando lo comunicamos por escrito.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+  <section class="s_text_image o_cc o_cc1 pt64 pb64" data-snippet="s_text_image" data-name="Recolección en almacén">
+    <div class="container">
+      <div class="row align-items-start">
+        <div class="col-lg-6 pt16 pb16">
+          <h2 class="h3-fs">Recolección en almacén</h2>
+          <p>Si prefieres recoger tu pedido directamente, puedes hacerlo con cita previa una vez que esté terminado, pagado y liberado.</p><h3 class="h5-fs">Requisitos para la recolección</h3><ul><li>Número de pedido</li><li>Persona autorizada</li><li>Identificación oficial vigente</li><li>Carta de autorización, si acude un tercero</li></ul>
+        </div>
+        <div class="col-lg-5 offset-lg-1 pt16 pb16">
+          <div class="s_card card o_cc o_cc2" data-vxml="001" data-snippet="s_card" data-name="Card" style="border-width: 0px !important;">
+              <div class="card-body">
+                <h3 class="card-title h5-fs">Dónde y cuándo</h3>
+                <p class="card-text">Poniente 134 núm. 682, Bodega E, Col. Industrial Vallejo, Alcaldía Azcapotzalco, C.P. 02300, CDMX.</p><p class="card-text">Atención de lunes a viernes de 8:30 a 17:30 horas (hora del centro). Sábados solo por WhatsApp, sujeto a disponibilidad y con confirmación expresa para recolecciones sabatinas.</p>
+              </div>
+            </div>
+        </div>
+      </div>
+    </div>
+  </section>
+  <section class="s_text_block o_cc o_cc1 pt48 pb48" data-snippet="s_text_block" data-name="Al recibir tu pedido">
+    <div class="container s_allow_columns">
+      <h2 class="h3-fs">Al recibir tu pedido</h2>
+      <p>Antes de firmar de recibido: cuenta los bultos, revisa el estado del embalaje y anota cualquier anomalía directamente en la guía o carta porte de la paquetería; toma fotografías del paquete y su contenido. Este registro es indispensable para cualquier reclamación posterior.</p><p>Reporta cualquier anomalía dentro de los 3 días naturales siguientes a la entrega. Conoce el proceso completo en nuestra página de <a href="/devoluciones">devoluciones</a>.</p>
+    </div>
+  </section>
+  <section class="s_call_to_action o_cc o_cc5 pt64 pb64" data-snippet="s_call_to_action" data-name="Llamada a la acción">
+    <div class="container">
+      <div class="row">
+        <div class="col-lg-9">
+          <h2 class="h3-fs">¿Tienes dudas sobre tu envío?</h2>
+          <p class="lead">Solicita tu cotización y te confirmamos tiempos y costos según tu destino. También puedes escribirnos a hola@brandtrendy.com.mx o llamar al +52 55 5526 0418.</p>
+        </div>
+        <div class="col-lg-3">
+          <p style="text-align: right;"><a href="/contactus" class="btn btn-primary btn-lg o_translate_inline">Solicitar cotización</a></p>
+        </div>
+      </div>
+    </div>
+  </section>
+</pagina>

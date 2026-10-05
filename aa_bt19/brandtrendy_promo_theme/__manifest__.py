@@ -16,6 +16,7 @@
     ],
     "data": [
         "data/lista_blanca.xml",
+        "data/filtros_listado.xml",
         "data/plantillas_correo.xml",
         "data/automatizacion.xml",
         "views/plantillas_sitio.xml",

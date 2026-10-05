@@ -16,8 +16,40 @@ $o-color-palettes: map-merge($o-color-palettes, (
         'o-cc1-btn-primary-border': #414042,
         'o-cc1-btn-secondary': #FFFFFF,
         'o-cc1-btn-secondary-border': #414042,
+        // Banda gris (fondo #F3F3F4): igual que la blanca.
+        'o-cc2-text': #414042,
+        'o-cc2-headings': #231F20,
+        'o-cc2-link': #1F667F,
+        'o-cc2-btn-primary': #414042,
+        'o-cc2-btn-primary-border': #414042,
+        'o-cc2-btn-secondary': #FFFFFF,
+        'o-cc2-btn-secondary-border': #414042,
+        // Bandas oscuras (teal #1F667F, grafito #414042, ink #231F20): texto y enlaces claros; botón primario blanco.
+        'o-cc3-text': #FFFFFF,
+        'o-cc3-headings': #FFFFFF,
+        'o-cc3-link': #FFFFFF,
+        'o-cc3-btn-primary': #FFFFFF,
+        'o-cc3-btn-primary-border': #FFFFFF,
+        'o-cc4-text': #FFFFFF,
+        'o-cc4-headings': #FFFFFF,
+        'o-cc4-link': #FFFFFF,
+        'o-cc4-btn-primary': #FFFFFF,
+        'o-cc4-btn-primary-border': #FFFFFF,
+        'o-cc5-text': rgba(#FFFFFF, .85),
+        'o-cc5-headings': #FFFFFF,
+        'o-cc5-link': #38B9E7, // cyan de marca: solo sobre oscuro
+        'o-cc5-btn-primary': #FFFFFF,
+        'o-cc5-btn-primary-border': #FFFFFF,
     ),
 ));
+
+// Encabezados según los tokens (base 16 px): H1 28, H2 22, H3 18, H4 16, H5 15, H6 14. Odoo 19 trae H1 = 3× la base.
+$o-theme-h1-font-size-multiplier: 1.75;
+$o-theme-h2-font-size-multiplier: 1.375;
+$o-theme-h3-font-size-multiplier: 1.125;
+$o-theme-h4-font-size-multiplier: 1;
+$o-theme-h5-font-size-multiplier: .9375;
+$o-theme-h6-font-size-multiplier: .875;
 $o-selected-color-palettes-names: append($o-selected-color-palettes-names, 'brandtrendy');
 
 // Hanken Grotesk autoalojada (fuentes.scss): sin 'url', el sitio no pide fuentes a Google.

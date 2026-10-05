@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <!-- Filtro de los listados dinámicos de producto de las páginas del sitio: productos publicados en el orden de la
+         tienda (website_sequence), no «los más nuevos». Patrón de website_sale/data/data.xml (19.0). -->
+    <record id="filtro_catalogo_orden_tienda" model="ir.filters">
+        <field name="name">Promocionales · catálogo en el orden de la tienda</field>
+        <field name="model_id">product.product</field>
+        <field name="user_ids" eval="False"/>
+        <field name="domain">[('website_published', '=', True)]</field>
+        <field name="context">{'display_default_code': False, 'add2cart_rerender': False}</field>
+        <field name="sort">["website_sequence asc", "id asc"]</field>
+    </record>
+    <record id="snippet_filtro_catalogo" model="website.snippet.filter">
+        <field name="name">Promocionales · catálogo en el orden de la tienda</field>
+        <field name="filter_id" ref="filtro_catalogo_orden_tienda"/>
+        <field name="field_names">display_name,description_sale,image_512</field>
+        <field name="limit" eval="16"/>
+    </record>
+</odoo>

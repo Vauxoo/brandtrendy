@@ -1,0 +1,72 @@
+<pagina url="/devoluciones" nombre="Devoluciones e incidencias" titulo="Devoluciones e incidencias | Promocionales Brandtrendy" descripcion="Cómo reportar una incidencia con tu pedido: plazos, expediente requerido, retornos autorizados y cancelaciones sin defecto en Brandtrendy." indexada="1" publicada="1">
+  <section class="s_title pt40 pb16" data-snippet="s_title" data-vcss="001" data-name="Título">
+    <div class="container o_container_small s_allow_columns">
+      <h1 class="display-3-fs">Devoluciones e incidencias</h1>
+    </div>
+  </section>
+  <section class="s_text_block pt0 pb16" data-snippet="s_text_block" data-name="Introducción">
+    <div class="container o_container_small s_allow_columns">
+      <p class="lead">En BRANDTRENDY revisamos cada incidencia con el mismo cuidado con el que gestionamos tu pedido: producto, personalización, control de calidad y entrega nacional desde una sola operación. Esta página explica qué reclamaciones aceptamos, en qué plazos y cómo reportarlas.</p>
+    </div>
+  </section>
+  <section class="s_text_block pt24 pb24" data-snippet="s_text_block" data-name="Reclamaciones que aceptamos">
+    <div class="container o_container_small s_allow_columns">
+      <h2 class="h3-fs">Reclamaciones que aceptamos</h2>
+      <p>Atendemos incidencias relacionadas con:</p><ul><li>Producto distinto o incorrecto al cotizado</li><li>Faltantes en el pedido</li><li>Daño de embalaje</li><li>Defecto de fabricación</li><li>Producto inutilizable para su propósito ordinario</li><li>Error de personalización atribuible a BRANDTRENDY</li><li>Diferencia material respecto a la prueba digital aprobada</li><li>Daño ocurrido en transporte</li></ul>
+    </div>
+  </section>
+  <section class="s_text_block pt24 pb24" data-snippet="s_text_block" data-name="Plazos">
+    <div class="container o_container_small s_allow_columns">
+      <h2 class="h3-fs">Plazos</h2>
+      <div class="table-responsive"><table class="table table-bordered"><thead><tr><th scope="col">Concepto</th><th scope="col">Plazo</th></tr></thead><tbody><tr><td>Inspección y reporte de la incidencia</td><td>3 días naturales desde la entrega (fecha registrada por la paquetería)</td></tr><tr><td>Defectos de fabricación</td><td>Reportables hasta 15 días naturales desde la entrega</td></tr><tr><td>Respuesta inicial de BRANDTRENDY</td><td>Máximo 1 día hábil</td></tr><tr><td>Resolución</td><td>Máximo 7 días naturales desde que la reclamación está completa (evidencia y, si se solicita, muestra)</td></tr></tbody></table></div><p>BRANDTRENDY no otorga una garantía propia adicional a la descrita en esta página. Pasado el plazo de 15 días naturales para defectos de fabricación, orientamos la gestión que corresponda, cuando aplique, sin plazo comprometido. Todo lo anterior es sin perjuicio de los derechos irrenunciables que la ley otorga a los consumidores.</p>
+    </div>
+  </section>
+  <section class="s_text_block pt24 pb24" data-snippet="s_text_block" data-name="Cómo reportar">
+    <div class="container o_container_small s_allow_columns">
+      <h2 class="h3-fs">Cómo reportar una incidencia</h2>
+      <p>Al recibir tu pedido, cuenta los bultos, revisa el estado del embalaje y anota cualquier anomalía directamente en la guía o carta porte de la paquetería, además de fotografiarla; esto es indispensable para cualquier reclamación.</p><p>Envía tu reporte a <a href="mailto:hola@brandtrendy.com.mx">hola@brandtrendy.com.mx</a> con el expediente completo:</p><h3 class="h5-fs">Expediente requerido</h3><ul><li>Número de pedido</li><li>Razón social</li><li>Contacto</li><li>Fecha de entrega</li><li>Descripción del problema</li><li>Código del producto</li><li>Cantidades afectadas</li><li>Fotos generales y de detalle</li><li>Video si aplica</li><li>Fotos del empaque y de la guía</li><li>Prueba digital aprobada, si aplica</li></ul><p>Conserva el producto y el empaque completos: BRANDTRENDY puede solicitar una muestra para inspección antes de resolver.</p>
+    </div>
+  </section>
+  <section class="s_text_block pt24 pb24" data-snippet="s_text_block" data-name="Retornos autorizados">
+    <div class="container o_container_small s_allow_columns">
+      <h2 class="h3-fs">Retornos autorizados</h2>
+      <p>Solo se aceptan retornos previamente autorizados por BRANDTRENDY, con el folio de incidencia visible en el embalaje, dentro de los 10 días naturales posteriores a la autorización. En reclamaciones procedentes, el flete de retorno lo cubre BRANDTRENDY.</p><h3 class="h5-fs">Soluciones posibles</h3><p>Según el caso, la resolución puede ser corrección, reimpresión, reposición, sustitución, nota de crédito, devolución parcial, reembolso u otra solución acordada entre las partes.</p>
+    </div>
+  </section>
+  <section class="s_text_block pt24 pb24" data-snippet="s_text_block" data-name="Qué no aplica">
+    <div class="container o_container_small s_allow_columns">
+      <h2 class="h3-fs">Qué no aplica para devolución</h2>
+      <p>Salvo defecto atribuible a BRANDTRENDY, los siguientes casos no son devolubles:</p><ul><li>Cambio de opinión</li><li>Producto personalizado conforme a la prueba aprobada</li><li>Errores aprobados por el cliente en la prueba digital</li><li>Archivos incorrectos proporcionados por el cliente</li><li>Selección errónea de producto o variante</li><li>Variaciones razonables de tono o color</li><li>Mal uso</li><li>Modificaciones</li><li>Daños posteriores a la entrega</li><li>Desgaste por uso</li><li>Productos especiales o importados conforme a especificación</li><li>Producto incompleto o usado más allá de lo necesario para comprobar el defecto</li></ul>
+    </div>
+  </section>
+  <section class="s_text_block pt24 pb24" data-snippet="s_text_block" data-name="Cancelaciones sin defecto">
+    <div class="container o_container_small s_allow_columns">
+      <h2 class="h3-fs">Cancelaciones sin defecto</h2>
+      <p>Puedes cancelar un pedido sin defecto hasta 15 días naturales desde la entrega, con un cargo administrativo del 10%. La mercancía debe devolverse sin transformar, completa y con sus empaques y etiquetas originales; el flete de retorno corre por cuenta del cliente. El reembolso se instrumenta, por defecto, como nota de crédito de BRANDTRENDY.</p><p>Los productos personalizados no son cancelables después de aprobar la prueba digital.</p>
+    </div>
+  </section>
+  <section class="s_text_block pt24 pb24" data-snippet="s_text_block" data-name="Garantía de personalización">
+    <div class="container o_container_small s_allow_columns">
+      <h2 class="h3-fs">Garantía de personalización</h2>
+      <p>Corregimos o reponemos el producto cuando el resultado de la personalización difiere materialmente de la prueba digital aprobada. Esta garantía no cubre errores presentes en la prueba ya aprobada, archivos entregados por el cliente, diferencias mínimas de tamaño o posición, variación razonable de color, limitaciones de material o técnica informadas previamente, ni resultados sobre superficies irregulares cuando esa condición fue informada antes de producir.</p><p>Consulta también nuestro <a href="/proceso-de-personalizacion">proceso de personalización</a> y las condiciones de <a href="/envios-y-cobertura">envíos y cobertura</a> y <a href="/pagos-y-facturacion">pagos y facturación</a>.</p>
+    </div>
+  </section>
+  <section class="s_call_to_action o_cc o_cc5 pt64 pb64" data-snippet="s_call_to_action" data-name="Llamada a la acción">
+    <div class="container">
+      <div class="row">
+        <div class="col-lg-9">
+          <h2 class="h3-fs">¿Tienes una incidencia?</h2>
+          <p class="lead">Escríbenos con tu expediente completo y te respondemos en máximo 1 día hábil.</p>
+        </div>
+        <div class="col-lg-3">
+          <p style="text-align: right;"><a href="mailto:hola@brandtrendy.com.mx" class="btn btn-primary btn-lg o_translate_inline">Reportar incidencia</a></p>
+        </div>
+      </div>
+    </div>
+  </section>
+  <section class="s_text_block pt32 pb48" data-snippet="s_text_block" data-name="Enlaces relacionados">
+    <div class="container o_container_small s_allow_columns">
+      <p>Si prefieres escribirnos por WhatsApp, usa el <a href="https://wa.me/525555260418">+52 55 5526 0418</a>. ¿Dudas generales? Visita nuestras <a href="/preguntas-frecuentes">preguntas frecuentes</a> o conoce más en <a href="/quienes-somos">quiénes somos</a>. Revisa también nuestro <a href="/aviso-de-privacidad">aviso de privacidad</a> y <a href="/terminos-y-condiciones">términos y condiciones</a>.</p>
+    </div>
+  </section>
+</pagina>

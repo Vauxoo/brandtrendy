@@ -5,6 +5,7 @@ import logging
 import re
 
 from odoo import api, fields, models
+from odoo.exceptions import AccessError
 from odoo.tools.misc import file_open
 
 _logger = logging.getLogger(__name__)
@@ -124,6 +125,10 @@ class Website(models.Model):
                 ("ajustes", sitio._bt_promo_ajustes, "version"),
                 ("pasos", sitio._bt_promo_pasos, "version"),
                 ("automatizaciones", sitio._bt_promo_automatizaciones, "una_vez"),
+                ("paginas", sitio._bt_promo_paginas, "siempre"),  # protege con huella lo editado a mano
+                ("pie", sitio._bt_promo_pie, "siempre"),
+                ("rutas", sitio._bt_promo_rutas, "version"),
+                ("menu", sitio._bt_promo_menu, "version"),
             ]:
                 marca = ICP.get_param(PARAM_PASO + nombre)
                 if (regla == "version" and marca == APLICAR_VERSION) or (regla == "una_vez" and marca):
@@ -131,8 +136,10 @@ class Website(models.Model):
                     continue
                 try:
                     with self.env.cr.savepoint():
-                        resultado["pasos"][nombre] = metodo() or "ok"
-                        if regla != "siempre":
+                        texto = metodo() or "ok"
+                        resultado["pasos"][nombre] = texto
+                        # «PENDIENTE…» = faltan datos (p. ej. categorías de otro lote): no se marca y se reintenta.
+                        if regla != "siempre" and not str(texto).startswith("PENDIENTE"):
                             ICP.set_param(PARAM_PASO + nombre, APLICAR_VERSION)
                 except Exception as error:  # noqa: BLE001 — se registra y se sigue con los demás pasos
                     _logger.exception("%s: falló el paso «%s»", MODULO, nombre)
@@ -141,6 +148,17 @@ class Website(models.Model):
         self.env["ir.config_parameter"].sudo().set_param(PARAM_RESULTADO, json.dumps(resultado, ensure_ascii=False))
         _logger.info("%s: aplicado %s", MODULO, resultado)
         return True
+
+    def bt_promo_reaplicar(self):
+        """Vuelve a aplicar la configuración del sitio sin esperar una actualización del módulo (solo administradores).
+        Fuerza los pasos por versión; los de «una sola vez» y las páginas editadas a mano se siguen respetando."""
+        if not self.env.user.has_group("base.group_system"):
+            raise AccessError(self.env._("Solo un administrador puede reaplicar la configuración del sitio."))
+        ICP = self.env["ir.config_parameter"].sudo()
+        for paso in ("modo", "vistas", "ajustes", "pasos", "rutas", "menu"):
+            ICP.set_param(PARAM_PASO + paso, False)
+        self._bt_promo_aplicar()
+        return json.loads(ICP.get_param(PARAM_RESULTADO) or "{}")
 
     def _bt_promo_modo(self):
         self.ensure_one()
@@ -210,6 +228,13 @@ class Website(models.Model):
             "account_on_checkout": "disabled",  # solicitud como invitado; sin cuentas de cliente en el flujo
             "prevent_zero_price_sale": True,  # artículos sin precio: «Contáctanos» con el producto en el asunto
             "contact_us_button_url": "/contactus",
+            # Redes públicas de la marca (13_DATOS_EMPRESA); X/Twitter no se publica.
+            "social_facebook": "https://www.facebook.com/Brandtrendy",
+            "social_instagram": "https://www.instagram.com/brandtrendy_mexico",
+            "social_tiktok": "https://www.tiktok.com/@brandtrendy_mexico",
+            "social_youtube": "https://www.youtube.com/@brandtrendy-xf9ij",
+            "social_linkedin": "https://www.linkedin.com/company/brandtrendy",
+            "social_twitter": False,
         }
         if self.salesteam_id:
             vals["crm_default_team_id"] = self.salesteam_id.id  # el formulario de contacto cae en el equipo del sitio

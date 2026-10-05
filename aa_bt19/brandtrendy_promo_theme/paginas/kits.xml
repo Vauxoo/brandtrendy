@@ -1,0 +1,139 @@
+<pagina url="/kits" nombre="Kits promocionales corporativos" titulo="Kits promocionales corporativos | Promocionales Brandtrendy" descripcion="Kits promocionales para bienvenida de personal, cierre de año o congresos, con una misma personalización en todo el set. Solicita asesoría." indexada="1" publicada="1">
+  <section class="s_text_image o_cc o_cc1 pt64 pb64" data-snippet="s_text_image" data-name="Portada de kits">
+    <div class="container">
+      <div class="row align-items-center">
+        <div class="col-lg-5 pt16 pb16">
+          <h1 class="display-3-fs">Kits promocionales corporativos</h1>
+          <p class="lead">Un kit reúne varias piezas bajo una misma línea de personalización, pensado para una ocasión específica: bienvenida de personal, cierre de año o un congreso.</p>
+          <p>Cuéntanos la ocasión y el presupuesto; un ejecutivo te propone la combinación de productos y la técnica de personalización, y te confirma precio y entrega.</p>
+          <p><a href="/contactus" class="btn btn-primary btn-lg o_translate_inline">Solicitar asesoría</a></p>
+        </div>
+        <div class="col-lg-6 offset-lg-1 pt16 pb16">
+          <img src="/brandtrendy_promo_theme/static/img/paginas/kits-portada.jpg" class="img img-fluid mx-auto rounded" alt="Kit promocional corporativo: mochila, termo y libreta con bolígrafo"/>
+        </div>
+      </div>
+    </div>
+  </section>
+  <section class="s_features o_cc o_cc2 pt64 pb64" data-snippet="s_features" data-name="Cómo se arma un kit">
+    <div class="container">
+      <h2 class="h3-fs">Cómo se arma un kit</h2>
+      <p class="lead"></p>
+      <div class="row">
+        <div class="col-lg-4">
+          <div class="s_hr pt-4 pb32" data-snippet="s_hr" data-name="Separador"><hr class="w-100 mx-auto"/></div>
+          <i class="s_features_icon fa fa-sliders mb-3 rounded bg-o-color-3" role="img"/>
+          <div class="overflow-hidden">
+            <h3 class="h5-fs">A tu medida</h3>
+            <p>Cada propuesta se ajusta a tu presupuesto y al número de piezas que necesites. Las cantidades especiales están sujetas a cotización.</p>
+          </div>
+        </div>
+        <div class="col-lg-4">
+          <div class="s_hr pt-4 pb32" data-snippet="s_hr" data-name="Separador"><hr class="w-100 mx-auto"/></div>
+          <i class="s_features_icon fa fa-eye mb-3 rounded bg-o-color-3" role="img"/>
+          <div class="overflow-hidden">
+            <h3 class="h5-fs">Prueba digital del kit completo</h3>
+            <p>Antes de producir recibes la prueba digital, con una ronda de cambios sin costo.</p>
+          </div>
+        </div>
+        <div class="col-lg-4">
+          <div class="s_hr pt-4 pb32" data-snippet="s_hr" data-name="Separador"><hr class="w-100 mx-auto"/></div>
+          <i class="s_features_icon fa fa-file-text-o mb-3 rounded bg-o-color-3" role="img"/>
+          <div class="overflow-hidden">
+            <h3 class="h5-fs">Envío y factura</h3>
+            <p>El envío a cualquier punto de México se cotiza aparte y la operación se factura con CFDI.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+  <section class="s_three_columns o_cc o_cc1 pt32 pb32 o_colored_level" data-snippet="s_three_columns" data-vxml="001" data-vcss="001" data-name="Conceptos de kit">
+    <div class="container">
+      <h2 class="h3-fs">Conceptos para empezar</h2>
+      <p class="lead">Cada kit se arma con productos reales del catálogo y una sola personalización para todas las piezas.</p>
+      <div class="row d-flex align-items-stretch">
+        <div data-name="Card" class="col-lg-4 pt16 pb16">
+          <div class="s_card o_card_img_top card h-100 o_cc o_cc1 my-0" data-vxml="001" data-snippet="s_card" data-name="Card">
+            <figure class="o_card_img_wrapper ratio ratio-4x3 mb-0">
+              <img class="o_card_img card-img-top" src="/brandtrendy_promo_theme/static/img/paginas/kits-bienvenida-equipo.jpg" alt="Kit de bienvenida para personal de nuevo ingreso: mochila, termo y libreta con bolígrafo"/>
+            </figure>
+            <div class="card-body">
+              <h3 class="card-title h5-fs">Kit Bienvenida de Equipo</h3>
+              <p class="card-text">Un set de piezas de uso diario para dar la bienvenida a nuevas incorporaciones, con una sola personalización.</p>
+              <p class="card-text"><b>Sugerencia:</b> Mochila, libreta, bolígrafo y termo, personalizados con la misma técnica y entregados en una bolsa.</p>
+            </div>
+          </div>
+        </div>
+        <div data-name="Card" class="col-lg-4 pt16 pb16">
+          <div class="s_card o_card_img_top card h-100 o_cc o_cc1 my-0" data-vxml="001" data-snippet="s_card" data-name="Card">
+            <figure class="o_card_img_wrapper ratio ratio-4x3 mb-0">
+              <img class="o_card_img card-img-top" src="/brandtrendy_promo_theme/static/img/paginas/kits-cierre-de-anio.jpg" alt="Kit de cierre de año: termo, taza, libretas y bolígrafo"/>
+            </figure>
+            <div class="card-body">
+              <h3 class="card-title h5-fs">Kit Cierre de Año</h3>
+              <p class="card-text">Piezas para reconocer al equipo al cierre de año, con una personalización uniforme en todo el set.</p>
+              <p class="card-text"><b>Sugerencia:</b> Termo o taza, libreta y bolígrafo, con la misma técnica de personalización para todas las piezas.</p>
+            </div>
+          </div>
+        </div>
+        <div data-name="Card" class="col-lg-4 pt16 pb16">
+          <div class="s_card o_card_img_top card h-100 o_cc o_cc1 my-0" data-vxml="001" data-snippet="s_card" data-name="Card">
+            <figure class="o_card_img_wrapper ratio ratio-4x3 mb-0">
+              <img class="o_card_img card-img-top" src="/brandtrendy_promo_theme/static/img/paginas/kits-congresos-y-ferias.jpg" alt="Kit para congresos y ferias: bolsa de yute, botella y memoria USB"/>
+            </figure>
+            <div class="card-body">
+              <h3 class="card-title h5-fs">Kit para Congresos y Ferias</h3>
+              <p class="card-text">Piezas prácticas para entregar en stands o congresos, útiles durante y después del evento.</p>
+              <p class="card-text"><b>Sugerencia:</b> Mochila o bolsa, libreta, USB y batería portátil, con una sola personalización para todo el kit.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+  <section data-snippet="s_dynamic_snippet_products" data-name="Productos dinámicos" class="s_dynamic_snippet_products oe_website_sale {{clases_tienda}} s_dynamic o_colored_level pt48 pb48" data-filter-id="{{filtro:brandtrendy_promo_theme.snippet_filtro_catalogo}}" data-template-key="website_sale.dynamic_filter_template_product_product_products_item" data-product-category-id="{{categoria:Promocionales / Kits promocionales}}" data-number-of-records="8" data-number-of-elements="4" data-number-of-elements-small-devices="1" data-row-per-slide="2" data-carousel-interval="0">
+    <div class="s_dynamic_snippet_container container">
+      <div class="row s_nb_column_fixed">
+        <section class="s_dynamic_snippet_holder d-none px-4 placeholder-glow">
+          <div class="row">
+            <span class="placeholder col-3 rounded"/>
+            <span class="placeholder col-2 offset-7 rounded"/>
+            <span class="placeholder mt-3 col-6 rounded"/>
+          </div>
+          <div class="row mt-4">
+            <span class="placeholder col-12 rounded" style="height: 250px;"/>
+          </div>
+        </section>
+        <section class="s_dynamic_snippet_title oe_unremovable oe_unmovable justify-content-between d-flex flex-column flex-md-row mb-lg-0 pb-3 pb-md-0 s_col_no_resize">
+          <div>
+            <h2 class="h3">Productos para armar tu kit</h2>
+            <p class="lead">Piezas de la categoría Kits promocionales.</p>
+          </div>
+          <div>
+            <a title="Ver todos" href="{{url_categoria:Promocionales / Kits promocionales}}">Ver todos<span class="fa fa-long-arrow-right ms-2"/></a>
+          </div>
+        </section>
+        <section class="s_dynamic_snippet_content oe_unremovable oe_unmovable o_not_editable col s_col_no_resize">
+          <div class="css_non_editable_mode_hidden">
+            <div class="missing_option_warning alert alert-info fade show d-none d-print-none rounded-0">
+              Aquí se mostrará tu listado dinámico. Este mensaje aparece porque no diste suficientes opciones para obtener su contenido.<br/>
+            </div>
+          </div>
+          <div class="dynamic_snippet_template"/>
+        </section>
+      </div>
+    </div>
+  </section>
+  <section class="s_call_to_action o_cc o_cc5 pt64 pb64" data-snippet="s_call_to_action" data-name="Llamada a la acción">
+    <div class="container">
+      <div class="row">
+        <div class="col-lg-9">
+          <h2 class="h3-fs">Solicita asesoría de kits promocionales</h2>
+          <p class="lead">Cuéntanos la ocasión y el número de piezas; un ejecutivo te propone el kit y te confirma personalización, precio y entrega.</p>
+        </div>
+        <div class="col-lg-3">
+          <p style="text-align: right;"><a href="/contactus" class="btn btn-primary btn-lg o_translate_inline">Solicitar asesoría</a></p>
+        </div>
+      </div>
+    </div>
+  </section>
+</pagina>

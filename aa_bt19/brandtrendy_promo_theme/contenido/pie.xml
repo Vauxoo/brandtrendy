@@ -1,0 +1,80 @@
+<pie>
+    <section class="s_text_block pt40 pb16" data-snippet="s_text_block" data-name="Container">
+        <div class="container">
+            <div class="row">
+                <div class="col-6 col-lg-3 pt24 pb24">
+                    <h5>Productos</h5>
+                    <ul class="list-unstyled">
+                        <li><a href="{{url_categoria:Promocionales / Termos y botellas}}">Termos y botellas</a></li>
+                        <li><a href="{{url_categoria:Promocionales / Bolsas y mochilas}}">Bolsas y mochilas</a></li>
+                        <li><a href="{{url_categoria:Promocionales / Tecnología}}">Tecnología</a></li>
+                        <li><a href="{{url_categoria:Promocionales / Escritura}}">Escritura</a></li>
+                        <li><a href="{{url_categoria:Promocionales / Textiles}}">Textiles</a></li>
+                        <li><a href="/shop">Ver todo el catálogo</a></li>
+                    </ul>
+                </div>
+                <div class="col-6 col-lg-3 pt24 pb24">
+                    <h5>Ocasiones e industrias</h5>
+                    <ul class="list-unstyled">
+                        <li><a href="/ocasiones/fin-de-ano">Fin de año</a></li>
+                        <li><a href="/ocasiones/regalos-ejecutivos">Regalos ejecutivos</a></li>
+                        <li><a href="{{url_categoria:Promocionales / Por ocasión / Bienvenida a colaboradores}}">Bienvenida a colaboradores</a></li>
+                        <li><a href="/kits">Kits promocionales</a></li>
+                        <li><a href="{{url_categoria:Promocionales / Productos ecológicos}}">Productos ecológicos</a></li>
+                        <li><a href="{{url_categoria:Promocionales / Por industria}}">Por industria</a></li>
+                    </ul>
+                </div>
+                <div class="col-6 col-lg-3 pt24 pb24">
+                    <h5>Ayuda</h5>
+                    <ul class="list-unstyled">
+                        <li><a href="/proceso-de-personalizacion">Cómo funciona</a></li>
+                        <li><a href="/envios-y-cobertura">Envíos y cobertura</a></li>
+                        <li><a href="/devoluciones">Devoluciones e incidencias</a></li>
+                        <li><a href="/pagos-y-facturacion">Pagos y facturación</a></li>
+                        <li><a href="/preguntas-frecuentes">Preguntas frecuentes</a></li>
+                    </ul>
+                </div>
+                <div class="col-6 col-lg-3 pt24 pb24">
+                    <h5>Empresa</h5>
+                    <ul class="list-unstyled">
+                        <li><a href="/quienes-somos">Quiénes somos</a></li>
+                        <li><a href="/contactus">Contacto</a></li>
+                        <li><i class="fa fa-whatsapp fa-fw me-2" aria-hidden="true"/><a href="https://wa.me/525555260418">Tel. y WhatsApp +52 55 5526 0418</a></li>
+                        <li><i class="fa fa-envelope fa-fw me-2" aria-hidden="true"/><a href="mailto:hola@brandtrendy.com.mx">hola@brandtrendy.com.mx</a></li>
+                        <li>Lunes a viernes de 8:30 a 17:30, hora del centro</li>
+                    </ul>
+                    <div class="s_social_media text-start o_not_editable" data-snippet="s_social_media" data-name="Social Media" contenteditable="false">
+                        <h5 class="s_social_media_title d-none" contenteditable="true">Síguenos</h5>
+                        <a href="/website/social/facebook" class="s_social_media_facebook" target="_blank" aria-label="Facebook">
+                            <i class="fa fa-facebook rounded-circle shadow-sm o_editable_media"/>
+                        </a>
+                        <a href="/website/social/instagram" class="s_social_media_instagram" target="_blank" aria-label="Instagram">
+                            <i class="fa fa-instagram rounded-circle shadow-sm o_editable_media"/>
+                        </a>
+                        <a href="/website/social/tiktok" class="s_social_media_tiktok" target="_blank" aria-label="TikTok">
+                            <i class="fa fa-tiktok rounded-circle shadow-sm o_editable_media"/>
+                        </a>
+                        <a href="/website/social/youtube" class="s_social_media_youtube" target="_blank" aria-label="YouTube">
+                            <i class="fa fa-youtube rounded-circle shadow-sm o_editable_media"/>
+                        </a>
+                        <a href="/website/social/linkedin" class="s_social_media_linkedin" target="_blank" aria-label="LinkedIn">
+                            <i class="fa fa-linkedin rounded-circle shadow-sm o_editable_media"/>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <section class="s_text_block pt16 pb24" data-snippet="s_text_block" data-name="Text">
+        <div class="container">
+            <p class="small mb-2">Precios con IVA incluido. El envío y la personalización se cotizan aparte.</p>
+            <p class="small mb-2">Usamos cookies propias y de terceros para que el sitio funcione, recordar tu solicitud de
+                cotización y medir nuestras campañas. Al seguir navegando las aceptas; puedes desactivarlas en tu navegador.
+                Consulta la <a href="/politica-de-cookies">política de cookies</a> y el
+                <a href="/aviso-de-privacidad">aviso de privacidad</a>.</p>
+            <p class="small mb-0"><a href="/terminos-y-condiciones">Términos y condiciones</a> ·
+                <a href="/aviso-de-privacidad">Aviso de privacidad</a> ·
+                <a href="/politica-de-cookies">Política de cookies</a></p>
+        </div>
+    </section>
+</pie>
