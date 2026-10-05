@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <!-- Sin noupdate: corre en la instalación y en cada actualización (odoo/tools/convert.py, _tag_function).
+         Deja el sitio «Promocionales Brandtrendy» como lo define el módulo; resultado en el parámetro
+         brandtrendy_promo_theme.ultimo_aplicar. -->
+    <function model="website" name="_bt_promo_aplicar"/>
+</odoo>

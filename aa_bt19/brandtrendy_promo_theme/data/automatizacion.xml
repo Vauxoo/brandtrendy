@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <!-- D2 · la solicitud del sitio y su lead, en servidor. Una regla, dos momentos: la orden recibe un contacto real
+         (el cliente terminó «Datos de contacto») y la orden pasa a «enviada» (solicitud confirmada).
+         Sin campo active en el XML: si un administrador la archiva como interruptor, una actualización no la reactiva. -->
+    <record id="accion_solicitud_lead" model="ir.actions.server">
+        <field name="name">Promocionales · ligar la solicitud del sitio con su lead</field>
+        <field name="model_id" ref="sale.model_sale_order"/>
+        <field name="state">code</field>
+        <field name="usage">base_automation</field>
+        <field name="code">records._bt_promo_sync_lead()</field>
+    </record>
+    <record id="automatizacion_solicitud_lead" model="base.automation">
+        <field name="name">Promocionales · solicitud del sitio → lead</field>
+        <field name="model_id" ref="sale.model_sale_order"/>
+        <field name="trigger">on_create_or_write</field>
+        <field name="filter_domain">[('website_id.bt_quote_mode', '=', True)]</field>
+        <field name="trigger_field_ids" eval="[Command.set([
+            ref('sale.field_sale_order__partner_id'),
+            ref('sale.field_sale_order__state')])]"/>
+        <field name="action_server_ids" eval="[Command.set([ref('accion_solicitud_lead')])]"/>
+    </record>
+</odoo>

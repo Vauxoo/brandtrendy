@@ -1,0 +1,10 @@
+// Hanken Grotesk (SIL OFL 1.1, ver static/fonts/OFL.txt). Solo existen los pesos 400, 600, 700 y 800.
+@each $peso in (400, 600, 700, 800) {
+    @font-face {
+        font-family: 'Hanken Grotesk';
+        font-style: normal;
+        font-weight: $peso;
+        font-display: swap;
+        src: url('/brandtrendy_promo_theme/static/fonts/HankenGrotesk-#{$peso}.woff2') format('woff2');
+    }
+}

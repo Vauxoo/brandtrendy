@@ -1,0 +1,102 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <!--
+        N4 · cantidad inicial = mínimo de compra en el sitio en modo cotización.
+        Ancla: input name="add_qty" de website_sale.product_quantity
+        (odoo 19.0 addons/website_sale/views/templates.xml l.2621-2627, t-att-value="1" y data-min="1").
+        No hay opción nativa para el valor inicial. No se bloquea pedir menos: se cobra el mínimo al cotizar.
+    -->
+    <template id="cantidad_inicial_minimo" inherit_id="website_sale.product_quantity"
+              name="Promocionales · cantidad inicial = mínimo">
+        <xpath expr="//input[@name='add_qty']" position="attributes">
+            <attribute name="t-att-value">(product.x_bt_moq or 1) if website.bt_quote_mode else 1</attribute>
+        </xpath>
+    </template>
+
+    <!--
+        H3/D2 · paso «Información adicional» de la solicitud. Los valores se guardan en la orden
+        (POST /website/form/shop.sale.order, lista blanca en data/lista_blanca.xml).
+        Anclas (odoo 19.0 templates.xml l.2759-2818, template extra_info): el h4 del título y el contenedor
+        div.s_website_form_rows (l.2787), que se reemplaza completo para no depender de campos que el editor podría
+        quitar. Ninguna es t-set/t-call/t-foreach.
+        Solo el sitio en modo cotización activa esta vista; el módulo la propaga a su copia por sitio.
+    -->
+    <template id="informacion_adicional" inherit_id="website_sale.extra_info"
+              name="Promocionales · información adicional de la solicitud">
+        <xpath expr="//h4" position="replace">
+            <h4 class="mb-3">Información adicional para tu cotización</h4>
+        </xpath>
+        <xpath expr="//div[hasclass('s_website_form_rows')]" position="replace">
+            <div class="s_website_form_rows s_col_no_bgcolor row">
+                <span id="s_website_form_result"/>
+
+            <div class="s_website_form_field col-12 pb-2 mb-0" data-type="integer" data-name="Field">
+                <div class="s_col_no_resize s_col_no_bgcolor">
+                    <label class="s_website_form_label col-form-label col-sm-auto" style="width: 200px" for="bt_extra1">
+                        <span class="s_website_form_label_content">Cantidad objetivo (piezas)</span>
+                    </label>
+                    <div class="col-sm">
+                        <input id="bt_extra1" type="number" class="s_website_form_input form-control"
+                               name="x_bt_cantidad_objetivo" step="1" min="1"/>
+                    </div>
+                </div>
+            </div>
+            <div class="s_website_form_field col-12 pb-2 mb-0" data-type="date" data-name="Field">
+                <div class="s_col_no_resize s_col_no_bgcolor">
+                    <label class="s_website_form_label col-form-label col-sm-auto" style="width: 200px" for="bt_extra2">
+                        <span class="s_website_form_label_content">Fecha de entrega deseada</span>
+                    </label>
+                    <div class="col-sm">
+                        <input id="bt_extra2" type="date" class="s_website_form_input form-control"
+                               name="x_bt_fecha_entrega_deseada"/>
+                    </div>
+                </div>
+            </div>
+            <div class="s_website_form_field col-12 pb-2 mb-0" data-type="boolean" data-name="Field">
+                <div class="s_col_no_resize s_col_no_bgcolor">
+                    <div class="row s_col_no_resize s_col_no_bgcolor">
+                        <div class="offset-sm-auto col-sm" style="width: 200px"/>
+                        <div class="col-sm">
+                            <div class="form-check">
+                                <input id="bt_extra3" type="checkbox" class="s_website_form_input form-check-input"
+                                       name="x_bt_optin_whatsapp_orden" value="Yes"/>
+                                <label class="form-check-label s_website_form_check_label" for="bt_extra3">Prefiero que me contacten por WhatsApp</label>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+<div class="s_website_form_field col-12 pb-2 mb-0" data-type="char" data-name="Field">
+                <div class="s_col_no_resize s_col_no_bgcolor">
+                    <label class="s_website_form_label col-form-label col-sm-auto" style="width: 200px" for="sale1">
+                        <span class="s_website_form_label_content">Tu referencia u orden de compra</span>
+                    </label>
+                    <div class="col-sm">
+                        <input id="sale1" type="text" class="s_website_form_input form-control" name="client_order_ref"/>
+                    </div>
+                </div>
+            </div>
+<div class="s_website_form_field s_website_form_custom col-12 pb-2 mb-0" data-type="text" data-name="Field">
+                <div class="s_col_no_resize s_col_no_bgcolor">
+                    <label class="s_website_form_label col-form-label col-sm-auto" style="width: 200px" for="sale2">
+                        <span class="s_website_form_label_content">Comentarios para tu cotización</span>
+                    </label>
+                    <div class="col-sm">
+                        <textarea id="sale2" class="s_website_form_input form-control" name="Comentarios"/>
+                    </div>
+                </div>
+            </div>
+<div class="s_website_form_field s_website_form_custom col-12 pb-2 mb-0" data-type="binary" data-name="Field">
+                <div class="s_col_no_resize s_col_no_bgcolor">
+                    <label class="s_website_form_label col-form-label col-sm-auto" style="width: 200px" for="sale3">
+                        <span class="s_website_form_label_content">Tu logotipo o arte (opcional)</span>
+                    </label>
+                    <div class="col-sm">
+                        <input id="sale3" type="file" class="s_website_form_input form-control" name="a_document"/>
+                    </div>
+                </div>
+            </div>
+            </div>
+        </xpath>
+    </template>
+</odoo>

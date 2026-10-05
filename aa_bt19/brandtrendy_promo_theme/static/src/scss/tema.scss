@@ -1,0 +1,24 @@
+// Reglas que ningún ajuste del editor cubre. Solo tokens de marca; sin ids de registros.
+:root {
+    --bt-ink: #231F20;
+    --bt-foco: #2782A2;
+    --bt-auxiliar: #6B6A6E;
+}
+
+:focus-visible {
+    outline: 2px solid var(--bt-foco);
+    outline-offset: 2px;
+}
+
+.btn-primary:hover,
+.btn-primary:focus {
+    background-color: var(--bt-ink);
+    border-color: var(--bt-ink);
+}
+
+// Precios en ink, nunca en rojo; cifras tabulares.
+.oe_currency_value,
+.oe_price {
+    color: var(--bt-ink);
+    font-variant-numeric: tabular-nums;
+}

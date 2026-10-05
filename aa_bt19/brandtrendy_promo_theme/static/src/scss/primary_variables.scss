@@ -1,0 +1,46 @@
+// Tema del sitio «Promocionales Brandtrendy». Se carga SOLO en ese sitio mediante un ir.asset con website_id
+// (models/website.py, ASSETS_SITIO); no se declara en el manifiesto para no tocar al sitio 1.
+// Claves verificadas en odoo 19.0 addons/website/static/src/scss/primary_variables.scss.
+
+$o-color-palettes: map-merge($o-color-palettes, (
+    'brandtrendy': (
+        'o-color-1': #414042, // grafito: CTA, texto, navegación
+        'o-color-2': #1F667F, // enlace
+        'o-color-3': #F3F3F4, // neutro de superficie
+        'o-color-4': #FFFFFF,
+        'o-color-5': #231F20, // ink: titulares, precios, pie
+        'o-cc1-text': #414042,
+        'o-cc1-headings': #231F20,
+        'o-cc1-link': #1F667F,
+        'o-cc1-btn-primary': #414042,
+        'o-cc1-btn-primary-border': #414042,
+        'o-cc1-btn-secondary': #FFFFFF,
+        'o-cc1-btn-secondary-border': #414042,
+    ),
+));
+$o-selected-color-palettes-names: append($o-selected-color-palettes-names, 'brandtrendy');
+
+// Hanken Grotesk autoalojada (fuentes.scss): sin 'url', el sitio no pide fuentes a Google.
+$o-theme-font-configs: map-merge($o-theme-font-configs, (
+    'Hanken Grotesk': (
+        'family': ('Hanken Grotesk', 'Avenir Next', 'Segoe UI', system-ui, Arial, sans-serif),
+    ),
+));
+
+$o-website-values-palettes: (
+    (
+        'color-palettes-name': 'brandtrendy',
+        'font': 'Hanken Grotesk',
+        'headings-font': 'Hanken Grotesk',
+        'navbar-font': 'Hanken Grotesk',
+        'buttons-font': 'Hanken Grotesk',
+        'body-line-height': 1.5,
+        'headings-line-height': 1.25,
+        'btn-border-radius': 8px,
+        'btn-padding-y': .75rem,
+        'btn-padding-x': 1.25rem,
+        'input-border-radius': 8px,
+        'link-underline': 'hover',
+        'btn-ripple': false,
+    ),
+);

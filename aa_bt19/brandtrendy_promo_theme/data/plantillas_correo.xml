@@ -1,0 +1,85 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <!-- noupdate: el equipo puede ajustar los textos sin que una actualización los pise. Cuerpo en QWeb (t-out). -->
+    <data noupdate="1">
+        <!-- Acuse al cliente cuando confirma su solicitud en el sitio (sustituye al correo estándar de «pago»). -->
+        <record id="mail_template_acuse_solicitud" model="mail.template">
+            <field name="name">Promocionales · acuse de solicitud</field>
+            <field name="model_id" ref="sale.model_sale_order"/>
+            <field name="subject">Recibimos tu solicitud {{ object.name }}</field>
+            <field name="email_from">{{ (object.user_id.email_formatted or object.company_id.email_formatted or user.email_formatted) }}</field>
+            <field name="partner_to">{{ object.partner_id.id }}</field>
+            <field name="lang">{{ object.partner_id.lang }}</field>
+            <field name="report_template_ids" eval="[(4, ref('sale.action_report_saleorder'))]"/>
+            <field name="auto_delete" eval="False"/>
+            <field name="description">Lo recibe el cliente al confirmar una solicitud de cotización en el sitio Promocionales.</field>
+            <field name="body_html" type="html">
+<div style="font-family: 'Hanken Grotesk', Arial, sans-serif; color: #414042; font-size: 15px; line-height: 22px;">
+    <p>Hola <t t-out="object.partner_id.name or ''"/>:</p>
+    <p>Recibimos tu solicitud de cotización <strong t-out="object.name"/>. Un ejecutivo de ventas revisa precio,
+        personalización y entrega, y te envía tu cotización formal en un día hábil (lunes a viernes de 8:30 a 17:30,
+        hora del centro).</p>
+    <table style="width: 100%; border-collapse: collapse; margin: 16px 0;">
+        <tr style="background-color: #F3F3F4;">
+            <th style="text-align: left; padding: 8px;">Artículo</th>
+            <th style="text-align: right; padding: 8px;">Piezas</th>
+            <th style="text-align: right; padding: 8px;">Importe con IVA</th>
+        </tr>
+        <t t-foreach="object.order_line" t-as="linea">
+            <tr t-if="not linea.display_type">
+                <td style="padding: 8px; border-bottom: 1px solid #F3F3F4;" t-out="linea.product_id.display_name"/>
+                <td style="padding: 8px; border-bottom: 1px solid #F3F3F4; text-align: right;" t-out="int(linea.product_uom_qty)"/>
+                <td style="padding: 8px; border-bottom: 1px solid #F3F3F4; text-align: right;" t-out="format_amount(linea.price_total, object.currency_id)"/>
+            </tr>
+        </t>
+    </table>
+    <p>Total estimado: <strong t-out="format_amount(object.amount_total, object.currency_id)"/> con IVA incluido.
+        El envío y la personalización se cotizan aparte.</p>
+    <p>Si ya tienes tu logotipo, responde este correo con el archivo, de preferencia en vector: lo usamos para tu prueba
+        digital, y producimos solo con tu aprobación.</p>
+    <p>¿Prefieres WhatsApp? Escríbenos al +52 55 5526 0418 y menciona tu folio <t t-out="object.name"/>.</p>
+    <p style="color: #6B6A6E; font-size: 13px;">Brandtrendy · Promocionales</p>
+</div>
+            </field>
+        </record>
+
+        <!-- Aviso interno al líder y a los miembros del equipo del sitio (sustituye la regla 29 y su plantilla 76). -->
+        <record id="mail_template_aviso_interno" model="mail.template">
+            <field name="name">Promocionales · aviso interno de solicitud</field>
+            <field name="model_id" ref="sale.model_sale_order"/>
+            <field name="subject">Nueva solicitud del sitio: {{ object.name }} · {{ object.partner_id.commercial_company_name or object.partner_id.name }}</field>
+            <field name="email_from">{{ object.company_id.email_formatted or user.email_formatted }}</field>
+            <field name="auto_delete" eval="True"/>
+            <field name="description">Aviso al equipo de Promocionales cuando entra una solicitud confirmada del sitio.</field>
+            <field name="body_html" type="html">
+<div style="font-family: Arial, sans-serif; color: #231F20; font-size: 14px; line-height: 20px;">
+    <p><strong t-out="object.name"/> · total con IVA <strong t-out="format_amount(object.amount_total, object.currency_id)"/>
+        (sin IVA <t t-out="format_amount(object.amount_untaxed, object.currency_id)"/>)</p>
+    <p>
+        <t t-out="object.partner_id.commercial_company_name or object.partner_id.company_name or ''"/><br/>
+        <t t-out="object.partner_id.name or ''"/><br/>
+        <t t-out="object.partner_id.email or 'sin correo'"/> · <t t-out="object.partner_id.phone or 'sin teléfono'"/><br/>
+        <t t-out="object.partner_id.city or ''"/> <t t-out="object.partner_id.state_id.name or ''"/>
+    </p>
+    <p t-if="object.x_bt_cantidad_objetivo or object.x_bt_fecha_entrega_deseada or object.x_bt_optin_whatsapp_orden">
+        Cantidad objetivo: <t t-out="object.x_bt_cantidad_objetivo or '—'"/> ·
+        fecha deseada: <t t-out="object.x_bt_fecha_entrega_deseada or '—'"/> ·
+        WhatsApp: <t t-out="'sí' if object.x_bt_optin_whatsapp_orden else 'no'"/>
+    </p>
+    <table style="width: 100%; border-collapse: collapse;">
+        <t t-foreach="object.order_line" t-as="linea">
+            <tr t-if="not linea.display_type">
+                <td style="padding: 4px 8px; border-bottom: 1px solid #F3F3F4;" t-out="linea.product_id.default_code or ''"/>
+                <td style="padding: 4px 8px; border-bottom: 1px solid #F3F3F4;" t-out="(linea.product_id.name or '')[:70]"/>
+                <td style="padding: 4px 8px; border-bottom: 1px solid #F3F3F4; text-align: right;" t-out="int(linea.product_uom_qty)"/>
+                <td style="padding: 4px 8px; border-bottom: 1px solid #F3F3F4; text-align: right;" t-out="format_amount(linea.price_subtotal, object.currency_id)"/>
+            </tr>
+        </t>
+    </table>
+    <p><a t-att-href="object.get_base_url() + '/mail/view?model=sale.order&amp;res_id=%s' % object.id"
+          style="background-color: #414042; color: #FFFFFF; padding: 10px 16px; border-radius: 8px; text-decoration: none;">Abrir la solicitud</a></p>
+</div>
+            </field>
+        </record>
+    </data>
+</odoo>

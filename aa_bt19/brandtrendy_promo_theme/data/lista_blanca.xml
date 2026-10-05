@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <!-- Campos que los formularios del sitio pueden escribir (patrón de website_sale/data/data.xml en 19.0).
+         Sin noupdate: se re-aplica en cada actualización. -->
+    <function model="ir.model.fields" name="formbuilder_whitelist">
+        <value>sale.order</value>
+        <value eval="['x_bt_cantidad_objetivo', 'x_bt_fecha_entrega_deseada', 'x_bt_optin_whatsapp_orden']"/>
+    </function>
+    <function model="ir.model.fields" name="formbuilder_whitelist">
+        <value>crm.lead</value>
+        <value eval="['x_bt_cantidad', 'x_bt_fecha_entrega', 'x_bt_wa_optin']"/>
+    </function>
+</odoo>
