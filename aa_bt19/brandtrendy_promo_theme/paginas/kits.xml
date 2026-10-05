@@ -10,7 +10,7 @@
           <p><a href="/contactus#asesoria" class="btn btn-primary btn-lg o_translate_inline">Solicitar asesoría</a></p>
         </div>
         <div class="col-lg-6 offset-lg-1 pt16 pb16">
-          <img src="/brandtrendy_promo_theme/static/img/paginas/kits-portada.jpg" class="img img-fluid mx-auto rounded" alt="Kit promocional corporativo: mochila, termo y libreta con bolígrafo"/>
+          <img src="/brandtrendy_promo_theme/static/img/paginas/kits-portada.jpg" class="img img-fluid mx-auto rounded" alt="Kit promocional corporativo de ejemplo: mochila negra, termo de acero y libreta de corcho con liga"/>
         </div>
       </div>
     </div>
@@ -21,7 +21,7 @@
       <div class="row">
         <div class="col-lg-4">
           <div class="s_hr pt-4 pb32" data-snippet="s_hr" data-name="Separador"><hr class="w-100 mx-auto"/></div>
-          <i class="s_features_icon fa fa-sliders mb-3 rounded bg-o-color-3" aria-hidden="true"/>
+          <i class="s_features_icon fa fa-sliders mb-3 rounded bg-o-color-4" aria-hidden="true"/>
           <div class="overflow-hidden">
             <h3 class="h5-fs">A tu medida</h3>
             <p>Cada propuesta se ajusta a tu presupuesto y al número de piezas que necesites. Las cantidades especiales están sujetas a cotización.</p>
@@ -29,7 +29,7 @@
         </div>
         <div class="col-lg-4">
           <div class="s_hr pt-4 pb32" data-snippet="s_hr" data-name="Separador"><hr class="w-100 mx-auto"/></div>
-          <i class="s_features_icon fa fa-eye mb-3 rounded bg-o-color-3" aria-hidden="true"/>
+          <i class="s_features_icon fa fa-eye mb-3 rounded bg-o-color-4" aria-hidden="true"/>
           <div class="overflow-hidden">
             <h3 class="h5-fs">Prueba digital del kit completo</h3>
             <p>Antes de producir recibes la prueba digital, con una ronda de cambios sin costo.</p>
@@ -37,7 +37,7 @@
         </div>
         <div class="col-lg-4">
           <div class="s_hr pt-4 pb32" data-snippet="s_hr" data-name="Separador"><hr class="w-100 mx-auto"/></div>
-          <i class="s_features_icon fa fa-file-text-o mb-3 rounded bg-o-color-3" aria-hidden="true"/>
+          <i class="s_features_icon fa fa-file-text-o mb-3 rounded bg-o-color-4" aria-hidden="true"/>
           <div class="overflow-hidden">
             <h3 class="h5-fs">Envío y factura</h3>
             <p>El envío se cotiza aparte según tu código postal y la operación se factura con CFDI.</p>
@@ -46,15 +46,18 @@
       </div>
     </div>
   </section>
-  <section class="s_three_columns o_cc o_cc1 pt32 pb32 o_colored_level" data-snippet="s_three_columns" data-vxml="001" data-vcss="001" data-name="Conceptos de kit">
+  <section class="s_three_columns o_cc o_cc1 pt48 pb48 o_colored_level" data-snippet="s_three_columns" data-vxml="001" data-vcss="001" data-name="Conceptos de kit">
     <div class="container">
       <h2 class="h1-fs">Conceptos para empezar</h2>
       <p class="lead">Cada kit se arma con productos del catálogo, con tu marca en cada pieza y la técnica adecuada a cada material.</p>
       <div class="row d-flex align-items-stretch">
         <div data-name="Card" class="col-lg-4 pt16 pb16">
           <div class="s_card o_card_img_top card h-100 o_cc o_cc1 my-0" data-vxml="001" data-snippet="s_card" data-name="Card">
-            <figure class="o_card_img_wrapper ratio ratio-4x3 mb-0">
-              <img class="o_card_img card-img-top" src="/brandtrendy_promo_theme/static/img/paginas/kits-bienvenida-equipo.jpg" alt="Ejemplo de kit de bienvenida para personal de nuevo ingreso: mochila, termo y libreta con bolígrafo"/>
+            <figure class="mb-0">
+              <div class="o_card_img_wrapper ratio ratio-4x3">
+                <img class="o_card_img card-img-top" src="/brandtrendy_promo_theme/static/img/paginas/kits-bienvenida-equipo.jpg" alt="Ejemplo de kit de bienvenida: mochila negra, termo azul marino y libreta de corcho con liga"/>
+              </div>
+              <figcaption class="small text-muted px-3 py-2">Ejemplo ilustrativo</figcaption>
             </figure>
             <div class="card-body">
               <h3 class="card-title h5-fs">Kit de bienvenida para tu equipo</h3>
@@ -65,8 +68,11 @@
         </div>
         <div data-name="Card" class="col-lg-4 pt16 pb16">
           <div class="s_card o_card_img_top card h-100 o_cc o_cc1 my-0" data-vxml="001" data-snippet="s_card" data-name="Card">
-            <figure class="o_card_img_wrapper ratio ratio-4x3 mb-0">
-              <img class="o_card_img card-img-top" src="/brandtrendy_promo_theme/static/img/paginas/kits-cierre-de-anio.jpg" alt="Ejemplo de kit de cierre de año: termo, taza, libretas y bolígrafo"/>
+            <figure class="mb-0">
+              <div class="o_card_img_wrapper ratio ratio-4x3">
+                <img class="o_card_img card-img-top" src="/brandtrendy_promo_theme/static/img/paginas/kits-cierre-de-anio.jpg" alt="Ejemplo de kit de cierre de año: termo, taza, libretas y bolígrafo"/>
+              </div>
+              <figcaption class="small text-muted px-3 py-2">Ejemplo ilustrativo</figcaption>
             </figure>
             <div class="card-body">
               <h3 class="card-title h5-fs">Kit de cierre de año</h3>
@@ -77,13 +83,16 @@
         </div>
         <div data-name="Card" class="col-lg-4 pt16 pb16">
           <div class="s_card o_card_img_top card h-100 o_cc o_cc1 my-0" data-vxml="001" data-snippet="s_card" data-name="Card">
-            <figure class="o_card_img_wrapper ratio ratio-4x3 mb-0">
-              <img class="o_card_img card-img-top" src="/brandtrendy_promo_theme/static/img/paginas/kits-congresos-y-ferias.jpg" alt="Ejemplo de kit para congresos y ferias: bolsa de yute, botella y memoria USB"/>
+            <figure class="mb-0">
+              <div class="o_card_img_wrapper ratio ratio-4x3">
+                <img class="o_card_img card-img-top" src="/brandtrendy_promo_theme/static/img/paginas/kits-congresos-y-ferias.jpg" alt="Ejemplo de kit para congresos y ferias: bolsa de yute, botella y memoria USB"/>
+              </div>
+              <figcaption class="small text-muted px-3 py-2">Ejemplo ilustrativo</figcaption>
             </figure>
             <div class="card-body">
               <h3 class="card-title h5-fs">Kit para congresos y ferias</h3>
               <p class="card-text">Piezas prácticas para entregar en stands o congresos, útiles durante y después del evento.</p>
-              <p class="card-text"><b>Sugerencia:</b> Mochila o bolsa, libreta, USB y batería portátil, con tu marca en cada pieza y la técnica adecuada a cada una.</p>
+              <p class="card-text"><b>Sugerencia:</b> Bolsa o mochila, botella y memoria USB, con tu marca en cada pieza y la técnica adecuada a cada una.</p>
             </div>
           </div>
         </div>
@@ -105,8 +114,8 @@
         </section>
         <section class="s_dynamic_snippet_title oe_unremovable oe_unmovable justify-content-between d-flex flex-column flex-md-row mb-lg-0 pb-3 pb-md-0 s_col_no_resize">
           <div>
-            <h2 class="h1-fs">Productos para armar tu kit</h2>
-            <p class="lead">Kits y piezas de nuestro catálogo.</p>
+            <h2 class="h1-fs">Kits y sets del catálogo</h2>
+            <p class="lead">Sets ya armados que puedes cotizar tal cual o usar como punto de partida para tu kit.</p>
           </div>
           <div>
             <a title="Ver todos los kits" href="{{url_categoria:Promocionales / Kits promocionales}}">Ver todos los kits<span class="fa fa-long-arrow-right ms-2"/></a>
@@ -128,7 +137,7 @@
       <div class="row">
         <div class="col-lg-9">
           <h2 class="h1-fs">¿Armamos un kit para tu equipo?</h2>
-          <p class="lead">Cuéntanos tu caso y un ejecutivo te responde en 1 día hábil.</p>
+          <p class="lead">Cuéntanos tu caso y un ejecutivo te contacta para proponerte la combinación.</p>
         </div>
         <div class="col-lg-3">
           <p style="text-align: right;"><a href="/contactus#asesoria" class="btn btn-primary btn-lg o_translate_inline">Solicitar asesoría</a></p>

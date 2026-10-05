@@ -48,20 +48,14 @@
   <section class="s_text_block pt24 pb24" data-snippet="s_text_block" data-name="Corrección de personalización">
     <div class="container o_container_small s_allow_columns">
       <h2>Corrección de personalización</h2>
-      <p>Corregimos o reponemos el producto cuando el resultado de la personalización difiere materialmente de la prueba digital aprobada. Esta corrección no aplica a errores presentes en la prueba ya aprobada, archivos entregados por el cliente, diferencias mínimas de tamaño o posición, variación razonable de color, limitaciones de material o técnica informadas previamente, ni resultados sobre superficies irregulares cuando esa condición fue informada antes de producir.</p><p>Consulta también nuestro <a href="/proceso-de-personalizacion">proceso de personalización</a>, las condiciones de <a href="/envios-y-cobertura">envíos y cobertura</a> y <a href="/pagos-y-facturacion">pagos y facturación</a>, las <a href="/preguntas-frecuentes">preguntas frecuentes</a>, el <a href="/aviso-de-privacidad">aviso de privacidad</a> y los <a href="/terminos-y-condiciones">términos y condiciones</a>.</p>
+      <p>Corregimos o reponemos el producto cuando el resultado de la personalización difiere materialmente de la prueba digital aprobada. Esta corrección no aplica a errores presentes en la prueba ya aprobada, archivos entregados por el cliente, diferencias mínimas de tamaño o posición, variación razonable de color, limitaciones de material o técnica informadas previamente, ni resultados sobre superficies irregulares cuando esa condición fue informada antes de producir.</p><p>Consulta también nuestro <a href="/proceso-de-personalizacion">proceso de personalización</a>, las condiciones de <a href="/envios-y-cobertura">envíos y cobertura</a> y <a href="/pagos-y-facturacion">pagos y facturación</a>, las <a href="/preguntas-frecuentes">preguntas frecuentes</a>, el <a href="/aviso-de-privacidad">aviso de privacidad</a> y los <a href="/terminos-y-condiciones">términos y condiciones</a>.</p><p>Última actualización: 5 de octubre de 2026.</p>
     </div>
   </section>
   <section class="s_call_to_action o_cc o_cc5 pt64 pb64" data-snippet="s_call_to_action" data-name="Llamada a la acción">
-    <div class="container">
-      <div class="row">
-        <div class="col-lg-9">
-          <h2>¿Tienes una incidencia?</h2>
-          <p class="lead">Reúne tu expediente completo y te respondemos en máximo 1 día hábil.</p>
-        </div>
-        <div class="col-lg-3">
-          <p style="text-align: right;"><a href="mailto:hola@brandtrendy.com.mx" class="btn btn-primary btn-lg o_translate_inline">Escribir a hola@brandtrendy.com.mx</a></p>
-        </div>
-      </div>
+    <div class="container o_container_small">
+      <h2 class="h1-fs">¿Tienes una incidencia?</h2>
+      <p class="lead">Reúne tu expediente y escríbenos a hola@brandtrendy.com.mx y te respondemos de lunes a viernes de 8:30 a 17:30.</p>
+      <p><a href="mailto:hola@brandtrendy.com.mx" class="btn btn-primary btn-lg o_translate_inline">Escríbenos</a></p>
     </div>
   </section>
 </pagina>

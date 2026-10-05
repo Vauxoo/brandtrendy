@@ -1,15 +1,11 @@
-<pagina url="/preguntas-frecuentes" nombre="Preguntas frecuentes" titulo="Preguntas frecuentes | Promocionales Brandtrendy" descripcion="Dudas frecuentes sobre cotizaciones, pagos por transferencia, personalización, envíos e incidencias en Promocionales Brandtrendy." indexada="1" publicada="1">
-  <section class="s_title pt40 pb16" data-snippet="s_title" data-vcss="001" data-name="Título">
+<pagina url="/preguntas-frecuentes" nombre="Preguntas frecuentes" titulo="Preguntas frecuentes sobre cotización | Promocionales Brandtrendy" descripcion="Dudas frecuentes sobre cotizaciones, pagos por transferencia, personalización, envíos e incidencias en Promocionales Brandtrendy." indexada="1" publicada="1">
+  <section class="s_title o_cc o_cc1 pt64 pb32" data-snippet="s_title" data-vcss="001" data-name="Título de la página">
     <div class="container s_allow_columns">
       <h1>Preguntas frecuentes</h1>
+      <p class="lead">Reunimos aquí las dudas más comunes sobre cómo cotizar, personalizar, pagar, recibir y, si hace falta, devolver tus productos promocionales. Si no encuentras tu respuesta, <a href="mailto:hola@brandtrendy.com.mx">escríbenos</a>.</p>
     </div>
   </section>
-  <section class="s_text_block pt0 pb16" data-snippet="s_text_block" data-name="Introducción">
-    <div class="container s_allow_columns">
-      <p class="lead">Reunimos aquí las dudas más comunes sobre cómo cotizar, personalizar, pagar, recibir y, si hace falta, devolver tus productos promocionales. Si no encuentras tu respuesta, <a href="/contactus#asesoria">escríbenos</a>.</p>
-    </div>
-  </section>
-  <section class="s_faq_collapse pt32 pb32" data-snippet="s_faq_collapse" data-vcss="001" data-name="Preguntas: Cotizaciones y precios">
+  <section class="s_faq_collapse pt16 pb32" data-snippet="s_faq_collapse" data-vcss="001" data-name="Preguntas: Cotizaciones y precios">
     <div class="container">
       <div class="row align-items-start s_nb_column_fixed">
         <div class="col-lg-4 pt16">
@@ -19,25 +15,25 @@
           <div class="s_accordion" data-name="Accordion">
             <div id="faqAcc1" class="accordion-flush accordion">
               <div class="accordion-item position-relative z-1" data-name="Accordion Item">
-                <button type="button" id="faqAcc1-btn-1" class="accordion-header accordion-button justify-content-between gap-2 bg-transparent h6-fs fw-bold text-decoration-none text-reset transition-none" data-bs-target="#faqAcc1-tab-1" aria-controls="faqAcc1-tab-1" data-bs-toggle="collapse" aria-expanded="true"><span class="flex-grow-1">¿Cómo cotizo un producto?</span></button>
+                <button type="button" id="faqAcc1-btn-1" class="accordion-header accordion-button justify-content-between gap-2 bg-transparent text-decoration-none text-reset transition-none" data-bs-target="#faqAcc1-tab-1" aria-controls="faqAcc1-tab-1" data-bs-toggle="collapse" aria-expanded="true"><span class="flex-grow-1">¿Cómo cotizo un producto?</span></button>
                 <div id="faqAcc1-tab-1" class="accordion-collapse collapse show" data-bs-parent="#faqAcc1" role="region" aria-labelledby="faqAcc1-btn-1">
                   <div class="accordion-body"><p>Elige tus productos en el <a href="/shop">catálogo</a>, agrégalos a «Mi cotización» y envía tu solicitud desde ahí. Un ejecutivo de Brandtrendy te responde con la cotización formal, desglosada en producto, personalización y envío. Si prefieres que te respondamos por WhatsApp, indícalo en la solicitud.</p></div>
                 </div>
               </div>
               <div class="accordion-item position-relative z-1" data-name="Accordion Item">
-                <button type="button" id="faqAcc1-btn-2" class="accordion-header accordion-button collapsed justify-content-between gap-2 bg-transparent h6-fs fw-bold text-decoration-none text-reset transition-none" data-bs-target="#faqAcc1-tab-2" aria-controls="faqAcc1-tab-2" data-bs-toggle="collapse" aria-expanded="false"><span class="flex-grow-1">¿Cuánto tarda la cotización?</span></button>
+                <button type="button" id="faqAcc1-btn-2" class="accordion-header accordion-button collapsed justify-content-between gap-2 bg-transparent text-decoration-none text-reset transition-none" data-bs-target="#faqAcc1-tab-2" aria-controls="faqAcc1-tab-2" data-bs-toggle="collapse" aria-expanded="false"><span class="flex-grow-1">¿Cuánto tarda la cotización?</span></button>
                 <div id="faqAcc1-tab-2" class="accordion-collapse collapse" data-bs-parent="#faqAcc1" role="region" aria-labelledby="faqAcc1-btn-2">
                   <div class="accordion-body"><p>Respondemos las solicitudes de productos del catálogo en un máximo de 1 día hábil, dentro de nuestro horario de lunes a viernes de 8:30 a 17:30 (hora del centro de México). Los sábados atendemos solo por WhatsApp, sujeto a disponibilidad. La cotización que recibes tiene una vigencia de 7 días naturales. Los proyectos a medida se acuerdan aparte con tu ejecutivo.</p></div>
                 </div>
               </div>
               <div class="accordion-item position-relative z-1" data-name="Accordion Item">
-                <button type="button" id="faqAcc1-btn-3" class="accordion-header accordion-button collapsed justify-content-between gap-2 bg-transparent h6-fs fw-bold text-decoration-none text-reset transition-none" data-bs-target="#faqAcc1-tab-3" aria-controls="faqAcc1-tab-3" data-bs-toggle="collapse" aria-expanded="false"><span class="flex-grow-1">¿Qué significa «desde X piezas» en cada producto?</span></button>
+                <button type="button" id="faqAcc1-btn-3" class="accordion-header accordion-button collapsed justify-content-between gap-2 bg-transparent text-decoration-none text-reset transition-none" data-bs-target="#faqAcc1-tab-3" aria-controls="faqAcc1-tab-3" data-bs-toggle="collapse" aria-expanded="false"><span class="flex-grow-1">¿Qué significa «desde X piezas» en cada producto?</span></button>
                 <div id="faqAcc1-tab-3" class="accordion-collapse collapse" data-bs-parent="#faqAcc1" role="region" aria-labelledby="faqAcc1-btn-3">
                   <div class="accordion-body"><p>Es la cantidad desde la cual se publica el precio de cada producto. Si necesitas una cantidad distinta, indícala en tu solicitud y la cotizamos.</p></div>
                 </div>
               </div>
               <div class="accordion-item position-relative z-1" data-name="Accordion Item">
-                <button type="button" id="faqAcc1-btn-4" class="accordion-header accordion-button collapsed justify-content-between gap-2 bg-transparent h6-fs fw-bold text-decoration-none text-reset transition-none" data-bs-target="#faqAcc1-tab-4" aria-controls="faqAcc1-tab-4" data-bs-toggle="collapse" aria-expanded="false"><span class="flex-grow-1">¿Los precios publicados incluyen IVA?</span></button>
+                <button type="button" id="faqAcc1-btn-4" class="accordion-header accordion-button collapsed justify-content-between gap-2 bg-transparent text-decoration-none text-reset transition-none" data-bs-target="#faqAcc1-tab-4" aria-controls="faqAcc1-tab-4" data-bs-toggle="collapse" aria-expanded="false"><span class="flex-grow-1">¿Los precios publicados incluyen IVA?</span></button>
                 <div id="faqAcc1-tab-4" class="accordion-collapse collapse" data-bs-parent="#faqAcc1" role="region" aria-labelledby="faqAcc1-btn-4">
                   <div class="accordion-body"><p>Sí, todos los precios que ves en el catálogo incluyen IVA. Precios especiales por volumen: solicita tu cotización para conocer las condiciones aplicables a tu cantidad. El envío no está incluido en el precio del producto: siempre se cotiza por separado.</p></div>
                 </div>
@@ -58,31 +54,31 @@
           <div class="s_accordion" data-name="Accordion">
             <div id="faqAcc2" class="accordion-flush accordion">
               <div class="accordion-item position-relative z-1" data-name="Accordion Item">
-                <button type="button" id="faqAcc2-btn-1" class="accordion-header accordion-button collapsed justify-content-between gap-2 bg-transparent h6-fs fw-bold text-decoration-none text-reset transition-none" data-bs-target="#faqAcc2-tab-1" aria-controls="faqAcc2-tab-1" data-bs-toggle="collapse" aria-expanded="false"><span class="flex-grow-1">¿Qué técnicas de personalización manejan?</span></button>
+                <button type="button" id="faqAcc2-btn-1" class="accordion-header accordion-button collapsed justify-content-between gap-2 bg-transparent text-decoration-none text-reset transition-none" data-bs-target="#faqAcc2-tab-1" aria-controls="faqAcc2-tab-1" data-bs-toggle="collapse" aria-expanded="false"><span class="flex-grow-1">¿Qué técnicas de personalización manejan?</span></button>
                 <div id="faqAcc2-tab-1" class="accordion-collapse collapse" data-bs-parent="#faqAcc2" role="region" aria-labelledby="faqAcc2-btn-1">
-                  <div class="accordion-body"><p>Trabajamos varias técnicas, entre ellas serigrafía, tampografía, grabado láser, bordado, sublimación, DTF y termograbado. Cada ficha indica las que ese producto admite y son las que puedes elegir al agregarlo a tu cotización. La técnica adecuada para tu proyecto depende del producto, el material y el diseño, y se define junto con tu ejecutivo al preparar la cotización. El costo se cotiza por proyecto y no manejamos tarifas planas. Conoce el detalle en <a href="/proceso-de-personalizacion">proceso de personalización</a>.</p></div>
+                  <div class="accordion-body"><p>Trabajamos varias técnicas, entre ellas serigrafía, tampografía, grabado láser, bordado, sublimación, DTF, UV y termograbado. Cada ficha indica las que ese producto admite y son las que puedes elegir al agregarlo a tu cotización. La técnica adecuada para tu proyecto depende del producto, el material y el diseño, y se define junto con tu ejecutivo al preparar la cotización. El costo se cotiza por proyecto y no manejamos tarifas planas. Conoce el detalle en <a href="/proceso-de-personalizacion">proceso de personalización</a>.</p></div>
                 </div>
               </div>
               <div class="accordion-item position-relative z-1" data-name="Accordion Item">
-                <button type="button" id="faqAcc2-btn-2" class="accordion-header accordion-button collapsed justify-content-between gap-2 bg-transparent h6-fs fw-bold text-decoration-none text-reset transition-none" data-bs-target="#faqAcc2-tab-2" aria-controls="faqAcc2-tab-2" data-bs-toggle="collapse" aria-expanded="false"><span class="flex-grow-1">¿Qué formatos de archivo debo enviar para mi logo?</span></button>
+                <button type="button" id="faqAcc2-btn-2" class="accordion-header accordion-button collapsed justify-content-between gap-2 bg-transparent text-decoration-none text-reset transition-none" data-bs-target="#faqAcc2-tab-2" aria-controls="faqAcc2-tab-2" data-bs-toggle="collapse" aria-expanded="false"><span class="flex-grow-1">¿Qué formatos de archivo debo enviar para mi logo?</span></button>
                 <div id="faqAcc2-tab-2" class="accordion-collapse collapse" data-bs-parent="#faqAcc2" role="region" aria-labelledby="faqAcc2-btn-2">
                   <div class="accordion-body"><p>Los formatos preferentes son AI, EPS, SVG o PDF vectorial. También podemos revisar archivos en PSD editable, PNG en alta resolución con fondo transparente o JPG en alta resolución. Si tu logo requiere vectorización, redibujo, limpieza o separación de colores, ese trabajo tiene un costo adicional que se cotiza y aprueba antes de realizarse.</p></div>
                 </div>
               </div>
               <div class="accordion-item position-relative z-1" data-name="Accordion Item">
-                <button type="button" id="faqAcc2-btn-3" class="accordion-header accordion-button collapsed justify-content-between gap-2 bg-transparent h6-fs fw-bold text-decoration-none text-reset transition-none" data-bs-target="#faqAcc2-tab-3" aria-controls="faqAcc2-tab-3" data-bs-toggle="collapse" aria-expanded="false"><span class="flex-grow-1">¿Puedo pedir un color Pantone exacto?</span></button>
+                <button type="button" id="faqAcc2-btn-3" class="accordion-header accordion-button collapsed justify-content-between gap-2 bg-transparent text-decoration-none text-reset transition-none" data-bs-target="#faqAcc2-tab-3" aria-controls="faqAcc2-tab-3" data-bs-toggle="collapse" aria-expanded="false"><span class="flex-grow-1">¿Puedo elegir un color Pantone exacto?</span></button>
                 <div id="faqAcc2-tab-3" class="accordion-collapse collapse" data-bs-parent="#faqAcc2" role="region" aria-labelledby="faqAcc2-btn-3">
                   <div class="accordion-body"><p>El Pantone se usa como referencia, siempre que la técnica, el material, la tinta y la cantidad lo permitan; no implica una reproducción idéntica. Una variación razonable de color no se considera un defecto. Si tu proyecto requiere control estricto de color, ese servicio se cotiza aparte.</p></div>
                 </div>
               </div>
               <div class="accordion-item position-relative z-1" data-name="Accordion Item">
-                <button type="button" id="faqAcc2-btn-4" class="accordion-header accordion-button collapsed justify-content-between gap-2 bg-transparent h6-fs fw-bold text-decoration-none text-reset transition-none" data-bs-target="#faqAcc2-tab-4" aria-controls="faqAcc2-tab-4" data-bs-toggle="collapse" aria-expanded="false"><span class="flex-grow-1">¿La cotización incluye prueba digital? ¿Puedo pedir cambios?</span></button>
+                <button type="button" id="faqAcc2-btn-4" class="accordion-header accordion-button collapsed justify-content-between gap-2 bg-transparent text-decoration-none text-reset transition-none" data-bs-target="#faqAcc2-tab-4" aria-controls="faqAcc2-tab-4" data-bs-toggle="collapse" aria-expanded="false"><span class="flex-grow-1">¿La cotización incluye prueba digital? ¿Puedo pedir cambios?</span></button>
                 <div id="faqAcc2-tab-4" class="accordion-collapse collapse" data-bs-parent="#faqAcc2" role="region" aria-labelledby="faqAcc2-btn-4">
                   <div class="accordion-body"><p>Sí, la prueba digital está incluida y se entrega en aproximadamente 1 día hábil después de confirmado el anticipo, con logo en formato adecuado, textos, instrucciones y tu selección completa de producto. Tienes una ronda de cambios sin costo para ajustes razonables de tamaño o posición, correcciones menores o sustitución de archivo antes de aprobar. Ninguna producción inicia sin tu aprobación expresa, por escrito, de la prueba.</p></div>
                 </div>
               </div>
               <div class="accordion-item position-relative z-1" data-name="Accordion Item">
-                <button type="button" id="faqAcc2-btn-5" class="accordion-header accordion-button collapsed justify-content-between gap-2 bg-transparent h6-fs fw-bold text-decoration-none text-reset transition-none" data-bs-target="#faqAcc2-tab-5" aria-controls="faqAcc2-tab-5" data-bs-toggle="collapse" aria-expanded="false"><span class="flex-grow-1">¿Puedo solicitar una muestra antes de mi pedido?</span></button>
+                <button type="button" id="faqAcc2-btn-5" class="accordion-header accordion-button collapsed justify-content-between gap-2 bg-transparent text-decoration-none text-reset transition-none" data-bs-target="#faqAcc2-tab-5" aria-controls="faqAcc2-tab-5" data-bs-toggle="collapse" aria-expanded="false"><span class="flex-grow-1">¿Puedo solicitar una muestra antes de confirmar mi pedido?</span></button>
                 <div id="faqAcc2-tab-5" class="accordion-collapse collapse" data-bs-parent="#faqAcc2" role="region" aria-labelledby="faqAcc2-btn-5">
                   <div class="accordion-body"><p>Sí. Una muestra sin personalizar tiene el costo de la pieza más envío; una muestra personalizada suma personalización, herramentales y envío. Ese costo puede bonificarse en tu pedido final si es el mismo proyecto y producto, el monto de mercancía más personalización alcanza $20,000 MXN, el pedido se coloca dentro de la vigencia de la cotización y la muestra ya fue pagada. El envío de la muestra nunca se bonifica.</p></div>
                 </div>
@@ -103,19 +99,19 @@
           <div class="s_accordion" data-name="Accordion">
             <div id="faqAcc3" class="accordion-flush accordion">
               <div class="accordion-item position-relative z-1" data-name="Accordion Item">
-                <button type="button" id="faqAcc3-btn-1" class="accordion-header accordion-button collapsed justify-content-between gap-2 bg-transparent h6-fs fw-bold text-decoration-none text-reset transition-none" data-bs-target="#faqAcc3-tab-1" aria-controls="faqAcc3-tab-1" data-bs-toggle="collapse" aria-expanded="false"><span class="flex-grow-1">¿Puedo pagar en línea?</span></button>
+                <button type="button" id="faqAcc3-btn-1" class="accordion-header accordion-button collapsed justify-content-between gap-2 bg-transparent text-decoration-none text-reset transition-none" data-bs-target="#faqAcc3-tab-1" aria-controls="faqAcc3-tab-1" data-bs-toggle="collapse" aria-expanded="false"><span class="flex-grow-1">¿Puedo pagar en línea?</span></button>
                 <div id="faqAcc3-tab-1" class="accordion-collapse collapse" data-bs-parent="#faqAcc3" role="region" aria-labelledby="faqAcc3-btn-1">
                   <div class="accordion-body"><p>No. El único método de pago es la transferencia electrónica interbancaria; los datos bancarios se entregan con tu cotización formal. Tu solicitud en el sitio no genera ningún cargo.</p></div>
                 </div>
               </div>
               <div class="accordion-item position-relative z-1" data-name="Accordion Item">
-                <button type="button" id="faqAcc3-btn-2" class="accordion-header accordion-button collapsed justify-content-between gap-2 bg-transparent h6-fs fw-bold text-decoration-none text-reset transition-none" data-bs-target="#faqAcc3-tab-2" aria-controls="faqAcc3-tab-2" data-bs-toggle="collapse" aria-expanded="false"><span class="flex-grow-1">¿Cómo funciona el anticipo del 70/30?</span></button>
+                <button type="button" id="faqAcc3-btn-2" class="accordion-header accordion-button collapsed justify-content-between gap-2 bg-transparent text-decoration-none text-reset transition-none" data-bs-target="#faqAcc3-tab-2" aria-controls="faqAcc3-tab-2" data-bs-toggle="collapse" aria-expanded="false"><span class="flex-grow-1">¿Cómo funciona el anticipo del 70/30?</span></button>
                 <div id="faqAcc3-tab-2" class="accordion-collapse collapse" data-bs-parent="#faqAcc3" role="region" aria-labelledby="faqAcc3-btn-2">
-                  <div class="accordion-body"><p>Para pedidos sin personalizar, el pago es 100% antes de preparar, enviar, liberar o recolectar la mercancía. Para pedidos personalizados se solicita un anticipo del 70% para iniciar producción y el 30% restante antes de liberar el pedido. La producción arranca solo cuando hay anticipo confirmado, producto y cantidades confirmados, archivos utilizables y prueba digital aprobada; nada se libera con saldo pendiente.</p></div>
+                  <div class="accordion-body"><p>Para pedidos sin personalizar, el pago es 100% antes de preparar, enviar, liberar o recolectar la mercancía. Para pedidos personalizados se solicita 70% de anticipo para iniciar tu proyecto (prueba digital y producción) y 30% antes de liberar el pedido. La producción arranca solo cuando hay anticipo confirmado, producto y cantidades confirmados, archivos utilizables y prueba digital aprobada; nada se libera con saldo pendiente.</p></div>
                 </div>
               </div>
               <div class="accordion-item position-relative z-1" data-name="Accordion Item">
-                <button type="button" id="faqAcc3-btn-3" class="accordion-header accordion-button collapsed justify-content-between gap-2 bg-transparent h6-fs fw-bold text-decoration-none text-reset transition-none" data-bs-target="#faqAcc3-tab-3" aria-controls="faqAcc3-tab-3" data-bs-toggle="collapse" aria-expanded="false"><span class="flex-grow-1">¿Qué necesito para facturar mi pedido?</span></button>
+                <button type="button" id="faqAcc3-btn-3" class="accordion-header accordion-button collapsed justify-content-between gap-2 bg-transparent text-decoration-none text-reset transition-none" data-bs-target="#faqAcc3-tab-3" aria-controls="faqAcc3-tab-3" data-bs-toggle="collapse" aria-expanded="false"><span class="flex-grow-1">¿Qué necesito para facturar mi pedido?</span></button>
                 <div id="faqAcc3-tab-3" class="accordion-collapse collapse" data-bs-parent="#faqAcc3" role="region" aria-labelledby="faqAcc3-btn-3">
                   <div class="accordion-body"><p>Para emitir tu CFDI necesitamos RFC, razón social, código postal fiscal, régimen fiscal, uso de CFDI y correo electrónico. Te los pedimos al confirmar tu pedido; también puedes enviarlos a <a href="mailto:facturacion@brandtrendy.com.mx">facturacion@brandtrendy.com.mx</a>. Más detalle en <a href="/pagos-y-facturacion">pagos y facturación</a>.</p></div>
                 </div>
@@ -136,19 +132,19 @@
           <div class="s_accordion" data-name="Accordion">
             <div id="faqAcc4" class="accordion-flush accordion">
               <div class="accordion-item position-relative z-1" data-name="Accordion Item">
-                <button type="button" id="faqAcc4-btn-1" class="accordion-header accordion-button collapsed justify-content-between gap-2 bg-transparent h6-fs fw-bold text-decoration-none text-reset transition-none" data-bs-target="#faqAcc4-tab-1" aria-controls="faqAcc4-tab-1" data-bs-toggle="collapse" aria-expanded="false"><span class="flex-grow-1">¿Cuánto tarda el envío de mi pedido?</span></button>
+                <button type="button" id="faqAcc4-btn-1" class="accordion-header accordion-button collapsed justify-content-between gap-2 bg-transparent text-decoration-none text-reset transition-none" data-bs-target="#faqAcc4-tab-1" aria-controls="faqAcc4-tab-1" data-bs-toggle="collapse" aria-expanded="false"><span class="flex-grow-1">¿Cuánto tarda el envío de mi pedido?</span></button>
                 <div id="faqAcc4-tab-1" class="accordion-collapse collapse" data-bs-parent="#faqAcc4" role="region" aria-labelledby="faqAcc4-btn-1">
                   <div class="accordion-body"><p>El tiempo de tránsito se cuenta a partir de que tu pedido queda liberado; no incluye producción ni personalización. En CDMX y zona metropolitana es de 1 a 3 días, en el interior del país de 1 a 7 días y en zonas extendidas de 7 a 15 días. Trabajamos con Estafeta, FedEx, DHL, Paquetexpress y otras paqueterías según tu destino, peso y volumen. Detalle completo en <a href="/envios-y-cobertura">envíos y cobertura</a>.</p></div>
                 </div>
               </div>
               <div class="accordion-item position-relative z-1" data-name="Accordion Item">
-                <button type="button" id="faqAcc4-btn-2" class="accordion-header accordion-button collapsed justify-content-between gap-2 bg-transparent h6-fs fw-bold text-decoration-none text-reset transition-none" data-bs-target="#faqAcc4-tab-2" aria-controls="faqAcc4-tab-2" data-bs-toggle="collapse" aria-expanded="false"><span class="flex-grow-1">¿Ofrecen envío exprés?</span></button>
+                <button type="button" id="faqAcc4-btn-2" class="accordion-header accordion-button collapsed justify-content-between gap-2 bg-transparent text-decoration-none text-reset transition-none" data-bs-target="#faqAcc4-tab-2" aria-controls="faqAcc4-tab-2" data-bs-toggle="collapse" aria-expanded="false"><span class="flex-grow-1">¿Ofrecen envío exprés?</span></button>
                 <div id="faqAcc4-tab-2" class="accordion-collapse collapse" data-bs-parent="#faqAcc4" role="region" aria-labelledby="faqAcc4-btn-2">
                   <div class="accordion-body"><p>Sí, sujeto a existencia, pago completo, prueba digital aprobada, capacidad operativa, horario y destino, además de un costo adicional. El envío exprés solo se considera confirmado cuando Brandtrendy lo confirma por escrito.</p></div>
                 </div>
               </div>
               <div class="accordion-item position-relative z-1" data-name="Accordion Item">
-                <button type="button" id="faqAcc4-btn-3" class="accordion-header accordion-button collapsed justify-content-between gap-2 bg-transparent h6-fs fw-bold text-decoration-none text-reset transition-none" data-bs-target="#faqAcc4-tab-3" aria-controls="faqAcc4-tab-3" data-bs-toggle="collapse" aria-expanded="false"><span class="flex-grow-1">¿Puedo recoger mi pedido en el almacén?</span></button>
+                <button type="button" id="faqAcc4-btn-3" class="accordion-header accordion-button collapsed justify-content-between gap-2 bg-transparent text-decoration-none text-reset transition-none" data-bs-target="#faqAcc4-tab-3" aria-controls="faqAcc4-tab-3" data-bs-toggle="collapse" aria-expanded="false"><span class="flex-grow-1">¿Puedo recoger mi pedido en el almacén?</span></button>
                 <div id="faqAcc4-tab-3" class="accordion-collapse collapse" data-bs-parent="#faqAcc4" role="region" aria-labelledby="faqAcc4-btn-3">
                   <div class="accordion-body"><p>Sí, con cita previa y solo cuando el pedido está terminado, pagado y liberado. Debes presentar el número de pedido y una identificación oficial de la persona autorizada; si un tercero recoge, necesita una carta de autorización. Nuestro almacén está en Poniente 134 número 682, Bodega E, Col. Industrial Vallejo, Alcaldía Azcapotzalco, CDMX.</p></div>
                 </div>
@@ -169,19 +165,19 @@
           <div class="s_accordion" data-name="Accordion">
             <div id="faqAcc5" class="accordion-flush accordion">
               <div class="accordion-item position-relative z-1" data-name="Accordion Item">
-                <button type="button" id="faqAcc5-btn-1" class="accordion-header accordion-button collapsed justify-content-between gap-2 bg-transparent h6-fs fw-bold text-decoration-none text-reset transition-none" data-bs-target="#faqAcc5-tab-1" aria-controls="faqAcc5-tab-1" data-bs-toggle="collapse" aria-expanded="false"><span class="flex-grow-1">¿Qué hago si mi pedido llega con un problema?</span></button>
+                <button type="button" id="faqAcc5-btn-1" class="accordion-header accordion-button collapsed justify-content-between gap-2 bg-transparent text-decoration-none text-reset transition-none" data-bs-target="#faqAcc5-tab-1" aria-controls="faqAcc5-tab-1" data-bs-toggle="collapse" aria-expanded="false"><span class="flex-grow-1">¿Qué hago si mi pedido llega con un problema?</span></button>
                 <div id="faqAcc5-tab-1" class="accordion-collapse collapse" data-bs-parent="#faqAcc5" role="region" aria-labelledby="faqAcc5-btn-1">
                   <div class="accordion-body"><p>Al recibir, cuenta los bultos, revisa el estado del producto y anota cualquier anomalía directamente en la guía o carta porte de la paquetería; toma fotografías, ya que es indispensable para cualquier reclamación. Tienes 3 días naturales desde la entrega para reportarlo a <a href="mailto:hola@brandtrendy.com.mx">hola@brandtrendy.com.mx</a> con número de pedido y evidencia; respondemos en máximo 1 día hábil y resolvemos en un máximo de 7 días naturales desde que la reclamación está completa. Todo el proceso en <a href="/devoluciones">devoluciones</a>.</p></div>
                 </div>
               </div>
               <div class="accordion-item position-relative z-1" data-name="Accordion Item">
-                <button type="button" id="faqAcc5-btn-2" class="accordion-header accordion-button collapsed justify-content-between gap-2 bg-transparent h6-fs fw-bold text-decoration-none text-reset transition-none" data-bs-target="#faqAcc5-tab-2" aria-controls="faqAcc5-tab-2" data-bs-toggle="collapse" aria-expanded="false"><span class="flex-grow-1">¿Qué pasa si el producto tiene un defecto de fabricación?</span></button>
+                <button type="button" id="faqAcc5-btn-2" class="accordion-header accordion-button collapsed justify-content-between gap-2 bg-transparent text-decoration-none text-reset transition-none" data-bs-target="#faqAcc5-tab-2" aria-controls="faqAcc5-tab-2" data-bs-toggle="collapse" aria-expanded="false"><span class="flex-grow-1">¿Qué pasa si el producto tiene un defecto de fabricación?</span></button>
                 <div id="faqAcc5-tab-2" class="accordion-collapse collapse" data-bs-parent="#faqAcc5" role="region" aria-labelledby="faqAcc5-btn-2">
-                  <div class="accordion-body"><p>Los defectos de fabricación son reportables hasta 15 días naturales después de la entrega. Brandtrendy no otorga una garantía propia adicional a ese plazo; pasado ese tiempo, orientamos la gestión que corresponda, cuando aplique, sin plazo comprometido. Esto es sin perjuicio de los derechos irrenunciables que la ley otorga a los consumidores.</p></div>
+                  <div class="accordion-body"><p>Repórtalo hasta 15 días naturales después de la entrega, con evidencia, y lo revisamos. Brandtrendy no otorga una garantía propia adicional a ese plazo; pasado ese tiempo, orientamos la gestión que corresponda, cuando aplique, sin plazo comprometido. Esto es sin perjuicio de los derechos irrenunciables que la ley otorga a los consumidores.</p></div>
                 </div>
               </div>
               <div class="accordion-item position-relative z-1" data-name="Accordion Item">
-                <button type="button" id="faqAcc5-btn-3" class="accordion-header accordion-button collapsed justify-content-between gap-2 bg-transparent h6-fs fw-bold text-decoration-none text-reset transition-none" data-bs-target="#faqAcc5-tab-3" aria-controls="faqAcc5-tab-3" data-bs-toggle="collapse" aria-expanded="false"><span class="flex-grow-1">¿Puedo cancelar mi pedido?</span></button>
+                <button type="button" id="faqAcc5-btn-3" class="accordion-header accordion-button collapsed justify-content-between gap-2 bg-transparent text-decoration-none text-reset transition-none" data-bs-target="#faqAcc5-tab-3" aria-controls="faqAcc5-tab-3" data-bs-toggle="collapse" aria-expanded="false"><span class="flex-grow-1">¿Puedo cancelar mi pedido?</span></button>
                 <div id="faqAcc5-tab-3" class="accordion-collapse collapse" data-bs-parent="#faqAcc5" role="region" aria-labelledby="faqAcc5-btn-3">
                   <div class="accordion-body"><p>Puedes cancelar sin defecto hasta 15 días naturales después de la entrega, con un cargo administrativo del 10%, siempre que la mercancía esté sin transformar, completa y con sus empaques y etiquetas; el flete de retorno corre por tu cuenta y el reembolso se instrumenta por defecto como nota de crédito de Brandtrendy. Los pedidos personalizados ya no son cancelables después de que apruebes la prueba digital.</p></div>
                 </div>
@@ -197,10 +193,10 @@
       <div class="row">
         <div class="col-lg-9">
           <h2 class="h1-fs">¿Tienes otra duda?</h2>
-          <p class="lead">Cuéntanos tu caso y un ejecutivo te responde en 1 día hábil.</p>
+          <p class="lead">Escríbenos a hola@brandtrendy.com.mx y te respondemos de lunes a viernes de 8:30 a 17:30.</p>
         </div>
         <div class="col-lg-3">
-          <p style="text-align: right;"><a href="/contactus#asesoria" class="btn btn-primary btn-lg o_translate_inline">Solicitar asesoría</a></p>
+          <p style="text-align: right;"><a href="mailto:hola@brandtrendy.com.mx" class="btn btn-primary o_translate_inline">Escríbenos</a></p>
         </div>
       </div>
     </div>

@@ -1,11 +1,11 @@
-<pagina url="/envios-y-cobertura" nombre="Envíos y cobertura a nivel nacional" titulo="Envíos y cobertura | Promocionales Brandtrendy" descripcion="Cobertura de envío en México: paqueterías, reparto propio en CDMX, tiempos de tránsito estimados, envío exprés y recolección en almacén." indexada="1" publicada="1">
+<pagina url="/envios-y-cobertura" nombre="Envíos y cobertura a nivel nacional" titulo="Envíos y cobertura en todo México | Promocionales Brandtrendy" descripcion="Cobertura de envío en México: paqueterías, reparto propio en CDMX, tiempos de tránsito estimados, envío exprés y recolección en almacén." indexada="1" publicada="1">
   <section class="s_title o_cc o_cc1 pt64 pb32" data-snippet="s_title" data-vcss="001" data-name="Título de la página">
     <div class="container s_allow_columns">
       <h1>Envíos y cobertura</h1>
       <p class="lead">Gestionamos el envío de tu pedido a nivel nacional desde nuestro almacén propio en la Ciudad de México. Aquí te explicamos cómo funciona la cobertura, los tiempos estimados y qué hacer al recibir tu mercancía.</p>
     </div>
   </section>
-  <section class="s_text_block o_cc o_cc1 pt40 pb40" data-snippet="s_text_block" data-name="Cobertura y reparto">
+  <section class="s_text_block o_cc o_cc1 pt16 pb40" data-snippet="s_text_block" data-name="Cobertura y reparto">
     <div class="container s_allow_columns">
       <div class="row">
         <div class="col-lg-6 pt16 pb16">
@@ -24,7 +24,7 @@
       <div class="row align-items-start">
         <div class="col-lg-6 pt16 pb16">
           <h2 class="h1-fs">El envío siempre se cotiza aparte</h2>
-          <p>Los precios publicados en el catálogo llevan IVA incluido; el envío se cotiza aparte, de forma independiente.</p><p>El desglose completo —producto, personalización y envío— se entrega en tu cotización formal, junto con los datos bancarios para el pago por transferencia.</p>
+          <p>Los precios publicados en el catálogo llevan IVA incluido; el envío se cotiza por separado.</p><p>El desglose completo —producto, personalización y envío— se entrega en tu cotización formal, junto con los datos bancarios para el pago por transferencia.</p>
         </div>
         <div class="col-lg-5 offset-lg-1 pt16 pb16">
           <div class="s_card card o_cc o_cc1" data-vxml="001" data-snippet="s_card" data-name="Card" style="border-width: 0px !important;">
@@ -58,8 +58,8 @@
       </div>
       <div class="row">
         <div class="col-lg-8 pt24">
-          <p><b>Importante:</b> el tiempo de tránsito corre a partir de que el pedido queda liberado —es decir, pagado, producido y con la prueba digital aprobada— y no incluye el tiempo de producción ni de personalización. Ese plazo se confirma en tu cotización según la técnica y la cantidad solicitada.</p>
-          <h3 class="h5-fs">Envío exprés</h3>
+          <p><b>Importante:</b> son estimaciones de tránsito, no una fecha de entrega comprometida. El tiempo de tránsito corre a partir de que el pedido queda liberado —es decir, pagado, producido y con la prueba digital aprobada— y no incluye el tiempo de producción ni de personalización. Ese plazo se confirma en tu cotización según la técnica y la cantidad solicitada.</p>
+          <h3 class="h4-fs mt-4">Envío exprés</h3>
           <p>El servicio exprés está sujeto a existencia, pago completo, prueba digital aprobada, capacidad operativa del momento, horario y destino, e implica un costo adicional. Solo se considera confirmado cuando lo comunicamos por escrito.</p>
         </div>
       </div>
@@ -94,10 +94,10 @@
       <div class="row">
         <div class="col-lg-9">
           <h2 class="h1-fs">¿Tienes dudas sobre tu envío?</h2>
-          <p class="lead">Cuéntanos tu caso y un ejecutivo te responde en 1 día hábil.</p>
+          <p class="lead">Escríbenos a hola@brandtrendy.com.mx y te respondemos de lunes a viernes de 8:30 a 17:30.</p>
         </div>
         <div class="col-lg-3">
-          <p style="text-align: right;"><a href="/contactus#asesoria" class="btn btn-primary btn-lg o_translate_inline">Solicitar asesoría</a></p>
+          <p style="text-align: right;"><a href="mailto:hola@brandtrendy.com.mx" class="btn btn-primary o_translate_inline">Escríbenos</a></p>
         </div>
       </div>
     </div>

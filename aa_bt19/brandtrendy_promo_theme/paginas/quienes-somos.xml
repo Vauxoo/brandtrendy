@@ -1,11 +1,29 @@
-<pagina url="/quienes-somos" nombre="Quiénes somos" titulo="Quiénes somos | Promocionales Brandtrendy" descripcion="Operamos en comercio electrónico desde 2006, con almacén propio en CDMX y cobertura nacional. Cotizamos tus artículos promocionales con todo desglosado." indexada="1" publicada="1">
+<pagina url="/quienes-somos" nombre="Quiénes somos" titulo="Quiénes somos y cómo operamos | Promocionales Brandtrendy" descripcion="Operamos en comercio electrónico desde 2006, con almacén propio en CDMX y cobertura nacional. Cotizamos tus artículos promocionales con todo desglosado." indexada="1" publicada="1">
   <section class="s_title o_cc o_cc1 pt64 pb32" data-snippet="s_title" data-vcss="001" data-name="Título de la página">
     <div class="container s_allow_columns">
       <h1>Quiénes somos</h1>
       <p class="lead">Brandtrendy es una empresa mexicana dedicada a artículos promocionales personalizables para empresas, con atención empresarial y operación propia en México.</p>
     </div>
   </section>
-  <section class="s_text_block o_cc o_cc1 pt0 pb40" data-snippet="s_text_block" data-name="Historia y operación">
+  <section class="s_numbers o_cc o_cc2 pt32 pb32" data-snippet="s_numbers" data-name="Cifras de la operación">
+    <div class="container">
+      <div class="row s_nb_column_fixed">
+        <div class="col-6 col-lg-3">
+          <p style="text-align: center;"><span class="s_number display-1-fs fw-bold">2006</span><br/><span class="h5-fs">año desde el que operamos en comercio electrónico</span></p>
+        </div>
+        <div class="col-6 col-lg-3">
+          <p style="text-align: center;"><span class="s_number display-1-fs fw-bold">2015</span><br/><span class="h5-fs">año de nuestra constitución legal</span></p>
+        </div>
+        <div class="col-6 col-lg-3">
+          <p style="text-align: center;"><span class="s_number display-1-fs fw-bold">CDMX</span><br/><span class="h5-fs">almacén propio, domicilio fiscal y operativo</span></p>
+        </div>
+        <div class="col-6 col-lg-3">
+          <p style="text-align: center;"><span class="s_number display-1-fs fw-bold">México</span><br/><span class="h5-fs">cobertura nacional por paquetería</span></p>
+        </div>
+      </div>
+    </div>
+  </section>
+  <section class="s_text_block o_cc o_cc1 pt40 pb40" data-snippet="s_text_block" data-name="Historia y operación">
     <div class="container s_allow_columns">
       <div class="row">
         <div class="col-lg-6 pt16 pb16">
@@ -45,7 +63,7 @@
           <i class="s_features_icon fa fa-check-square-o mb-3 rounded bg-white" aria-hidden="true"/>
           <div class="overflow-hidden">
             <h3 class="h5-fs">Seguimiento de cada pedido</h3>
-            <p>Damos seguimiento a cada pedido, de la cotización a la entrega.</p>
+            <p>Tu ejecutivo te mantiene informado de la prueba, la producción y el envío.</p>
           </div>
         </div>
         <div class="col-lg-3">
@@ -64,10 +82,10 @@
       <div class="row">
         <div class="col-lg-9">
           <h2 class="h1-fs">Hablemos de tu proyecto</h2>
-          <p class="lead">Cuéntanos tu caso y un ejecutivo te responde en 1 día hábil.</p>
+          <p class="lead">Cuéntanos tu caso y un ejecutivo te contacta para revisarlo contigo.</p>
         </div>
         <div class="col-lg-3">
-          <p style="text-align: right;"><a href="/contactus#asesoria" class="btn btn-primary btn-lg o_translate_inline">Solicitar asesoría</a></p>
+          <p style="text-align: right;"><a href="/contactus#asesoria" class="btn btn-primary o_translate_inline">Solicitar asesoría</a></p>
         </div>
       </div>
     </div>

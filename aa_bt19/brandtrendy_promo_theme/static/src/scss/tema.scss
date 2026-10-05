@@ -60,3 +60,36 @@ footer .s_social_media a:hover > i.fa {
     background-color: #414042;
     border-color: #414042;
 }
+
+// Portada: el H1 de héroe va en 800 (R5 §2.2); los demás encabezados quedan en 700.
+h1.display-3-fs {
+    font-weight: 800;
+}
+
+// Un solo tamaño de botón principal en el sitio (R5 §2.3: 600 15/20); el grande solo gana relleno.
+.btn-lg {
+    font-size: .9375rem;
+    line-height: 1.25rem;
+    padding: .875rem 1.75rem;
+}
+
+// Preguntas frecuentes: la pregunta no puede verse más chica que la respuesta (mismo estilo que el acordeón de la ficha).
+.s_faq_collapse .accordion-button {
+    font-size: 1rem;
+    line-height: 1.5rem;
+    font-weight: 600;
+    color: #414042;
+}
+
+// Tablas de contenido (plazos, datos personales): encabezado diferenciado y solo líneas horizontales.
+main .table > thead > tr > th {
+    background-color: #F3F3F4;
+    color: #414042;
+    font-size: .875rem;
+    line-height: 1.25rem;
+    font-weight: 600;
+}
+main .table-bordered > :not(caption) > * > * {
+    border-width: 0 0 1px;
+    border-color: #F3F3F4;
+}

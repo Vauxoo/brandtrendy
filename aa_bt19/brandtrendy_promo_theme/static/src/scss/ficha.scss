@@ -4,6 +4,10 @@ $bt-ficha-ink: #231F20;
 $bt-ficha-grafito: #414042;
 $bt-ficha-secundario: #5F5E61;
 $bt-ficha-borde: #F3F3F4;
+$bt-ficha-neutro-650: #6B6A6E; // 5.37:1 sobre blanco
+$bt-ficha-neutro-borde: #767579;
+$bt-ficha-rojo: #EF393D; // solo indicador
+$bt-ficha-foco: #2782A2;
 
 // --- Ficha · título: H1 interior 28/36 700 (móvil 24/31). Odoo le pone la clase h3 (18 px). -------------------
 #o_wsale_product_details_content .o_wsale_product_details_content_section_title h1 {
@@ -66,6 +70,71 @@ $bt-ficha-borde: #F3F3F4;
     .o_wsale_product_details_content_section_contact:not(:has(#contact_us_wrapper:not(.d-none))),
     #product_attributes_simple:not(:has(td)) {
         display: none;
+    }
+}
+
+// --- Ficha · galería fija en escritorio ----------------------------------------------------------------------
+// Odoo ya la hace sticky y le pone top = cabecera fija + 16 px (WebsiteSaleStickyObject, estilo en línea que se
+// recalcula si cambia la cabecera). El margen negativo con su padding la dejan a cabecera + 24 px al fijarse sin
+// moverla en reposo; así acompaña a la descripción y a las preguntas en lugar de dejar un hueco a la izquierda.
+@media (min-width: 992px) {
+    #product_detail_main > .o_wsale_product_images {
+        position: sticky;
+        align-self: flex-start;
+        margin-top: -8px;
+        padding-top: 8px !important; // #product_detail.o_wsale_container_lg le quita el padding con más especificidad
+    }
+}
+
+// --- Ficha · variantes de tipo «radio» como píldoras (el radio sigue ahí, transparente, para teclado y JS) -----
+.o_wsale_product_page_variants [data-attribute-display-type="radio"] .o_wsale_product_attribute {
+    gap: 8px !important;
+
+    .js_attribute_value .form-check {
+        position: relative;
+        display: flex;
+        align-items: center;
+        min-height: 44px;
+        margin: 0;
+        padding: 10px 16px;
+        border: 1px solid $bt-ficha-neutro-borde;
+        border-radius: 8px;
+        background-color: #FFFFFF;
+        color: $bt-ficha-ink;
+        font-size: 14px;
+        line-height: 20px;
+        transition: border-color 150ms ease-out, background-color 150ms ease-out;
+
+        &:hover {
+            border-color: $bt-ficha-grafito;
+        }
+
+        &:has(.form-check-input:checked) {
+            border-color: $bt-ficha-grafito;
+            box-shadow: inset 0 0 0 1px $bt-ficha-grafito;
+            background-color: $bt-ficha-borde;
+            font-weight: 600;
+        }
+
+        &:has(.form-check-input:focus-visible) {
+            outline: 2px solid $bt-ficha-foco;
+            outline-offset: 2px;
+        }
+    }
+
+    .form-check-input {
+        position: absolute;
+        inset: 0;
+        width: 100%;
+        height: 100%;
+        margin: 0;
+        float: none;
+        opacity: 0;
+        cursor: pointer;
+    }
+
+    .form-check-label {
+        cursor: pointer;
     }
 }
 
@@ -137,15 +206,66 @@ $bt-ficha-borde: #F3F3F4;
     }
 }
 
+// Estado vacío alineado a la izquierda bajo el H1 (Odoo centra el h5 y el botón con estilo en línea).
+#shop_cart .js_cart_lines:has(.bt_cotizacion_vacia) {
+    > h5,
+    > p {
+        text-align: left !important;
+    }
+}
+
 .bt_cotizacion_vacia {
-    max-width: 560px;
-    margin: 0 auto 24px;
+    max-width: 640px;
+    margin: 0 0 24px;
     font-size: 16px;
     line-height: 24px;
     color: $bt-ficha-secundario;
 }
 
-// --- 404: composición tipográfica ------------------------------------------------------------------------------
+// Línea de la cotización: la descripción de venta completa se resume a dos renglones (la ficha la tiene entera).
+#cart_products .o_cart_product .text-muted.small > span.mb-1:first-child:not(:last-child) {
+    display: -webkit-box !important; // el span trae d-block
+    -webkit-box-orient: vertical;
+    -webkit-line-clamp: 2;
+    overflow: hidden;
+}
+
+// --- Pasos de la solicitud (Revisar solicitud › Datos de contacto › …) ---------------------------------------
+// Odoo pone los pendientes en text-muted con opacidad .5 (≈2:1); aquí neutro 650 y el actual en ink 600 con un
+// subrayado rojo de marca como indicador.
+.o_wizard {
+    > .o_disabled {
+        opacity: 1;
+    }
+
+    > .o_disabled [name="step_name"],
+    > .o_disabled [name="step_name"] .fa,
+    [name="step_name"] .fa-angle-right {
+        color: $bt-ficha-neutro-650 !important;
+    }
+
+    > span:not(.o_disabled) [name="step_name"] {
+        color: $bt-ficha-ink;
+        font-weight: 600 !important;
+
+        p > span {
+            padding-bottom: 2px;
+            box-shadow: inset 0 -2px 0 $bt-ficha-rojo;
+        }
+    }
+}
+
+// --- 404: composición tipográfica, buscador de productos y ayuda ------------------------------------------------
+.bt_404_buscador {
+    max-width: 480px;
+}
+
+.bt_404_ayuda {
+    font-size: 14px;
+    line-height: 20px;
+    color: $bt-ficha-secundario;
+}
+
 .bt_404 h1 {
     font-size: 28px;
     line-height: 36px;

@@ -34,7 +34,8 @@
         - fila tr de product_attributes_simple: «Cantidad mínima» (atributo de catálogo de la 17) ya se muestra junto
           al precio con x_bt_moq; se omite la fila solo si el producto tiene x_bt_moq.
         - li de la ruta de navegación: se omite la raíz del árbol de categorías cuando no es la última
-          («Todos los productos» ya enlaza al catálogo).
+          («Productos» ya enlaza al catálogo). La ruta sale de la primera categoría pública del producto (la de menor
+          secuencia): las transversales («Por industria», «Por ocasión») van con secuencia ≥30000 en el catálogo.
     -->
     <template id="ficha_bloque_compra" inherit_id="website_sale.product"
               name="Promocionales · bloque de compra de la ficha">
@@ -48,7 +49,7 @@
             </t>
         </xpath>
         <xpath expr="//div[hasclass('o_wsale_product_details_content_section_cta')]" position="inside">
-            <p t-if="website.bt_quote_mode" class="bt_ficha_expectativa mb-0">Un ejecutivo te confirma precio, personalización y entrega en 1 día hábil.</p>
+            <p t-if="website.bt_quote_mode" class="bt_ficha_expectativa mb-0">En 1 día hábil recibes tu cotización formal, con precio, personalización y plazo de entrega confirmados por un ejecutivo.</p>
         </xpath>
         <xpath expr="//div[@id='product_attributes_simple']//tr" position="attributes">
             <attribute name="t-if">not (website.bt_quote_mode and product.x_bt_moq and attribute.name == 'Cantidad mínima')</attribute>
@@ -63,6 +64,13 @@
         <xpath expr="//ol[hasclass('o_wsale_breadcrumb')]//li[a[contains(@t-att-href, 'slug(cat)')] and not(hasclass('d-lg-none'))]" position="attributes">
             <attribute name="t-if">not (website.bt_quote_mode and not cat.parent_id and not cat_last)</attribute>
         </xpath>
+        <!-- Raíz de la ruta: «Productos», igual que en el listado (el li original y su texto traducido se quedan). -->
+        <xpath expr="//ol[hasclass('o_wsale_breadcrumb')]/li[a[@t-att-href='keep(shop_path)']]" position="attributes">
+            <attribute name="t-if">not website.bt_quote_mode</attribute>
+        </xpath>
+        <xpath expr="//ol[hasclass('o_wsale_breadcrumb')]/li[a[@t-att-href='keep(shop_path)']]" position="before">
+            <li t-if="website.bt_quote_mode" class="breadcrumb-item d-none d-lg-inline-block"><a t-att-href="keep(shop_path)">Productos</a></li>
+        </xpath>
     </template>
 
     <!--
@@ -74,6 +82,38 @@
               name="Promocionales · descripción después del bloque de compra">
         <xpath expr="//div[@t-field='product.description_ecommerce']" position="attributes">
             <attribute name="t-if">not (website.bt_quote_mode and is_add_to_cart_possible)</attribute>
+        </xpath>
+        <!--
+            H1 del producto: el modelo BT-XXX-0000 (con su «– » previo) no se corta en dos renglones. Ancla:
+            h1[@t-field='product.name']; en este sitio se rinde un H1 gemelo (mismas clases) con el modelo en
+            text-nowrap. El nombre es dato de catálogo y no se edita desde la ficha; si no trae « BT-», sale tal cual.
+        -->
+        <xpath expr="//h1[@t-field='product.name']" position="attributes">
+            <attribute name="t-if">not website.bt_quote_mode</attribute>
+        </xpath>
+        <xpath expr="//h1[@t-field='product.name']" position="after">
+            <h1 t-if="website.bt_quote_mode" t-attf-class="h3 {{'mb-3' if not product.description_ecommerce and not is_view_active('website_sale.product_comment') else ''}}">
+                <t t-set="bt_nombre" t-value="product.name or ''"/>
+                <t t-set="bt_corte" t-value="bt_nombre.rfind(' BT-')"/>
+                <t t-if="bt_corte &gt; 0">
+                    <t t-set="bt_cabeza" t-value="bt_nombre[:bt_corte]"/>
+                    <t t-set="bt_modelo" t-value="bt_nombre[bt_corte + 1:]"/>
+                    <t t-if="bt_cabeza.endswith(' –') or bt_cabeza.endswith(' -')">
+                        <t t-set="bt_modelo" t-value="bt_cabeza[-1:] + ' ' + bt_modelo"/>
+                        <t t-set="bt_cabeza" t-value="bt_cabeza[:-2]"/>
+                    </t>
+                    <t t-out="bt_cabeza"/> <span class="text-nowrap" t-out="bt_modelo"/>
+                </t>
+                <t t-else="" t-out="bt_nombre"/>
+            </h1>
+        </xpath>
+    </template>
+
+    <!-- Ficha · cantidad con nombre accesible. Ancla: input[@name='add_qty'] de website_sale.product_quantity. -->
+    <template id="ficha_cantidad_etiqueta" inherit_id="website_sale.product_quantity"
+              name="Promocionales · nombre accesible de la cantidad">
+        <xpath expr="//input[@name='add_qty']" position="attributes">
+            <attribute name="t-att-aria-label">'Cantidad' if website.bt_quote_mode else None</attribute>
         </xpath>
     </template>
 
@@ -109,11 +149,21 @@
     </template>
 
     <!--
-        Mi cotización (/shop/cart). Anclas en website_sale.cart: div#shop_cart/div con el h4 del resumen y su div
-        del botón «Repetir solicitud» (sin cuentas de cliente en este sitio: solo si hay historial).
+        Mi cotización (/shop/cart). Anclas en website_sale.cart: div#shop_cart (el título del documento va antes, dentro
+        del t-call), div#shop_cart/div con el h4 del resumen y su div del botón «Repetir solicitud» (sin cuentas de
+        cliente en este sitio: solo si hay historial). website_meta_title de la vista («Mi cotización», TI2) queda
+        para el sitio 1.
     -->
     <template id="cotizacion_encabezado" inherit_id="website_sale.cart"
               name="Promocionales · encabezado de Mi cotización">
+        <!-- Hijo directo del t-call: el título llega a la cabeza del documento (website.layout). -->
+        <xpath expr="//div[@id='shop_cart']" position="before">
+            <t t-if="website.bt_quote_mode" t-set="title" t-value="'Mi cotización | ' + website.name"/>
+        </xpath>
+        <!-- «Resumen de tu solicitud» solo cuando hay líneas. -->
+        <xpath expr="//div[@id='shop_cart']/div[h4]" position="attributes">
+            <attribute name="t-if">not website.bt_quote_mode or (website_sale_order and website_sale_order.website_order_line)</attribute>
+        </xpath>
         <xpath expr="//div[@id='shop_cart']/div[h4]" position="before">
             <h1 t-if="website.bt_quote_mode" class="bt_cotizacion_titulo mb-3">Mi cotización</h1>
         </xpath>
@@ -132,13 +182,14 @@
             <attribute name="t-if">not website.bt_quote_mode</attribute>
         </xpath>
         <xpath expr="//div[hasclass('js_cart_lines')][div[hasclass('mt-5')]]/h5" position="after">
-            <p t-if="website.bt_quote_mode" class="bt_cotizacion_vacia text-center">Agrega los modelos que te interesan desde el catálogo y envía tu solicitud; un ejecutivo te confirma precio, personalización y entrega en 1 día hábil.</p>
+            <p t-if="website.bt_quote_mode" class="bt_cotizacion_vacia">Agrega los modelos que te interesan desde el catálogo y envía tu solicitud. En 1 día hábil recibes tu cotización formal, con precio, personalización y plazo de entrega confirmados por un ejecutivo.</p>
         </xpath>
     </template>
 
     <!--
         404. Ancla: section[@data-snippet='s_image_text'] de http_routing.404. En este sitio se oculta completa (con lo
-        que le agregue cualquier otra herencia) y se muestra una composición tipográfica con una sola acción.
+        que le agregue cualquier otra herencia) y se muestra una composición tipográfica con una sola acción
+        («Ver el catálogo»), el buscador de productos de la cabecera (D6) y el correo para reportar el enlace.
         Prioridad 30: se aplica después de las herencias del sitio con prioridad menor.
     -->
     <template id="pagina_no_encontrada" inherit_id="http_routing.404" priority="30"
@@ -157,10 +208,23 @@
                         <div class="row justify-content-center">
                             <div class="col-lg-8 text-center py-lg-5">
                                 <h1 class="mb-3">Página no encontrada</h1>
-                                <p class="mb-4">No encontramos la página que buscas. Si crees que es un error,
-                                    escríbenos desde <a href="/contactus">contacto</a>.</p>
-                                <p class="mb-3"><a href="/shop" class="btn btn-primary">Ver el catálogo</a></p>
-                                <p class="mb-0"><a href="/">Ir al inicio</a></p>
+                                <p class="mb-4">No encontramos la página que buscas. Busca el producto por nombre o
+                                    modelo, o entra al catálogo.</p>
+                                <t t-call="website.website_search_box_input"
+                                   _form_classes.f="bt_404_buscador mx-auto mb-4"
+                                   _input_classes.f="rounded-start-pill ps-3 text-bg-light"
+                                   _submit_classes.f="rounded-end-pill p-3 bg-o-color-3 lh-1"
+                                   search_type.f="products_only"
+                                   action.f="/shop"
+                                   placeholder.f="Buscar modelo o producto"
+                                   limit.f="5"
+                                   display_image.f="true"
+                                   display_description.f="false"
+                                   display_extra_link.f="false"
+                                   display_detail.f="true"/>
+                                <p class="mb-4"><a href="/shop" class="btn btn-primary">Ver el catálogo</a></p>
+                                <p class="bt_404_ayuda mb-0">Si crees que es un error, escríbenos a
+                                    <a href="mailto:hola@brandtrendy.com.mx">hola@brandtrendy.com.mx</a>.</p>
                             </div>
                         </div>
                     </div>

@@ -33,8 +33,11 @@
     background-color: #FFFFFF;
 }
 
+// Título con alto reservado de 3 líneas (4 en móvil): en una misma fila el precio, que va justo debajo, queda a la
+// misma altura en todas las tarjetas. Solo el botón baja al fondo (margin-top: auto).
 #wrap .oe_product_cart .o_wsale_products_item_title {
     max-width: none;
+    min-height: 4.5rem;
     margin-bottom: 4px;
     font-size: 1rem;
     line-height: 1.5rem;
@@ -50,14 +53,20 @@
 }
 
 #wrap .oe_product_cart .bt_tarjeta_pie {
+    flex-grow: 1;
     order: 6;
-    margin-top: auto;
     width: 100%;
+    margin-top: 0;
 }
 
 // Orden de lectura: precio, mínimo y técnicas, botón (Odoo da order 6 a .product_price).
-#wrap .oe_product_cart .bt_tarjeta_pie > * {
+#wrap .oe_product_cart .bt_tarjeta_pie > *,
+#wrap .oe_product_cart .bt_tarjeta_datos > * {
     order: 0;
+}
+
+#wrap .oe_product_cart .bt_tarjeta_datos {
+    margin-bottom: 12px;
 }
 
 #wrap .oe_product_cart .bt_tarjeta_precio {
@@ -88,12 +97,56 @@
     color: #5F5E61;
 }
 
+#wrap .oe_product_cart .bt_tec_mas_movil {
+    display: none;
+}
+
 #wrap .oe_product_cart .bt_tarjeta_cta {
     position: relative;
     z-index: 2;
     width: 100%;
     min-height: 44px;
+    margin-top: auto;
     white-space: normal;
+}
+
+// Tarjeta angosta (tableta, rejillas de 3-4 columnas): «IVA incluido» en renglón propio, sin el separador, para que
+// ningún renglón empiece con «·».
+#wrap .oe_product_cart .bt_tarjeta_datos {
+    container-type: inline-size;
+}
+
+@container (max-width: 250px) {
+    .bt_tarjeta_precio .bt_tarjeta_iva {
+        display: block;
+    }
+    .bt_tarjeta_precio .bt_tarjeta_sep {
+        display: none;
+    }
+}
+
+// Móvil: título de hasta 4 líneas (15/22) con su alto reservado, «IVA incluido» en renglón propio sin «·» y una sola
+// técnica más «y N más».
+@media (max-width: 575.98px) {
+    #wrap .oe_product_cart .o_wsale_products_item_title {
+        min-height: 5.5rem;
+        font-size: .9375rem;
+        line-height: 1.375rem;
+    }
+    #wrap .oe_product_cart .o_wsale_products_item_title > a {
+        -webkit-line-clamp: 4;
+    }
+    #wrap .oe_product_cart .bt_tarjeta_iva {
+        display: block;
+    }
+    #wrap .oe_product_cart .bt_tarjeta_sep,
+    #wrap .oe_product_cart .bt_tec_resto,
+    #wrap .oe_product_cart .bt_tec_mas {
+        display: none;
+    }
+    #wrap .oe_product_cart .bt_tec_mas_movil {
+        display: inline;
+    }
 }
 
 // Rejilla de /shop: el hueco vertical acompaña al de la tarjeta con borde.
@@ -166,9 +219,38 @@
     color: #5F5E61;
 }
 
-// Píldoras de categoría: solo texto (las categorías no tienen imagen y el cuadro gris vacío no aporta).
-#o_wsale_categories_filmstrip .o_wsale_filmstrip_placeholder {
+// Píldoras de categoría: solo texto, todas iguales (la plantilla ya no pinta miniaturas; el marcador gris vacío no
+// aporta).
+#o_wsale_categories_filmstrip .o_wsale_filmstrip_image {
     display: none !important;
+}
+
+// Píldora compacta de texto (sin la miniatura, Odoo le dejaba el alto de la imagen: 64 px).
+#o_wsale_categories_filmstrip .o_wsale_filmstrip_item {
+    align-items: center;
+    min-height: 44px;
+    padding: 8px 16px !important;
+}
+
+#o_wsale_categories_filmstrip .o_wsale_filmstrip_item > span {
+    height: auto !important;
+    min-height: 0 !important;
+    line-height: 1.5rem;
+    white-space: nowrap;
+}
+
+// Escritorio: las píldoras pasan a otro renglón en lugar de cortarse contra el borde.
+@media (min-width: 992px) {
+    #o_wsale_categories_filmstrip .o_wsale_filmstrip_wrapper {
+        flex: 1 1 100%;
+        min-width: 0;
+        overflow: visible !important;
+    }
+    #o_wsale_categories_filmstrip .o_wsale_filmstrip {
+        flex-wrap: wrap;
+        width: 100%;
+        row-gap: 8px;
+    }
 }
 
 // Móvil: la fila de píldoras se desvanece a la derecha para indicar que se desplaza.
@@ -180,6 +262,18 @@
     #o_wsale_categories_filmstrip .o_wsale_filmstrip {
         padding-right: 32px;
     }
+}
+
+// Sin la caja de búsqueda de la barra, «Ordenar por» queda a la derecha.
+#o_wsale_products_header .products_header {
+    justify-content: flex-end !important;
+}
+
+// Conteo de una búsqueda en /shop, bajo el H1 («127 modelos»).
+#o_wsale_products_header .bt_conteo_busqueda {
+    font-size: 1rem;
+    line-height: 1.5rem;
+    color: #5F5E61;
 }
 
 // ---------------------------------------------------------------- Resultados de búsqueda (/website/search y sugerencias)
@@ -231,4 +325,104 @@
         font-size: .875rem;
         line-height: 1.25rem;
     }
+}
+
+// Precio de cada resultado de /website/search (plantilla del módulo) con el formato de la tarjeta.
+.bt_resultado_precio {
+    color: #231F20;
+    font-variant-numeric: tabular-nums;
+}
+
+.bt_resultado_precio > b {
+    font-size: 1.125rem;
+    line-height: 1.5rem;
+    font-weight: 700;
+    white-space: nowrap;
+}
+
+.bt_resultado_precio .bt_tarjeta_desde,
+.bt_resultado_precio .bt_tarjeta_iva {
+    font-size: .875rem;
+    line-height: 1.25rem;
+    font-weight: 400;
+    color: #5F5E61;
+}
+
+.bt_resultado_precio .bt_tarjeta_iva {
+    white-space: nowrap;
+}
+
+@media (max-width: 575.98px) {
+    .bt_resultado_precio .bt_tarjeta_iva {
+        display: block;
+    }
+    .bt_resultado_precio .bt_tarjeta_sep {
+        display: none;
+    }
+}
+
+// Paginación de /website/search separada del último resultado.
+#wrap .table-responsive + .o_portal_pager {
+    margin-top: 2rem;
+}
+
+// Autocompletado de la cabecera (plantilla del cliente website.s_searchbar.autocomplete): el precio va bajo el
+// nombre con el formato de la tarjeta («Desde $X» e «IVA incluido»); esos textos los pone el CSS porque la
+// plantilla es de Odoo y este archivo solo se carga en el sitio en modo cotización.
+.o_searchbar_form .o_dropdown_menu .o_search_result_item {
+    display: grid !important;
+    grid-template-columns: 56px minmax(0, 1fr);
+    grid-template-areas: "foto texto" "foto precio";
+    column-gap: 12px;
+    align-items: start !important;
+}
+
+.o_searchbar_form .o_dropdown_menu .o_search_result_item > img,
+.o_searchbar_form .o_dropdown_menu .o_search_result_item > i {
+    grid-area: foto;
+    width: 56px;
+    height: 56px;
+    padding: 0 !important;
+}
+
+.o_searchbar_form .o_dropdown_menu .o_search_result_item > .o_search_result_item_detail {
+    grid-area: texto;
+    padding: 0 !important;
+}
+
+.o_searchbar_form .o_dropdown_menu .o_search_result_item > .flex-shrink-0.ms-auto {
+    grid-area: precio;
+    margin-left: 0 !important;
+}
+
+.o_searchbar_form .o_dropdown_menu .o_search_result_item > .flex-shrink-0.ms-auto > b {
+    font-size: 1rem;
+    line-height: 1.5rem;
+    font-weight: 700;
+    color: #231F20;
+    font-variant-numeric: tabular-nums;
+}
+
+.o_searchbar_form .o_dropdown_menu .o_search_result_item > .flex-shrink-0.ms-auto > b::before {
+    content: "Desde ";
+    font-size: .875rem;
+    font-weight: 400;
+    color: #5F5E61;
+}
+
+// El menú es angosto (ancho de la caja): «IVA incluido» va en su renglón, sin «·», como en la tarjeta angosta.
+.o_searchbar_form .o_dropdown_menu .o_search_result_item > .flex-shrink-0.ms-auto > b::after {
+    content: "IVA incluido";
+    display: block;
+    font-size: .875rem;
+    line-height: 1.25rem;
+    font-weight: 400;
+    color: #5F5E61;
+}
+
+.o_searchbar_form .o_dropdown_menu .o_search_result_item_detail .h6 {
+    margin-bottom: 2px;
+    font-size: .9375rem;
+    line-height: 1.25rem;
+    font-weight: 600;
 }

@@ -7,7 +7,7 @@
       <div class="row align-items-center">
         <div class="col-lg-6 pt16 pb16">
           <h1 class="display-3-fs">Promocionales personalizados para empresas</h1>
-          <p class="lead">Elige del catálogo, personaliza con tu logotipo y recibe tu cotización formal en 1 día hábil. Un ejecutivo te confirma precio, personalización y entrega.</p>
+          <p class="lead">Elige del catálogo y personaliza con tu logotipo. En 1 día hábil recibes tu cotización formal, con precio, personalización y plazo de entrega confirmados por un ejecutivo.</p>
           <form method="get" class="o_searchbar_form s_searchbar_input mb-3" action="/shop" data-snippet="s_searchbar_input" data-name="Buscador">
             <div role="search" class="input-group input-group-lg">
               <input type="search" name="search" class="search-query form-control oe_search_box" placeholder="¿Qué producto buscas?" aria-label="Buscar productos" data-search-type="products_only" data-limit="6" data-display-image="true" data-display-description="false" data-display-extra-link="false" data-display-detail="true" data-order-by="website_sequence asc"/>
@@ -18,7 +18,7 @@
           <p><a href="#modelos" class="btn btn-secondary btn-lg o_translate_inline">Ver modelos</a></p>
         </div>
         <div class="col-lg-5 offset-lg-1 pt16 pb16">
-          <img src="/brandtrendy_promo_theme/static/img/paginas/home-heroe.jpg" class="img img-fluid mx-auto rounded" alt="Colaboradora en oficina con bolsa promocional personalizada"/>
+          <img src="/brandtrendy_promo_theme/static/img/paginas/home-heroe.jpg" class="img img-fluid mx-auto rounded" alt="Mujer sonriente con suéter mostaza que sostiene una bolsa térmica gris con asas color cobre"/>
         </div>
       </div>
     </div>
@@ -35,7 +35,7 @@
           <i class="s_features_icon fa fa-clock-o mb-3 rounded bg-o-color-4" aria-hidden="true"/>
           <div class="overflow-hidden">
             <h3 class="h5-fs">Comercio electrónico desde 2006</h3>
-            <p>Operamos en comercio electrónico desde 2006.</p>
+            <p>Operamos en línea y atendemos a empresas de todo México.</p>
           </div>
         </div>
         <div class="col-lg-3 col-md-6">
@@ -86,7 +86,7 @@
         <div data-name="Card" class="col-lg-4 col-md-6 pt16 pb16">
           <div class="s_card o_card_img_top card h-100 o_cc o_cc1 my-0" data-vxml="001" data-snippet="s_card" data-name="Card">
             <figure class="o_card_img_wrapper ratio ratio-1x1 mb-0">
-              <a href="/ocasiones/fin-de-ano" tabindex="-1" aria-hidden="true"><img class="o_card_img card-img-top" src="/brandtrendy_promo_theme/static/img/paginas/home-ocasion-fin-de-ano.jpg" alt="Estuche de regalo con accesorios de bar y vasos térmicos para fin de año"/></a>
+              <a href="/ocasiones/fin-de-ano" tabindex="-1" aria-hidden="true"><img class="o_card_img card-img-top" src="/brandtrendy_promo_theme/static/img/paginas/home-ocasion-fin-de-ano.jpg" alt="Dos personas se entregan un estuche con accesorios para vino, junto a termos metálicos y una taza sobre una mesa"/></a>
             </figure>
             <div class="card-body">
               <h3 class="card-title h5-fs"><a href="/ocasiones/fin-de-ano">Regalos de fin de año</a></h3>
@@ -145,7 +145,7 @@
   <!-- 4 · Categorías de primer nivel (tarjetas estáticas: el listado dinámico de categorías recorta la foto y le pone velo) -->
   <section class="s_product_list o_cc o_cc2 pt48 pb48" data-snippet="s_product_list" data-name="Categorías" data-vcss="001">
     <div class="container">
-      <h2 class="h1-fs">Todo lo que tu marca necesita, por categoría</h2>
+      <h2 class="h1-fs">Explora el catálogo por categoría</h2>
       <p><a href="/shop">Ver todo el catálogo<span class="fa fa-long-arrow-right ms-2"/></a></p>
       <div class="row justify-content-center">
         <div data-name="Card" class="col-lg-3 col-6 pt8 pb8">
@@ -241,16 +241,6 @@
         <div data-name="Card" class="col-lg-3 col-6 pt8 pb8">
           <div class="s_card o_card_img_top card h-100 o_cc o_cc1" data-snippet="s_card" data-vxml="001" data-name="Card">
             <figure class="o_card_img_wrapper ratio ratio-1x1 mb-0">
-              <a href="{{url_categoria:Promocionales / Regalos corporativos}}" tabindex="-1" aria-hidden="true"><img src="/brandtrendy_promo_theme/static/img/paginas/home-categoria-regalos-corporativos.jpg" alt="Ejecutivo con set de licorera y vasos de acero" class="o_card_img card-img-top"/></a>
-            </figure>
-            <div class="card-body">
-              <h3 class="card-title h6-fs mb-0" style="text-align: center;"><a href="{{url_categoria:Promocionales / Regalos corporativos}}">Regalos corporativos</a></h3>
-            </div>
-          </div>
-        </div>
-        <div data-name="Card" class="col-lg-3 col-6 pt8 pb8">
-          <div class="s_card o_card_img_top card h-100 o_cc o_cc1" data-snippet="s_card" data-vxml="001" data-name="Card">
-            <figure class="o_card_img_wrapper ratio ratio-1x1 mb-0">
               <a href="{{url_categoria:Promocionales / Cuidado personal}}" tabindex="-1" aria-hidden="true"><img src="/brandtrendy_promo_theme/static/img/paginas/home-categoria-cuidado-personal.jpg" alt="Mujer con set de brochas de maquillaje" class="o_card_img card-img-top"/></a>
             </figure>
             <div class="card-body">
@@ -309,7 +299,7 @@
         <section class="s_dynamic_snippet_title oe_unremovable oe_unmovable justify-content-between d-flex flex-column flex-md-row mb-lg-0 pb-3 pb-md-0 s_col_no_resize">
           <div>
             <h2 class="h1-fs">Productos del catálogo</h2>
-            <p class="lead">Abre cualquier producto para ver su mínimo, sus técnicas de personalización y agregarlo a tu cotización.</p>
+            <p class="lead">Cada ficha muestra su mínimo y sus técnicas de personalización, y desde ahí lo agregas a tu cotización.</p>
           </div>
           <div>
             <a title="Ver todo el catálogo" href="/shop">Ver todo el catálogo<span class="fa fa-long-arrow-right ms-2"/></a>
@@ -337,8 +327,8 @@
       </defs>
     </svg>
     <div class="container">
-      <h2 class="mb-2 text-center h1-fs">Cómo funciona</h2>
-      <p class="lead text-center mb-4">El sitio opera por cotización: armas tu solicitud y un ejecutivo te confirma precio, personalización y entrega.</p>
+      <h2 class="mb-2 h1-fs">Cómo funciona</h2>
+      <p class="lead mb-4">El sitio opera por cotización: armas tu solicitud y un ejecutivo te confirma precio, personalización y entrega.</p>
       <div class="row g-0">
         <div class="col-lg-3 s_process_step position-relative pt24 pb24">
           <svg class="s_process_step_connector position-absolute z-index-1" viewBox="0 0 100 20" preserveAspectRatio="none"><path d="M 0 10 L 100 10" vector-effect="non-scaling-stroke"/></svg>
@@ -361,7 +351,7 @@
           <div class="s_process_step_content mt-3 px-3 text-center"><h3 class="h5-fs">Producimos y entregamos</h3><p>Con control de calidad y envío a todo México.</p></div>
         </div>
       </div>
-      <p class="text-center"><a href="/proceso-de-personalizacion">Conoce el proceso de personalización<span class="fa fa-long-arrow-right ms-2"/></a></p>
+      <p><a href="/proceso-de-personalizacion">Conoce el proceso de personalización<span class="fa fa-long-arrow-right ms-2"/></a></p>
     </div>
   </section>
 
@@ -378,33 +368,33 @@
           <div class="s_accordion" data-name="Accordion">
             <div id="faqInicio" class="accordion-flush accordion">
               <div class="accordion-item position-relative z-1" data-name="Accordion Item">
-                <button type="button" id="faqInicio-btn-1" class="accordion-header accordion-button justify-content-between gap-2 bg-transparent h6-fs fw-bold text-decoration-none text-reset transition-none" data-bs-target="#faqInicio-tab-1" aria-controls="faqInicio-tab-1" data-bs-toggle="collapse" aria-expanded="true"><span class="flex-grow-1">¿Desde cuántas piezas puedo pedir?</span></button>
+                <button type="button" id="faqInicio-btn-1" class="accordion-header accordion-button justify-content-between gap-2 bg-transparent h5-fs fw-bold text-decoration-none text-reset transition-none" data-bs-target="#faqInicio-tab-1" aria-controls="faqInicio-tab-1" data-bs-toggle="collapse" aria-expanded="true"><span class="flex-grow-1">¿Desde cuántas piezas puedo cotizar?</span></button>
                 <div id="faqInicio-tab-1" class="accordion-collapse collapse show" data-bs-parent="#faqInicio" role="region" aria-labelledby="faqInicio-btn-1">
                   <div class="accordion-body"><p>Cada producto muestra su cantidad mínima («Desde N piezas»). Las cantidades especiales están sujetas a cotización.</p></div>
                 </div>
               </div>
               <div class="accordion-item position-relative z-1" data-name="Accordion Item">
-                <button type="button" id="faqInicio-btn-2" class="accordion-header accordion-button collapsed justify-content-between gap-2 bg-transparent h6-fs fw-bold text-decoration-none text-reset transition-none" data-bs-target="#faqInicio-tab-2" aria-controls="faqInicio-tab-2" data-bs-toggle="collapse" aria-expanded="false"><span class="flex-grow-1">¿Los precios incluyen IVA?</span></button>
+                <button type="button" id="faqInicio-btn-2" class="accordion-header accordion-button collapsed justify-content-between gap-2 bg-transparent h5-fs fw-bold text-decoration-none text-reset transition-none" data-bs-target="#faqInicio-tab-2" aria-controls="faqInicio-tab-2" data-bs-toggle="collapse" aria-expanded="false"><span class="flex-grow-1">¿Los precios incluyen IVA?</span></button>
                 <div id="faqInicio-tab-2" class="accordion-collapse collapse" data-bs-parent="#faqInicio" role="region" aria-labelledby="faqInicio-btn-2">
                   <div class="accordion-body"><p>Sí, los precios publicados incluyen IVA. El envío y la personalización se cotizan aparte y aparecen en líneas claras dentro de tu cotización.</p></div>
                 </div>
               </div>
               <div class="accordion-item position-relative z-1" data-name="Accordion Item">
-                <button type="button" id="faqInicio-btn-3" class="accordion-header accordion-button collapsed justify-content-between gap-2 bg-transparent h6-fs fw-bold text-decoration-none text-reset transition-none" data-bs-target="#faqInicio-tab-3" aria-controls="faqInicio-tab-3" data-bs-toggle="collapse" aria-expanded="false"><span class="flex-grow-1">¿Puedo ver mi logotipo aplicado antes de producir?</span></button>
+                <button type="button" id="faqInicio-btn-3" class="accordion-header accordion-button collapsed justify-content-between gap-2 bg-transparent h5-fs fw-bold text-decoration-none text-reset transition-none" data-bs-target="#faqInicio-tab-3" aria-controls="faqInicio-tab-3" data-bs-toggle="collapse" aria-expanded="false"><span class="flex-grow-1">¿Puedo ver mi logotipo aplicado antes de producir?</span></button>
                 <div id="faqInicio-tab-3" class="accordion-collapse collapse" data-bs-parent="#faqInicio" role="region" aria-labelledby="faqInicio-btn-3">
                   <div class="accordion-body"><p>Sí. Toda producción personalizada incluye una prueba digital con una ronda de cambios sin costo; producimos solo con tu aprobación.</p></div>
                 </div>
               </div>
               <div class="accordion-item position-relative z-1" data-name="Accordion Item">
-                <button type="button" id="faqInicio-btn-4" class="accordion-header accordion-button collapsed justify-content-between gap-2 bg-transparent h6-fs fw-bold text-decoration-none text-reset transition-none" data-bs-target="#faqInicio-tab-4" aria-controls="faqInicio-tab-4" data-bs-toggle="collapse" aria-expanded="false"><span class="flex-grow-1">¿Cuánto tarda mi entrega?</span></button>
+                <button type="button" id="faqInicio-btn-4" class="accordion-header accordion-button collapsed justify-content-between gap-2 bg-transparent h5-fs fw-bold text-decoration-none text-reset transition-none" data-bs-target="#faqInicio-tab-4" aria-controls="faqInicio-tab-4" data-bs-toggle="collapse" aria-expanded="false"><span class="flex-grow-1">¿Cuánto tarda mi entrega?</span></button>
                 <div id="faqInicio-tab-4" class="accordion-collapse collapse" data-bs-parent="#faqInicio" role="region" aria-labelledby="faqInicio-btn-4">
                   <div class="accordion-body"><p>Depende del producto y la técnica; el plazo se cotiza contigo. Corre desde la confirmación completa (anticipo, archivos utilizables y prueba aprobada), y el tránsito del envío se suma según tu código postal.</p></div>
                 </div>
               </div>
               <div class="accordion-item position-relative z-1" data-name="Accordion Item">
-                <button type="button" id="faqInicio-btn-5" class="accordion-header accordion-button collapsed justify-content-between gap-2 bg-transparent h6-fs fw-bold text-decoration-none text-reset transition-none" data-bs-target="#faqInicio-tab-5" aria-controls="faqInicio-tab-5" data-bs-toggle="collapse" aria-expanded="false"><span class="flex-grow-1">¿Cómo se paga?</span></button>
+                <button type="button" id="faqInicio-btn-5" class="accordion-header accordion-button collapsed justify-content-between gap-2 bg-transparent h5-fs fw-bold text-decoration-none text-reset transition-none" data-bs-target="#faqInicio-tab-5" aria-controls="faqInicio-tab-5" data-bs-toggle="collapse" aria-expanded="false"><span class="flex-grow-1">¿Cómo se paga?</span></button>
                 <div id="faqInicio-tab-5" class="accordion-collapse collapse" data-bs-parent="#faqInicio" role="region" aria-labelledby="faqInicio-btn-5">
-                  <div class="accordion-body"><p>Por transferencia electrónica. En pedidos personalizados, 70% de anticipo para iniciar y 30% antes de liberar. Facturamos con CFDI a partir de tus datos fiscales.</p></div>
+                  <div class="accordion-body"><p>Por transferencia electrónica. En productos personalizados, 70% de anticipo para iniciar tu proyecto (prueba digital y producción) y 30% antes de liberar el pedido. Facturamos con CFDI a partir de tus datos fiscales.</p></div>
                 </div>
               </div>
             </div>
@@ -420,7 +410,7 @@
       <div class="row align-items-center">
         <div class="col-lg-9">
           <h2 class="h1-fs">¿Tienes un proyecto a medida o un kit para tu equipo?</h2>
-          <p class="lead">Cuéntanos tu caso y un ejecutivo te responde en 1 día hábil.</p>
+          <p class="lead">Cuéntanos tu caso y un ejecutivo te contacta para revisarlo contigo.</p>
         </div>
         <div class="col-lg-3">
           <p style="text-align: right;"><a href="/contactus#asesoria" class="btn btn-primary btn-lg o_translate_inline">Solicitar asesoría</a></p>

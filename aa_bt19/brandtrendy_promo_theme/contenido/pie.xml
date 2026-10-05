@@ -34,7 +34,7 @@
                         <li><a href="/preguntas-frecuentes">Preguntas frecuentes</a></li>
                     </ul>
                 </div>
-                <div class="col-6 col-lg-3 pt24 pb24">
+                <div class="col-12 col-sm-6 col-lg-3 pt24 pb24">
                     <h5>Empresa</h5>
                     <ul class="list-unstyled">
                         <li><a href="/quienes-somos">Quiénes somos</a></li>
@@ -69,7 +69,7 @@
         <div class="container">
             <p class="small mb-2">Precios con IVA incluido. El envío y la personalización se cotizan aparte.</p>
             <p class="small mb-2">Usamos cookies propias y de terceros para que el sitio funcione, recordar tu solicitud de
-                cotización y medir nuestras campañas. Al seguir navegando las aceptas; puedes desactivarlas en tu navegador.
+                cotización y entender cómo llegas al sitio y cómo lo usas. Al seguir navegando las aceptas; puedes desactivarlas en tu navegador.
                 Consulta la <a href="/politica-de-cookies">política de cookies</a> y el
                 <a href="/aviso-de-privacidad">aviso de privacidad</a>.</p>
             <p class="small mb-0"><a href="/terminos-y-condiciones">Términos y condiciones</a> ·

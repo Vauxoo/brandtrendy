@@ -6,8 +6,8 @@
       <div class="row align-items-center">
         <div class="col-lg-5 pt16 pb16">
           <h1 class="display-3-fs">Agendas 2027 personalizadas con tu logo</h1>
-          <p class="lead">El regalo corporativo que tu cliente usa los 365 días del año. Modelos de curpiel de la línea 2027, personalizados con tu marca.</p>
-          <p>Precios con IVA incluido. Eliges el modelo, agregas la cantidad a Mi cotización y un ejecutivo te confirma precio, personalización y entrega.</p>
+          <p class="lead">Agendas 2027 de curpiel para regalar a clientes y a tu equipo, con tu logotipo.</p>
+          <p>Precios con IVA incluido. Agrega los modelos y las cantidades a Mi cotización. En 1 día hábil recibes tu cotización formal, con precio, personalización y plazo de entrega confirmados por un ejecutivo.</p>
           <p><a href="#modelos" class="btn btn-primary btn-lg o_translate_inline">Ver modelos</a></p>
         </div>
         <div class="col-lg-6 offset-lg-1 pt16 pb16">
@@ -17,7 +17,7 @@
     </div>
   </section>
 
-  <section id="modelos" class="s_dynamic_snippet_products oe_website_sale {{clases_tienda}} s_dynamic o_colored_level o_cc o_cc1 pt48 pb48" data-snippet="s_dynamic_snippet_products" data-name="Modelos de la línea 2027" data-filter-id="{{filtro:brandtrendy_promo_theme.snippet_filtro_catalogo}}" data-template-key="website_sale.dynamic_filter_template_product_product_products_item" data-product-category-id="{{categoria:Promocionales / Oficina / Agendas}}" data-number-of-records="12" data-number-of-elements="3" data-number-of-elements-small-devices="1" data-row-per-slide="3" data-carousel-interval="0">
+  <section id="modelos" class="s_dynamic_snippet_products oe_website_sale {{clases_tienda}} s_dynamic o_colored_level o_cc o_cc2 pt48 pb48" data-snippet="s_dynamic_snippet_products" data-name="Modelos de la línea 2027" data-filter-id="{{filtro:brandtrendy_promo_theme.snippet_filtro_catalogo}}" data-template-key="website_sale.dynamic_filter_template_product_product_products_item" data-product-category-id="{{categoria:Promocionales / Oficina / Agendas}}" data-number-of-records="12" data-number-of-elements="3" data-number-of-elements-small-devices="1" data-row-per-slide="4" data-carousel-interval="0">
     <div class="s_dynamic_snippet_container container">
       <div class="row s_nb_column_fixed">
         <section class="s_dynamic_snippet_holder d-none px-4 placeholder-glow">
@@ -51,16 +51,16 @@
     </div>
   </section>
 
-  <section class="s_features o_cc o_cc2 pt64 pb64" data-snippet="s_features" data-name="Lo que incluye">
+  <section class="s_features o_cc o_cc1 pt64 pb64" data-snippet="s_features" data-name="Lo que incluye">
     <div class="container">
       <h2 class="h1-fs">Lo que incluye tu cotización de agendas</h2>
       <div class="row">
         <div class="col-lg-3">
           <div class="s_hr pt-4 pb32" data-snippet="s_hr" data-name="Separator"><hr class="w-100 mx-auto"/></div>
-          <i class="s_features_icon fa fa-calendar mb-3 rounded bg-o-color-3" aria-hidden="true"/>
+          <i class="s_features_icon fa fa-pencil mb-3 rounded bg-o-color-3" aria-hidden="true"/>
           <div class="overflow-hidden">
-            <h3 class="h5-fs">Línea 2027 en curpiel</h3>
-            <p>Agendas del año 2027 en curpiel; tu logo se personaliza en cada pieza.</p>
+            <h3 class="h5-fs">Personalización de tu logotipo</h3>
+            <p>Personalizamos tu logotipo en cada agenda con la técnica que admite el modelo.</p>
           </div>
         </div>
         <div class="col-lg-3">
@@ -91,7 +91,7 @@
     </div>
   </section>
 
-  <section class="s_process_steps o_cc o_cc1 pt72 pb72 s_process_steps_connector_line" data-snippet="s_process_steps" data-name="Cómo cotizar tus agendas" data-vcss="002" data-vxml="002">
+  <section class="s_process_steps o_cc o_cc2 pt72 pb72 s_process_steps_connector_line" data-snippet="s_process_steps" data-name="Cómo cotizar tus agendas" data-vcss="002" data-vxml="002">
     <svg class="s_process_step_svg_defs position-absolute">
       <defs>
         <marker class="s_process_steps_arrow_head" markerWidth="15" markerHeight="10" refX="6" refY="6" orient="auto">
@@ -100,15 +100,15 @@
       </defs>
     </svg>
     <div class="container">
-      <h2 class="mb-2 text-center h1-fs">Cómo cotizar tus agendas</h2>
-      <p class="lead mb-4 text-center">De tu logo a la entrega, con prueba digital de por medio.</p>
+      <h2 class="mb-2 h1-fs">Cómo cotizar tus agendas</h2>
+      <p class="lead mb-4">De tu logo a la entrega, con prueba digital de por medio.</p>
       <div class="row g-0">
         <div class="col-lg-4 s_process_step position-relative pt24 pb24">
           <svg class="s_process_step_connector position-absolute z-index-1" viewBox="0 0 100 20" preserveAspectRatio="none"><path d="M 0 10 L 100 10" vector-effect="non-scaling-stroke"/></svg>
           <div class="s_process_step_number d-flex align-items-center justify-content-center mx-auto rounded-circle bg-primary-light" data-name="Step Number"><p class="h3 mb-0 text-primary text-center" aria-hidden="true">1</p></div>
           <div class="s_process_step_content mt-3 px-3 text-center">
             <h3 class="h4-fs">Eliges y cotizas</h3>
-            <p>Agrega a tu cotización el modelo y la cantidad, y adjunta tu logo. Puedes combinar colores y modelos en la misma solicitud.</p>
+            <p>Agregas el modelo y la cantidad a Mi cotización y compartes tu logotipo con el ejecutivo. Puedes combinar colores y modelos en la misma solicitud.</p>
           </div>
         </div>
         <div class="col-lg-4 s_process_step position-relative pt24 pb24">
@@ -142,31 +142,31 @@
           <div class="s_accordion" data-name="Accordion">
             <div id="faqAgendas" class="accordion-flush accordion">
               <div class="accordion-item position-relative z-1" data-name="Accordion Item">
-                <button type="button" id="faqAgendas-btn-1" class="accordion-header accordion-button justify-content-between gap-2 bg-transparent h6-fs fw-bold text-decoration-none text-reset transition-none" data-bs-target="#faqAgendas-tab-1" aria-controls="faqAgendas-tab-1" data-bs-toggle="collapse" aria-expanded="true"><span class="flex-grow-1">¿Cuál es la cantidad mínima?</span></button>
+                <button type="button" id="faqAgendas-btn-1" class="accordion-header accordion-button justify-content-between gap-2 bg-transparent h5-fs fw-bold text-decoration-none text-reset transition-none" data-bs-target="#faqAgendas-tab-1" aria-controls="faqAgendas-tab-1" data-bs-toggle="collapse" aria-expanded="true"><span class="flex-grow-1">¿Cuál es la cantidad mínima?</span></button>
                 <div id="faqAgendas-tab-1" class="accordion-collapse collapse show" data-bs-parent="#faqAgendas" role="region" aria-labelledby="faqAgendas-btn-1">
                   <div class="accordion-body"><p>Varía por modelo. El mínimo de cada agenda aparece en su ficha y se confirma en la cotización formal.</p></div>
                 </div>
               </div>
               <div class="accordion-item position-relative z-1" data-name="Accordion Item">
-                <button type="button" id="faqAgendas-btn-2" class="accordion-header accordion-button collapsed justify-content-between gap-2 bg-transparent h6-fs fw-bold text-decoration-none text-reset transition-none" data-bs-target="#faqAgendas-tab-2" aria-controls="faqAgendas-tab-2" data-bs-toggle="collapse" aria-expanded="false"><span class="flex-grow-1">¿En cuánto tiempo las reciben?</span></button>
+                <button type="button" id="faqAgendas-btn-2" class="accordion-header accordion-button collapsed justify-content-between gap-2 bg-transparent h5-fs fw-bold text-decoration-none text-reset transition-none" data-bs-target="#faqAgendas-tab-2" aria-controls="faqAgendas-tab-2" data-bs-toggle="collapse" aria-expanded="false"><span class="flex-grow-1">¿En cuánto tiempo recibo mis agendas?</span></button>
                 <div id="faqAgendas-tab-2" class="accordion-collapse collapse" data-bs-parent="#faqAgendas" role="region" aria-labelledby="faqAgendas-btn-2">
                   <div class="accordion-body"><p>El plazo se confirma en la cotización formal, según modelo, cantidad y personalización; el tránsito del envío se suma según tu código postal.</p></div>
                 </div>
               </div>
               <div class="accordion-item position-relative z-1" data-name="Accordion Item">
-                <button type="button" id="faqAgendas-btn-3" class="accordion-header accordion-button collapsed justify-content-between gap-2 bg-transparent h6-fs fw-bold text-decoration-none text-reset transition-none" data-bs-target="#faqAgendas-tab-3" aria-controls="faqAgendas-tab-3" data-bs-toggle="collapse" aria-expanded="false"><span class="flex-grow-1">¿Cómo queda mi logo y qué pasa si no me convence?</span></button>
+                <button type="button" id="faqAgendas-btn-3" class="accordion-header accordion-button collapsed justify-content-between gap-2 bg-transparent h5-fs fw-bold text-decoration-none text-reset transition-none" data-bs-target="#faqAgendas-tab-3" aria-controls="faqAgendas-tab-3" data-bs-toggle="collapse" aria-expanded="false"><span class="flex-grow-1">¿Cómo queda mi logo y qué pasa si no me convence?</span></button>
                 <div id="faqAgendas-tab-3" class="accordion-collapse collapse" data-bs-parent="#faqAgendas" role="region" aria-labelledby="faqAgendas-btn-3">
                   <div class="accordion-body"><p>Nada entra a producción sin tu visto bueno: recibes una prueba digital con tu logo aplicado y una ronda de cambios sin costo antes de producir.</p></div>
                 </div>
               </div>
               <div class="accordion-item position-relative z-1" data-name="Accordion Item">
-                <button type="button" id="faqAgendas-btn-4" class="accordion-header accordion-button collapsed justify-content-between gap-2 bg-transparent h6-fs fw-bold text-decoration-none text-reset transition-none" data-bs-target="#faqAgendas-tab-4" aria-controls="faqAgendas-tab-4" data-bs-toggle="collapse" aria-expanded="false"><span class="flex-grow-1">¿Los precios llevan IVA? ¿Facturan?</span></button>
+                <button type="button" id="faqAgendas-btn-4" class="accordion-header accordion-button collapsed justify-content-between gap-2 bg-transparent h5-fs fw-bold text-decoration-none text-reset transition-none" data-bs-target="#faqAgendas-tab-4" aria-controls="faqAgendas-tab-4" data-bs-toggle="collapse" aria-expanded="false"><span class="flex-grow-1">¿Los precios llevan IVA? ¿Facturan?</span></button>
                 <div id="faqAgendas-tab-4" class="accordion-collapse collapse" data-bs-parent="#faqAgendas" role="region" aria-labelledby="faqAgendas-btn-4">
                   <div class="accordion-body"><p>Sí. Los precios publicados ya incluyen IVA y facturamos a tu razón social. La personalización y el envío se cotizan por separado.</p></div>
                 </div>
               </div>
               <div class="accordion-item position-relative z-1" data-name="Accordion Item">
-                <button type="button" id="faqAgendas-btn-5" class="accordion-header accordion-button collapsed justify-content-between gap-2 bg-transparent h6-fs fw-bold text-decoration-none text-reset transition-none" data-bs-target="#faqAgendas-tab-5" aria-controls="faqAgendas-tab-5" data-bs-toggle="collapse" aria-expanded="false"><span class="flex-grow-1">¿Puedo combinar varios colores o modelos en una misma solicitud?</span></button>
+                <button type="button" id="faqAgendas-btn-5" class="accordion-header accordion-button collapsed justify-content-between gap-2 bg-transparent h5-fs fw-bold text-decoration-none text-reset transition-none" data-bs-target="#faqAgendas-tab-5" aria-controls="faqAgendas-tab-5" data-bs-toggle="collapse" aria-expanded="false"><span class="flex-grow-1">¿Puedo combinar varios colores o modelos en una misma solicitud?</span></button>
                 <div id="faqAgendas-tab-5" class="accordion-collapse collapse" data-bs-parent="#faqAgendas" role="region" aria-labelledby="faqAgendas-btn-5">
                   <div class="accordion-body"><p>Sí. Puedes combinar colores y modelos; un ejecutivo de ventas arma la cotización con las cantidades por color y por modelo que necesites.</p></div>
                 </div>
@@ -182,8 +182,8 @@
     <div class="container">
       <div class="row align-items-center">
         <div class="col-lg-9">
-          <h2 class="h1-fs">¿Cuántas agendas necesitas y con qué grabado?</h2>
-          <p class="lead">Agrega los modelos a Mi cotización y un ejecutivo te confirma precio, personalización y entrega en 1 día hábil.</p>
+          <h2 class="h1-fs">¿Cuántas agendas necesitas y con qué personalización?</h2>
+          <p class="lead">Agrega los modelos a Mi cotización. En 1 día hábil recibes tu cotización formal, con precio, personalización y plazo de entrega confirmados por un ejecutivo.</p>
         </div>
         <div class="col-lg-3">
           <p style="text-align: right;"><a href="{{url_categoria:Promocionales / Oficina / Agendas}}" class="btn btn-primary btn-lg o_translate_inline">Ver todos los modelos</a></p>

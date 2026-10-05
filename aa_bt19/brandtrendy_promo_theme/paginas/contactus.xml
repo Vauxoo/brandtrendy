@@ -1,16 +1,16 @@
-<pagina url="/contactus" nombre="Contacto" titulo="Contacto y asesoría | Promocionales Brandtrendy" descripcion="Cuéntanos tu proyecto a medida y un ejecutivo te asesora. Teléfono, WhatsApp, correo, horario y domicilio de Brandtrendy en Azcapotzalco, CDMX." indexada="1" publicada="1">
-  <section class="s_text_block pt64 pb16" data-snippet="s_text_block" data-name="Introducción">
+<pagina url="/contactus" nombre="Contacto" titulo="Contacto y asesoría para tu proyecto | Promocionales Brandtrendy" descripcion="Cuéntanos tu proyecto a medida y un ejecutivo te asesora. Teléfono, WhatsApp, correo, horario y domicilio de Brandtrendy en Azcapotzalco, CDMX." indexada="1" publicada="1">
+  <section class="s_text_block pt64 pb32" data-snippet="s_text_block" data-name="Introducción">
     <div class="container s_allow_columns">
       <h1>Contacto y asesoría</h1>
       <p class="lead">Para proyectos a medida y asesoría: cuéntanos qué necesitas y un ejecutivo te acompaña desde la idea hasta la entrega.</p>
-      <p>Si buscas producto de catálogo, agrégalo a <b>Mi cotización</b> desde el <a href="/shop" class="o_translate_inline">catálogo</a>: la cotización formal llega en 1 día hábil.</p>
+      <p>Si buscas producto de catálogo, agrégalo a <b>Mi cotización</b> desde el <a href="/shop" class="o_translate_inline">catálogo</a>. En 1 día hábil recibes tu cotización formal, con precio, personalización y plazo de entrega confirmados por un ejecutivo.</p>
     </div>
   </section>
 
-  <section id="asesoria" class="s_title_form o_cc o_cc2 pt64 pb48" data-snippet="s_title_form" data-name="Formulario de asesoría">
+  <section id="asesoria" class="s_title_form o_cc o_cc2 pt32 pb48" data-snippet="s_title_form" data-name="Formulario de asesoría">
     <div class="o_container_small">
-      <h2 class="h1-fs" style="text-align: center;">Solicitar asesoría</h2>
-      <p class="lead" style="text-align: center;">Un ejecutivo te confirma precio, personalización y entrega. Los proyectos a medida se acuerdan contigo según su alcance.</p>
+      <h2 class="h1-fs">Solicitar asesoría</h2>
+      <p class="lead">Cuéntanos tu caso y un ejecutivo te contacta para revisarlo contigo. Los proyectos a medida se acuerdan según su alcance.</p>
       <section class="s_website_form pt16 pb16" data-snippet="s_website_form" data-vcss="001" data-name="Formulario">
         <div class="container-fluid">
           <form action="/website/form/" method="post" enctype="multipart/form-data" class="o_mark_required" data-mark="*" data-pre-fill="true" data-model_name="crm.lead" data-success-mode="redirect" data-success-page="/contactus-thank-you">
@@ -23,17 +23,6 @@
                   </label>
                   <div class="col-12">
                     <input type="hidden" class="form-control s_website_form_input" name="name" id="bt_c_name" value="Solicitud de asesoría desde el sitio"/>
-                  </div>
-                </div>
-              </div>
-
-              <div data-name="Field" class="s_website_form_field mb-3 col-12 s_website_form_custom s_website_form_dnone" data-type="char">
-                <div class="row s_col_no_resize s_col_no_bgcolor">
-                  <label class="col-form-label col-12 s_website_form_label" for="bt_c_subject">
-                    <span class="s_website_form_label_content">Tema</span>
-                  </label>
-                  <div class="col-12">
-                    <input type="hidden" class="form-control s_website_form_input" name="subject" id="bt_c_subject" value=""/>
                   </div>
                 </div>
               </div>
@@ -98,7 +87,7 @@
                 </div>
               </div>
 
-              <div data-name="Field" class="s_website_form_field mb-3 col-lg-6" data-type="date">
+              <div data-name="Field" class="s_website_form_field mb-3 col-12" data-type="date">
                 <div class="row s_col_no_resize s_col_no_bgcolor">
                   <label class="col-form-label col-12 s_website_form_label" for="bt_c_fecha">
                     <span class="s_website_form_label_content">Fecha deseada</span>
@@ -108,6 +97,7 @@
                       <input type="text" class="form-control datetimepicker-input s_website_form_input" name="x_bt_fecha_entrega" id="bt_c_fecha"/>
                       <div class="input-group-text o_input_group_date_icon"><i class="fa fa-calendar" aria-hidden="true"/></div>
                     </div>
+                    <div class="s_website_form_field_description small form-text text-muted">Es una referencia; el plazo se confirma contigo.</div>
                   </div>
                 </div>
               </div>
@@ -147,7 +137,7 @@
     </div>
   </section>
 
-  <section class="s_features pt64 pb64" data-snippet="s_features" data-name="Datos de contacto">
+  <section class="s_features pt64 pb40" data-snippet="s_features" data-name="Datos de contacto">
     <div class="container">
       <h2 class="h1-fs">Datos de contacto</h2>
       <p class="lead">BRANDTRENDY, S.A. DE C.V. · Operamos en comercio electrónico desde 2006.</p>
@@ -158,7 +148,6 @@
           <div class="overflow-hidden">
             <h3 class="h5-fs">Teléfono y WhatsApp</h3>
             <p><a href="tel:+525555260418" class="o_translate_inline">+52 55 5526 0418</a></p>
-            <p><a href="https://wa.me/525555260418" class="o_translate_inline">Escríbenos por WhatsApp</a></p>
           </div>
         </div>
         <div class="col-lg-3">

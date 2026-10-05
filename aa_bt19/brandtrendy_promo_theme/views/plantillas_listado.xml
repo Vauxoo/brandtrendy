@@ -20,20 +20,24 @@
     <template id="tarjeta_detalle" name="Promocionales · detalle de tarjeta de producto">
         <t t-set="bt_moq" t-value="bt_producto.x_bt_moq"/>
         <t t-set="bt_tecnicas" t-value="bt_producto.attribute_line_ids.filtered(lambda l: l.attribute_id.name == 'Técnica de personalización').value_ids.mapped('name')"/>
-        <t t-set="bt_tecnicas_txt" t-value="', '.join([n if (i == 0 or n[1:2].isupper()) else n[:1].lower() + n[1:] for i, n in enumerate(bt_tecnicas[:3])])"/>
-        <div class="bt_tarjeta_pie d-flex flex-column gap-1">
-            <p t-if="bt_precio is not None" class="product_price bt_tarjeta_precio mb-0">
-                <span class="bt_tarjeta_desde">Desde</span>
-                <span t-out="bt_precio" t-options="{'widget': 'monetary', 'display_currency': website.currency_id}"/>
-                <span t-if="website.show_line_subtotals_tax_selection == 'tax_included'" class="bt_tarjeta_iva">· IVA incluido</span>
-            </p>
-            <p t-if="bt_moq or bt_tecnicas" class="bt_tarjeta_detalle mb-0">
-                <t t-if="bt_moq">Desde <t t-out="bt_moq"/> <t t-if="bt_moq == 1">pieza</t><t t-else="">piezas</t></t>
-                <t t-if="bt_moq and bt_tecnicas"> · </t>
-                <t t-if="bt_tecnicas" t-out="bt_tecnicas_txt"/>
-                <t t-if="len(bt_tecnicas) &gt; 3"> y <t t-out="len(bt_tecnicas) - 3"/> más</t>
-            </p>
-            <a t-if="not bt_sin_boton" t-att-href="bt_href" class="btn btn-secondary bt_tarjeta_cta mt-2"
+        <t t-set="bt_tecnicas_txt" t-value="[n if (i == 0 or n[1:2].isupper()) else n[:1].lower() + n[1:] for i, n in enumerate(bt_tecnicas[:3])]"/>
+        <!-- Precio y detalle van pegados al título (alto reservado en tienda.scss) y solo el botón baja al fondo:
+             en una misma fila los precios quedan a la misma altura. -->
+        <div class="bt_tarjeta_pie d-flex flex-column">
+            <div class="bt_tarjeta_datos d-flex flex-column gap-1">
+                <p t-if="bt_precio is not None" class="product_price bt_tarjeta_precio mb-0">
+                    <span class="bt_tarjeta_desde">Desde</span>
+                    <span t-out="bt_precio" t-options="{'widget': 'monetary', 'display_currency': website.currency_id}"/>
+                    <span t-if="website.show_line_subtotals_tax_selection == 'tax_included'" class="bt_tarjeta_iva"><span class="bt_tarjeta_sep" aria-hidden="true">· </span>IVA incluido</span>
+                </p>
+                <!-- Técnicas: hasta 3 y «y N más»; en móvil (≤575) solo la primera y «y N más» (tienda.scss). -->
+                <p t-if="bt_moq or bt_tecnicas" class="bt_tarjeta_detalle mb-0">
+                    <t t-if="bt_moq">Desde <t t-out="bt_moq"/> <t t-if="bt_moq == 1">pieza</t><t t-else="">piezas</t></t>
+                    <t t-if="bt_moq and bt_tecnicas"> · </t>
+                    <t t-if="bt_tecnicas"><t t-out="bt_tecnicas_txt[0]"/><span t-if="len(bt_tecnicas_txt) &gt; 1" class="bt_tec_resto" t-out="', ' + ', '.join(bt_tecnicas_txt[1:])"/><span t-if="len(bt_tecnicas) &gt; 3" class="bt_tec_mas"> y <t t-out="len(bt_tecnicas) - 3"/> más</span><span t-if="len(bt_tecnicas) &gt; 1" class="bt_tec_mas_movil"> y <t t-out="len(bt_tecnicas) - 1"/> más</span></t>
+                </p>
+            </div>
+            <a t-if="not bt_sin_boton" t-att-href="bt_href" class="btn btn-secondary bt_tarjeta_cta"
                t-att-aria-label="'Ver y cotizar ' + (bt_nombre or '')">Ver y cotizar</a>
         </div>
     </template>
@@ -114,16 +118,41 @@
     </template>
 
     <!-- ============================================================ Cabecera de /shop y de categoría
-         Anclas (website_sale.products, 19.0): t-set opt_wsale_show_category_title, h1.o_wsale_shop_title y el
-         t-call de website_sale.filmstrip_categories.
+         Anclas (website_sale.products, 19.0): t-set additional_title y opt_wsale_show_category_title, los dos H1
+         (h1.o_wsale_category_title y h1.o_wsale_shop_title), el t-call de website_sale.filmstrip_categories, el t-if
+         del buscador de la barra, el modal de búsqueda, el aviso de búsqueda aproximada y el párrafo sin resultados.
+         - /shop: título y descripción de la página (la vista website_sale.products es genérica; su website_meta_title
+           no lleva el sufijo del sitio y no tiene descripción).
          - Categoría: el H1 con el nombre se muestra siempre (el ajuste por categoría lo ocultaba con CSS).
-         - /shop: H1 «Catálogo de artículos promocionales» (el mismo texto del título de la página).
+         - Búsqueda: H1 «Resultados para «término»» y el conteo en una línea propia («127 modelos»), una sola vez.
+         - /shop: H1 «Catálogo de artículos promocionales».
+         - Un solo buscador por pantalla: la caja de la cabecera ya busca productos y lleva a /shop; la de la barra
+           de la tienda (y su modal móvil) no se pinta.
          - Píldoras de /shop: si la raíz es una sola categoría, se muestran sus hijas (la raíz no filtra nada).
     -->
     <template id="cabecera_listado" inherit_id="website_sale.products"
               name="Promocionales · cabecera de la tienda y de las categorías">
+        <xpath expr="//t[@t-set='additional_title']" position="after">
+            <t t-if="website.bt_quote_mode and search" t-set="title" t-value="'Resultados para «%s» | %s' % (search, website.name)"/>
+            <t t-elif="website.bt_quote_mode and not category" t-set="title" t-value="'Catálogo de artículos promocionales | %s' % website.name"/>
+            <t t-if="website.bt_quote_mode and not category and not search" t-set="website_meta_description"
+               t-valuef="Cotiza artículos promocionales con tu logotipo: cada modelo muestra su precio con IVA incluido, desde cuántas piezas se cotiza y sus técnicas."/>
+        </xpath>
         <xpath expr="//t[@t-set='opt_wsale_show_category_title']" position="after">
             <t t-if="website.bt_quote_mode" t-set="opt_wsale_show_category_title" t-value="bool(category)"/>
+        </xpath>
+        <xpath expr="//h1[contains(@t-attf-class, 'o_wsale_category_title')]" position="replace">
+            <t t-if="website.bt_quote_mode">
+                <t t-if="search">
+                    <h1 class="o_wsale_category_title bt_titulo_listado mb-0">Resultados para «<t t-out="search"/>»<t t-if="category"> en <t t-out="category.name"/></t></h1>
+                    <p class="bt_conteo_busqueda mb-0">
+                        <t t-out="search_count or 0"/> <t t-if="search_count == 1">modelo</t><t t-else="">modelos</t>
+                        <t t-if="category"> · <a t-att-href="keep(shop_path, search=search)">Buscar en todo el catálogo</a></t>
+                    </p>
+                </t>
+                <h1 t-elif="category" class="o_wsale_category_title bt_titulo_listado mb-0"><span t-field="category.name"/></h1>
+            </t>
+            <t t-else="">$0</t>
         </xpath>
         <xpath expr="//h1[hasclass('o_wsale_shop_title')]" position="replace">
             <t t-if="website.bt_quote_mode">
@@ -139,6 +168,37 @@
         <xpath expr="//t[@t-call='website_sale.filmstrip_categories']" position="attributes">
             <attribute name="entries">(bt_hijas_raiz or category_entries) if website.bt_quote_mode else category_entries</attribute>
         </xpath>
+        <xpath expr="//div[hasclass('products_header')]/t[@t-if=&quot;is_view_active('website_sale.search')&quot;]" position="attributes">
+            <attribute name="t-if">is_view_active('website_sale.search') and not website.bt_quote_mode</attribute>
+        </xpath>
+        <xpath expr="//div[@id='o_wsale_search_modal']" position="attributes">
+            <attribute name="t-if">is_view_active('website_sale.search') and not website.bt_quote_mode</attribute>
+        </xpath>
+        <xpath expr="//div[@t-if='original_search and products']" position="replace">
+            <t t-if="website.bt_quote_mode">
+                <div t-if="original_search and products" class="alert alert-warning mt8 mb-0">
+                    No hay resultados para «<span t-out="original_search"/>». Te mostramos los de «<span t-out="search"/>».
+                </div>
+            </t>
+            <t t-else="">$0</t>
+        </xpath>
+        <xpath expr="//p[strong[@t-out='search']]" position="replace">
+            <t t-if="website.bt_quote_mode">
+                <p class="text-center">
+                    No hay resultados para «<strong t-out="search"/>»<t t-if="category"> en <strong t-out="category.name"/></t>.
+                </p>
+            </t>
+            <t t-else="">$0</t>
+        </xpath>
+    </template>
+
+    <!-- Píldoras de categoría sin miniatura (todas de texto, iguales). Ancla: div[@name='o_wsale_filmstrip_image']
+         (website_sale.filmstrip_categories, 19.0); el marcador gris vacío se oculta en tienda.scss. -->
+    <template id="tira_categorias" inherit_id="website_sale.filmstrip_categories"
+              name="Promocionales · tira de categorías sin miniaturas">
+        <xpath expr="//div[@name='o_wsale_filmstrip_image']" position="attributes">
+            <attribute name="t-if">c.image_128 and not website.bt_quote_mode</attribute>
+        </xpath>
     </template>
 
     <!-- Ruta de navegación sin la categoría raíz (no aporta). Ancla: t-foreach de website_sale.products_breadcrumb. -->
@@ -153,14 +213,17 @@
          Caja de la cabecera (escritorio, modal y menú móvil pasan por website.header_search_box_input): solo
          productos, sin coincidencia por descripción en las sugerencias, sin enlaces de categoría, y el envío va al
          listado de /shop (tarjetas, H1 y paginación del catálogo).
+         Un solo buscador por pantalla: en /website/search la página trae su propia caja y pone
+         bt_sin_buscador_cabecera (la cabecera no se pinta ahí); en /shop y categorías se quita la de la barra.
     -->
     <template id="buscador_cabecera" inherit_id="website.header_search_box_input"
               name="Promocionales · buscador de la cabecera solo de productos">
         <xpath expr="//t[@t-call='website.website_search_box_input']" position="replace">
             <t t-if="website.bt_quote_mode">
-                <t t-call="website.website_search_box_input"
+                <t t-if="not bt_sin_buscador_cabecera" t-call="website.website_search_box_input"
                    search_type.f="products_only"
                    action.f="/shop"
+                   placeholder.f="Buscar producto"
                    limit="limit or '5'"
                    display_image.f="true"
                    display_description.f="false"
@@ -171,7 +234,8 @@
         </xpath>
     </template>
 
-    <!-- Caja de búsqueda interna de /shop: mismo criterio que la cabecera. Ancla: último t-set de website_sale.search. -->
+    <!-- Caja de búsqueda interna de /shop: mismo criterio que la cabecera. Ancla: último t-set de website_sale.search.
+         En el sitio en modo cotización ya no se pinta en /shop (cabecera_listado); se conserva por si se reactiva. -->
     <template id="buscador_tienda" inherit_id="website_sale.search"
               name="Promocionales · buscador de la tienda solo de productos">
         <xpath expr="//t[@t-set='display_detail']" position="after">
@@ -181,29 +245,31 @@
         </xpath>
     </template>
 
-    <!-- Contador junto a la lupa con concordancia («1 resultado», «215 resultados»). Ancla: span.oe_search_found. -->
+    <!-- Sin contador dentro de la caja (apretaba el texto y duplicaba el del título): el conteo va bajo el H1 de
+         /shop. Ancla: span.oe_search_found. -->
     <template id="buscador_contador" inherit_id="website.website_search_box"
               name="Promocionales · contador de resultados de búsqueda">
         <xpath expr="//span[hasclass('oe_search_found')]" position="replace">
-            <t t-if="website.bt_quote_mode">
-                <span t-if="search" class="oe_search_found">
-                    <small>(<t t-out="search_count or 0"/> <t t-if="search_count == 1">resultado</t><t t-else="">resultados</t>)</small>
-                </span>
-            </t>
-            <t t-else="">$0</t>
+            <t t-if="not website.bt_quote_mode">$0</t>
         </xpath>
     </template>
 
-    <!-- Página /website/search: H1 con el término y caja de búsqueda con el criterio de D6.
-         Anclas (website.list_hybrid, 19.0): el h1 y el t-call de website.website_search_box_input. -->
+    <!-- Página /website/search: título, H1 con el término y una sola caja de búsqueda con el criterio de D6.
+         Anclas (website.list_hybrid, 19.0): div#wrap, el h1 y el t-call de website.website_search_box_input. -->
     <template id="resultados_busqueda" inherit_id="website.list_hybrid"
               name="Promocionales · página de resultados de búsqueda">
+        <xpath expr="//div[@id='wrap']" position="before">
+            <t t-if="website.bt_quote_mode" t-set="bt_sin_buscador_cabecera" t-value="True"/>
+            <t t-if="website.bt_quote_mode" t-set="title"
+               t-value="('Resultados para «%s» | %s' % (search, website.name)) if search else ('Resultados de búsqueda | %s' % website.name)"/>
+        </xpath>
         <xpath expr="//t[@t-call='website.website_search_box_input']" position="replace">
             <t t-if="website.bt_quote_mode">
                 <t t-call="website.website_search_box_input"
                    _classes.f="mt8"
                    search_type.f="products_only"
                    action.f="/shop"
+                   placeholder.f="Buscar modelo o producto"
                    display_description.f="false"
                    display_extra_link.f="false"/>
             </t>
@@ -215,6 +281,24 @@
                     <t t-if="search">Resultados para «<t t-out="search"/>»</t>
                     <t t-else="">Resultados de búsqueda</t>
                 </h1>
+            </t>
+            <t t-else="">$0</t>
+        </xpath>
+    </template>
+
+    <!-- Precio de cada resultado de /website/search con el formato de la tarjeta («Desde $X · IVA incluido»); sin
+         precio tachado (el sitio no comunica descuentos). El autocompletado de la cabecera es una plantilla del
+         cliente: allí el mismo texto lo ponen ::before/::after en tienda.scss.
+         Ancla: div.flex-shrink-0.ms-auto (website.one_hybrid, 19.0). -->
+    <template id="resultado_busqueda" inherit_id="website.one_hybrid"
+              name="Promocionales · precio en los resultados de búsqueda">
+        <xpath expr="//div[hasclass('flex-shrink-0')][hasclass('ms-auto')]" position="replace">
+            <t t-if="website.bt_quote_mode">
+                <div t-if="result.get('detail')" class="flex-shrink-0 ms-auto bt_resultado_precio">
+                    <span class="bt_tarjeta_desde">Desde</span>
+                    <b t-out="result.get('detail')"/>
+                    <span t-if="website.show_line_subtotals_tax_selection == 'tax_included'" class="bt_tarjeta_iva"><span class="bt_tarjeta_sep" aria-hidden="true">· </span>IVA incluido</span>
+                </div>
             </t>
             <t t-else="">$0</t>
         </xpath>

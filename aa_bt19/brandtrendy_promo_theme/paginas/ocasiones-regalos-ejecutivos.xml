@@ -1,23 +1,23 @@
 <?xml version="1.0" encoding="utf-8"?>
-<pagina url="/ocasiones/regalos-ejecutivos" nombre="Regalos ejecutivos para clientes y dirección" titulo="Regalos ejecutivos para clientes | Promocionales Brandtrendy" descripcion="Regalos ejecutivos para clientes y directivos: sets, termos y tecnología con tu marca. Cotización formal en 1 día hábil para producto de catálogo." indexada="1" publicada="1">
+<pagina url="/ocasiones/regalos-ejecutivos" nombre="Regalos ejecutivos para clientes y dirección" titulo="Regalos ejecutivos para clientes | Promocionales Brandtrendy" descripcion="Regalos ejecutivos para clientes y directivos: maletas, relojes, bolígrafos, agendas y libretas con tu logo. Precios con IVA incluido." indexada="1" publicada="1">
 
   <section class="s_text_image o_cc o_cc1 pt64 pb64" data-snippet="s_text_image" data-name="Portada">
     <div class="container">
       <div class="row align-items-center">
         <div class="col-lg-5 pt16 pb16">
           <h1 class="display-3-fs">Regalos ejecutivos para clientes y dirección</h1>
-          <p class="lead">Piezas en acero, madera y curpiel que representan a tu marca frente a quien importa, con tu logotipo grabado o bordado.</p>
-          <p>Precios con IVA incluido. Agrega las piezas a Mi cotización y un ejecutivo te confirma precio, personalización y entrega.</p>
+          <p class="lead">Maletas, relojes, bolígrafos, agendas y libretas para regalar a clientes y a dirección, con tu logotipo en la técnica que admite cada modelo.</p>
+          <p>Precios con IVA incluido. Agrega las piezas a Mi cotización. En 1 día hábil recibes tu cotización formal, con precio, personalización y plazo de entrega confirmados por un ejecutivo.</p>
           <p><a href="#seleccion" class="btn btn-primary btn-lg o_translate_inline">Ver modelos</a></p>
         </div>
         <div class="col-lg-6 offset-lg-1 pt16 pb16">
-          <img src="/brandtrendy_promo_theme/static/img/paginas/regalos-ejecutivos-set-bar.jpg" class="img img-fluid mx-auto rounded" alt="Set de licorera forrada en curpiel con vasos de acero y hielos metálicos sobre una barra, ejemplo de regalo ejecutivo"/>
+          <img src="/brandtrendy_promo_theme/static/img/paginas/regalos-ejecutivos-set-bar.jpg" class="img img-fluid mx-auto rounded" alt="Hombre en traje junto a una barra con una licorera forrada en curpiel, vasos de acero y hielos metálicos"/>
         </div>
       </div>
     </div>
   </section>
 
-  <section id="seleccion" class="s_dynamic_snippet_products oe_website_sale {{clases_tienda}} s_dynamic o_colored_level o_cc o_cc1 pt48 pb48" data-snippet="s_dynamic_snippet_products" data-name="Selección de regalos ejecutivos" data-filter-id="{{filtro:brandtrendy_promo_theme.snippet_filtro_catalogo}}" data-template-key="website_sale.dynamic_filter_template_product_product_products_item" data-product-category-id="{{categoria:Promocionales / Por ocasión / Regalos ejecutivos}}" data-number-of-records="12" data-number-of-elements="4" data-number-of-elements-small-devices="1" data-row-per-slide="3" data-carousel-interval="0">
+  <section id="seleccion" class="s_dynamic_snippet_products oe_website_sale {{clases_tienda}} s_dynamic o_colored_level o_cc o_cc2 pt48 pb48" data-snippet="s_dynamic_snippet_products" data-name="Selección de regalos ejecutivos" data-filter-id="{{filtro:brandtrendy_promo_theme.snippet_filtro_catalogo}}" data-template-key="website_sale.dynamic_filter_template_product_product_products_item" data-product-category-id="{{categoria:Promocionales / Por ocasión / Regalos ejecutivos}}" data-number-of-records="12" data-number-of-elements="4" data-number-of-elements-small-devices="1" data-row-per-slide="3" data-carousel-interval="0">
     <div class="s_dynamic_snippet_container container">
       <div class="row s_nb_column_fixed">
         <section class="s_dynamic_snippet_holder d-none px-4 placeholder-glow">
@@ -33,7 +33,7 @@
         <section class="s_dynamic_snippet_title oe_unremovable oe_unmovable justify-content-between d-flex flex-column flex-md-row mb-lg-0 pb-3 pb-md-0 s_col_no_resize">
           <div>
             <h2 class="h1-fs">Selección de regalos ejecutivos</h2>
-            <p class="lead">Escritorio, bebida, tecnología y viaje, personalizados con tu marca.</p>
+            <p class="lead">Maletas, relojes, bolígrafos, agendas y libretas personalizados con tu marca.</p>
           </div>
           <div>
             <a title="Ver todos los regalos ejecutivos" href="{{url_categoria:Promocionales / Por ocasión / Regalos ejecutivos}}">Ver toda la selección<span class="fa fa-long-arrow-right ms-2"/></a>
@@ -51,53 +51,62 @@
     </div>
   </section>
 
-  <section class="s_text_block o_cc o_cc1 pt32 pb48" data-snippet="s_text_block" data-name="Más opciones">
-    <div class="container s_allow_columns">
-      <h2 class="h1-fs">¿Quieres ver más opciones?</h2>
-      <p>Explora las categorías completas relacionadas:
-        <a href="{{url_categoria:Promocionales / Escritura / Bolígrafos Metálicos}}">Bolígrafos metálicos</a> ·
-        <a href="{{url_categoria:Promocionales / Oficina / Agendas}}">Agendas</a> ·
-        <a href="{{url_categoria:Promocionales / Bolsas y mochilas / Portafolios}}">Portafolios</a> ·
-        <a href="{{url_categoria:Promocionales / Tecnología / Relojes}}">Relojes</a> ·
-        <a href="{{url_categoria:Promocionales / Viaje / Maletas}}">Maletas</a> ·
-        <a href="{{url_categoria:Promocionales / Oficina / Libretas}}">Libretas</a></p>
+  <section class="s_text_block o_cc o_cc1 pt48 pb48" data-snippet="s_text_block" data-name="Más opciones">
+    <div class="container">
+      <div class="row align-items-start">
+        <div class="col-lg-4">
+          <h2 class="h1-fs">¿Quieres ver más opciones?</h2>
+        </div>
+        <div class="col-lg-7 offset-lg-1">
+          <p>Explora las categorías completas relacionadas.</p>
+          <ul class="list-inline mb-0">
+          <li class="list-inline-item me-3"><a class="d-inline-block py-2" href="{{url_categoria:Promocionales / Escritura / Bolígrafos Metálicos}}">Bolígrafos metálicos</a></li>
+          <li class="list-inline-item me-3"><a class="d-inline-block py-2" href="{{url_categoria:Promocionales / Oficina / Agendas}}">Agendas</a></li>
+          <li class="list-inline-item me-3"><a class="d-inline-block py-2" href="{{url_categoria:Promocionales / Bolsas y mochilas / Portafolios}}">Portafolios</a></li>
+          <li class="list-inline-item me-3"><a class="d-inline-block py-2" href="{{url_categoria:Promocionales / Tecnología / Relojes}}">Relojes</a></li>
+          <li class="list-inline-item me-3"><a class="d-inline-block py-2" href="{{url_categoria:Promocionales / Viaje / Maletas}}">Maletas</a></li>
+          <li class="list-inline-item me-3"><a class="d-inline-block py-2" href="{{url_categoria:Promocionales / Oficina / Libretas}}">Libretas</a></li>
+          </ul>
+        </div>
+      </div>
     </div>
   </section>
 
-  <section class="s_features o_cc o_cc2 pt64 pb64" data-snippet="s_features" data-name="Por qué cotizar con nosotros">
+  <section class="s_features o_cc o_cc2 pt48 pb48" data-snippet="s_features" data-name="Por qué cotizar con nosotros">
     <div class="container">
       <h2 class="h1-fs">Una sola operación, de la selección a la entrega</h2>
+      <p class="lead">Gestionamos producto, personalización, control de calidad y entrega nacional desde una sola operación.</p>
       <div class="row">
-        <div class="col-lg-3">
+        <div class="col-lg-3 col-md-6">
           <div class="s_hr pt-4 pb32" data-snippet="s_hr" data-name="Separator"><hr class="w-100 mx-auto"/></div>
-          <i class="s_features_icon fa fa-history mb-3 rounded bg-o-color-3" aria-hidden="true"/>
+          <i class="s_features_icon fa fa-clock-o mb-3 rounded bg-o-color-4" aria-hidden="true"/>
           <div class="overflow-hidden">
             <h3 class="h5-fs">Comercio electrónico desde 2006</h3>
-            <p>Operamos en comercio electrónico desde 2006.</p>
+            <p>Operamos en línea y atendemos a empresas de todo México.</p>
           </div>
         </div>
-        <div class="col-lg-3">
+        <div class="col-lg-3 col-md-6">
           <div class="s_hr pt-4 pb32" data-snippet="s_hr" data-name="Separator"><hr class="w-100 mx-auto"/></div>
-          <i class="s_features_icon fa fa-building-o mb-3 rounded bg-o-color-3" aria-hidden="true"/>
+          <i class="s_features_icon fa fa-building-o mb-3 rounded bg-o-color-4" aria-hidden="true"/>
           <div class="overflow-hidden">
             <h3 class="h5-fs">Almacén propio en CDMX</h3>
             <p>Recepción centralizada para control de calidad y personalización.</p>
           </div>
         </div>
-        <div class="col-lg-3">
+        <div class="col-lg-3 col-md-6">
           <div class="s_hr pt-4 pb32" data-snippet="s_hr" data-name="Separator"><hr class="w-100 mx-auto"/></div>
-          <i class="s_features_icon fa fa-eye mb-3 rounded bg-o-color-3" aria-hidden="true"/>
+          <i class="s_features_icon fa fa-check-square-o mb-3 rounded bg-o-color-4" aria-hidden="true"/>
           <div class="overflow-hidden">
             <h3 class="h5-fs">Prueba digital incluida</h3>
-            <p>Revisas tu diseño aplicado antes de producir, con una ronda de cambios sin costo.</p>
+            <p>Ves tu diseño aplicado antes de producir, con una ronda de cambios sin costo.</p>
           </div>
         </div>
-        <div class="col-lg-3">
+        <div class="col-lg-3 col-md-6">
           <div class="s_hr pt-4 pb32" data-snippet="s_hr" data-name="Separator"><hr class="w-100 mx-auto"/></div>
-          <i class="s_features_icon fa fa-truck mb-3 rounded bg-o-color-3" aria-hidden="true"/>
+          <i class="s_features_icon fa fa-truck mb-3 rounded bg-o-color-4" aria-hidden="true"/>
           <div class="overflow-hidden">
             <h3 class="h5-fs">Cobertura nacional</h3>
-            <p>Envíos a toda la república y reparto propio en CDMX y zona metropolitana, sujeto a disponibilidad.</p>
+            <p>Envíos a toda la república por paquetería y reparto propio en CDMX y zona metropolitana, sujeto a disponibilidad.</p>
           </div>
         </div>
       </div>
@@ -109,7 +118,7 @@
       <div class="row align-items-center">
         <div class="col-lg-9">
           <h2 class="h1-fs">¿Buscas un regalo ejecutivo a la medida?</h2>
-          <p class="lead">Cuéntanos tu caso y un ejecutivo te responde en 1 día hábil.</p>
+          <p class="lead">Cuéntanos tu caso y un ejecutivo te contacta para revisarlo contigo.</p>
         </div>
         <div class="col-lg-3">
           <p style="text-align: right;"><a href="/contactus#asesoria" class="btn btn-primary btn-lg o_translate_inline">Solicitar asesoría</a></p>
