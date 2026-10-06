@@ -20,6 +20,14 @@ APLICAR_VERSION = "4"
 PARAM_PASO = MODULO + ".aplicado."  # + nombre del paso → versión aplicada
 PARAM_CODIGO_RESPALDO = MODULO + ".codigo_respaldo"
 GSC_BLOQUE = re.compile(r"<!-- BT-GSC -->.*?<!-- /BT-GSC -->", re.S)  # verificación de Search Console: se conserva
+# Atribución propia de la 17 que se conserva en el pie (no depende de las páginas de la 17): BT-UTM guarda la primera y
+# la última fuente de la visita (cookies bt_touch_first/bt_touch_last, 30 días) y bt-wa-ref agrega esa referencia a los
+# enlaces de WhatsApp, para que un lead de WhatsApp que viene de Google Ads conserve su gclid. Declaradas en la política
+# de cookies.
+ATRIBUCION_BLOQUES = [
+    re.compile(r"<!-- BT-UTM v\d+ -->.*?<!-- /BT-UTM -->", re.S),
+    re.compile(r'<script id="bt-wa-ref".*?</script>', re.S),
+]
 
 # --- Tema del sitio: archivos del módulo cargados SOLO en este sitio (como hace Odoo con un theme_*) -----------
 ASSETS_SITIO = [  # (key, bundle, directiva, ruta)
@@ -359,8 +367,8 @@ class Website(models.Model):
         return texto + ("; marcadores (revisar): %s" % ", ".join(marcadores) if marcadores else "")
 
     def _bt_promo_codigo(self):
-        """Una sola vez: respalda el código inyectado de la 17 en un parámetro, conserva únicamente el bloque de
-        verificación de Google Search Console y vacía lo demás (el JavaScript y los estilos de la 17)."""
+        """Una sola vez: respalda el código inyectado de la 17 en un parámetro, conserva la verificación de Google Search
+        Console y la atribución propia (ATRIBUCION_BLOQUES), y vacía lo demás (el JavaScript y los estilos de la 17)."""
         self.ensure_one()
         cabeza, pie = self.custom_code_head or "", self.custom_code_footer or ""
         if not cabeza and not pie:
@@ -368,8 +376,11 @@ class Website(models.Model):
         self.env["ir.config_parameter"].sudo().set_param(
             PARAM_CODIGO_RESPALDO, json.dumps({"head": cabeza, "footer": pie}, ensure_ascii=False))
         gsc = GSC_BLOQUE.search(cabeza)
-        self.write({"custom_code_head": gsc.group(0) if gsc else False, "custom_code_footer": False})
-        return "código inyectado respaldado y vaciado%s" % (" (se conservó la verificación de GSC)" if gsc else "")
+        atribucion = [m.group(0) for patron in ATRIBUCION_BLOQUES for m in [patron.search(pie)] if m]
+        self.write({"custom_code_head": gsc.group(0) if gsc else False,
+                    "custom_code_footer": "\n".join(atribucion) or False})
+        return "código inyectado respaldado y vaciado (se conservó: %s)" % (
+            ", ".join((["verificación de GSC"] if gsc else []) + ["%s bloques de atribución" % len(atribucion)]))
 
     # ------------------------------------------------------------------ ajustes del sitio
     def _bt_promo_ajustes(self):
