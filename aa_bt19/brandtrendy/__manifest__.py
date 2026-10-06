@@ -7,7 +7,7 @@
     "website": "https://www.vauxoo.com",
     "license": "OPL-1",
     "category": "Installer",
-    "version": "19.0.1.0.9",
+    "version": "19.0.1.0.10",
     "depends": [
         "approvals",
         "contacts",
@@ -35,6 +35,7 @@
         "website_slides",
         "website_sale",
         "brandtrendy_promo_theme",
+        "brandtrendy_compat17",
     ],
     "data": [
         "data/res_company_data.xml",
