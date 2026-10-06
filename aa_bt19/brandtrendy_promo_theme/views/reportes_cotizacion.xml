@@ -1,0 +1,274 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <!--
+        PDF de cotización del equipo Promocionales y carta membretada.
+
+        En la 17 vivían como registros sueltos de la base (vistas brandtrendy_f4.bt_external_layout,
+        brandtrendy_f4.bt_report_saleorder_document y brandtrendy_f4.bt_carta_membretada; reportes «Cotización ·
+        Promocionales» y «Carta membretada BT»; formato «BT Carta Cotización»). Aquí quedan como plantillas,
+        formato y reportes del módulo. El paso «reportes» de website._bt_promo_aplicar quita los de la 17 del menú
+        Imprimir y archiva sus vistas; no borra nada.
+
+        Cambios contra la 17:
+        · line.product_uom → line.product_uom_id (en 19 el campo cambió de nombre; con el anterior el PDF fallaba en
+          toda orden del equipo).
+        · Las subsecciones de 19 (display_type line_subsection) se pintan como sección y no como producto vacío.
+        · El equipo ya no va por id: el formato aplica a las órdenes del equipo de ventas de un sitio en modo cotización.
+        · El RFC del pie sale de la empresa del documento; los estilos ya no se cargan desde un adjunto por URL
+          (static/src/scss/reporte_cotizacion.scss va en web.report_assets_common).
+    -->
+
+    <record id="paperformat_bt_carta" model="report.paperformat">
+        <field name="name">Promocionales · carta</field>
+        <field name="format">Letter</field>
+        <field name="orientation">Landscape</field>
+        <field name="margin_top">36</field>
+        <field name="margin_bottom">26</field>
+        <field name="margin_left">0</field>
+        <field name="margin_right">0</field>
+        <field name="header_line" eval="False"/>
+        <field name="header_spacing">34</field>
+        <field name="dpi">96</field>
+    </record>
+
+    <!-- Membrete: lockup Promocionales arriba, pie fiscal con numeración. -->
+    <template id="bt_external_layout" name="Promocionales · membrete de reportes">
+        <t t-set="bt_empresa" t-value="(o and 'company_id' in o and o.company_id) or res_company"/>
+        <div class="header bt-header">
+            <table class="bt-head-table"><tr>
+                <td class="bt-head-left">
+                    <div class="bt-lockup">
+                        <img src="data:image/png;base64,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" alt="BRANDTRENDY" class="bt-logo"/>
+                        <div class="bt-descriptor-row"><span class="bt-descriptor">Promocionales</span></div>
+                    </div>
+                    <div t-if="o and o._name == 'account.move'" class="bt-razon-social">BRANDTRENDY, S.A. DE C.V.</div>
+                </td>
+                <td class="bt-head-right"/>
+            </tr></table>
+            <div class="bt-rule"/>
+        </div>
+        <div class="article o_report_layout_bt" t-att-data-oe-model="o and o._name" t-att-data-oe-id="o and o.id"
+             t-att-data-oe-lang="o and o.env.context.get('lang')">
+            <t t-out="0"/>
+        </div>
+        <div class="footer bt-footer">
+            <div class="bt-footer-rule"/>
+            <table class="bt-footer-table"><tr>
+                <td class="bt-footer-fiscal">
+                    BRANDTRENDY, S.A. DE C.V.<t t-if="bt_empresa.vat"> | RFC: <t t-out="bt_empresa.vat"/></t><br/>
+                    Calle Poniente 134, No. 682, Bodega E, Col. Industrial Vallejo, Alcaldía Azcapotzalco, C.P. 02300, Ciudad de México<br/>
+                    <span class="bt-nowrap">Tel. y WhatsApp: +52 55 5526 0418</span> |
+                    <t t-if="o and o._name == 'account.move'">facturacion@brandtrendy.com.mx</t>
+                    <t t-else="">ventas@brandtrendy.com.mx</t>
+                    | promocionales.brandtrendy.com.mx
+                </td>
+                <td class="bt-footer-page">Página <span class="page"/> de <span class="topage"/></td>
+            </tr></table>
+        </div>
+    </template>
+
+    <!-- Cotización con membrete. Solo para órdenes del equipo de un sitio en modo cotización; las demás reciben un aviso. -->
+    <template id="bt_report_saleorder_document" name="Cotización · Promocionales">
+        <t t-call="web.html_container">
+            <t t-set="bt_equipos" t-value="env['website'].sudo().search([('bt_quote_mode', '=', True)]).salesteam_id"/>
+            <t t-foreach="docs" t-as="o">
+                <!-- div.article: sin él wkhtmltopdf recibe el aviso sin charset y los acentos salen rotos -->
+                <div t-if="not (o.team_id &amp; bt_equipos)" class="article" t-att-data-oe-model="o._name" t-att-data-oe-id="o.id">
+                    <div class="page" style="font-family:sans-serif;padding:40px">
+                        <p style="font-size:12pt;line-height:1.6">
+                            <b>Formato exclusivo de Brandtrendy Promocionales.</b><br/>
+                            La orden <span t-field="o.name"/> no pertenece al equipo Promocionales, así que este
+                            documento no se imprime con su membrete ni con sus condiciones comerciales.<br/>
+                            Usa el reporte «PDF Quote» para esta orden.
+                        </p>
+                    </div>
+                </div>
+                <t t-else="" t-call="brandtrendy_promo_theme.bt_external_layout">
+                    <t t-set="doc" t-value="o.with_context(lang=o.partner_id.lang)"/>
+                    <div class="page bt-page">
+                        <table class="bt-doc-title"><tr><td class="bt-title-left">
+                            <div class="bt-h1">Cotización</div>
+                            <div class="bt-folio" t-field="doc.name"/>
+                        </td></tr></table>
+                        <table class="bt-meta"><tr>
+                            <td class="bt-meta-cliente">
+                                <div class="bt-lbl">Cliente</div>
+                                <div class="bt-strong" t-out="doc.partner_id.commercial_company_name or doc.partner_id.name"/>
+                                <div t-if="doc.partner_id.commercial_company_name and doc.partner_id.name != doc.partner_id.commercial_company_name">Atención: <span t-field="doc.partner_id.name"/></div>
+                                <div><span t-field="doc.partner_id.email"/> · <span t-field="doc.partner_id.phone"/></div>
+                            </td>
+                            <td class="bt-meta-datos"><table>
+                                <tr>
+                                    <td style="padding-right:16px"><div class="bt-lbl">Fecha de emisión</div><div t-field="doc.date_order" t-options="{&quot;widget&quot;: &quot;date&quot;}"/></td>
+                                    <td><div class="bt-lbl">Vigente hasta</div><div class="bt-strong" t-field="doc.validity_date" t-options="{&quot;widget&quot;: &quot;date&quot;}"/><div class="bt-small">7 días naturales</div></td>
+                                </tr>
+                                <tr>
+                                    <td class="bt-meta-pad" style="padding-right:16px"><div class="bt-lbl">Condiciones de pago</div><div>70% anticipo · 30% antes de liberar</div></td>
+                                    <td class="bt-meta-pad"><div class="bt-lbl">Moneda</div><div><span t-field="doc.currency_id.name"/> — pesos mexicanos</div></td>
+                                </tr>
+                            </table></td>
+                        </tr></table>
+                        <table class="bt-lines">
+                            <thead><tr>
+                                <th class="bt-th bt-th-concepto">Concepto</th>
+                                <th class="bt-th bt-num">Cantidad</th>
+                                <th class="bt-th bt-num">Precio unitario (IVA incluido)</th>
+                                <th class="bt-th bt-num">Importe (IVA incluido)</th>
+                            </tr></thead>
+                            <tbody>
+                                <t t-foreach="doc.order_line" t-as="line">
+                                    <tr t-if="line.display_type in ('line_section', 'line_subsection')" class="bt-row-section"><td colspan="4"><span t-field="line.name"/></td></tr>
+                                    <tr t-elif="line.display_type == 'line_note'" class="bt-row-note"><td colspan="4"><span t-field="line.name"/></td></tr>
+                                    <tr t-else="" class="bt-row">
+                                        <td class="bt-cell-concepto">
+                                            <div class="bt-strong" t-out="line.product_id.display_name or line.name"/>
+                                            <t t-set="bt_desc" t-value="line.name.split('\n', 1)[1].strip() if line.name and '\n' in line.name else ('' if not line.name or (line.product_id and line.name == line.product_id.display_name) else line.name)"/>
+                                            <div class="bt-desc" t-if="bt_desc" t-out="bt_desc"/>
+                                        </td>
+                                        <td class="bt-cell bt-num"><span t-field="line.product_uom_qty"/> <span t-field="line.product_uom_id.name"/></td>
+                                        <td class="bt-cell bt-num"><span t-field="line.price_unit" t-options="{&quot;widget&quot;: &quot;monetary&quot;, &quot;display_currency&quot;: doc.currency_id}"/></td>
+                                        <td class="bt-cell bt-num bt-strong"><span t-field="line.price_total" t-options="{&quot;widget&quot;: &quot;monetary&quot;, &quot;display_currency&quot;: doc.currency_id}"/></td>
+                                    </tr>
+                                </t>
+                            </tbody>
+                        </table>
+                        <table class="bt-totales"><tr>
+                            <td class="bt-totales-nota">Precios en pesos mexicanos. El total incluye IVA. Cantidades sujetas a múltiplos de caja cerrada. Precios especiales por volumen — solicita cotización.</td>
+                            <td class="bt-totales-tabla"><table>
+                                <tr><td>Suma de importes (IVA incluido)</td><td class="bt-num"><span t-field="doc.amount_total" t-options="{&quot;widget&quot;: &quot;monetary&quot;, &quot;display_currency&quot;: doc.currency_id}"/></td></tr>
+                                <tr><td>Base gravable</td><td class="bt-num"><span t-field="doc.amount_untaxed" t-options="{&quot;widget&quot;: &quot;monetary&quot;, &quot;display_currency&quot;: doc.currency_id}"/></td></tr>
+                                <tr><td>IVA (16%)</td><td class="bt-num"><span t-field="doc.amount_tax" t-options="{&quot;widget&quot;: &quot;monetary&quot;, &quot;display_currency&quot;: doc.currency_id}"/></td></tr>
+                                <tr class="bt-total-final"><td>Total a pagar</td><td class="bt-num"><span t-field="doc.amount_total" t-options="{&quot;widget&quot;: &quot;monetary&quot;, &quot;display_currency&quot;: doc.currency_id}"/> MXN</td></tr>
+                            </table></td>
+                        </tr></table>
+                        <table class="bt-condiciones"><tr>
+                            <td>
+                                <div class="bt-lbl">Condiciones</div>
+                                <div class="bt-cond-text">Vigencia de 7 días naturales a partir de la fecha de emisión.<br/>Pago: 70% de anticipo para iniciar y 30% antes de liberar. Único método de pago: transferencia electrónica interbancaria; los datos bancarios se comparten al confirmar el pedido.<br/>La producción inicia con anticipo confirmado, archivos utilizables y prueba digital aprobada.</div>
+                            </td>
+                            <td>
+                                <div class="bt-lbl">Personalización</div>
+                                <div class="bt-cond-text">Prueba digital incluida; 1 ronda de cambios sin costo.<br/>Los tiempos de producción corren a partir de la confirmación completa; el tránsito del envío es adicional.<br/>Los colores se igualan como referencia; variaciones razonables de tono no constituyen defecto.</div>
+                            </td>
+                        </tr></table>
+                        <div class="bt-atencion">
+                            <span class="bt-strong">¿Dudas sobre esta cotización?</span>
+                            <span> Atendido por <span t-field="doc.user_id.name"/> · ventas@brandtrendy.com.mx · <span class="bt-nowrap">Tel. y WhatsApp +52 55 5526 0418</span></span>
+                        </div>
+                    </div>
+                </t>
+            </t>
+        </t>
+    </template>
+
+    <!-- Hoja membretada en blanco para documentos del equipo (se imprime desde el contacto). -->
+    <template id="bt_carta_membretada" name="Promocionales · carta membretada">
+        <t t-call="web.html_container">
+            <t t-foreach="docs" t-as="o">
+                <t t-call="brandtrendy_promo_theme.bt_external_layout">
+                    <div class="page bt-page bt-carta">
+                        <div class="bt-carta-fecha">Ciudad de México, a <span t-out="time.strftime('%d/%m/%Y')"/></div>
+                        <div class="bt-carta-dest">
+                            <div style="font-weight:700;color:#231F20;" t-field="o.name"/>
+                            <div t-if="o.commercial_company_name and o.name != o.commercial_company_name" t-field="o.commercial_company_name"/>
+                            <div t-if="o.email" t-field="o.email"/>
+                        </div>
+                        <div class="bt-carta-asunto">Asunto: [asunto del documento]</div>
+                        <div class="bt-carta-cuerpo">
+                            <p>Estimado(a) [nombre]:</p>
+                            <p>[Cuerpo de la carta. Esta plantilla valida la hoja membretada: encabezado con lockup Promocionales, pie fiscal de tres líneas con numeración de página y márgenes de 18 mm por lado. El contenido se sustituye al emitir cada documento.]</p>
+                            <p>Sin más por el momento, quedamos a sus órdenes.</p>
+                        </div>
+                        <div class="bt-carta-firma">
+                            <div class="bt-firma-linea"/>
+                            <div style="font-weight:700;color:#231F20;">[Nombre del firmante]</div>
+                            <div style="font-size:8.5pt;color:#5F5E61;">[Cargo] · [correo]@brandtrendy.com.mx</div>
+                        </div>
+                    </div>
+                </t>
+            </t>
+        </t>
+    </template>
+
+    <record id="accion_reporte_cotizacion" model="ir.actions.report">
+        <field name="name">Cotización · Promocionales</field>
+        <field name="model">sale.order</field>
+        <field name="report_type">qweb-pdf</field>
+        <field name="report_name">brandtrendy_promo_theme.bt_report_saleorder_document</field>
+        <field name="report_file">brandtrendy_promo_theme.bt_report_saleorder_document</field>
+        <field name="paperformat_id" ref="paperformat_bt_carta"/>
+        <field name="binding_model_id" ref="sale.model_sale_order"/>
+        <field name="binding_type">report</field>
+    </record>
+
+    <record id="accion_reporte_carta" model="ir.actions.report">
+        <field name="name">Carta membretada BT</field>
+        <field name="model">res.partner</field>
+        <field name="report_type">qweb-pdf</field>
+        <field name="report_name">brandtrendy_promo_theme.bt_carta_membretada</field>
+        <field name="report_file">brandtrendy_promo_theme.bt_carta_membretada</field>
+        <field name="paperformat_id" ref="paperformat_bt_carta"/>
+        <field name="binding_model_id" ref="base.model_res_partner"/>
+        <field name="binding_type">report</field>
+    </record>
+
+    <!--
+        PDF estándar de cotización (PDF Quote y los que heredan del documento: Quotation/Order, Pro-Forma) para las
+        órdenes de un sitio en modo cotización. Sustituye a la vista brandtrendy_f4.bt_report_saleorder_ws2 de la 17,
+        que en 19 ya no valida (su ancla //div[hasclass('page')]/h2 desapareció: el título ahora lo pinta el membrete).
+        Las órdenes de los demás sitios y de ventas directas quedan intactas.
+        · 13 título y total en tinta #231F20 (se acota al artículo de la orden; el h2 de 19 está fuera de div.page).
+        · 8 la línea de envío sin precio dice «—» y «Por cotizar», nunca $0.00.
+        · 6 términos y condiciones en el dominio del sitio (se conserva el nodo order_note para la vista de delivery).
+        · 7 fuera «Términos de pago: pago inmediato»; en su lugar, cotización sin costo y sin compromiso.
+        Anclas (odoo 19.0 addons/sale/report/sale_report_templates.xml, report_saleorder_document): t-set
+        display_discount, td td_product_name, td_product_priceunit, td_product_subtotal, span order_note y el p de
+        doc.payment_term_id.note.
+    -->
+    <template id="reporte_cotizacion_sitio" inherit_id="sale.report_saleorder_document" priority="99"
+              name="Promocionales · PDF de cotización del sitio">
+        <xpath expr="//t[@t-set='display_discount']" position="after">
+            <t t-set="bt_cotizacion_sitio" t-value="bool(doc.website_id.bt_quote_mode)"/>
+            <t t-set="bt_productos_envio" t-value="doc.env['delivery.carrier'].sudo().search([('website_id', '=', doc.website_id.id)]).product_id.ids if bt_cotizacion_sitio else []"/>
+            <style t-if="bt_cotizacion_sitio">
+                .article[data-oe-model="sale.order"][data-oe-id="<t t-out="doc.id"/>"] h2,
+                .article[data-oe-model="sale.order"][data-oe-id="<t t-out="doc.id"/>"] .h2,
+                .article[data-oe-model="sale.order"][data-oe-id="<t t-out="doc.id"/>"] #total strong,
+                .article[data-oe-model="sale.order"][data-oe-id="<t t-out="doc.id"/>"] .totals_taxes_company_currency strong { color: #231F20 !important; }
+            </style>
+        </xpath>
+        <xpath expr="//td[@name='td_product_name']" position="before">
+            <t t-set="bt_envio_por_cotizar" t-value="bt_cotizacion_sitio and (line.is_delivery or line.product_id.id in bt_productos_envio) and not line.price_unit and not line.price_subtotal"/>
+        </xpath>
+        <xpath expr="//td[@name='td_product_priceunit']/span[@t-field='line.price_unit']" position="attributes">
+            <attribute name="t-elif">not collapse_prices and not bt_envio_por_cotizar</attribute>
+        </xpath>
+        <xpath expr="//td[@name='td_product_priceunit']/span[@t-field='line.price_unit']" position="after">
+            <span t-elif="bt_envio_por_cotizar" class="text-muted">—</span>
+        </xpath>
+        <xpath expr="//td[@name='td_product_subtotal']/t" position="attributes">
+            <attribute name="t-if">not line.is_downpayment and not collapse_prices and not bt_envio_por_cotizar</attribute>
+        </xpath>
+        <xpath expr="//td[@name='td_product_subtotal']/t" position="after">
+            <span t-if="bt_envio_por_cotizar" class="text-muted text-nowrap">Por cotizar</span>
+        </xpath>
+        <xpath expr="//span[@name='order_note']" position="attributes">
+            <attribute name="t-if">not bt_cotizacion_sitio</attribute>
+        </xpath>
+        <xpath expr="//span[@name='order_note']" position="after">
+            <p t-if="bt_cotizacion_sitio" name="order_note_bt" class="mt-3">
+                Términos y condiciones:
+                <a href="https://promocionales.brandtrendy.com.mx/terminos-y-condiciones">https://promocionales.brandtrendy.com.mx/terminos-y-condiciones</a>
+            </p>
+        </xpath>
+        <xpath expr="//p[span[@t-field='doc.payment_term_id.note']]" position="attributes">
+            <attribute name="t-if">not is_html_empty(doc.payment_term_id.note) and not bt_cotizacion_sitio</attribute>
+        </xpath>
+        <xpath expr="//p[span[@t-field='doc.payment_term_id.note']]" position="after">
+            <p t-if="bt_cotizacion_sitio" name="bt_quote_terms" class="mt-2">
+                Cotización sin costo y sin compromiso: no se requiere ningún pago en línea. Las condiciones de pago se
+                confirman en la cotización formal que te envía tu asesor.
+            </p>
+        </xpath>
+    </template>
+</odoo>

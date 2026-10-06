@@ -37,6 +37,16 @@ ASSETS_SITIO = [  # (key, bundle, directiva, ruta)
 # ir.model.data._process_end). Si una copia por sitio no tiene las anclas de 19, la validación falla, la actualización
 # aborta (código 255) y Odoo.sh deja el build en rojo aunque el sitio responda (5-oct: copia 5685 de la 17 de
 # website_sale.cart sin div#shop_cart). Los pasos «jubilar» y «herencias_sitio» lo evitan (ver sus docstrings).
+# PDF de la 17 que vivían como registros sueltos de la base (sin módulo): report_name → reporte del módulo que lo sustituye.
+REPORTES_17 = {
+    "brandtrendy_f4.bt_report_saleorder_document": MODULO + ".accion_reporte_cotizacion",
+    "brandtrendy_f4.bt_carta_membretada": MODULO + ".accion_reporte_carta",
+}
+VISTAS_REPORTE_17 = [
+    "brandtrendy_f4.bt_external_layout",
+    "brandtrendy_f4.bt_report_saleorder_document",
+    "brandtrendy_f4.bt_carta_membretada",
+]
 SUFIJO_JUBILADA = ".bt17_jubilada"
 PARAM_INSTALADO = MODULO + ".instalado_en"  # primera aplicación del módulo en esta base: separa copias de la 17 de las de 19
 ICONOS_KEY = MODULO + ".sitio_iconos"
@@ -168,6 +178,7 @@ class Website(models.Model):
                 ("pie", sitio._bt_promo_pie, "siempre"),
                 ("rutas", sitio._bt_promo_rutas, "version"),
                 ("menu", sitio._bt_promo_menu, "version"),
+                ("reportes", sitio._bt_promo_reportes, "siempre"),
                 # al final: los pasos anteriores crean copias por sitio (checkout, cabecera, pie)
                 ("herencias_sitio", sitio._bt_promo_herencias_sitio, "siempre"),
             ]:
@@ -246,6 +257,24 @@ class Website(models.Model):
         if vistas:
             vistas.write({"active": False})
         return "%s vistas apagadas" % len(vistas)
+
+    # ------------------------------------------------------------------ reportes PDF
+    def _bt_promo_reportes(self):
+        """Los PDF de la 17 (registros sin módulo: «Cotización · Promocionales» y «Carta membretada BT») ceden su lugar a
+        los del módulo, que funcionan en 19: se quitan del menú Imprimir y sus vistas se archivan. No se borra nada.
+        Idempotente. Reversa: volver a poner binding_model_id y active."""
+        nuevos = [self.env.ref(xmlid, raise_if_not_found=False) for xmlid in REPORTES_17.values()]
+        if not all(nuevos):
+            return "PENDIENTE: faltan los reportes del módulo; no se toca lo de la 17"
+        Reporte = self.env["ir.actions.report"].sudo()
+        viejos = Reporte.search([("report_name", "in", list(REPORTES_17)), ("binding_model_id", "!=", False)])
+        if viejos:
+            viejos.write({"binding_model_id": False})
+        View = self.env["ir.ui.view"].sudo().with_context(active_test=False, website_id=False, no_cow=True)
+        vistas = View.search([("key", "in", VISTAS_REPORTE_17), ("active", "=", True)])
+        if vistas:
+            vistas.write({"active": False})
+        return "%s reportes de la 17 fuera del menú Imprimir; %s vistas de la 17 archivadas" % (len(viejos), len(vistas))
 
     def _bt_promo_instalado_en(self):
         """Momento de la primera aplicación del módulo en esta base. Lo creado antes (en la 17 o en la migración) es
